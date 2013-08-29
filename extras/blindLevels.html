@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<!--<html lang="en" ng-app="event1" id="ng-app">-->
+<html lang="en">
+<!-- the ng-app name 'event1' is referenced the corresponding controller logic -->
+<head> `
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="player" content="brianM">
+    <title>Poker Results</title>
+    <!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <link href="../css/poker.css" rel="stylesheet">
+    <link href="../css/animate.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="src/css/jumbotron.css" rel="stylesheet">
+    <script type="text/javascript" src="../js/jquery-1.10.2.min.js"></script>
+    <!-- temp local hosting until prod release -->
+    <script type="text/javascript" src="../js/angular.min.js"></script>
+    <!-- temp local hosting until prod release -->
+    <script type="text/javascript" src="../js/bootstrap.js"></script>
+    <script type="text/javascript" src="../js/blindLevels.js"></script>
+    <script type="text/javascript" src="http://twitter.github.com/bootstrap/assets/js/bootstrap-dropdown.js"></script>
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container" id="navigationBar">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="../index.html">Home</a>
+
+            <div class="nav-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown" data-no-collapse="true">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Event History<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../events/20130406.html">06/04/2013 @ Ben's</a></li>
+                            <li><a href="../events/20130511.html">11/05/2013 @ Brian's</a></li>
+                            <li><a href="../events/20130706.html">06/07/2013 @ Steve's</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Players<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../players/benI.html">Ben I</a></li>
+                            <li><a href="../players/brianM.html">Brian M</a></li>
+                            <li><a href="../players/daveM.html">Dave M</a></li>
+                            <li><a href="../players/jadeW.html">Jade W</a></li>
+                            <li><a href="../players/markL.html">Mark L</a></li>
+                            <li><a href="../players/markV.html">Mark V</a></li>
+                            <li><a href="../players/michaelR.html">Michael R</a></li>
+                            <li><a href="../players/paulB.html">Paul B</a></li>
+                            <li><a href="../players/simonM.html">Simon M</a></li>
+                            <li><a href="../players/steveW.html">Steve W</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Extras <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Blind Levels</a></li>
+                            <li><a href="points.html">Points allocation</a></li>
+                            <li><a href="winningHands.html">Winning Hands</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+    </div>
+    <div class="container">
+
+        <div class="jumbotron">
+            <h2>Recommended blind levels</h2>
+            <p>&nbsp;</p>
+            <p>....keep an eye out or be blinded out!</p>
+        </div>
+        <div class="body-content">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>With a starting stack of $1000, we'll adhere to the following blind levels and durations which should make one
+                        tournament last approximately 3 to 4 hours.
+                    </p>
+                    <p><i>Note: </i>If your stack goes below $500 and you've already received your free chip-ups, you are eligible for a re-buy up to the 3rd break.</p>
+                    <table class="table table-striped table-bordered table-condensed table-hover">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Level</th>
+                                    <th scope="col">Duration</th>
+                                    <th scope="col">Small Blind</th>
+                                    <th scope="col">Big Blind</th>
+                                    <th scope="col">Ante</th>
+                                    <th scope="col" style="width:50%;">Notes</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="results invisible" id="level1">
+                                    <td>1<sup>st</sup></td>
+                                    <td>30 mins</td>
+                                    <td>$5</td>
+                                    <td>$10</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr class="results invisible" id="level2">
+                                    <td>2<sup>nd</sup></td>
+                                    <td>30 mins</td>
+                                    <td>$10</td>
+                                    <td>$20</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr class="results invisible" id="level3">
+                                    <td>Break 1</td>
+                                    <td>10 mins</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>Extra $1000 worth of chips. Colouring up and removing $5 and $10 chips</td>
+                                </tr>
+                                <tr class="results invisible" id="level4">
+                                    <td>3<sup>rd</sup></td>
+                                    <td>30 mins</td>
+                                    <td>$25</td>
+                                    <td>$50</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+
+                                <tr class="results invisible" id="level5">
+                                    <td>4<sup>th</sup></td>
+                                    <td>30 mins</td>
+                                    <td>$50</td>
+                                    <td>$100</td>
+                                    <td></td>
+                                    <td></td>
+                                </tr>
+                                <tr class="results invisible" id="level6">
+                                    <td>Break 2</td>
+                                    <td>10 mins</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>Extra $1000 worth of chips. Colouring up and removing $25 chips</td>
+                                </tr>
+                                <tr class="results invisible" id="level7">
+                                    <td>5<sup>th</sup></td>
+                                    <td>20 mins</td>
+                                    <td>$100</td>
+                                    <td>$200</td>
+                                    <td>$25</td>
+                                    <td></td>
+                                </tr>
+                                <tr class="results invisible" id="level8">
+                                    <td>6<sup>th</sup></td>
+                                    <td>20 mins</td>
+                                    <td>$200</td>
+                                    <td>$400</td>
+                                    <td>$50</td>
+                                    <td></td>
+                                </tr>
+                                <tr class="results invisible" id="level9">
+                                    <td>7<sup>th</sup></td>
+                                    <td>20 mins</td>
+                                    <td>$300</td>
+                                    <td>$600</td>
+                                    <td>$50</td>
+                                    <td></td>
+                                </tr>
+                                <tr class="results invisible" id="level10">
+                                    <td>Break 3</td>
+                                    <td>10 mins</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>Last chance for a re-buy of $2000. Colouring up and removing $50 chips.</td>
+                                </tr>
+                                <tr class="results invisible" id="level11">
+                                    <td>8<sup>th</sup></td>
+                                    <td>20 mins</td>
+                                    <td>$500</td>
+                                    <td>$1,000</td>
+                                    <td>$100</td>
+                                    <td></td>
+                                </tr>
+                                <tr class="results invisible" id="level12">
+                                    <td>9<sup>th</sup></td>
+                                    <td>20 mins</td>
+                                    <td>$1,000</td>
+                                    <td>$2,000</td>
+                                    <td>$200</td>
+                                    <td></td>
+                                </tr>
+                                <tr class="results invisible" id="level13">
+                                    <td>10<sup>th</sup></td>
+                                    <td>20 mins</td>
+                                    <td>$2,000</td>
+                                    <td>$4,000</td>
+                                    <td>$500</td>
+                                    <td></td>
+                                </tr>
+                                <tr class="results invisible" id="level14">
+                                    <td>11<sup>th</sup></td>
+                                    <td>Unlimited</td>
+                                    <td>$5,000</td>
+                                    <td>$10,000</td>
+                                    <td>$1000</td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                </div>
+            </div>
+        </div>
+        <footer>
+            <p>&copy; BJIT website productions 2013</p>     <!-- TODO replace year with angular derived current year-->
+        </footer>
+
+    </div>
+    <!-- /container -->
+    <!--<script type="text/javascript" src="../js/controllers/event1.js"></script>-->
+</body>
+</html>

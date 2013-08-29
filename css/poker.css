@@ -1,0 +1,56 @@
+.results tbody tr th {
+    text-align:center;
+    font-size: 1.0em;
+}
+
+body
+{
+ background-color: #F0F0F0  ;
+ /* background-color: green  ; */
+
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+#newsTicker {
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    -ms-animation-duration: 2s;
+    -o-animation-duration: 1s;
+}
+
+.results tbody tr td {
+    text-align:center;
+}
+
+
+ /*--- ipad ---*/
+    /*--- full screen mode ---*/
+    @media (device-width: 768px) and (orientation: portrait) {
+        .panel {
+            height                      : 934px; /*1004-80*/
+        }
+    }
+    /*--- browser mode ---*/
+    @media (device-width: 768px) and (orientation: landscape) {
+        .panel {
+            height                      : 668px; /*748-80*/
+        }
+    }
+
+  /*--- iphone ---*/
+    /*--- full screen mode ---*/
+    @media (max-width: 480px) and (orientation: portrait) {
+        .panel {
+            height                      : 380px; /*460-80*/
+        }
+    }
+    /*--- browser mode ---*/
+    @media (max-width: 480px) and (orientation: landscape) {
+        .panel {
+            height                      : 220px; /*300-80*/
+        }
+    }
+

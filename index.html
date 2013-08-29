@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="poker" id="ng-app">
+<!-- the ng-app name 'poker' is referenced the corresponding controller logic -->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Poker Results</title>
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/poker.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="src/css/jumbotron.css" rel="stylesheet">
+    <script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+    <!-- temp local hosting until prod release -->
+    <script type="text/javascript" src="js/animations.js"></script>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <!-- temp local hosting until prod release -->
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <!--<script type="text/javascript" src="http://twitter.github.com/bootstrap/assets/js/bootstrap-dropdown.js"></script>-->
+</head>
+<body ng-controller="homePageController" ng-cloak>
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container" id="navigationBar">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">Home</a>
+
+        <div class="nav-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="dropdown" data-no-collapse="true">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Event History<b class="caret"></b></a>
+                    <ul class="dropdown-menu" >
+                        <li ng-repeat="event in homePageStatistics.events"><a href="{{event.url}}">{{event.eventDate}} @ {{event.location}}</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Players<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li ng-repeat="player in homePageStatistics.players | orderBy: ['name']"><a href="{{player.url}}">{{player.name}}</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Extras <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li ng-repeat="extra in homePageStatistics.extras"><a href="{{extra.url}}">{{extra.name}}</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!--/.nav-collapse -->
+    </div>
+</div>
+
+<div class="container">
+
+    <div class="jumbotron">
+        <h2 id="header1">'The Square' Poker Results.......</h2>
+
+        <p id="header2">
+            Here you'll find all the latest scores from each tournament held,
+            latest news, statistics and ammunition for bragging rights :)
+        </p>
+    </div>
+    <div class="body-content">
+        <h4 style="color:blue;" class="hidden" id="newsTicker"><b><i><span id="news">Latest News:</span></i></b> Event
+            IV pencilled in for <span id="nextEvent">Saturday 5th October 2013 - 7.30pm @ Pauls</span>....details to
+            come.....</h4>
+
+        <div class="row">
+            <div class="col-lg-6">
+                <h3>Current Ladder</h3>
+
+                <div>
+                    <table class="results table table-striped table-bordered table-condensed table-hover">
+                        <tr>
+                            <th>Position</th>
+                            <th style="text-align:left; padding-left:10px;">Name</th>
+                            <th>Played</th>
+                            <th>Won</th>
+                            <th>Average</th>
+                            <th>Points</th>
+                        </tr>
+                        <tr ng-repeat="result in homePageStatistics.players | orderBy: ['-points','-won', 'played', 'name']">
+                            <td>{{$index + 1}}<sup>{{positionSuffix($index + 1)}}</sup></td>
+                            <td style="text-align:left; padding-left:10px;"><a href="{{result.url}}">{{result.name}}</a>
+                            </td>
+                            <td>{{result.played}}</td>
+                            <td>{{result.won}}</td>
+                            <td>{{result.points / result.played | number:2}}</td>
+                            <td>{{result.points}}</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <h3>Event History</h3>
+                <table class="results table table-striped table-bordered table-condensed table-hover">
+                    <tr>
+                        <th>No.</th>
+                        <th>Date</th>
+                        <th>Location</th>
+                        <th>Tournaments</th>
+                    </tr>
+                    <tr ng-repeat="event in homePageStatistics.events">
+                        <td>{{$index + 1}}<sup>{{positionSuffix($index + 1)}}</sup></td>
+                        <td><a href="{{event.url}}">{{event.eventDate}}</a></td>
+                        <td>{{event.location}}</td>
+                        <td>{{event.noOfTournaments}}</td>
+                    </tr>
+                </table>
+            </div>
+            <hr>
+        </div>
+        <footer>
+            <p>&copy; BJIT website productions 2013</p>
+        </footer>
+
+    </div>
+    <!-- /container -->
+    <script type="text/javascript" src="js/controllers/homePage.js"></script>
+</body>
+</html>

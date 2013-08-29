@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="event1" id="ng-app">
+<!-- the ng-app name 'event1' is referenced the corresponding controller logic -->
+<head> `
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="player" content="brianM">
+    <title>Poker Results</title>
+    <!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <link href="../css/poker.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="src/css/jumbotron.css" rel="stylesheet">
+    <script type="text/javascript" src="../js/jquery-1.10.2.min.js"></script>
+    <!-- temp local hosting until prod release -->
+    <script type="text/javascript" src="../js/angular.min.js"></script>
+    <!-- temp local hosting until prod release -->
+    <script type="text/javascript" src="../js/bootstrap.js"></script>
+    <script type="text/javascript" src="http://twitter.github.com/bootstrap/assets/js/bootstrap-dropdown.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container" id="navigationBar">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="../index.html">Home</a>
+
+            <div class="nav-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="dropdown" data-no-collapse="true">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Event History<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../events/20130406.html">06/04/2013 @ Ben's</a></li>
+                            <li><a href="../events/20130511.html">11/05/2013 @ Brian's</a></li>
+                            <li><a href="../events/20130706.html">06/07/2013 @ Steve's</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Players<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../players/benI.html">Ben I</a></li>
+                            <li><a href="../players/brianM.html">Brian M</a></li>
+                            <li><a href="../players/daveM.html">Dave M</a></li>
+                            <li><a href="../players/jadeW.html">Jade W</a></li>
+                            <li><a href="../players/markL.html">Mark L</a></li>
+                            <li><a href="../players/markV.html">Mark V</a></li>
+                            <li><a href="../players/michaelR.html">Michael R</a></li>
+                            <li><a href="../players/paulB.html">Paul B</a></li>
+                            <li><a href="../players/simonM.html">Simon M</a></li>
+                            <li><a href="../players/steveW.html">Steve W</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Extras <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="blindLevels.html">Blind Levels</a></li>
+                            <li><a href="points.html">Points allocation</a></li>
+                            <li><a href="winningHands.html">Winning Hands</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+    </div>
+    <div class="container">
+
+        <div class="jumbotron">
+            <h2>Winning hands</h2>
+            <p>&nbsp;</p>
+            <p>Learn this by rote and you're half way there!</p>
+        </div>
+        <div class="body-content">
+            <div class="row">
+                <div class="col-lg-12">
+                    <img src="../images/winningHands.png" alt="Augusta Square" style="float:left; padding:10px">
+                </div>
+            </div>
+        </div>
+        <footer>
+            <p>&copy; BJIT website productions 2013</p>     <!-- TODO replace year with angular derived current year-->
+        </footer>
+
+    </div>
+    <!-- /container -->
+    <script type="text/javascript" src="../js/controllers/event1.js"></script>
+
+</body>
+</html>

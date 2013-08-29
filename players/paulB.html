@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="player" id="ng-app">
+<!-- the ng-app name 'event1' is referenced the corresponding controller logic -->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="player" content="paulB">
+    <title>Poker Results</title>
+    <!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <link href="../css/poker.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="src/css/jumbotron.css" rel="stylesheet">
+    <script type="text/javascript" src="../js/jquery-1.10.2.min.js"></script>
+    <!-- temp local hosting until prod release -->
+    <script type="text/javascript" src="../js/angular.min.js"></script>
+    <!-- temp local hosting until prod release -->
+    <script type="text/javascript" src="../js/bootstrap.js"></script>
+    <script type="text/javascript" src="http://twitter.github.com/bootstrap/assets/js/bootstrap-dropdown.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript" src="../js/playerResults.js"></script>
+    <script type="text/javascript" src="../js/charts/charts.js"></script>
+</head>
+<body ng-controller="playerController" ng-cloak>
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container" id="navigationBar">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html">Home</a>
+        <div class="nav-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="dropdown" data-no-collapse="true">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Event History<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li ng-repeat="event in playerDetails.events"><a href="{{event.url}}">{{event.eventDate}} @
+                            {{event.location}}</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Players<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li ng-repeat="player in playerDetails.results | orderBy: ['name']"><a href="{{player.url}}">{{player.name}}</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Extras <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li ng-repeat="extra in playerDetails.extras"><a href="{{extra.url}}">{{extra.name}}</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!--/.nav-collapse -->
+    </div>
+</div>
+<div class="container">
+
+    <div class="jumbotron">
+        <h2>Paul's statistics and analysis</h2>
+        <p>....because you can never have enough tables, charts and graphs.</p>
+        <p>&nbsp;</p>
+    </div>
+    <div class="body-content">
+        <div class="row">
+            <div class="col-lg-8">
+                <table class="results table table-striped table-bordered table-condensed table-hover">
+                    <tr>
+                        <th>Position</th>
+                        <th>Played</th>
+                        <th>Won</th>
+                        <th>Average</th>
+                        <th>Points</th>
+                    </tr>
+                    <tr>
+                        <td>4<sup>th</sup></td>
+                        <td>6</td>
+                        <td>0</td>
+                        <td>4.8</td>
+                        <td>29</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8">
+                <table class="results table table-striped table-bordered table-condensed table-hover">
+                    <tr>
+                        <th>Date</th>
+                        <th>Location</th>
+                        <th>Tournament No.</th>
+                        <th>Position</th>
+                        <th>No. of players</th>
+                        <th>Points</th>
+                    </tr>
+                    <tr>
+                        <td>06/04/2013</sup></td>
+                        <td>Ben's</td>
+                        <td>1<sup>st</sup></td>
+                        <td>6<sup>th</sup></td>
+                        <td>8</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>06/04/2013</sup></td>
+                        <td>Ben's</td>
+                        <td>2<sup>nd</sup></td>
+                        <td>6<sup>th</sup></td>
+                        <td>8</td>
+                        <td>3</td>
+                    </tr>
+                    <tr>
+                        <td>11/05/2013</sup></td>
+                        <td>Brian's</td>
+                        <td>1<sup>st</sup></td>
+                        <td>5<sup>th</sup></td>
+                        <td>6</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>11/05/2013</sup></td>
+                        <td>Brian's</td>
+                        <td>2<sup>nd</sup></td>
+                        <td>5<sup>th</sup></td>
+                        <td>6</td>
+                        <td>2</td>
+                    </tr>
+                    <tr>
+                        <td>06/07/2013</sup></td>
+                        <td>Steve's</td>
+                        <td>1<sup>st</sup></td>
+                        <td>3<sup>rd</sup></td>
+                        <td>8</td>
+                        <td>8</td>
+                    </tr>
+                    <tr>
+                        <td>06/07/2013</sup></td>
+                        <td>Steve's</td>
+                        <td>2<sup>nd</sup></td>
+                        <td>2<sup>nd</sup></td>
+                        <td>8</td>
+                        <td>11</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-8">
+                <table>
+                    <tr>
+                        <td>
+                            <div id="lineGraph_div"></div>
+                        </td>
+                        <td>&nbsp;</td>
+                        <td>
+                            <div id="pieChart_div"></div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <br/>
+
+        <div class="row">
+            <div class="col-lg-10">
+                <div id='chart_div'></div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; BJIT website productions 2013</p>
+    </footer>
+</div>
+<!-- /container -->
+<script type="text/javascript" src="../js/controllers/player.js"></script>
+</body>
+</html>
