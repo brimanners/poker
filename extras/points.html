@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="event1" id="ng-app">
+<html lang="en" ng-app="extras" id="ng-app">
 <!-- the ng-app name 'event1' is referenced the corresponding controller logic -->
 <head>
     <meta charset="utf-8">
@@ -21,7 +21,7 @@
     <script type="text/javascript" src="http://twitter.github.com/bootstrap/assets/js/bootstrap-dropdown.js"></script>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
 </head>
-<body>
+<body ng-controller="extrasController" ng-cloak>
 <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="container" id="navigationBar">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
@@ -36,32 +36,21 @@
                 <li class="dropdown" data-no-collapse="true">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Event History<b class="caret"></b></a>
                     <ul class="dropdown-menu">
-                        <li><a href="../events/20130406.html">06/04/2013 @ Ben's</a></li>
-                        <li><a href="../events/20130511.html">11/05/2013 @ Brian's</a></li>
-                        <li><a href="../events/20130706.html">06/07/2013 @ Steve's</a></li>
+                        <li ng-repeat="event in extraDetails.events"><a href="{{event.url}}">{{event.eventDate}} @
+                            {{event.location}}</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Players<b class="caret"></b></a>
                     <ul class="dropdown-menu">
-                        <li><a href="../players/benI.html">Ben I</a></li>
-                        <li><a href="../players/brianM.html">Brian M</a></li>
-                        <li><a href="../players/daveM.html">Dave M</a></li>
-                        <li><a href="../players/jadeW.html">Jade W</a></li>
-                        <li><a href="../players/markL.html">Mark L</a></li>
-                        <li><a href="../players/markV.html">Mark V</a></li>
-                        <li><a href="../players/michaelR.html">Michael R</a></li>
-                        <li><a href="../players/paulB.html">Paul B</a></li>
-                        <li><a href="../players/simonM.html">Simon M</a></li>
-                        <li><a href="../players/steveW.html">Steve W</a></li>
+                        <li ng-repeat="player in extraDetails.results | orderBy: ['name']"><a href="{{player.url}}">{{player.name}}</a>
+                        </li>
                     </ul>
                 </li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Extras <b class="caret"></b></a>
                     <ul class="dropdown-menu">
-                        <li><a href="blindLevels.html">Blind Levels</a></li>
-                        <li><a href="#">Points allocation</a></li>
-                        <li><a href="winningHands.html">Winning Hands</a></li>
+                        <li ng-repeat="extra in extraDetails.extras"><a href="{{extra.url}}">{{extra.name}}</a></li>
                     </ul>
                 </li>
             </ul>
@@ -72,14 +61,17 @@
 <div class="container">
 
     <div class="jumbotron">
-        <h2>Championship points</h2>
+        <h2>Position and points</h2>
+
         <p>&nbsp;</p>
-        <p>....because it's what we're really here for!</p>
+
+        <p>....because (apart from the beer, snacks and witty banter), it's what we're really here for!</p>
     </div>
     <div class="body-content">
         <div class="row">
             <div class="col-lg-12">
-                <p>Simple equation: The more players, the more points, with bonus points for the top 3 when up to 8 players, and
+                <p>Simple equation: The more players, the more points, with bonus points for the top 3 when up to 8
+                    players, and
                     bonus points for the top 4 when more than 8 players.
                 </p>
                 <table class="table table-striped table-bordered table-condensed table-hover">
@@ -171,7 +163,7 @@
 
 </div>
 <!-- /container -->
-<script type="text/javascript" src="../js/controllers/event1.js"></script>
+<script type="text/javascript" src="../js/controllers/extras.js"></script>
 
 </body>
 </html>
