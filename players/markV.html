@@ -75,12 +75,12 @@
                         <th>Average</th>
                         <th>Points</th>
                     </tr>
-                    <tr>
-                        <td>6<sup>th</sup></td>
-                        <td>4</td>
-                        <td>2</td>
-                        <td>6.3</td>
-                        <td>25</td>
+                    <tr ng-show="result.name == 'Mark V'" ng-repeat="result in playerDetails.results | orderBy: ['-points','-won', 'played', 'name']">
+                        <td>{{$index + 1}}<sup>{{positionSuffix($index + 1)}}</sup></td>
+                        <td>{{result.played}}</td>
+                        <td>{{result.won}}</td>
+                        <td>{{result.points / result.played | number:2}}</td>
+                        <td>{{result.points}}</td>
                     </tr>
                 </table>
             </div>

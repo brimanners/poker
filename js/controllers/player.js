@@ -4,6 +4,15 @@ var player = angular.module('player', []);
 player.controller('playerController', function ($scope, $http) {
    var playerDetails = {};
 
+   $scope.positionSuffix = function(position) {
+           switch (position) {
+              case 1 : return "st"; break;
+              case 2 : return "nd"; break;
+              case 3 : return "rd"; break;
+              default : return "th"; break;
+           }
+   }
+
    $http.get('../json/event-history.json').success(function (data) {
            playerDetails.events = data;
            getUrlForEvents(playerDetails.events);
