@@ -1,5 +1,7 @@
 var ladderModule = angular.module('poker', []);        // poker module is the name of the ng-app on the template
 
+
+// This is a test for GIT !!!
 ladderModule.controller('homePageController', function ($scope, $http) {
     populateDetailsFromJson($scope, $http);   // calls ajax request to read ladder results from json file generated via clojure app :)
 
