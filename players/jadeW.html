@@ -93,61 +93,13 @@
         <div class="row">
             <div class="col-lg-8">
                 <table class="results table table-striped table-bordered table-condensed table-hover">
-                    <tr>
-                        <th>Date</th>
-                        <th>Location</th>
-                        <th>Tournament No.</th>
-                        <th>Position</th>
-                        <th>No. of players</th>
-                        <th>Points</th>
-                    </tr>
-                    <tr>
-                        <td>06/04/2013</sup></td>
-                        <td>Ben's</td>
-                        <td>1<sup>st</sup></td>
-                        <td>7<sup>th</sup></td>
-                        <td>8</td>
-                        <td>2</td>
-                    </tr>
-                    <tr>
-                        <td>06/04/2013</sup></td>
-                        <td>Ben's</td>
-                        <td>2<sup>nd</sup></td>
-                        <td>5<sup>th</sup></td>
-                        <td>8</td>
-                        <td>4</td>
-                    </tr>
-                    <tr>
-                        <td>11/05/2013</sup></td>
-                        <td>Brian's</td>
-                        <td>1<sup>st</sup></td>
-                        <td>4<sup>th</sup></td>
-                        <td>6</td>
-                        <td>3</td>
-                    </tr>
-                    <tr>
-                        <td>11/05/2013</sup></td>
-                        <td>Brian's</td>
-                        <td>2<sup>nd</sup></td>
-                        <td>2<sup>nd</sup></td>
-                        <td>6</td>
-                        <td>7</td>
-                    </tr>
-                    <tr>
-                        <td>06/07/2013</sup></td>
-                        <td>Steve's</td>
-                        <td>1<sup>st</sup></td>
-                        <td>1<sup>st</sup></td>
-                        <td>8</td>
-                        <td>14</td>
-                    </tr>
-                    <tr>
-                        <td>06/07/2013</sup></td>
-                        <td>Steve's</td>
-                        <td>2<sup>nd</sup></td>
-                        <td>8<sup>th</sup></td>
-                        <td>8</td>
-                        <td>1</td>
+                    <tr ng-repeat="event in playerDetails.eventDetails">
+                        <td>{{event.eventDate}}</td>
+                        <td>{{event.location}}</td>
+                        <td>{{event.tournament}}<sup>{{positionSuffix(event.tournament)}}</sup></td>
+                        <td>{{event.position}}<sup>{{positionSuffix(event.position)}}</sup></td>
+                        <td>{{event.noOfPlayers}}</td>
+                        <td>{{event.points}}</td>
                     </tr>
                 </table>
             </div>

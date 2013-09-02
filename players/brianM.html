@@ -37,7 +37,8 @@
                 <li class="dropdown" data-no-collapse="true">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Event History<b class="caret"></b></a>
                     <ul class="dropdown-menu">
-                        <li ng-repeat="event in playerDetails.events"><a href="{{event.url}}">{{event.eventDate}} @ {{event.location}}</a></li>
+                        <li ng-repeat="event in playerDetails.events"><a href="{{event.url}}">{{event.eventDate}} @
+                            {{event.location}}</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
@@ -77,12 +78,12 @@
                         <th>Points</th>
                     </tr>
                     <tr ng-show="result.name == 'Brian M'" ng-repeat="result in playerDetails.results | orderBy: ['-points','-won', 'played', 'name']">
-                       <td>{{$index + 1}}<sup>{{positionSuffix($index + 1)}}</sup></td>
-                       <td>{{result.played}}</td>
-                       <td>{{result.won}}</td>
-                       <td>{{result.points / result.played | number:2}}</td>
-                       <td>{{result.points}}</td>
-                   </tr>
+                        <td>{{$index + 1}}<sup>{{positionSuffix($index + 1)}}</sup></td>
+                        <td>{{result.played}}</td>
+                        <td>{{result.won}}</td>
+                        <td>{{result.points / result.played | number:2}}</td>
+                        <td>{{result.points}}</td>
+                    </tr>
                 </table>
             </div>
         </div>
@@ -97,53 +98,13 @@
                         <th>No. of players</th>
                         <th>Points</th>
                     </tr>
-                    <tr>
-                        <td>06/04/2013</td>
-                        <td>Ben's</td>
-                        <td>1<sup>st</sup></td>
-                        <td>1<sup>st</sup></td>
-                        <td>8</td>
-                        <td>14</td>
-                    </tr>
-                    <tr>
-                        <td>06/04/2013</td>
-                        <td>Ben's</td>
-                        <td>2<sup>nd</sup></td>
-                        <td>7<sup>th</sup></td>
-                        <td>8</td>
-                        <td>2</td>
-                    </tr>
-                    <tr>
-                        <td>11/05/2013</td>
-                        <td>Brian's</td>
-                        <td>1<sup>st</sup></td>
-                        <td>3<sup>rd</sup></td>
-                        <td>6</td>
-                        <td>5</td>
-                    </tr>
-                    <tr>
-                        <td>11/05/2013</td>
-                        <td>Brian's</td>
-                        <td>2<sup>nd</sup></td>
-                        <td>4<sup>th</sup></td>
-                        <td>6</td>
-                        <td>3</td>
-                    </tr>
-                    <tr>
-                        <td>06/07/2013</td>
-                        <td>Steve's</td>
-                        <td>1<sup>st</sup></td>
-                        <td>6<sup>th</sup></td>
-                        <td>8</td>
-                        <td>3</td>
-                    </tr>
-                    <tr>
-                        <td>06/07/2013</td>
-                        <td>Steve's</td>
-                        <td>2<sup>nd</sup></td>
-                        <td>5<sup>th</sup></td>
-                        <td>8</td>
-                        <td>4</td>
+                    <tr ng-repeat="event in playerDetails.eventDetails">
+                        <td>{{event.eventDate}}</td>
+                        <td>{{event.location}}</td>
+                        <td>{{event.tournament}}<sup>{{positionSuffix(event.tournament)}}</sup></td>
+                        <td>{{event.position}}<sup>{{positionSuffix(event.position)}}</sup></td>
+                        <td>{{event.noOfPlayers}}</td>
+                        <td>{{event.points}}</td>
                     </tr>
                 </table>
             </div>

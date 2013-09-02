@@ -1,6 +1,5 @@
 var player = angular.module('player', []);
 
-
 player.controller('playerController', function ($scope, $http) {
    var playerDetails = {};
 
@@ -26,6 +25,11 @@ player.controller('playerController', function ($scope, $http) {
    $http.get('../json/extras.json').success(function (data) {
          playerDetails.extras = data;
    });
+
+   var player = $('meta[name="player"]').attr("content");
+   $http.get('../json/' + player + '_event_history.json').success(function (data) {
+            playerDetails.eventDetails = data;
+    });
 
     $scope.playerDetails = playerDetails;
 });
