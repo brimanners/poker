@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
+    <meta name="eventDate" content="06_07_2013">
+    <meta name="noOfTournaments" content="2">
     <title>Poker Results</title>
     <!-- Bootstrap core CSS -->
     <link href="../css/bootstrap.css" rel="stylesheet">
@@ -77,10 +79,10 @@
                     <th>Players</th>
                 </tr>
                 <tr>
-                    <td>06/07/2013</sup></td>
-                    <td>Steve's</td>
-                    <td>1<sup>st</sup></td>
-                    <td>8</td>
+                    <td>{{tournaments.tournamentOne[0].eventDate}}</sup></td>
+                    <td>{{tournaments.tournamentOne[0].location}}</td>
+                    <td>{{tournaments.tournamentOne[0].tournament}}</td>
+                    <td>{{tournaments.tournamentOne[0].noOfPlayers}}</td>
                 </tr>
             </table>
         </div>
@@ -95,10 +97,10 @@
                     <th>Players</th>
                 </tr>
                 <tr>
-                    <td>06/07/2013</sup></td>
-                    <td>Steve's</td>
-                    <td>2<sup>nd</sup></td>
-                    <td>8</td>
+                    <td>{{tournaments.tournamentTwo[0].eventDate}}</sup></td>
+                    <td>{{tournaments.tournamentTwo[0].location}}</td>
+                    <td>{{tournaments.tournamentTwo[0].tournament}}</td>
+                    <td>{{tournaments.tournamentTwo[0].noOfPlayers}}</td>
                 </tr>
             </table>
         </div>
