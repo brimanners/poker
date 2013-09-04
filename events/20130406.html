@@ -113,9 +113,9 @@
                     <th style="text-align:left; padding-left:10px;">Name</th>
                     <th>Points</th>
                 </tr>
-                <tr ng-repeat="result in results.tournamentOne">
+                <tr ng-show="result.event == 1 && result.tournament == 1" ng-repeat="result in results.eventResults | orderBy: ['event','tournament', '-points']">
                     <td>{{$index + 1}}<sup>{{positionSuffix($index + 1)}}</sup></td>
-                    <td style="text-align:left; padding-left:10px;">{{result.forename}} {{result.surname}}</td>
+                    <td style="text-align:left; padding-left:10px;">{{result.name}}</td>
                     <td>{{result.points}}</td>
                 </tr>
             </table>
@@ -130,9 +130,9 @@
                     <th style="text-align:left; padding-left:10px;">Name</th>
                     <th>Points</th>
                 </tr>
-                <tr ng-repeat="result in results.tournamentTwo">
+                <tr ng-show="result.event == 1 && result.tournament == 2" ng-repeat="result in results.eventResults | orderBy: ['event','tournament', '-points']">
                     <td>{{$index + 1}}<sup>{{positionSuffix($index + 1)}}</sup></td>
-                    <td style="text-align:left; padding-left:10px;">{{result.forename}} {{result.surname}}</td>
+                    <td style="text-align:left; padding-left:10px;">{{result.name}}</td>
                     <td>{{result.points}}</td>
                 </tr>
             </table>

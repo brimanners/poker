@@ -5,27 +5,6 @@ eventModule.controller('event1-controller', function ($scope, $http) {
       var tournaments = {};
 
       // This will eventually be either copied and pasted from Clojure app, or called directly when the clojure app is wrapped up into an uberjar and hosted?
-      results.tournamentOne = [            // Doesn't seem to like numbers in the name?
-                        {"forename":"Brian","surname":"M","points":14},
-                        {"forename":"Ben","surname":"I","points":11},
-                        {"forename":"Steve","surname":"W","points":8},
-                        {"forename":"Dave","surname":"M","points":5},
-                        {"forename":"Mark","surname":"L","points":4},
-                        {"forename":"Paul","surname":"B","points":3},
-                        {"forename":"Jade","surname":"W","points":2},
-                        {"forename":"Michael","surname":"R","points":1}
-                      ];
-
-      results.tournamentTwo = [
-                        {"forename":"Mark","surname":"L","points":14},
-                        {"forename":"Ben","surname":"I","points":11},
-                        {"forename":"Steve","surname":"W","points":8},
-                        {"forename":"Dave","surname":"M","points":5},
-                        {"forename":"Jade","surname":"W","points":4},
-                        {"forename":"Paul","surname":"B","points":3},
-                        {"forename":"Brian","surname":"M","points":2},
-                        {"forename":"Michael","surname":"R","points":1}
-                      ];
 
        results.ladder = [
                          {"won":0,"forename":"Steve","points":16,"surname":"W","average":8.0,"played":2},
@@ -75,6 +54,9 @@ eventModule.controller('event1-controller', function ($scope, $http) {
         getUrlForEvents(results.events);
     });
 
+    $http.get('../json/event_results.json').success(function (data) {
+       results.eventResults = data; /* Tournament results - i.e. position, player and points */
+    });
 
      $http.get('../json/current-table.json').success(function (data) {
         results.results = data;
