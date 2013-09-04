@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="event1" id="ng-app">
+<html lang="en" ng-app="event" id="ng-app">
 <!-- the ng-app name 'event1' is referenced the corresponding controller logic -->
 <head> `
     <meta charset="utf-8">
@@ -21,7 +21,7 @@
     <script type="text/javascript" src="../js/bootstrap.js"></script>
     <script type="text/javascript" src="http://twitter.github.com/bootstrap/assets/js/bootstrap-dropdown.js"></script>
 </head>
-<body ng-controller="event1-controller" ng-cloak>
+<body ng-controller="event-controller" ng-cloak>
 <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="container" id="navigationBar">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
@@ -114,7 +114,7 @@
                     <th>Points</th>
                 </tr>
                 <tr ng-show="result.event == 1 && result.tournament == 1" ng-repeat="result in results.eventResults | orderBy: ['event','tournament', '-points']">
-                    <td>{{$index + 1}}<sup>{{positionSuffix($index + 1)}}</sup></td>
+                    <td>{{result.position}}<sup>{{positionSuffix(result.position)}}</sup></td>
                     <td style="text-align:left; padding-left:10px;">{{result.name}}</td>
                     <td>{{result.points}}</td>
                 </tr>
@@ -131,7 +131,7 @@
                     <th>Points</th>
                 </tr>
                 <tr ng-show="result.event == 1 && result.tournament == 2" ng-repeat="result in results.eventResults | orderBy: ['event','tournament', '-points']">
-                    <td>{{$index + 1}}<sup>{{positionSuffix($index + 1)}}</sup></td>
+                    <td>{{result.position}}<sup>{{positionSuffix(result.position)}}</sup></td>
                     <td style="text-align:left; padding-left:10px;">{{result.name}}</td>
                     <td>{{result.points}}</td>
                 </tr>
@@ -284,7 +284,7 @@
 
 </div>
 <!-- /container -->
-<script type="text/javascript" src="../js/controllers/event1.js"></script>
+<script type="text/javascript" src="../js/controllers/events.js"></script>
 
 </body>
 </html>
