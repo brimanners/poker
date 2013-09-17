@@ -7,15 +7,40 @@ eventModule.controller('event-controller', function ($scope, $http) {
       // This will eventually be either copied and pasted from Clojure app, or called directly when the clojure app is wrapped up into an uberjar and hosted?
 
        results.ladder = [
-                         {"won":0,"forename":"Steve","points":16,"surname":"W","average":8.0,"played":2},
-                         {"won":0,"forename":"Dave","points":10,"surname":"M","average":5.0,"played":2},
-                         {"won":1,"forename":"Brian","points":16,"surname":"M","average":8.0,"played":2},
-                         {"won":0,"forename":"Michael","points":2,"surname":"R","average":1.0,"played":2},
-                         {"won":0,"forename":"Jade","points":6,"surname":"W","average":3.0,"played":2},
-                         {"won":0,"forename":"Ben","points":22,"surname":"I","average":11.0,"played":2},
-                         {"won":0,"forename":"Paul","points":6,"surname":"B","average":3.0,"played":2},
-                         {"won":1,"forename":"Mark","points":18,"surname":"L","average":9.0,"played":2},
-                        ];
+             {"won":0,"forename":"Steve","points":16,"surname":"W","average":8.0,"played":2},
+             {"won":0,"forename":"Dave","points":10,"surname":"M","average":5.0,"played":2},
+             {"won":1,"forename":"Brian","points":16,"surname":"M","average":8.0,"played":2},
+             {"won":0,"forename":"Michael","points":2,"surname":"R","average":1.0,"played":2},
+             {"won":0,"forename":"Jade","points":6,"surname":"W","average":3.0,"played":2},
+             {"won":0,"forename":"Ben","points":22,"surname":"I","average":11.0,"played":2},
+             {"won":0,"forename":"Paul","points":6,"surname":"B","average":3.0,"played":2},
+             {"won":1,"forename":"Mark","points":18,"surname":"L","average":9.0,"played":2},
+            ];
+
+        results.ladderFour = [
+             {"won":0,"forename":"Steve","points":22,"surname":"W","average":5.5,"played":4},
+             {"won":0,"forename":"Dave","points":10,"surname":"M","average":5.0,"played":2},
+             {"won":1,"forename":"Brian","points":24,"surname":"M","average":6.0,"played":4},
+             {"won":0,"forename":"Michael","points":2,"surname":"R","average":1.0,"played":2},
+             {"won":0,"forename":"Jade","points":16,"surname":"W","average":4.0,"played":4},
+             {"won":0,"forename":"Ben","points":30,"surname":"I","average":7.5,"played":4},
+             {"won":0,"forename":"Paul","points":10,"surname":"B","average":2.5,"played":4},
+             {"won":1,"forename":"Mark","points":18,"surname":"L","average":9.0,"played":2},
+             {"won":2,"forename":"Mark","points":18,"surname":"V","average":9.0,"played":2}
+            ];
+
+        results.ladderSix = [
+             {"won":0,"forename":"Steve","points":29,"surname":"W","average":4.8,"played":6},
+             {"won":0,"forename":"Dave","points":17,"surname":"M","average":4.3,"played":4},
+             {"won":1,"forename":"Brian","points":31,"surname":"M","average":5.2,"played":6},
+             {"won":0,"forename":"Michael","points":2,"surname":"R","average":1.0,"played":2},
+             {"won":1,"forename":"Jade","points":31,"surname":"W","average":5.2,"played":6},
+             {"won":0,"forename":"Ben","points":49,"surname":"I","average":8.2,"played":6},
+             {"won":0,"forename":"Paul","points":29,"surname":"B","average":4.8,"played":6},
+             {"won":1,"forename":"Mark","points":18,"surname":"L","average":9.0,"played":2},
+             {"won":2,"forename":"Mark","points":25,"surname":"V","average":6.3,"played":4},
+             {"won":1,"forename":"Simon","points":15,"surname":"M","average":7.5,"played":2}
+                                                ];
 
 
       var eventDate = $('meta[name="eventDate"]').attr("content");

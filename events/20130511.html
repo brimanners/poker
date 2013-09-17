@@ -155,7 +155,7 @@
                     <th>Points</th>
                 </tr>
                 </tr>
-                <tr ng-repeat="result in results.ladder | orderBy: ['-points','-won', 'played', 'forename', 'surname']">
+                <tr ng-repeat="result in results.ladderFour | orderBy: ['-points','-won', 'played', 'forename', 'surname']">
                     <td>{{$index + 1}}<sup>{{positionSuffix($index + 1)}}</sup></td>
                     <td style="text-align:left; padding-left:10px;">{{result.forename}} {{result.surname}}</td>
                     <td>{{result.played}}</td>
