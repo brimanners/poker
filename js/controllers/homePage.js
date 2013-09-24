@@ -18,7 +18,7 @@ function populateDetailsFromJson ($scope, $http)  {
     var statistics = {};
 
     $http.get('json/current-table.json').success(function (data) {
-        statistics.players = data;
+        statistics.players = data[0].event4;
         getUrlsForPlayers(statistics.players);
     });
 
