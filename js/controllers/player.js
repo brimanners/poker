@@ -18,7 +18,7 @@ player.controller('playerController', function ($scope, $http) {
    });
 
    $http.get('../json/current-table.json').success(function (data) {
-      playerDetails.results = data;
+      playerDetails.results = data[0]["event" + data.length];
       getUrlsForPlayers(playerDetails.results);
    });
 

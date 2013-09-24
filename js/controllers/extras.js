@@ -9,7 +9,7 @@ extras.controller('extrasController', function ($scope, $http) {
    });
 
    $http.get('../json/current-table.json').success(function (data) {
-      extraDetails.results = data;
+      extraDetails.results = data[0]["event" + data.length]
       getUrlsForPlayers(extraDetails.results);
    });
 

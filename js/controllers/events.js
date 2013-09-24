@@ -42,11 +42,13 @@ eventModule.controller('event-controller', function ($scope, $http) {
     });
 
     $http.get('../json/current-table.json').success(function (data) {
-        results.ladderEvent1 = data[3].event1;                       // TODO could do this in a loop based on total events
-        results.ladderEvent2 = data[2].event2;
-        results.ladderEvent3 = data[1].event3;
-        results.ladderEvent4 = data[0].event4;
-        results.results = data;                     // do we need this? used in next line but can in line
+        var eventTables = {};
+        var noOfTourneys = data.length;
+        for (i = 0; i < noOfTourneys; i ++) {
+            eventTables[i + 1] = data[noOfTourneys - 1 - i]["event" + (i + 1)];
+            results.eventTables = eventTables;
+        }
+        results.results = data[0]["event" + noOfTourneys];                     // do we need this? used in next line but can in line
         getUrlsForPlayers(results.results);
      });
 
