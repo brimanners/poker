@@ -40,7 +40,20 @@ eventModule.controller('event-controller', function ($scope, $http) {
              {"won":1,"forename":"Mark","points":18,"surname":"L","average":9.0,"played":2},
              {"won":2,"forename":"Mark","points":25,"surname":"V","average":6.3,"played":4},
              {"won":1,"forename":"Simon","points":15,"surname":"M","average":7.5,"played":2}
-                                                ];
+        ];
+
+        results.ladderSeven = [
+             {"won":0,"forename":"Steve","points":0,"surname":"W","average":0,"played":7},
+             {"won":0,"forename":"Dave","points":0,"surname":"M","average":0,"played":5},
+             {"won":0,"forename":"Brian","points":0,"surname":"M","average":0,"played":7},
+             {"won":0,"forename":"Michael","points":0,"surname":"R","average":0,"played":2},
+             {"won":0,"forename":"Jade","points":0,"surname":"W","average":0,"played":7},
+             {"won":0,"forename":"Ben","points":0,"surname":"I","average":0,"played":7},
+             {"won":0,"forename":"Paul","points":0,"surname":"B","average":0,"played":7},
+             {"won":0,"forename":"Mark","points":0,"surname":"L","average":0,"played":3},
+             {"won":0,"forename":"Mark","points":0,"surname":"V","average":0,"played":5},
+             {"won":0,"forename":"Simon","points":0,"surname":"M","average":0,"played":2}
+        ];
 
 
       var eventDate = $('meta[name="eventDate"]').attr("content");
