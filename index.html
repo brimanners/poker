@@ -20,8 +20,15 @@
     <!-- temp local hosting until prod release -->
     <script type="text/javascript" src="js/bootstrap.js"></script>
     <!--<script type="text/javascript" src="http://twitter.github.com/bootstrap/assets/js/bootstrap-dropdown.js"></script>-->
+
+     <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+     <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+     <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+     <link rel="stylesheet" href="/resources/demos/style.css" />
+
+
 </head>
-<body ng-controller="homePageController" ng-cloak>
+<body ng-controller="homePageController" ng-cloak class="yui3-skin-sam">
 <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="container" id="navigationBar">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
@@ -70,9 +77,28 @@
     <div class="body-content">
         <h4 style="color:blue;" class="hidden" id="newsTicker"><b><i><span id="news">Latest News:</span></i></b> Event
             IV confirmed - <span id="nextEvent">Saturday 5th October 2013 - 7.30pm @ Paul's (arrive 7pm onwards)</span>....8 runners so far.....</h4>
+
         <div class="row">
             <div class="col-lg-6">
-                <h3>Current Ladder</h3>
+                <table>
+                    <tr>
+                        <td>
+                            <h3>Ladder after event number:
+                                <!--<span id="eventId">{{noOfTourneys}}</span>-->
+                            </h3>
+                        </td>
+                        <td style="padding-left:10px;">
+                            <select ng-model="eventId" ng-change="tableChanged()">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                            </select>
+                        </td>
+                        <!--<td style="padding-left:20px">-->
+                            <!--<div id="slider" style="width: 100px" ng-model="ngEventId" ng-model-onblur ng-change="tableChanged()"></div>-->
+                        <!--</td>-->
+                    </tr>
+                </table>
                 <div>
                     <table class="results table table-striped table-bordered table-condensed table-hover">
                         <tr>
@@ -83,15 +109,14 @@
                             <th>Average</th>
                             <th>Points</th>
                         </tr>
-                        <tr ng-repeat="result in homePageStatistics.players | orderBy: ['-points','-won', 'played', 'name']">
-                            <td>{{$index + 1}}<sup>{{positionSuffix($index + 1)}}</sup></td>
-                            <td style="text-align:left; padding-left:10px;"><a href="{{result.url}}">{{result.name}}</a>
-                            </td>
-                            <td>{{result.played}}</td>
-                            <td>{{result.won}}</td>
-                            <td>{{result.points / result.played | number:2}}</td>
-                            <td>{{result.points}}</td>
-                        </tr>
+                        <tr ng-repeat="result in displayTable | filter:gotPoints | orderBy: ['-points','-won', 'played', 'name']">
+                           <td>{{$index + 1}}<sup>{{positionSuffix($index + 1)}}</sup></td>
+                           <td style="text-align:left; padding-left:10px;"><a href="{{result.url}}">{{result.name}}</a></td>
+                           <td>{{result.played}}</td>
+                           <td>{{result.won}}</td>
+                           <td>{{result.points / result.played | number:2}}</td>
+                           <td>{{result.points}}</td>
+                       </tr>
                     </table>
                 </div>
             </div>

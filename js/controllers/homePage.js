@@ -1,7 +1,10 @@
 var ladderModule = angular.module('poker', []);        // poker module is the name of the ng-app on the template
+var noOfTourneys = 3;
 
 ladderModule.controller('homePageController', function ($scope, $http) {
     populateDetailsFromJson($scope, $http);   // calls ajax request to read ladder results from json file generated via clojure app :)
+    $scope.eventId = 3;
+    $scope.displayTable = [];
 
     // this function feel like they should be a in general util type area - need to work out scoping so all angular controller can see....
     $scope.positionSuffix = function(position) {
@@ -12,14 +15,34 @@ ladderModule.controller('homePageController', function ($scope, $http) {
            default : return "th"; break;
         }
     }
+
+    $scope.tableChanged = function() {
+//    alert("table changed event fired ");
+        $scope.displayTable = $scope.homePageStatistics.eventTables[$scope.eventId];
+    }
+
+    $scope.gotPoints = function(result) {
+          return result.points > 0
+    };
+
 });
 
 function populateDetailsFromJson ($scope, $http)  {
     var statistics = {};
+    var eventTables = {};
 
     $http.get('json/current-table.json').success(function (data) {
-        statistics.players = data[0]["event" + data.length];
+        noOfTourneys = data.length;
+        statistics.players = data[0]["event" + noOfTourneys];
+        for (i = 0; i < noOfTourneys; i ++) {
+             eventTables[i + 1] = data[noOfTourneys - 1 - i]["event" + (i + 1)];
+             statistics.eventTables = eventTables;
+         }
+         $scope.displayTable = eventTables[noOfTourneys];
+
         getUrlsForPlayers(statistics.players);
+        $scope.homePageStatistics = statistics;
+        $scope.noOfTourneys = noOfTourneys;
     });
 
     $http.get('json/event-history.json').success(function (data) {
@@ -54,3 +77,17 @@ function stripUrlPrefix(extras) {
         extras[i].url = extras[i].url.replace("../","");
     }
 }
+
+
+$(document).ready(function() {
+    $("#slider").slider({
+        min: 1,
+        max: 3,
+        value: noOfTourneys,
+        slide: function( event, ui ) {
+            $( "#event" ).val(ui.value);
+
+        }
+    });
+    $("#event").val($( "#slider").slider("value"));
+});
