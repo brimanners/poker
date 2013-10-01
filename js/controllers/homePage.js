@@ -1,9 +1,7 @@
 var ladderModule = angular.module('poker', []);        // poker module is the name of the ng-app on the template
-var noOfTourneys = 3;
 
 ladderModule.controller('homePageController', function ($scope, $http) {
     populateDetailsFromJson($scope, $http);   // calls ajax request to read ladder results from json file generated via clojure app :)
-    $scope.eventId = 3;
     $scope.displayTable = [];
 
     // this function feel like they should be a in general util type area - need to work out scoping so all angular controller can see....
@@ -17,7 +15,6 @@ ladderModule.controller('homePageController', function ($scope, $http) {
     }
 
     $scope.tableChanged = function() {
-//    alert("table changed event fired ");
         $scope.displayTable = $scope.homePageStatistics.eventTables[$scope.eventId];
     }
 
@@ -33,6 +30,7 @@ function populateDetailsFromJson ($scope, $http)  {
 
     $http.get('json/current-table.json').success(function (data) {
         noOfTourneys = data.length;
+        $scope.eventId = noOfTourneys;
         statistics.players = data[0]["event" + noOfTourneys];
         for (i = 0; i < noOfTourneys; i ++) {
              eventTables[i + 1] = data[noOfTourneys - 1 - i]["event" + (i + 1)];
@@ -79,15 +77,16 @@ function stripUrlPrefix(extras) {
 }
 
 
-$(document).ready(function() {
-    $("#slider").slider({
-        min: 1,
-        max: 3,
-        value: noOfTourneys,
-        slide: function( event, ui ) {
-            $( "#event" ).val(ui.value);
 
-        }
-    });
-    $("#event").val($( "#slider").slider("value"));
+$(document).ready(function() {
+//    $("#slider").slider({
+//        min: 1,
+//        max: 3,
+//        value: noOfTourneys,
+//        slide: function( event, ui ) {
+//            $( "#event" ).val(ui.value);
+//
+//        }
+//    });
+//    $("#event").val($( "#slider").slider("value"));
 });

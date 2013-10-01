@@ -11,6 +11,7 @@
     <!-- Bootstrap core CSS -->
     <link href="../css/bootstrap.css" rel="stylesheet">
     <link href="../css/poker.css" rel="stylesheet">
+    <link href="../css/animate.min.css" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="src/css/jumbotron.css" rel="stylesheet">
     <script type="text/javascript" src="../js/jquery-1.10.2.min.js"></script>
@@ -20,6 +21,7 @@
     <script type="text/javascript" src="../js/bootstrap.js"></script>
     <script type="text/javascript" src="http://twitter.github.com/bootstrap/assets/js/bootstrap-dropdown.js"></script>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript" src="../js/animateRows.js"></script>
 </head>
 <body ng-controller="extrasController" ng-cloak>
 <div class="navbar navbar-inverse navbar-fixed-top">
@@ -83,7 +85,7 @@
                         <th>7 players</th>
                         <th>6 players</th>
                     </tr>
-                    <tr>
+                    <tr class="results invisible" id="level2">
                         <td>1st</td>
                         <td>18</td>
                         <td>17</td>
@@ -91,7 +93,7 @@
                         <td>10</td>
                         <td>9</td>
                     </tr>
-                    <tr>
+                    <tr class="results invisible" id="level3">
                         <td>2nd</td>
                         <td>15</td>
                         <td>14</td>
@@ -99,7 +101,7 @@
                         <td>8</td>
                         <td>7</td>
                     </tr>
-                    <tr>
+                    <tr class="results invisible" id="level4">
                         <td>3rd</td>
                         <td>12</td>
                         <td>11</td>
@@ -107,7 +109,7 @@
                         <td>6</td>
                         <td>5</td>
                     </tr>
-                    <tr>
+                    <tr class="results invisible" id="level5">
                         <td>4th</td>
                         <td>9</td>
                         <td>8</td>
@@ -115,7 +117,7 @@
                         <td>4</td>
                         <td>3</td>
                     </tr>
-                    <tr>
+                    <tr class="results invisible" id="level6">
                         <td>5th</td>
                         <td>6</td>
                         <td>5</td>
@@ -123,7 +125,7 @@
                         <td>3</td>
                         <td>2</td>
                     </tr>
-                    <tr>
+                    <tr class="results invisible" id="level7">
                         <td>6th</td>
                         <td>5</td>
                         <td>4</td>
@@ -131,25 +133,25 @@
                         <td>2</td>
                         <td>1</td>
                     </tr>
-                    <tr>
+                    <tr class="results invisible" id="level8">
                         <td>7th</td>
                         <td>4</td>
                         <td>3</td>
                         <td>2</td>
                         <td>1</td>
                     </tr>
-                    <tr>
+                    <tr class="results invisible" id="level9">
                         <td>8th</td>
                         <td>3</td>
                         <td>2</td>
                         <td>1</td>
                     </tr>
-                    <tr>
+                    <tr class="results invisible" id="level10">
                         <td>9th</td>
                         <td>2</td>
                         <td>1</td>
                     </tr>
-                    <tr>
+                    <tr class="results invisible" id="level11">
                         <td>10th</td>
                         <td>1</td>
                     </tr>
