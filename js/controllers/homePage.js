@@ -15,7 +15,16 @@ ladderModule.controller('homePageController', function ($scope, $http) {
     }
 
     $scope.tableChanged = function() {
+        $("#ladder").addClass('animated hinge')
         $scope.displayTable = $scope.homePageStatistics.eventTables[$scope.eventId];
+        setTimeout (function () {
+            $("#ladder").removeClass('animated hinge');
+
+            $("#ladder").addClass('animated rotateInUpRight');
+            setTimeout (function () {
+                $("#ladder").removeClass('animated rotateInUpRight');
+            },2000);
+        },2000);
     }
 
     $scope.gotPoints = function(result) {
