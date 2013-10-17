@@ -142,7 +142,7 @@
             </table>
         </div>
     </div>
-    <div class="col-lg-5">
+    <div class="col-lg-6">
         <div>
             <table class="results table table-striped table-bordered table-condensed table-hover">
                 <tr>
@@ -151,7 +151,8 @@
                     <th style="text-align:left; padding-left:10px;">Name</th>
                     <th>Played</th>
                     <th>Won</th>
-                    <th>Average</th>
+                    <th>Win ratio</th>
+                    <th>Average points</th>
                     <th>Points</th>
                 </tr>
                 </tr>
@@ -160,6 +161,7 @@
                     <td style="text-align:left; padding-left:10px;">{{result.name}}</td>
                     <td>{{result.played}}</td>
                     <td>{{result.won}}</td>
+                    <td>{{result.won / result.played * 100 | number:2}} %</td>
                     <td>{{result.points / result.played | number:2}}</td>
                     <td>{{result.points}}</td>
                 </tr>

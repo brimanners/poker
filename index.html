@@ -77,7 +77,7 @@
     </div>
     <div class="body-content">
         <h4 style="color:blue;" class="hidden" id="newsTicker"><b><i><span id="news">Latest News:</span></i></b> Event
-            IV confirmed - <span id="nextEvent">Saturday 5th October 2013 - 7.30pm @ Paul's (arrive 7pm onwards)</span>....8 runners so far.....</h4>
+            5 - <span id="nextEvent">BBQ....poker...and golf! Dave is offering an off site event in Rye on the 9th November....See your email for further details</h4>
 
         <div class="row">
             <div class="col-lg-6">
@@ -93,6 +93,7 @@
                                 <option>1</option>
                                 <option>2</option>
                                 <option>3</option>
+                                <option>4</option>
                             </select>
                         </td>
                         <!--<td style="padding-left:20px">-->
@@ -107,7 +108,8 @@
                             <th style="text-align:left; padding-left:10px;">Name</th>
                             <th>Played</th>
                             <th>Won</th>
-                            <th>Average</th>
+                            <th>Win Ratio</th>
+                            <th>Average Points</th>
                             <th>Points</th>
                         </tr>
                         <tr ng-repeat="result in displayTable | filter:gotPoints | orderBy: ['-points','-won', 'played', 'name']" >
@@ -115,6 +117,7 @@
                            <td style="text-align:left; padding-left:10px;"><a href="{{result.url}}">{{result.name}}</a></td>
                            <td>{{result.played}}</td>
                            <td>{{result.won}}</td>
+                           <td>{{result.won / result.played * 100 | number:2}} %</td>
                            <td>{{result.points / result.played | number:2}}</td>
                            <td>{{result.points}}</td>
                        </tr>
