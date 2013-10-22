@@ -80,7 +80,7 @@
             5 - <span id="nextEvent">BBQ....poker...and golf! Dave is offering an off site event in Rye on the 9th November....See your email for further details</h4>
 
         <div class="row">
-            <div class="col-lg-6">
+            <div class="col-lg-7">
                 <table>
                     <tr>
                         <td>
@@ -109,8 +109,9 @@
                             <th>Played</th>
                             <th>Won</th>
                             <th>Win Ratio</th>
-                            <th>Average Points</th>
-                            <th>Points</th>
+                            <th>Ave Points</th>
+                            <th>Ave Position</th>
+                            <th>Total Points</th>
                         </tr>
                         <tr ng-repeat="result in displayTable | filter:gotPoints | orderBy: ['-points','-won', 'played', 'name']" >
                            <td>{{$index + 1}}<sup>{{positionSuffix($index + 1)}}</sup></td>
@@ -119,6 +120,7 @@
                            <td>{{result.won}}</td>
                            <td>{{result.won / result.played * 100 | number:2}} %</td>
                            <td>{{result.points / result.played | number:2}}</td>
+                           <td>{{result.averagePosition | number:2}}</td>
                            <td>{{result.points}}</td>
                        </tr>
                     </table>
