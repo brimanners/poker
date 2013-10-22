@@ -76,7 +76,8 @@
                         <th>Played</th>
                         <th>Won</th>
                         <th>Win ratio</th>
-                        <th>Average points</th>
+                        <th>Ave points</th>
+                        <th>Ave position</th>
                         <th>Points</th>
                     </tr>
                     <tr ng-show="result.name == 'Simon M'" ng-repeat="result in playerDetails.results | orderBy: ['-points','-won', 'played', 'name']">
@@ -85,6 +86,7 @@
                         <td>{{result.won}}</td>
                         <td>{{result.won / result.played * 100 | number:2}} %</td>
                         <td>{{result.points / result.played | number:2}}</td>
+                        <td>{{result.averagePosition | number:2}}</td>
                         <td>{{result.points}}</td>
                     </tr>
                 </table>
