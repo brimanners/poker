@@ -96,9 +96,6 @@
                                 <option>4</option>
                             </select>
                         </td>
-                        <!--<td style="padding-left:20px">-->
-                            <!--<div id="slider" style="width: 100px" ng-model="ngEventId" ng-model-onblur ng-change="tableChanged()"></div>-->
-                        <!--</td>-->
                     </tr>
                 </table>
                 <div>
@@ -145,9 +142,38 @@
             </div>
             <hr>
         </div>
-        <footer>
-            <p>&copy; BJIT website productions 2013</p>
-        </footer>
+
+        <div class="col-lg-7">
+            <h3>Recent form..... (Last 5 results)</h3>
+            <table class="results table table-striped table-bordered table-condensed table-hover" id="ladder">
+                <tr>
+                    <th>Position</th>
+                    <th style="text-align:left; padding-left:10px;">Name</th>
+                    <th>Played</th>
+                    <th>Won</th>
+                    <th>Win Ratio</th>
+                    <th>Ave Points</th>
+                    <th>Ave Position</th>
+                    <th>Total Points</th>
+                </tr>
+                <tr ng-repeat="result in formTable | filter:gotPoints | orderBy: ['-points','-won', 'played', 'name']" >
+                   <td>{{$index + 1}}<sup>{{positionSuffix($index + 1)}}</sup></td>
+                   <td style="text-align:left; padding-left:10px;"><a href="{{result.url}}">{{result.name}}</a></td>
+                   <td>{{result.played}}</td>
+                   <td>{{result.won}}</td>
+                   <td>{{result.won / result.played * 100 | number:2}} %</td>
+                   <td>{{result.points / result.played | number:2}}</td>
+                   <td>{{result.averagePosition | number:2}}</td>
+                   <td>{{result.points}}</td>
+               </tr>
+            </table>
+        </div>
+        <br/>
+        <div class="col-lg-7">
+            <footer>
+                <p>&copy; BJIT website productions 2013</p>
+            </footer>
+        </div>
 
     </div>
     <!-- /container -->

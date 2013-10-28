@@ -52,6 +52,12 @@ function populateDetailsFromJson ($scope, $http)  {
         $scope.noOfTourneys = noOfTourneys;
     });
 
+
+    $http.get('json/form-table.json').success(function (data) {
+            $scope.formTable = data;
+    });
+
+
     $http.get('json/event-history.json').success(function (data) {
         statistics.events = data;
         getUrlForEvents(statistics.events);
@@ -84,18 +90,3 @@ function stripUrlPrefix(extras) {
         extras[i].url = extras[i].url.replace("../","");
     }
 }
-
-
-
-$(document).ready(function() {
-//    $("#slider").slider({
-//        min: 1,
-//        max: 3,
-//        value: noOfTourneys,
-//        slide: function( event, ui ) {
-//            $( "#event" ).val(ui.value);
-//
-//        }
-//    });
-//    $("#event").val($( "#slider").slider("value"));
-});
