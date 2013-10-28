@@ -55,6 +55,7 @@ function populateDetailsFromJson ($scope, $http)  {
 
     $http.get('json/form-table.json').success(function (data) {
             $scope.formTable = data;
+            getUrlsForPlayers(data)
     });
 
 
