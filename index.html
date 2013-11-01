@@ -118,8 +118,18 @@
                            <td>{{result.won / result.played * 100 | number:2}} %</td>
                            <td>{{result.points / result.played | number:2}}</td>
                            <td>{{result.averagePosition | number:2}}</td>
-                           <td>{{result.movement}}</td>
-                            <td>{{result.points}}</td>
+                           <td>
+                               <div ng-if="result.movement > 0">
+                                   <img src="images/down.png" alt=""> {{result.movement}}
+                               </div>
+                               <div ng-if="result.movement < 0">
+                                   <img src="images/up.png" alt=""> {{result.movement * - 1}}
+                               </div>
+                               <div ng-if="result.movement == 0">
+                                 -
+                               </div>
+                           </td>
+                           <td>{{result.points}}</td>
                        </tr>
                     </table>
                 </div>
