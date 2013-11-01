@@ -85,9 +85,7 @@
                 <table>
                     <tr>
                         <td>
-                            <h3>Ladder after event number:
-                                <!--<span id="eventId">{{noOfTourneys}}</span>-->
-                            </h3>
+                            <h3>Ladder after event number:</h3>
                         </td>
                         <td style="padding-left:10px;">
                             <select ng-model="eventId" ng-change="tableChanged()" id="eventNumber">
@@ -109,6 +107,7 @@
                             <th>Win Ratio</th>
                             <th>Ave Points</th>
                             <th>Ave Position</th>
+                            <th>Movement</th>
                             <th>Total Points</th>
                         </tr>
                         <tr ng-repeat="result in displayTable | filter:gotPoints | orderBy: ['-points','-won', 'played', 'name']" >
@@ -119,7 +118,8 @@
                            <td>{{result.won / result.played * 100 | number:2}} %</td>
                            <td>{{result.points / result.played | number:2}}</td>
                            <td>{{result.averagePosition | number:2}}</td>
-                           <td>{{result.points}}</td>
+                           <td>{{result.movement}}</td>
+                            <td>{{result.points}}</td>
                        </tr>
                     </table>
                 </div>
