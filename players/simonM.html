@@ -90,28 +90,27 @@
                         <td>{{result.points}}</td>
                     </tr>
                 </table>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-8">
                 <table class="results table table-striped table-bordered table-condensed table-hover">
-                    <tr>
-                        <th>Date</th>
-                        <th>Location</th>
-                        <th>Tournament No.</th>
-                        <th>Position</th>
-                        <th>No. of players</th>
-                        <th>Points</th>
-                    </tr>
-                    <tr ng-repeat="event in playerDetails.eventDetails">
-                        <td>{{event.eventDate}}</td>
-                        <td>{{event.location}}</td>
-                        <td>{{event.tournament}}<sup>{{positionSuffix(event.tournament)}}</sup></td>
-                        <td>{{event.position}}<sup>{{positionSuffix(event.position)}}</sup></td>
-                        <td>{{event.noOfPlayers}}</td>
-                        <td>{{event.points}}</td>
-                    </tr>
-                </table>
+                   <tr>
+                       <th>Date</th>
+                       <th>Location</th>
+                       <th>Tournament No.</th>
+                       <th>Position</th>
+                       <th>No. of players</th>
+                       <th>Points</th>
+                   </tr>
+                   <tr ng-repeat="event in playerDetails.eventDetails">
+                       <td>{{event.eventDate}}</td>
+                       <td>{{event.location}}</td>
+                       <td>{{event.tournament}}<sup>{{positionSuffix(event.tournament)}}</sup></td>
+                       <td>{{event.position}}<sup>{{positionSuffix(event.position)}}</sup></td>
+                       <td>{{event.noOfPlayers}}</td>
+                       <td>{{event.points}}</td>
+                   </tr>
+               </table>
+            </div>
+            <div class="col-lg-3">
+                <img src="../images/20130706_b.jpg" alt="picture2" style="float:right; padding:10px">
             </div>
         </div>
         <div class="row">
