@@ -52,7 +52,6 @@ function populateDetailsFromJson ($scope, $http)  {
                      var checking =  (i + 1) + ":" + eventTables[i + 1][j].name;
                      ladderMovement = getLadderMovement((i + 1) + ":" + eventTables[i + 1][j].name) -
                                 getLadderMovement(i + ":" + eventTables[i + 1][j].name);
-                     var blah2 = "";
                      eventTables[i + 1][j].movement = ladderMovement;
                 }
              }
