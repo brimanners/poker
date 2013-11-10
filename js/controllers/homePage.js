@@ -33,6 +33,11 @@ ladderModule.controller('homePageController', function ($scope, $http) {
           return result.points > 0
     };
 
+//    ladderModule.directive('test', function() {
+//        alert("here!");
+//        return "";
+//    });
+
 });
 
 function populateDetailsFromJson ($scope, $http)  {
