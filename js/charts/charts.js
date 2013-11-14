@@ -39,6 +39,84 @@ function drawLineGraph(finishingPositions, noOfPlayers) {
     lineGraph.draw(data, options);
 }
 
+function drawPointsAccumulationLineGraph(accumulatedPoints) {
+	var lineGraphData = [];
+    lineGraphData.push(['Game', 'Points']);
+    var points = 0;
+    for (var i = 0; i < accumulatedPoints.length; i++) {
+        var item = [getNumberSuffix(i + 1 + ""), parseInt(accumulatedPoints[i])];
+        lineGraphData.push(item);
+    }
+
+	var data = google.visualization.arrayToDataTable(lineGraphData);
+    var options = {
+        vAxis: {
+            title: "Accumulated Points",
+            minValue: 1,
+            format: '0',
+            maxValue: points,
+            viewWindowMode: 'pretty',
+            gridlines: {
+                color: "black",
+                count: 10
+            },
+        },
+        hAxis: {
+            title: "Game Number",
+            viewWindowMode: 'pretty',
+            minValue: 1,
+            maxValue: 10,
+        },
+        pointSize: 10,
+        legend: {
+            position: 'top',
+            alignment: 'center'
+        },
+    };
+
+    var lineGraph = new google.visualization.LineChart(document.getElementById('pointsAccumulation_div'));
+    lineGraph.draw(data, options);
+}
+
+function drawLadderPositionLineGraph(ladderPositions) {
+	var lineGraphData = [];
+    lineGraphData.push(['Game', 'Ladder Position']);
+    var points = 0;
+    for (var i = 0; i < ladderPositions.length; i++) {
+        var item = [getNumberSuffix(i + 1 + ""), parseInt(ladderPositions[i])];
+        lineGraphData.push(item);
+    }
+
+	var data = google.visualization.arrayToDataTable(lineGraphData);
+    var options = {
+        vAxis: {
+            title: "Ladder Position",
+            direction: -1,
+            minValue: 1,
+            maxValue: 10,
+            viewWindowMode: 'pretty',
+            gridlines: {
+                color: "black",
+                count: 10
+            },
+        },
+        hAxis: {
+            title: "Event Number",
+            viewWindowMode: 'pretty',
+            minValue: 1,
+            maxValue: 10,
+        },
+        pointSize: 10,
+        legend: {
+            position: 'top',
+            alignment: 'center'
+        },
+    };
+
+    var lineGraph = new google.visualization.LineChart(document.getElementById('ladderPosition_div'));
+    lineGraph.draw(data, options);
+}
+
 function drawPieChart(finishingPositionsOccurrences) {
 	// Create the data table.
 	var pieChartData = [];
@@ -51,7 +129,7 @@ function drawPieChart(finishingPositionsOccurrences) {
 
     var data = google.visualization.arrayToDataTable(pieChartData);
     var options = {'title':'Tournament Placing',
-                   'width':400,
+                   'width':500,
                    'height':200,
                    is3D: true};
 

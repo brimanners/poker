@@ -21,6 +21,7 @@
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript" src="../js/playerResults.js"></script>
     <script type="text/javascript" src="../js/charts/charts.js"></script>
+    <script type="text/javascript" src="../js/tableSorter.js"></script>
 </head>
 <body ng-controller="playerController" ng-cloak>
 <div class="navbar navbar-inverse navbar-fixed-top">
@@ -113,20 +114,35 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-8">
-                <table>
-                    <tr>
-                        <td>
-                            <div id="lineGraph_div"></div>
-                        </td>
-                        <td>&nbsp;</td>
-                        <td>
-                            <div id="pieChart_div"></div>
-                        </td>
-                    </tr>
-                </table>
-            </div>
-        </div>
+            <div class="col-lg-10">
+              <table>
+                  <tr>
+                      <td>
+                          <div id="lineGraph_div" style="height: 200px; width: 500px;"></div>
+                      </td>
+                      <td>&nbsp;</td>
+                      <td>
+                          <div id="pointsAccumulation_div" style="height: 200px; width: 500px;"></div>
+                      </td>
+                      <td>&nbsp;</td>
+                  </tr>
+               </table>
+          </div>
+          <p></p>
+          <div class="col-lg-10">
+              <table>
+                  <tr>
+                      <td>
+                          <div id="ladderPosition_div" style="height: 200px; width: 500px;"></div>
+                      </td>
+                      <td>&nbsp;</td>
+                      <td>
+                          <div id="pieChart_div" style="height: 200px; width: 500px;"></div>
+                      </td>
+                  </tr>
+                  <td>&nbsp;</td>
+              </table>
+          </div>
         <br/>
 
         <div class="row">

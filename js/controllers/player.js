@@ -1,4 +1,5 @@
 var player = angular.module('player', []);
+var playerEventPosition;
 
 player.controller('playerController', function ($scope, $http) {
    var playerDetails = {};
@@ -28,7 +29,23 @@ player.controller('playerController', function ($scope, $http) {
 
    var player = $('meta[name="player"]').attr("content");
    $http.get('../json/' + player + '_event_history.json').success(function (data) {
-            playerDetails.eventDetails = data;
+        playerDetails.eventDetails = data;
+        var playerCumulativePoints = new Array();
+        var accumulate = 0;
+        for (i = 0; i < data.length; i ++) {
+            accumulate = accumulate + data[i].points
+            playerCumulativePoints[i] = accumulate;
+            playerDetails.cumulativePoints = playerCumulativePoints;
+        }
+        drawPointsAccumulationLineGraph(playerDetails.cumulativePoints);
+    });
+
+
+
+    $http.get('../json/current-table.json').success(function (data) {
+            noOfTourneys = data.length;
+            playerEventPosition = calculatePlayerMovement(data, player);
+            drawLadderPositionLineGraph(playerEventPosition.playerPosition);
     });
 
     $scope.playerDetails = playerDetails;
