@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="poker" id="ng-app">
+<!-- the ng-app name 'poker' is referenced the corresponding controller logic -->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="season" content="2014">
+    <title>Poker Results</title>
+    <!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <link href="../css/poker.css" rel="stylesheet">
+    <link href="../css/theme.default.css" rel="stylesheet">
+    <link href="../css/animate.min.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <!--<link href="src/css/jumbotron.css" rel="stylesheet">-->
+    <script type="text/javascript" src="../js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.tablesorter.min.js"></script>
+    <!-- temp local hosting until prod release -->
+    <script type="text/javascript" src="../js/animations.js"></script>
+    <script type="text/javascript" src="../js/angular.min.js"></script>
+    <script type="text/javascript" src="../js/tableSorter.js"></script>
+    <!-- temp local hosting until prod release -->
+    <script type="text/javascript" src="../js/bootstrap.js"></script>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+
+
+    <script type="text/javascript" src="../js/animateRows.js"></script>
+</head>
+<body ng-controller="homePageController" ng-cloak class="yui3-skin-sam">
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container" id="navigationBar">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html">Home</a>
+
+        <div class="nav-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="dropdown" data-no-collapse="true">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Event History<b class="caret"></b></a>
+                    <ul class="dropdown-menu" >
+                        <li class="menu_year">&nbsp;2014</li>
+                        <li ng-show="event.year == '2014'" ng-repeat="event in statistics.events  | orderBy: ['-no']"><a href="{{event.url}}">{{event.eventDate}} @ {{event.location}}</a></li>
+                        <li class="menu_year">&nbsp;2013</li>
+                        <li ng-show="event.year == '2013'" ng-repeat="event in statistics.events  | orderBy: ['-no']"><a href="{{event.url}}">{{event.eventDate}} @ {{event.location}}</a></li>
+                    </ul>
+
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Players<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li ng-show="player.year == '2014'" ng-repeat="player in statistics.playerMenuDropdown | orderBy: ['name']"><a href="{{player.url}}">{{player.name}}</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Extras <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li ng-repeat="extra in statistics.extras"><a href="{{extra.url}}">{{extra.name}}</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">2013 History<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="2013Results.html">Season wrap up</a></li>
+                        <li class="menu_year">&nbsp;Players</li>
+                        <li ng-show="player.year == '2013'" ng-repeat="player in statistics.playerMenuDropdown | orderBy: ['name']"><a href="{{player.url}}">{{player.name}}</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!--/.nav-collapse -->
+    </div>
+</div>
+
+<div class="container">
+
+    <div class="jumbotron">
+        <h2 id="header1">2014 - 'The Square' Poker Results</h2>
+
+        <p id="header2">
+            Here you'll find all the latest scores from each tournament held,
+            latest news, statistics and ammunition for bragging rights :)
+        </p>
+    </div>
+    <div class="body-content">
+        <div class="row">
+            <div class="col-lg-7">
+                <table>
+                    <tr>
+                        <td>
+                            <h3>Ladder after event number:</h3>
+                        </td>
+                        <td style="padding-left:10px;">
+                            <select ng-model="eventId" ng-change="tableChanged()" id="eventNumber">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+                <div test="blah">
+                    <!--<table id="ladder" class="results tablesorter table table-striped table-bordered table-condensed table-hover">-->
+                    <table id="ladder" class="results table table-striped table-bordered table-condensed table-hover">
+                        <thead>
+                            <tr>
+                                <th>Position</th>
+                                <th style="text-align:left; padding-left:10px;">Name</th>
+                                <th>Played</th>
+                                <th>Won</th>
+                                <th>Win Ratio</th>
+                                <th>Ave Points</th>
+                                <th>Ave Position</th>
+                                <th>Total Points</th>
+                                <th>Movement</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr ng-repeat="result in displayTable | filter:gotPoints | orderBy: ['-points','-won', 'played', 'name']">
+                               <td>{{$index + 1}}<sup>{{positionSuffix($index + 1)}}</sup></td>
+                               <td style="text-align:left; padding-left:10px;"><a href="{{result.url}}">{{result.name}}</a></td>
+                               <td>{{result.played}}</td>
+                               <td>{{result.won}}</td>
+                               <td>{{result.won / result.played * 100 | number:2}} %</td>
+                               <td>{{result.points / result.played | number:2}}</td>
+                               <td>{{result.averagePosition | number:2}}</td>
+                               <td style="color: blue"><b>{{result.points}}</b></td>
+                                <td>
+                                    <div ng-if="result.movement > 0">
+                                        <img src="../images/down.png" alt=""> {{result.movement}}
+                                    </div>
+                                    <div ng-if="result.movement < 0">
+                                        <img src="../images/up.png" alt=""> {{result.movement * - 1}}
+                                    </div>
+                                    <div ng-if="result.movement == 0">
+                                        -
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <h3>Event History</h3>
+                <table class="results table table-striped table-bordered table-condensed table-hover">
+                    <tr>
+                        <th>No.</th>
+                        <th>Date</th>
+                        <th>Location</th>
+                        <th>Tournaments</th>
+                    </tr>
+                    <tr ng-repeat="event in statistics.events">
+                        <td>{{$index + 1}}<sup>{{positionSuffix($index + 1)}}</sup></td>
+                        <td><a href="{{event.url}}">{{event.eventDate}}</a></td>
+                        <td>{{event.location}}</td>
+                        <td>{{event.noOfTournaments}}</td>
+                    </tr>
+                </table>
+            </div>
+            <hr>
+        </div>
+
+        <div class="col-lg-7">
+            <h3>Recent form..... (Each players last 5 results)</h3>
+            <table class="results table table-striped table-bordered table-condensed table-hover" id="ladder">
+                <tr>
+                    <th>Position</th>
+                    <th style="text-align:left; padding-left:10px;">Name</th>
+                    <th>Played</th>
+                    <th>Won</th>
+                    <th>Win Ratio</th>
+                    <th>Ave Points</th>
+                    <th>Ave Position</th>
+                    <th>Total Points</th>
+                </tr>
+                <tr ng-repeat="result in formTable | filter:gotPoints | orderBy: ['-points','-won', 'played', 'name']" >
+                   <td>{{$index + 1}}<sup>{{positionSuffix($index + 1)}}</sup></td>
+                   <td style="text-align:left; padding-left:10px;"><a href="{{result.url}}">{{result.name}}</a></td>
+                   <td>{{result.played}}</td>
+                   <td>{{result.won}}</td>
+                   <td>{{result.won / result.played * 100 | number:2}} %</td>
+                   <td>{{result.points / result.played | number:2}}</td>
+                   <td>{{result.averagePosition | number:2}}</td>
+                   <td style="color: blue"><b>{{result.points}}</b></td>
+               </tr>
+            </table>
+        </div>
+        <br/>
+        <div class="col-lg-7">
+            <footer>
+                <p>&copy; BJIT website productions 2013</p>
+            </footer>
+        </div>
+
+    </div>
+    <!-- /container -->
+    <script type="text/javascript" src="../js/controllers/homePage.js"></script>
+    </div>
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-40877102-1', 'iinet.net.au');
+        ga('send', 'pageview');
+
+    </script>
+</body>
+</html>

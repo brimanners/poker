@@ -7,7 +7,7 @@ eventModule.controller('event-controller', function ($scope, $http) {
       var noOfTournaments = parseInt($('meta[name="noOfTournaments"]').attr("content"));
 
       for (var i=1; i <= noOfTournaments ; i++) {
-        var fileName = "../json/" + eventDate + "_" + i + "_results.json";
+        var fileName = "../json/2013/" + eventDate + "_" + i + "_results.json";
         getTournamentSummary($http, fileName, eventDate, i, tournaments);
       };
 
@@ -32,29 +32,48 @@ eventModule.controller('event-controller', function ($scope, $http) {
           }
       }
 
-    $http.get('../json/event-history.json').success(function (data) {
+    $http.get('../json/2013/event-history.json').success(function (data) {
+        for (i = 0; i < data.length; i ++) { // append year so menu dropdown can section values
+              data[i].year = data[i].eventDate.substring(data[i].eventDate.length - 4, data[i].eventDate.length);
+        }
         results.events = data;
         getUrlForEvents(results.events);
     });
 
-    $http.get('../json/event_results.json').success(function (data) {
+    $http.get('../json/2013/event_results.json').success(function (data) {
        results.eventResults = data; /* Tournament results - i.e. position, player and points */
     });
 
-    $http.get('../json/current-table.json').success(function (data) {
+    //  Get menu dropdown of players for relevant season
+   $http.get('../json/players.json').success(function (data) {
+       var players = [];
+       for (i = 0; i < data.length; i++) {
+           for (j = 0; j < data[i].players.length; j++) {
+               var player = {};
+               player.name = data[i].players[j].name;
+               player.year = data[i].year;
+               var nameParts = player.name.split(" ");
+               player.url = "../players/player.html?name=" + nameParts[0].toLowerCase() + nameParts[1] + '&year=' + data[i].year;
+               players.push(player);
+           }
+      }
+      $scope.playerMenuDropdown = players;
+   });
+
+    $http.get('../json/2013/current-table.json').success(function (data) {
         var eventTables = {};
         var noOfTourneys = data.length;
         for (i = 0; i < noOfTourneys; i ++) {
             eventTables[i + 1] = data[noOfTourneys - 1 - i]["event" + (i + 1)];
             results.eventTables = eventTables;
         }
-        results.results = data[0]["event" + noOfTourneys];                     // do we need this? used in next line but can in line
-        getUrlsForPlayers(results.results);
+        getUrlsForPlayers(data[0]["event" + noOfTourneys]);
      });
 
      $http.get('../json/extras.json').success(function (data) {
         results.extras = data;
      });
+
      $scope.results = results;
 
     $scope.gotPoints = function(result) {

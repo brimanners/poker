@@ -1,12 +1,12 @@
 $(document).ready(function() {
 
-   var player = $('meta[name="player"]').attr("content");
+   var player = getURLParameter('name');
+   var playerYear = getURLParameter('year');
    var finishingPositions = [];
    var noOfPlayers = [];
    var positionOccurrences = [];
    var pieChartData = [];
-   $.getJSON('../json/' + player + '.json', function( data ) {
-
+   $.getJSON('../json/' + playerYear + '/' + player + '.json', function( data ) {
         finish = data.positionAndPlayers[0].positions;
         playerCount = data.positionAndPlayers[0].players;
 
@@ -44,5 +44,9 @@ $(document).ready(function() {
         }
         sortable.sort(function(a,b) {return a[1] - b[1]});
         return sortable;
+    }
+
+    function getURLParameter(name) {
+      return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search)||[,""])[1].replace(/\+/g, '%20'))||null
     }
 });

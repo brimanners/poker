@@ -3,18 +3,33 @@ var extras = angular.module('extras', []);
 extras.controller('extrasController', function ($scope, $http) {
    var extraDetails = {};
 
-   $http.get('../json/event-history.json').success(function (data) {
-           extraDetails.events = data;
-           getUrlForEvents(extraDetails.events);
+   $http.get('../json/2013/event-history.json').success(function (data) {
+       extraDetails.events = data;
+       for (i = 0; i < data.length; i ++) { // append year so menu dropdown can section values
+                  data[i].year = data[i].eventDate.substring(data[i].eventDate.length - 4, data[i].eventDate.length);
+       }
+       getUrlForEvents(extraDetails.events);
    });
 
-   $http.get('../json/current-table.json').success(function (data) {
-      extraDetails.results = data[0]["event" + data.length]
-      getUrlsForPlayers(extraDetails.results);
-   });
 
    $http.get('../json/extras.json').success(function (data) {
          extraDetails.extras = data;
+   });
+
+   //  Get menu dropdown of players for relevant season
+   $http.get('../json/players.json').success(function (data) {
+       var players = [];
+       for (i = 0; i < data.length; i++) {
+           for (j = 0; j < data[i].players.length; j++) {
+               var player = {};
+               player.name = data[i].players[j].name;
+               player.year = data[i].year;
+               var nameParts = player.name.split(" ");
+               player.url = "../players/player.html?name=" + nameParts[0].toLowerCase() + nameParts[1] + '&year=' + data[i].year;
+               players.push(player);
+           }
+      }
+      $scope.playerMenuDropdown = players;
    });
 
     $scope.extraDetails = extraDetails;

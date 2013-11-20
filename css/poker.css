@@ -3,6 +3,12 @@
     font-size: 1.0em;
 }
 
+.menu_year {
+    disable:true;
+    font-style:italic;
+    font-weight:bold;
+}
+
 body
 {
  background-color: #F0F0F0  ;

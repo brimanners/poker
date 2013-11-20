@@ -1,4 +1,5 @@
 var playerEventPosition;
+var season = $('meta[name="season"]').attr("content");
 
 var ladderModule = angular.module('poker', []);        // poker module is the name of the ng-app on the template
 
@@ -18,7 +19,7 @@ ladderModule.controller('homePageController', function ($scope, $http) {
 
     $scope.tableChanged = function() {
         $("#ladder").addClass('animated hinge')
-        $scope.displayTable = $scope.homePageStatistics.eventTables[$scope.eventId];
+        $scope.displayTable = $scope.statistics.eventTables[$scope.eventId];
         setTimeout (function () {
             $("#ladder").removeClass('animated hinge');
 
@@ -32,19 +33,13 @@ ladderModule.controller('homePageController', function ($scope, $http) {
     $scope.gotPoints = function(result) {
           return result.points > 0
     };
-
-//    ladderModule.directive('test', function() {
-//        alert("here!");
-//        return "";
-//    });
-
 });
 
 function populateDetailsFromJson ($scope, $http)  {
     var statistics = {};
     var eventTables = {};
 
-    $http.get('json/current-table.json').success(function (data) {
+    $http.get('../json/' + season + '/current-table.json').success(function (data) {
         noOfTourneys = data.length;
         playerEventPosition = calculatePlayerMovement(data);
         $scope.eventId = data.length;
@@ -62,53 +57,69 @@ function populateDetailsFromJson ($scope, $http)  {
              }
              statistics.eventTables = eventTables;
          }
-         $scope.displayTable = eventTables[noOfTourneys];
-
-        getUrlsForPlayers(statistics.players);
-        $scope.homePageStatistics = statistics;
+        $scope.displayTable = eventTables[noOfTourneys];
+        getUrlsForPlayers(statistics.players, 2013);
+        $scope.statistics = statistics;
         $scope.noOfTourneys = noOfTourneys;
     });
 
 
-    $http.get('json/form-table.json').success(function (data) {
+    //  Get menu dropdown of players for relevant season
+    $http.get('../json/players.json').success(function (data) {
+        var players = [];
+        for (i = 0; i < data.length; i++) {
+            for (j = 0; j < data[i].players.length; j++) {
+                var player = {};
+                player.name = data[i].players[j].name;
+                player.year = data[i].year;
+                var nameParts = player.name.split(" ");
+                player.url = "../players/player.html?name=" + nameParts[0].toLowerCase() + nameParts[1] + '&year=' + data[i].year;
+                players.push(player);
+            }
+       }
+       $scope.statistics.playerMenuDropdown = players;
+    });
+
+
+    $http.get('../json/' + season + '/form-table.json').success(function (data) {
             $scope.formTable = data;
             getUrlsForPlayers(data);
     });
 
 
-    $http.get('json/event-history.json').success(function (data) {
+    $http.get('../json/' + season + '/event-history.json').success(function (data) {
+        for (i = 0; i < data.length; i ++) { // append year so menu dropdown can section values
+            data[i].year = data[i].eventDate.substring(data[i].eventDate.length - 4, data[i].eventDate.length);
+        }
         statistics.events = data;
-        getUrlForEvents(statistics.events);
+        getUrlForEvents(data);
     });
 
-    $http.get('json/extras.json').success(function (data) {
+    $http.get('../json//extras.json').success(function (data) {
        statistics.extras = data;
-       stripUrlPrefix(statistics.extras);
     });
 
-    $scope.homePageStatistics = statistics;
+    $scope.statistics = statistics;
 }
 
-function getUrlsForPlayers(players) {
+function getUrlsForPlayers(players, year) {
     for (var i=0; i < players.length; i++) {
         var nameParts = players[i].name.split(" ");
-        players[i].url =  "players/" + nameParts[0].toLowerCase() + nameParts[1] + ".html";
+        players[i].url = "../players/player.html?name=" + nameParts[0].toLowerCase() + nameParts[1] + '&year=' + year;
     }
 }
 
 function getUrlForEvents(events) {
     for (var i=0; i < events.length; i++) {
         var eventDate = events[i].eventDate
-        events[i].url =  "events/" + eventDate.substring(6) + eventDate.substring(3,5) + eventDate.substring(0,2) + ".html";
-    }
-}
-
-function stripUrlPrefix(extras) {
-    for (var i=0; i < extras.length; i++) {
-        extras[i].url = extras[i].url.replace("../","");
+        events[i].url =  "../events/" + eventDate.substring(6) + eventDate.substring(3,5) + eventDate.substring(0,2) + ".html";
     }
 }
 
 function getLadderMovement(playerEvent) {
     return playerEventPosition[playerEvent];
+}
+
+function getURLParameter(name) {
+      return decodeURIComponent((new RegExp('[?|&]' + name + '=' + '([^&;]+?)(&|#|;|$)').exec(location.search)||[,""])[1].replace(/\+/g, '%20'))||null
 }
