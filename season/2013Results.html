@@ -156,7 +156,7 @@
                         <th>Location</th>
                         <th>Tournaments</th>
                     </tr>
-                    <tr ng-repeat="event in homePageStatistics.events">
+                    <tr ng-repeat="event in statistics.events">
                         <td>{{$index + 1}}<sup>{{positionSuffix($index + 1)}}</sup></td>
                         <td><a href="{{event.url}}">{{event.eventDate}}</a></td>
                         <td>{{event.location}}</td>
