@@ -20,6 +20,10 @@ body
     visibility: hidden;
 }
 
+.header-center {
+    text-align: center;
+}
+
 #newsTicker {
     -webkit-animation-duration: 1s;
     -moz-animation-duration: 1s;

@@ -44,12 +44,8 @@
                 <li class="dropdown" data-no-collapse="true">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Event History<b class="caret"></b></a>
                     <ul class="dropdown-menu" >
-                        <li class="menu_year">&nbsp;2014</li>
                         <li ng-show="event.year == '2014'" ng-repeat="event in statistics.events  | orderBy: ['-no']"><a href="{{event.url}}">{{event.eventDate}} @ {{event.location}}</a></li>
-                        <li class="menu_year">&nbsp;2013</li>
-                        <li ng-show="event.year == '2013'" ng-repeat="event in statistics.events  | orderBy: ['-no']"><a href="{{event.url}}">{{event.eventDate}} @ {{event.location}}</a></li>
                     </ul>
-
                 </li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Players<b class="caret"></b></a>
@@ -67,6 +63,8 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">2013 History<b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         <li><a href="2013Results.html">Season wrap up</a></li>
+                        <li class="menu_year">&nbsp;Events</li>
+                        <li ng-repeat="event in statistics.previousEvents | orderBy: ['-no']"><a href="{{event.url}}">{{event.eventDate}} @ {{event.location}}</a></li>
                         <li class="menu_year">&nbsp;Players</li>
                         <li ng-show="player.year == '2013'" ng-repeat="player in statistics.playerMenuDropdown | orderBy: ['name']"><a href="{{player.url}}">{{player.name}}</a></li>
                     </ul>
@@ -88,7 +86,7 @@
     </div>
     <div class="body-content">
         <div class="row">
-            <div class="col-lg-7">
+            <div class="col-lg-8">
                 <table>
                     <tr>
                         <td>
@@ -105,20 +103,20 @@
                         </td>
                     </tr>
                 </table>
-                <div test="blah">
+                <div>
                     <!--<table id="ladder" class="results tablesorter table table-striped table-bordered table-condensed table-hover">-->
                     <table id="ladder" class="results table table-striped table-bordered table-condensed table-hover">
                         <thead>
                             <tr>
                                 <th>Position</th>
-                                <th style="text-align:left; padding-left:10px;">Name</th>
-                                <th>Played</th>
-                                <th>Won</th>
-                                <th>Win Ratio</th>
-                                <th>Ave Points</th>
-                                <th>Ave Position</th>
-                                <th>Total Points</th>
-                                <th>Movement</th>
+                                <th style="text-align:left; padding-left:10px; white-space: no-wrap;">Name</th>
+                                <th class="header-center">Played</th>
+                                <th class="header-center">Won</th>
+                                <th class="header-center">Win Ratio</th>
+                                <th class="header-center">Ave Points</th>
+                                <th class="header-center">Ave Position</th>
+                                <th class="header-center">Total Points</th>
+                                <th class="header-center">Movement</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -156,7 +154,7 @@
                         <th>Location</th>
                         <th>Tournaments</th>
                     </tr>
-                    <tr ng-repeat="event in statistics.events">
+                    <tr ng-repeat="event in statistics.previousEvents">
                         <td>{{$index + 1}}<sup>{{positionSuffix($index + 1)}}</sup></td>
                         <td><a href="{{event.url}}">{{event.eventDate}}</a></td>
                         <td>{{event.location}}</td>

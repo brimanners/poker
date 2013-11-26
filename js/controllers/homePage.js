@@ -42,7 +42,16 @@ function populateDetailsFromJson ($scope, $http)  {
     $http.get('../json/' + season + '/current-table.json').success(function (data) {
         noOfTourneys = data.length;
         playerEventPosition = calculatePlayerMovement(data);
-        $scope.eventId = data.length;
+        if (season = "2014") {
+            $scope.eventId = data.length - 5;
+        } else {
+            $scope.eventId = data.length;
+        }
+        if ($scope.eventId == 1) {
+            $scope.displayMovement = false;
+        } else {
+            $scope.displayMovement = true;
+        }
         statistics.players = data[0]["event" + noOfTourneys];
         for (i = 0; i < noOfTourneys; i ++) {
              eventTables[i + 1] = data[noOfTourneys - 1 - i]["event" + (i + 1)];
@@ -58,7 +67,7 @@ function populateDetailsFromJson ($scope, $http)  {
              statistics.eventTables = eventTables;
          }
         $scope.displayTable = eventTables[noOfTourneys];
-        getUrlsForPlayers(statistics.players, 2013);
+        getUrlsForPlayers(statistics.players, season);
         $scope.statistics = statistics;
         $scope.noOfTourneys = noOfTourneys;
     });
@@ -86,12 +95,20 @@ function populateDetailsFromJson ($scope, $http)  {
             getUrlsForPlayers(data);
     });
 
-
-    $http.get('../json/' + season + '/event-history.json').success(function (data) {
+    // Used for dropdown menus
+    $http.get('../json/2014/event-history.json').success(function (data) {
         for (i = 0; i < data.length; i ++) { // append year so menu dropdown can section values
             data[i].year = data[i].eventDate.substring(data[i].eventDate.length - 4, data[i].eventDate.length);
         }
         statistics.events = data;
+        getUrlForEvents(data);
+    });
+
+    $http.get('../json/2013/event-history.json').success(function (data) {
+        for (i = 0; i < data.length; i ++) { // append year so menu dropdown can section values
+            data[i].year = data[i].eventDate.substring(data[i].eventDate.length - 4, data[i].eventDate.length);
+        }
+        statistics.previousEvents = data;
         getUrlForEvents(data);
     });
 
