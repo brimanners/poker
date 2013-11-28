@@ -42,7 +42,7 @@ function populateDetailsFromJson ($scope, $http)  {
     $http.get('../json/' + season + '/current-table.json').success(function (data) {
         noOfTourneys = data.length;
         playerEventPosition = calculatePlayerMovement(data);
-        if (season = "2014") {
+        if (season == "2014") {
             $scope.eventId = data.length - 5;
         } else {
             $scope.eventId = data.length;
@@ -92,7 +92,7 @@ function populateDetailsFromJson ($scope, $http)  {
 
     $http.get('../json/' + season + '/form-table.json').success(function (data) {
             $scope.formTable = data;
-            getUrlsForPlayers(data);
+            getUrlsForPlayers(data, season);
     });
 
     // Used for dropdown menus

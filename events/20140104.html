@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <meta name="eventDate" content="09_11_2013">
-    <meta name="noOfTournaments" content="2">
+    <meta name="eventDate" content="04_01_2014">
+    <meta name="noOfTournaments" content="1">
     <title>Poker Results</title>
     <!-- Bootstrap core CSS -->
     <link href="../css/bootstrap.css" rel="stylesheet">
@@ -33,38 +33,37 @@
 
         <!-- Menus -->
         <div class="nav-collapse collapse">
-           <ul class="nav navbar-nav">
-               <li class="dropdown" data-no-collapse="true">
-                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Event History<b class="caret"></b></a>
-                   <ul class="dropdown-menu" >
-                       <li class="menu_year">&nbsp;2014</li>
-                       <li ng-show="event.year == '2014'" ng-repeat="event in results.events | orderBy: ['-no']"><a href="{{event.url}}">{{event.eventDate}} @ {{event.location}}</a></li>
-                       <li class="menu_year">&nbsp;2013</li>
-                       <li ng-show="event.year == '2013'" ng-repeat="event in results.events | orderBy: ['-no']"><a href="{{event.url}}">{{event.eventDate}} @ {{event.location}}</a></li>
-                   </ul>
-               </li>
-               <li class="dropdown">
-                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Players<b class="caret"></b></a>
-                   <ul class="dropdown-menu">
-                       <li ng-show="player.year == '2014'" ng-repeat="player in playerMenuDropdown | orderBy: ['name']"><a href="{{player.url}}">{{player.name}}</a></li>
-                   </ul>
-               </li>
-               <li class="dropdown">
-                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Extras <b class="caret"></b></a>
-                   <ul class="dropdown-menu">
-                       <li ng-repeat="extra in results.extras"><a href="{{extra.url}}">{{extra.name}}</a></li>
-                   </ul>
-               </li>
-               <li class="dropdown">
-                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">2013 History<b class="caret"></b></a>
-                   <ul class="dropdown-menu">
-                       <li><a href="../season/2013Results.html">Season wrap up</a></li>
-                       <li class="menu_year">&nbsp;Players</li>
-                       <li ng-show="player.year == '2013'" ng-repeat="player in playerMenuDropdown | orderBy: ['name']"><a href="{{player.url}}">{{player.name}}</a></li>
-                   </ul>
-               </li>
-           </ul>
-       </div>
+            <ul class="nav navbar-nav">
+                <li class="dropdown" data-no-collapse="true">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Event History<b class="caret"></b></a>
+                    <ul class="dropdown-menu" >
+                        <li ng-show="event.year == '2014'" ng-repeat="event in results.events | orderBy: ['-no']"><a href="{{event.url}}">{{event.eventDate}} @ {{event.location}}</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Players<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li ng-show="player.year == '2014'" ng-repeat="player in playerMenuDropdown | orderBy: ['name']"><a href="{{player.url}}">{{player.name}}</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Extras <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li ng-repeat="extra in results.extras"><a href="{{extra.url}}">{{extra.name}}</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">2013 History<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../season/2013Results.html">Season wrap up</a></li>
+                        <li class="menu_year">&nbsp;Events</li>
+                        <li ng-repeat="event in results.previousEvents | orderBy: ['-no']"><a href="{{event.url}}">{{event.eventDate}} @ {{event.location}}</a></li>
+                        <li class="menu_year">&nbsp;Players</li>
+                        <li ng-show="player.year == '2013'" ng-repeat="player in playerMenuDropdown | orderBy: ['name']"><a href="{{player.url}}">{{player.name}}</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
     </div>
 </div>
 <div class="container">
@@ -96,24 +95,6 @@
             </table>
         </div>
     </div>
-    <div class="col-lg-3">
-        <div>
-            <table class="results table table-striped table-bordered table-condensed table-hover">
-                <tr>
-                    <th>Date</th>
-                    <th>Location</th>
-                    <th>Game</th>
-                    <th>Players</th>
-                </tr>
-                <tr>
-                    <td>{{tournaments.tournamentTwo[0].eventDate}}</sup></td>
-                    <td>{{tournaments.tournamentTwo[0].location}}</td>
-                    <td>{{tournaments.tournamentTwo[0].tournament}}</td>
-                    <td>{{tournaments.tournamentTwo[0].noOfPlayers}}</td>
-                </tr>
-            </table>
-        </div>
-    </div>
 </div>
 <div class="row">
     <div class="col-lg-3">
@@ -124,7 +105,7 @@
                     <th style="text-align:left; padding-left:10px;">Name</th>
                     <th>Points</th>
                 </tr>
-                <tr ng-show="result.event == 5 && result.tournament == 1"
+                <tr ng-show="result.event == 6 && result.tournament == 1"
                     ng-repeat="result in results.eventResults | orderBy: ['event','tournament', '-points']">
                     <td>{{result.position}}<sup>{{positionSuffix(result.position)}}</sup></td>
                     <td style="text-align:left; padding-left:10px;">{{result.name}}</td>
@@ -136,32 +117,7 @@
                     <th>Bounty Winner</th>
                 </tr>
                 <tr>
-                    <td>Steve W</td>
-                </tr>
-            </table>
-        </div>
-    </div>
-    <div class="col-lg-3">
-        <div>
-            <table class="results table table-striped table-bordered table-condensed table-hover">
-                <tr>
-                    <th>Position</th>
-                    <th style="text-align:left; padding-left:10px;">Name</th>
-                    <th>Points</th>
-                </tr>
-                <tr ng-show="result.event == 5 && result.tournament == 2"
-                    ng-repeat="result in results.eventResults | orderBy: ['event','tournament', '-points']">
-                    <td>{{result.position}}<sup>{{positionSuffix(result.position)}}</sup></td>
-                    <td style="text-align:left; padding-left:10px;">{{result.name}}</td>
-                    <td>{{result.points}}</td>
-                </tr>
-            </table>
-            <table class="results table table-striped table-bordered table-condensed table-hover">
-                <tr>
-                    <th>Bounty Winner</th>
-                </tr>
-                <tr>
-                    <td>Dave M</td>
+                    <td>??????</td>
                 </tr>
             </table>
         </div>
@@ -181,7 +137,7 @@
                     <th>Points</th>
                 </tr>
                 </tr>
-                <tr ng-repeat="result in results.eventTables[5] | filter:gotPoints | orderBy: ['-points','-won', 'played', 'name']">
+                <tr ng-repeat="result in results.eventTables[6] | filter:gotPoints | orderBy: ['-points','-won', 'played', 'name']">
                     <td>{{$index + 1}}<sup>{{positionSuffix($index + 1)}}</sup></td>
                     <td style="text-align:left; padding-left:10px;">{{result.name}}</td>
                     <td>{{result.played}}</td>

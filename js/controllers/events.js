@@ -4,10 +4,12 @@ eventModule.controller('event-controller', function ($scope, $http) {
       var results = {};         // create a model object that can be put on the scope later
       var tournaments = {};
       var eventDate = $('meta[name="eventDate"]').attr("content");
+      var season = eventDate.substring(6,10);
       var noOfTournaments = parseInt($('meta[name="noOfTournaments"]').attr("content"));
 
       for (var i=1; i <= noOfTournaments ; i++) {
-        var fileName = "../json/2013/" + eventDate + "_" + i + "_results.json";
+        var temp = "../json/" + season + "/" + eventDate + "_" + i + "_results.json";
+        var fileName = "../json/" + season + "/" + eventDate + "_" + i + "_results.json";
         getTournamentSummary($http, fileName, eventDate, i, tournaments);
       };
 
@@ -32,16 +34,25 @@ eventModule.controller('event-controller', function ($scope, $http) {
           }
       }
 
-    $http.get('../json/2013/event-history.json').success(function (data) {
+    $http.get('../json/2014/event-history.json').success(function (data) {
         for (i = 0; i < data.length; i ++) { // append year so menu dropdown can section values
-              data[i].year = data[i].eventDate.substring(data[i].eventDate.length - 4, data[i].eventDate.length);
+            data[i].year = data[i].eventDate.substring(data[i].eventDate.length - 4, data[i].eventDate.length);
         }
         results.events = data;
         getUrlForEvents(results.events);
     });
 
-    $http.get('../json/2013/event_results.json').success(function (data) {
+    $http.get('../json/2013/event-history.json').success(function (data) {
+        for (i = 0; i < data.length; i ++) { // append year so menu dropdown can section values
+            data[i].year = data[i].eventDate.substring(data[i].eventDate.length - 4, data[i].eventDate.length);
+        }
+        results.previousEvents = data;
+        getUrlForEvents(results.previousEvents);
+    });
+
+    $http.get('../json/' + season + '/event_results.json').success(function (data) {
        results.eventResults = data; /* Tournament results - i.e. position, player and points */
+       var temp = "";
     });
 
     //  Get menu dropdown of players for relevant season
@@ -60,7 +71,8 @@ eventModule.controller('event-controller', function ($scope, $http) {
       $scope.playerMenuDropdown = players;
    });
 
-    $http.get('../json/2013/current-table.json').success(function (data) {
+    var blah = '../json/' + season + '/current-table.json';
+    $http.get('../json/' + season + '/current-table.json').success(function (data) {
         var eventTables = {};
         var noOfTourneys = data.length;
         for (i = 0; i < noOfTourneys; i ++) {
