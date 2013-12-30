@@ -54,12 +54,12 @@ player.controller('playerController', function ($scope, $http) {
       getUrlsForPlayers(playerDetails.results);
    });
 
-   $http.get('../json/extras.json').success(function (data) {
+   $http.get('../json/general/extras.json').success(function (data) {
          playerDetails.extras = data;
    });
 
    //  Get menu dropdown of players for relevant season
-   $http.get('../json/players.json').success(function (data) {
+   $http.get('../json/general/players.json').success(function (data) {
        var players = [];
        for (i = 0; i < data.length; i++) {
            for (j = 0; j < data[i].players.length; j++) {

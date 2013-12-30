@@ -56,7 +56,7 @@ eventModule.controller('event-controller', function ($scope, $http) {
     });
 
     //  Get menu dropdown of players for relevant season
-   $http.get('../json/players.json').success(function (data) {
+   $http.get('../json/general/players.json').success(function (data) {
        var players = [];
        for (i = 0; i < data.length; i++) {
            for (j = 0; j < data[i].players.length; j++) {
@@ -82,7 +82,7 @@ eventModule.controller('event-controller', function ($scope, $http) {
         getUrlsForPlayers(data[0]["event" + noOfTourneys]);
      });
 
-     $http.get('../json/extras.json').success(function (data) {
+     $http.get('../json/general/extras.json').success(function (data) {
         results.extras = data;
      });
 

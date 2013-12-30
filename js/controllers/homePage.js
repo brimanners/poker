@@ -58,7 +58,6 @@ function populateDetailsFromJson ($scope, $http)  {
              for (j = 0; j < eventTables[i + 1].length; j ++) {
                 var movement = 0;
                 if (i > 0) {
-                     var checking =  (i + 1) + ":" + eventTables[i + 1][j].name;
                      ladderMovement = getLadderMovement((i + 1) + ":" + eventTables[i + 1][j].name) -
                                 getLadderMovement(i + ":" + eventTables[i + 1][j].name);
                      eventTables[i + 1][j].movement = ladderMovement;
@@ -74,7 +73,7 @@ function populateDetailsFromJson ($scope, $http)  {
 
 
     //  Get menu dropdown of players for relevant season
-    $http.get('../json/players.json').success(function (data) {
+    $http.get('../json/general/players.json').success(function (data) {
         var players = [];
         for (i = 0; i < data.length; i++) {
             for (j = 0; j < data[i].players.length; j++) {
@@ -112,7 +111,7 @@ function populateDetailsFromJson ($scope, $http)  {
         getUrlForEvents(data);
     });
 
-    $http.get('../json//extras.json').success(function (data) {
+    $http.get('../json/general/extras.json').success(function (data) {
        statistics.extras = data;
     });
 
