@@ -6,6 +6,7 @@ $(document).ready(function() {
    var noOfPlayers = [];
    var positionOccurrences = [];
    var pieChartData = [];
+
    $.getJSON('../json/' + playerYear + '/' + player + '.json', function( data ) {
         finish = data.positionAndPlayers[0].positions;
         playerCount = data.positionAndPlayers[0].players;

@@ -16,13 +16,11 @@ player.controller('playerController', function ($scope, $http) {
    var playerYear = getURLParameter('year')
    var player = getURLParameter('name');
 
-//   $http.get('../json/' + playerYear + '/event-history.json').success(function (data) {
-//       for (i = 0; i < data.length; i ++) { // append year so menu dropdown can section values
-//          data[i].year = data[i].eventDate.substring(data[i].eventDate.length - 4, data[i].eventDate.length);
-//       }
-//       playerDetails.events = data;
-//       getUrlForEvents(data);
-//   });
+    // player image
+   var imageUrl = '../images/players/' + playerYear + '/' + player + '.jpg';
+   $http.get(imageUrl).success(function (data) {
+        playerDetails.image = imageUrl;
+   });
 
    $http.get('../json/2014/event-history.json').success(function (data) {
        for (i = 0; i < data.length; i ++) { // append year so menu dropdown can section values
@@ -87,9 +85,20 @@ player.controller('playerController', function ($scope, $http) {
     });
 
     $http.get('../json/' + playerYear + '/current-table.json').success(function (data) {
-            noOfTourneys = data.length;
+        noOfTourneys = data.length;
+        if (noOfTourneys > 1) {
             playerEventPosition = calculatePlayerMovement(data, player);
             drawLadderPositionLineGraph(playerEventPosition.playerPosition);
+        } else {
+//            var playerEventPosition = {};
+//            var eventPlayerPosition = new Array();
+//            eventPlayerPosition.push(1);
+//            playerEventPosition["1:" + player] = 1;
+//            playerEventPosition.playerPosition = eventPlayerPosition;
+//            drawLadderPositionLineGraph(playerEventPosition.playerPosition);
+            blah = "";
+        }
+
     });
     $scope.player = getURLParameter('name');
     $scope.year = getURLParameter('year');
