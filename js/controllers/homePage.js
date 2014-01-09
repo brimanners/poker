@@ -42,11 +42,7 @@ function populateDetailsFromJson ($scope, $http)  {
     $http.get('../json/' + season + '/current-table.json').success(function (data) {
         noOfTourneys = data.length;
         playerEventPosition = calculatePlayerMovement(data);
-        if (season == "2014") {
-            $scope.eventId = data.length - 5;
-        } else {
-            $scope.eventId = data.length;
-        }
+        $scope.eventId = data.length;
         if ($scope.eventId == 1) {
             $scope.displayMovement = false;
         } else {
