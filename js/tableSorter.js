@@ -1,17 +1,20 @@
-function calculatePlayerMovement(playerData, player) {
+function calculatePlayerMovement(playerData, player, season) {
     var playerEventPosition = {};                   // This is the hashmap (via an object) that we can return
     for (var i=0; i < playerData.length; i++) {
         var playerLadderData = new Object();
         var eventNumber = playerData.length - i;
         var eventPlayerPosition = new Array();
         for (j=0; j < playerData[i]["event" + (playerData.length - i)].length; j++) {
-            getUnsortedLadderForEvent(playerLadderData, playerData[i]["event" + (playerData.length - i)][j]);
+            if (playerData[i]["event" + (playerData.length - i)][j].points > 1) {
+                getUnsortedLadderForEvent(playerLadderData, playerData[i]["event" + (playerData.length - i)][j]);
+            }
         }
         var sortedLadder = sortEventData(playerLadderData);
         for (k=0; k < sortedLadder.length; k++) {
             playerEventPosition[eventNumber + ":" + sortedLadder[k].name] = (k + 1);
         }
     }
+    // get list of player positions for graph
     if (player != undefined) {
         var singlePlayer = new Array();
         var singlePlayerEventPosition = new Array();
@@ -25,7 +28,6 @@ function calculatePlayerMovement(playerData, player) {
         }
         playerEventPosition.playerPosition =  singlePlayerEventPosition;
     }
-
      return playerEventPosition;
 }
 

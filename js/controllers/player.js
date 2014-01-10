@@ -86,20 +86,10 @@ player.controller('playerController', function ($scope, $http) {
 
     $http.get('../json/' + playerYear + '/current-table.json').success(function (data) {
         noOfTourneys = data.length;
-        if (noOfTourneys > 1) {
-            playerEventPosition = calculatePlayerMovement(data, player);
-            drawLadderPositionLineGraph(playerEventPosition.playerPosition);
-        } else {
-//            var playerEventPosition = {};
-//            var eventPlayerPosition = new Array();
-//            eventPlayerPosition.push(1);
-//            playerEventPosition["1:" + player] = 1;
-//            playerEventPosition.playerPosition = eventPlayerPosition;
-//            drawLadderPositionLineGraph(playerEventPosition.playerPosition);
-            blah = "";
-        }
-
+        playerEventPosition = calculatePlayerMovement(data, player, playerYear);
+        drawLadderPositionLineGraph(playerEventPosition.playerPosition);
     });
+
     $scope.player = getURLParameter('name');
     $scope.year = getURLParameter('year');
     $scope.playerDetails = playerDetails;
