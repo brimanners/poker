@@ -94,8 +94,7 @@
                         </td>
                         <td style="padding-left:10px;">
                             <select ng-model="eventId" ng-change="tableChanged()" id="eventNumber">
-                                <option value="6">1</option>
-                                <option value="7">2</option>
+                      	        <option ng-repeat="tournament in statistics.events" ng-selected="{{statistics.events.length == $index + 1}}" value="{{tournament.no}}">{{$index + 1}}</option>
                             </select>
                         </td>
                     </tr>
