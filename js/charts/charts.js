@@ -137,6 +137,23 @@ function drawPieChart(finishingPositionsOccurrences) {
     pieChart.draw(data, options);
 };
 
+function drawDonutChart(donutDataValues, title, divToReplace) {
+
+    var data = google.visualization.arrayToDataTable(donutDataValues);
+
+    var options = {'title': title,
+                   'width':700,
+                   'height':350,
+                   'pieHole': 0.3,
+                   'pieSliceText': 'label',
+                   'fontSize': 10
+    };
+
+    var chart = new google.visualization.PieChart(document.getElementById(divToReplace));
+    chart.draw(data, options);
+};
+
+
 function getNumberSuffix(number) {
 	switch(number) {
 		case "1": suffix = "st"; break;

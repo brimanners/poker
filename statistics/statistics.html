@@ -1,27 +1,33 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="extras" id="ng-app">
+<html lang="en" ng-app="event" id="ng-app">
 <!-- the ng-app name 'event1' is referenced the corresponding controller logic -->
 <head> `
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <meta name="player" content="brianM">
+    <meta name="eventDate" content="04_01_2014">
+    <meta name="noOfTournaments" content="1">
     <title>Poker Results</title>
     <!-- Bootstrap core CSS -->
     <link href="../css/bootstrap.css" rel="stylesheet">
     <link href="../css/poker.css" rel="stylesheet">
+    <link href="../css/animate.min.css" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="src/css/jumbotron.css" rel="stylesheet">
     <script type="text/javascript" src="../js/jquery-1.10.2.min.js"></script>
+    <!--<script type="text/javascript" src="../js/jquery.blockUI.js"></script>-->
+    <script src="http://malsup.github.io/jquery.blockUI.js"></script>
     <!-- temp local hosting until prod release -->
     <script type="text/javascript" src="../js/angular.min.js"></script>
     <!-- temp local hosting until prod release -->
     <script type="text/javascript" src="../js/bootstrap.js"></script>
     <script type="text/javascript" src="http://twitter.github.com/bootstrap/assets/js/bootstrap-dropdown.js"></script>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript" src="../js/charts/charts.js"></script>
+
 </head>
-<body ng-controller="extrasController" ng-cloak>
+<body ng-controller="statistics-controller" ng-cloak>
 <div class="navbar navbar-inverse navbar-fixed-top">
     <div class="container" id="navigationBar">
         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
@@ -37,7 +43,7 @@
                 <li class="dropdown" data-no-collapse="true">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Event History<b class="caret"></b></a>
                     <ul class="dropdown-menu" >
-                        <li ng-show="event.year == '2014'" ng-repeat="event in extraDetails.events  | orderBy: ['-no']"><a href="{{event.url}}">{{event.eventDate}} @ {{event.location}}</a></li>
+                        <li ng-show="event.year == '2014'" ng-repeat="event in results.events | orderBy: ['-no']"><a href="{{event.url}}">{{event.eventDate}} @ {{event.location}}</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
@@ -49,7 +55,7 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Extras <b class="caret"></b></a>
                     <ul class="dropdown-menu">
-                        <li ng-repeat="extra in extraDetails.extras"><a href="{{extra.url}}">{{extra.name}}</a></li>
+                        <li ng-repeat="extra in results.extras"><a href="{{extra.url}}">{{extra.name}}</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
@@ -57,7 +63,7 @@
                     <ul class="dropdown-menu">
                         <li><a href="../season/2013Results.html">Season wrap up</a></li>
                         <li class="menu_year">&nbsp;Events</li>
-                        <li ng-repeat="event in extraDetails.previousEvents | orderBy: ['-no']"><a href="{{event.url}}">{{event.eventDate}} @ {{event.location}}</a></li>
+                        <li ng-repeat="event in results.previousEvents | orderBy: ['-no']"><a href="{{event.url}}">{{event.eventDate}} @ {{event.location}}</a></li>
                         <li class="menu_year">&nbsp;Players</li>
                         <li ng-show="player.year == '2013'" ng-repeat="player in playerMenuDropdown | orderBy: ['name']"><a href="{{player.url}}">{{player.name}}</a></li>
                     </ul>
@@ -65,33 +71,65 @@
             </ul>
             <a class="navbar-brand" href="../statistics/statistics.html">Statistics</a>
         </div>
-
-        <!--/.nav-collapse -->
     </div>
 </div>
 <div class="container">
 
-    <div class="jumbotron">
-        <h2>Winning hands</h2>
+<div class="jumbotron">
+    <h2>Statistics overload</h2>
 
-        <p>&nbsp;</p>
+    <p>&nbsp;</p>
 
-        <p>Learn this by rote and you're half way there!</p>
-    </div>
-    <div class="body-content">
-        <div class="row">
-            <div class="col-lg-12">
-                <img src="../images/winningHands.png" alt="Augusta Square" style="float:left; padding:10px">
-            </div>
+    <p>Hmmmm....donuts</p>
+</div>
+<div class="body-content">
+    <form>
+        <p>Results for season
+        <div id="selectSeason"></di>
+            <select id="seasons"">
+                <option value="2013">2013</option>
+                <option value="2014" selected="selected">2014</option>
+                <option value="All">All seasons</option>
+            </select>
         </div>
-    </div>
-    <footer>
-        <p>&copy; BJIT website productions 2014</p> <!-- TODO replace year with angular derived current year-->
-    </footer>
+        </p>
+        <fieldset>
+        <legend>Hall of fame:</legend>
+        <table>
+            <tr>
+                <td width="50%"><div id="playedDonutChart" class="donut"></div></td>
+                <td width="50%"><div id="wonDonutChart" class="donut"></div></td>
+            </tr>
+        </table>
+        <table>
+             <tr>
+                <td><div id="pointsDonutChart" class="donut"></div></td>
+                <td><div id="topThreeDonutChart" class="donut"></div></td>
+            </tr>
+        </table>
+        <table>
+             <tr>
+                <td><div id="bountiesDonutChart" class="donut"></div></td>
+                <td><div id="hostedDonutChart" class="donut"></div></td>
+            </tr>
+        </table>
+    </fieldset>
+    </form>
+
+    <form>
+        <fieldset>
+            <legend>Hall of shame:</legend>
+            <div id="lastDonutChart" class="donut"></div>
+        </fieldset>
+    </form>
+</div>
+<footer>
+    <p>&copy; BJIT website productions 2014</p>
+</footer>
 
 </div>
 <!-- /container -->
-<script type="text/javascript" src="../js/controllers/extras.js"></script>
+<script type="text/javascript" src="../js/controllers/statistics.js"></script>
 <script>
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -102,6 +140,5 @@
     ga('send', 'pageview');
 
 </script>
-
 </body>
 </html>
