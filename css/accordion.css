@@ -1,0 +1,94 @@
+html {
+    height: 100%;
+    width: 350px;
+    background: #e3e3e0;
+}  
+
+a {
+    text-decoration: none;  
+}
+
+table,th,td
+{
+border:1px solid black;
+border-collapse:collapse;
+}
+
+#ladder {
+  width: 100%;
+}
+
+#ladder thead th {
+  color: blue;
+  font-size: 12px;
+  padding-left:5px;
+}
+
+#ladder tr td {
+  color: blue;
+  font-size: 12px;
+  padding-left:5px;
+  border: 1px solid #000;
+  border-collapse:collapse;
+}
+
+.roomy {
+  padding-right:30px;
+}
+
+.centered {
+  text-align: center;
+}
+
+#ladder tr td {
+  color: blue;
+  font-size: 12px;
+}
+
+:focus, :active {  
+    outline: 0;  
+}
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+#accordion {
+    width: 100%;
+    margin: 1px;
+}
+
+#accordion h3 {
+   color: blue;
+   margin-bottom: 5px;
+}
+#accordion .ui-accordion-content {
+    width: 100%;
+    background-color: #f3f3f3;
+    color: #777;
+    font-size: 10pt;
+    line-height: 20pt;
+}
+
+#accordion .ui-accordion-content > * {
+    margin: 0;
+    padding: 5px;
+}
+#accordion .ui-accordion-content > * {
+    margin: 0;
+    padding: 1px;
+}
+#accordion .ui-accordion-header {
+    background-color: #ccc;
+    border: 1px solid #000;
+    line-height: 50px;
+    margin: 0px;
+}
+#accordion .ui-accordion-header a {
+    color: #fff;
+
+    display: block;
+    font-size: 14pt;
+    width: 100%;
+    text-indent: 10px;
+}
