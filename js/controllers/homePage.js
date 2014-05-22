@@ -33,6 +33,11 @@ ladderModule.controller('homePageController', function ($scope, $http) {
     $scope.gotPoints = function(result) {
           return result.points > 0
     };
+
+     //  Get news ticker item
+        $http.get('../json/general/news-item.txt').success(function (data) {
+          $scope.newsItem = data;
+        });
 });
 
 function populateDetailsFromJson ($scope, $http)  {

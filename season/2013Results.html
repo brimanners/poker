@@ -120,7 +120,10 @@
                         <tbody>
                             <tr ng-repeat="result in displayTable | filter:gotPoints | orderBy: ['-points','-won', 'played', 'name']">
                                <td>{{$index + 1}}<sup>{{positionSuffix($index + 1)}}</sup></td>
-                               <td style="text-align:left; padding-left:10px;"><a href="{{result.url}}">{{result.name}}</a></td>
+                                <td style="text-align:left; padding-left:10px; white-space: no-wrap;">
+                                   <img src="../images/flags/{{result.nationality}}.png" style="width="25px; height="25px;" alt="flag">
+                                   <a href="{{result.url}}">{{result.name}}</a>
+                               </td>
                                <td>{{result.played}}</td>
                                <td>{{result.won}}</td>
                                <td>{{result.won / result.played * 100 | number:2}} %</td>

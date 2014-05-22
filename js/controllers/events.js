@@ -8,7 +8,6 @@ eventModule.controller('event-controller', function ($scope, $http) {
       var noOfTournaments = parseInt($('meta[name="noOfTournaments"]').attr("content"));
 
       for (var i=1; i <= noOfTournaments ; i++) {
-        var temp = "../json/" + season + "/" + eventDate + "_" + i + "_results.json";
         var fileName = "../json/" + season + "/" + eventDate + "_" + i + "_results.json";
         getTournamentSummary($http, fileName, eventDate, i, tournaments);
       };
@@ -52,7 +51,6 @@ eventModule.controller('event-controller', function ($scope, $http) {
 
     $http.get('../json/' + season + '/event_results.json').success(function (data) {
        results.eventResults = data; /* Tournament results - i.e. position, player and points */
-       var temp = "";
     });
 
     //  Get menu dropdown of players for relevant season
