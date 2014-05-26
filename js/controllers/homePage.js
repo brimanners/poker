@@ -38,6 +38,17 @@ ladderModule.controller('homePageController', function ($scope, $http) {
         $http.get('../json/general/news-item.txt').success(function (data) {
           $scope.newsItem = data;
         });
+
+     // Set countdown time to next event
+     if (season == "2014"){
+          var clock = document.getElementById("countdown-holder");
+          var targetDate = new Date(2014, 05, 14, 19, 00, 00);
+
+          clock.innerHTML = countdown(targetDate).toString();
+          setInterval(function(){
+              clock.innerHTML = countdown(targetDate).toString();
+            }, 1000);
+     }
 });
 
 function populateDetailsFromJson ($scope, $http)  {

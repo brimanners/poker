@@ -3,6 +3,15 @@
     font-size: 1.0em;
 }
 
+#countdown-holder {
+    font-size: 1.0em;
+    color: blue;
+}
+
+#countdown-text {
+    font-size: 1.2em;
+    color: blue;
+}
 .menu_year {
     disable:true;
     font-style:italic;
