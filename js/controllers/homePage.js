@@ -41,14 +41,22 @@ ladderModule.controller('homePageController', function ($scope, $http) {
 
      // Set countdown time to next event
      if (season == "2014"){
-          var clock = document.getElementById("countdown-holder");
-          var targetDate = new Date(2014, 05, 14, 19, 00, 00);
-
-          clock.innerHTML = countdown(targetDate).toString();
-          setInterval(function(){
+         var now = new Date();
+         var targetDate = new Date(2014, 05, 14, 19, 30, 00);
+         if (now < targetDate) {
+              var clock = document.getElementById("countdown-holder");
               clock.innerHTML = countdown(targetDate).toString();
-            }, 1000);
+              var interval = setInterval(function(){
+                  clock.innerHTML = countdown(targetDate).toString();
+                  if (clock.innerHTML == "") {
+                     clock.innerHTML = "Game has commenced......."
+                     clearInterval(interval);
+                  }
+              }, 1000);
+          }
      }
+
+
 });
 
 function populateDetailsFromJson ($scope, $http)  {
