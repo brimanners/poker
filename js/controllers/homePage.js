@@ -41,19 +41,38 @@ ladderModule.controller('homePageController', function ($scope, $http) {
 
      // Set countdown time to next event
      if (season == "2014"){
-         var now = new Date();
-         var targetDate = new Date(2014, 05, 14, 19, 30, 00);
-         if (now < targetDate) {
-              var clock = document.getElementById("countdown-holder");
-              clock.innerHTML = countdown(targetDate).toString();
-              var interval = setInterval(function(){
+        $http.get('../json/general/next-event.json').success(function (data) {
+            var nextEventDate = data[0]["event-date"];
+            var nextEventTime = data[0]["event-time"];
+
+             // JS Date object has zero based months (e.g. 0 = January, 11 = December, so subtract one - TODO - JS String formatter?
+             var month = parseInt(nextEventDate.substring(5,7) - 1);
+             if (month < 10) {
+               jsMonth = "0" + month;
+             } else {
+               jsMonth = "" + month;
+             }
+
+             var targetDate = new Date(nextEventDate.substring(0,4),
+                                       jsMonth,
+                                       nextEventDate.substring(8,10),
+                                       nextEventTime.substring(0,2),
+                                       nextEventTime.substring(3,5),
+                                       00);
+
+             var now = new Date();
+             if (now < targetDate) {
+                  var clock = document.getElementById("countdown-holder");
                   clock.innerHTML = countdown(targetDate).toString();
-                  if (clock.innerHTML == "") {
-                     clock.innerHTML = "Game has commenced......."
-                     clearInterval(interval);
-                  }
-              }, 1000);
-          }
+                  var interval = setInterval(function(){
+                      clock.innerHTML = countdown(targetDate).toString();
+                      if (clock.innerHTML == "") {
+                         clock.innerHTML = "Game has commenced......."
+                         clearInterval(interval);
+                      }
+                  }, 1000);
+              }
+          });
      }
 
 
