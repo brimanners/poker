@@ -35,9 +35,9 @@ ladderModule.controller('homePageController', function ($scope, $http) {
     };
 
      //  Get news ticker item
-        $http.get('../json/general/news-item.txt').success(function (data) {
-          $scope.newsItem = data;
-        });
+    $http.get('../json/general/news-item.json').success(function (data) {
+      $scope.newsItem = data[0]["news-item"];
+    });
 
      // Set countdown time to next event
      if (season == "2014"){
@@ -53,16 +53,12 @@ ladderModule.controller('homePageController', function ($scope, $http) {
                jsMonth = "" + month;
              }
 
-             var targetDate = new Date(nextEventDate.substring(0,4),
-                                       jsMonth,
-                                       nextEventDate.substring(8,10),
-                                       nextEventTime.substring(0,2),
-                                       nextEventTime.substring(3,5),
-                                       00);
-
+             var targetDate = new Date(nextEventDate.substring(0,4), jsMonth, nextEventDate.substring(8,10),
+                                       nextEventTime.substring(0,2),nextEventTime.substring(3,5),00);
              var now = new Date();
+             var clock = document.getElementById("countdown-holder");
+             clock.innerHTML = ""
              if (now < targetDate) {
-                  var clock = document.getElementById("countdown-holder");
                   clock.innerHTML = countdown(targetDate).toString();
                   var interval = setInterval(function(){
                       clock.innerHTML = countdown(targetDate).toString();
