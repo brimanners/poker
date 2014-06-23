@@ -125,13 +125,19 @@ function animateOut() {
 
 $(document).ready(function(){
 
-    $.blockUI({ message: 'Gathering all the statistics goodness - please wait'});
-    setTimeout($.unblockUI, 2000);
+    function blockUI() {
+        $.blockUI({ message: 'Gathering all the statistics goodness - please wait'});
+        setTimeout($.unblockUI, 2000);
+     }
 
+    blockUI();
 
+    var playerMap = new Object();
     $.ajax({
         url: '../json/general/players.json', dataType: 'json', async: false, success: function(data) {
-            gatherDonutStats("2014", data)
+
+            gatherDonutStats(playerMap, "2014", data) // current season - grab from meta data?
+            outputDonutData(playerMap, "2014")
             animateIn();
         }
      });
@@ -139,141 +145,107 @@ $(document).ready(function(){
      $("#seasons").attr("selectedIndex", -1);
 
      $("#seasons").change(function() {
+        blockUI();
 
-        $.blockUI({ message: 'Gathering all the statistics goodness - please wait'});
-        setTimeout($.unblockUI, 2000);
         var season = $("#seasons option:selected").val();
         $.ajax({
             url: '../json/general/players.json', dataType: 'json', async: false, success: function(data) {
-                gatherDonutStats(season, data)
+                outputDonutData(playerMap, season)
                 animateOut();
             }
          });
      });
 
-     function gatherDonutStats(year, data) {
-         var playedDonutData = [];
-         var wonDonutData = [];
-         var topThreeDonutData = [];
-         var bountiesDonutData = [];
-         var lastDonutData = [];
-         var hostedDonutData = [];
-         var pointsDonutData = [];
 
-         wonDonutData.push(['Player', 'Won']);
-         playedDonutData.push(['Player', 'Played']);
-         topThreeDonutData.push(['Player', 'Top 3']);
-         bountiesDonutData.push(['Player', 'Bounties']);
-         lastDonutData.push(['Player', 'Last']);
-         hostedDonutData.push(['Player', 'Hosted']);
-         pointsDonutData.push(['Player', 'Points']);
-         var playerWonMap = new Object();
-         var playerPlayedMap = new Object();
-         var playerTopThreeMap = new Object();
-         var playerBountiesMap = new Object();
-         var playerLastMap = new Object();
-         var playerHostedMap = new Object();
-         var playerPointsMap = new Object();
 
+     function gatherDonutStats(playerMap, season, data) {
          for (var i = 0; i < data.length; i++) {
-
               var season = data[i].year;
-              if (season == year || year == "All") {
-                 for (var j = 0; j < data[i].players.length; j++) {
-                     var playerName = data[i].players[j].name;
-                     var fileName = playerName.substring(0,1).toLowerCase() + playerName.substring(1, playerName.length);
-                     var playerJsonFile = fileName.replace(/ /g,'') + ".json";
+              for (var j = 0; j < data[i].players.length; j++) {
+                 var playerName = data[i].players[j].name;
+                 var fileName = playerName.substring(0,1).toLowerCase() + playerName.substring(1, playerName.length);
+                 var playerJsonFile = fileName.replace(/ /g,'') + ".json";
 
-                     $.ajax({
-                         url: '../json/' + season + '/' + playerJsonFile, dataType: 'json', async: false, success: function(playerJson) {
-                             for (var k = 0; k < playerJson.positionAndPlayers.length; k++) {
-                                var playerName = formatName(playerJson.positionAndPlayers[k].player);
-                                var playerJsonStats = playerJson.positionAndPlayers[k].statistics;
-
-                                if (playerWonMap['Won :' + playerName] !== undefined) {
-                                    playerWonMap['Won :' + playerName] = parseInt(playerWonMap['Won :' + playerName]) + playerJsonStats.won;
-                                } else {
-                                    playerWonMap['Won :' + playerName] = playerJsonStats.won
-                                }
-                                if (playerPlayedMap['Played :' + playerName] !== undefined) {
-                                    playerPlayedMap['Played :' + playerName] = parseInt(playerPlayedMap['Played :' + playerName]) + playerJsonStats.played;
-                                } else {
-                                    playerPlayedMap['Played :' + playerName] = playerJsonStats.played;
-                                }
-                                if (playerTopThreeMap['Top3 :' + playerName] !== undefined) {
-                                    playerTopThreeMap['Top3 :' + playerName] = parseInt(playerTopThreeMap['Top3 :' + playerName]) + playerJsonStats.top3;
-                                } else {
-                                    playerTopThreeMap['Top3 :' + playerName] = playerJsonStats.top3;
-                                }
-                                if (playerBountiesMap['Bounty :' + playerName] !== undefined) {
-                                    playerBountiesMap['Bounty :' + playerName] = parseInt(playerBountiesMap['Bounty :' + playerName]) + playerJsonStats.bounties;
-                                } else {
-                                    playerBountiesMap['Bounty :' + playerName] = playerJsonStats.bounties;
-                                }
-                                if (playerLastMap['Last :' + playerName] !== undefined) {
-                                    playerLastMap['Last :' + playerName] = parseInt(playerLastMap['Last :' + playerName]) + playerJsonStats.last;
-                                } else {
-                                    playerLastMap['Last :' + playerName] = playerJsonStats.last;
-                                }
-                                if (playerHostedMap['Hosted :' + playerName] !== undefined) {
-                                    playerHostedMap['Hosted :' + playerName] = parseInt(playerHostedMap['Hosted :' + playerName]) + playerJsonStats.hosted;
-                                } else {
-                                    playerHostedMap['Hosted :' + playerName] = playerJsonStats.hosted;
-                                }
-                             }
+                 $.ajax({
+                     url: '../json/' + season + '/' + playerJsonFile, dataType: 'json', async: false, success: function(playerJson) {
+                         for (var k = 0; k < playerJson.positionAndPlayers.length; k++) {
+                            var playerJsonStats = playerJson.positionAndPlayers[k].statistics;
+                            accumulateStatistics(playerMap, 'Played', playerJsonStats.played, playerName, season);
+                            accumulateStatistics(playerMap, 'Won', playerJsonStats.won, playerName, season);
+                            accumulateStatistics(playerMap, 'Top3', playerJsonStats.top3, playerName, season);
+                            accumulateStatistics(playerMap, 'Bounty', playerJsonStats.bounties, playerName, season);
+                            accumulateStatistics(playerMap, 'Last', playerJsonStats.last, playerName, season);
+                            accumulateStatistics(playerMap, 'Hosted', playerJsonStats.hosted, playerName, season);
                          }
-                     })
+                     }
+                 })
 
-
-                     var playerEventJsonFile = playerJsonFile.replace('.json','_event_history.json');
-                     var totalPoints = 0;
-                     $.ajax(
-                        { url: '../json/' + season + '/' + playerEventJsonFile, dataType: 'json', async: false, success: function(playerEventJson) {
-                            for (var k = 0; k < playerEventJson.length; k++) {
-                                  totalPoints = totalPoints + playerEventJson[k].points;
-                            }
-
-                            if (playerPointsMap['Points :' + playerName] !== undefined) {
-                                 playerPointsMap['Points :' + playerName] = parseInt(playerPointsMap['Points :' + playerName]) + totalPoints;
-                            } else {
-                                 playerPointsMap['Points :' + playerName] = totalPoints;
-                            }
-                         }
-                     })
-                 }
+                 var playerEventJsonFile = playerJsonFile.replace('.json','_event_history.json');
+                 var totalPoints = 0;
+                 $.ajax(
+                    { url: '../json/' + season + '/' + playerEventJsonFile, dataType: 'json', async: false, success: function(playerEventJson) {
+                        for (var k = 0; k < playerEventJson.length; k++) {
+                              totalPoints = totalPoints + playerEventJson[k].points;
+                        }
+                        accumulateStatistics(playerMap, 'Points', totalPoints, playerName, season);
+                     }
+                 })
              }
          }
+     }
 
+     function outputDonutData(playerMap, season) {
 
-         for (var player in playerWonMap) {
-             wonDonutData.push([player.substring(5, player.length), playerWonMap[player]]);
-          }
-          for (var player in playerPlayedMap) {
-             playedDonutData.push([player.substring(8, player.length), playerPlayedMap[player]]);
-          }
-         for (var player in playerTopThreeMap) {
-            topThreeDonutData.push([player.substring(6, player.length), playerTopThreeMap[player]]);
-         }
-         for (var player in playerBountiesMap) {
-            bountiesDonutData.push([player.substring(8, player.length), playerBountiesMap[player]]);
-         }
-         for (var player in playerLastMap) {
-              lastDonutData.push([player.substring(6, player.length), playerLastMap[player]]);
-         }
-         for (var player in playerHostedMap) {
-               hostedDonutData.push([player.substring(8, player.length), playerHostedMap[player]]);
-          }
-         for (var player in playerPointsMap) {
-              pointsDonutData.push([player.substring(8, player.length), playerPointsMap[player]]);
-         }
+          var playedDonutData = [];
+          var wonDonutData = [];
+          var topThreeDonutData = [];
+          var bountiesDonutData = [];
+          var lastDonutData = [];
+          var hostedDonutData = [];
+          var pointsDonutData = [];
 
-         drawDonutChart(wonDonutData, "Won", "wonDonutChart");
-         drawDonutChart(playedDonutData, "Played", "playedDonutChart");
-         drawDonutChart(topThreeDonutData, "Top 3", "topThreeDonutChart");
-         drawDonutChart(bountiesDonutData, "Bounties", "bountiesDonutChart");
-         drawDonutChart(lastDonutData, "Lucky last", "lastDonutChart");
-         drawDonutChart(hostedDonutData, "Hosted", "hostedDonutChart");
-         drawDonutChart(pointsDonutData, "Total Points", "pointsDonutChart");
+          wonDonutData.push(['Player', 'Won']);
+          playedDonutData.push(['Player', 'Played']);
+          topThreeDonutData.push(['Player', 'Top 3']);
+          bountiesDonutData.push(['Player', 'Bounties']);
+          lastDonutData.push(['Player', 'Last']);
+          hostedDonutData.push(['Player', 'Hosted']);
+          pointsDonutData.push(['Player', 'Points']);
+
+          // This puts the results into the the donut data maps based upon the selected season or all
+          for (var player in playerMap) {
+              if (player.substring(0,4) == season) {
+                  if (player.substring(4,10) == "Played") {
+                     playedDonutData.push([player.substring(11, player.length), playerMap[player]]);
+                  }
+                  if (player.substring(4,7) == "Won") {
+                     wonDonutData.push([player.substring(8, player.length), playerMap[player]]);
+                  }
+                  if (player.substring(4,10) == "Points") {
+                     pointsDonutData.push([player.substring(11, player.length), playerMap[player]]);
+                  }
+                  if (player.substring(4,8) == "Top3") {
+                     topThreeDonutData.push([player.substring(9, player.length), playerMap[player]]);
+                  }
+                  if (player.substring(4,10) == "Bounty") {
+                     bountiesDonutData.push([player.substring(11, player.length), playerMap[player]]);
+                  }
+                  if (player.substring(4,10) == "Hosted") {
+                     hostedDonutData.push([player.substring(11, player.length), playerMap[player]]);
+                  }
+                  if (player.substring(4,8) == "Last") {
+                     lastDonutData.push([player.substring(9, player.length), playerMap[player]]);
+                  }
+              }
+          }
+
+          drawDonutChart(wonDonutData, "Won", "wonDonutChart");
+          drawDonutChart(playedDonutData, "Played", "playedDonutChart");
+          drawDonutChart(pointsDonutData, "Total Points", "pointsDonutChart");
+          drawDonutChart(topThreeDonutData, "Top 3", "topThreeDonutChart");
+          drawDonutChart(bountiesDonutData, "Bounties", "bountiesDonutChart");
+          drawDonutChart(hostedDonutData, "Hosted", "hostedDonutChart");
+          drawDonutChart(lastDonutData, "Lucky last", "lastDonutChart");
      }
 
      function formatName(player) {
@@ -285,4 +257,17 @@ $(document).ready(function(){
          return playerName
     }
 
+    function accumulateStatistics (playerMap, statisticType, value, playerName, season) {
+
+        if (playerMap['All ' + statisticType + ':' + playerName] !== undefined) {
+            playerMap['All ' + statisticType + ':' + playerName] = parseInt(playerMap['All ' + statisticType + ':' + playerName]) + value;
+        } else {
+            playerMap['All ' + statisticType + ':' +  playerName] = value;
+        }
+        if (playerMap[season + statisticType + ':' + playerName] !== undefined) {
+            playerMap[season + statisticType + ':' + playerName] = parseInt(playerMap[season + statisticType + ':' + playerName]) + value;
+        } else {
+            playerMap[season + statisticType + ':' + playerName] = value;
+        }
+    }
 });
