@@ -104,22 +104,63 @@ function populateDetailsFromJson ($scope, $http)  {
         getUrlsForPlayers(statistics.players, season);
         $scope.statistics = statistics;
         $scope.noOfTourneys = noOfTourneys;
-    });
 
+        var overallLadder = [];
+        var overallLadderItems = {};
+
+        function accumulateOverallLadder(seasonResults) {
+           var noOfSeasons = 2;  // code hack for average position calc - should be driven by json file of year lists?
+           for (i = 0; i < seasonResults.length; i ++) {
+              var overallLadderPlayer = {};
+              if (overallLadderItems[seasonResults[i].name] == undefined) {
+                 overallLadderPlayer.name = seasonResults[i].name;
+                 overallLadderPlayer.played = seasonResults[i].played;
+                 overallLadderPlayer.won = seasonResults[i].won;
+                 overallLadderPlayer.points = seasonResults[i].points;
+                 overallLadderPlayer.averagePosition = seasonResults[i].averagePosition;
+                 overallLadderItems[seasonResults[i].name] = overallLadderPlayer;
+              } else {
+                   var existingPlayer = overallLadderItems[seasonResults[i].name];
+                   existingPlayer.played = existingPlayer.played + seasonResults[i].played;
+                   existingPlayer.won = existingPlayer.won + seasonResults[i].won;
+                   existingPlayer.points = existingPlayer.points + seasonResults[i].points;
+                   existingPlayer.averagePosition = (existingPlayer.averagePosition + seasonResults[i].averagePosition) / noOfSeasons
+                   overallLadderItems[seasonResults[i].name] = existingPlayer;
+              }
+           }
+        }
+
+        $http.get('../json/2014/current-table.json').success(function (data) {
+           accumulateOverallLadder(data[0]["event" + data.length])
+
+            $http.get('../json/2013/current-table.json').success(function (data) {
+               accumulateOverallLadder(data[0]["event" + data.length])
+               for (ladderItem in overallLadderItems) {
+                         overallLadder.push(overallLadderItems[ladderItem]);
+               }
+               $scope.allSeasonsLadder = overallLadder;
+            });
+        });
+    });
 
     //  Get menu dropdown of players for relevant season
     $http.get('../json/general/players.json').success(function (data) {
         var players = [];
+        var nationality = {};
         for (i = 0; i < data.length; i++) {
             for (j = 0; j < data[i].players.length; j++) {
                 var player = {};
+                var playerNationality = [];
                 player.name = data[i].players[j].name;
                 player.year = data[i].year;
                 var nameParts = player.name.split(" ");
                 player.url = "../players/player.html?name=" + nameParts[0].toLowerCase() + nameParts[1] + '&year=' + data[i].year;
                 players.push(player);
+                nationality[player.name] = data[i].players[j].Nationality;
+                playerNationality.push(nationality);
             }
        }
+       $scope.playerNationality = playerNationality;
        $scope.statistics.playerMenuDropdown = players;
     });
 
