@@ -55,10 +55,10 @@ function sortEventData(playerLadderData) {
         b = playerB;
         if (a.points !== b.points) {
             return sortReturn(a.points, b.points);
+        } else if (a.played !== b.played) {
+                    return sortReturn(b.played, a.played);
         } else if (a.won !== b.won) {
             return sortReturn(a.won, b.won);
-        } else if (a.played !== b.played) {
-            return sortReturn(b.played, a.played);
         } else if (a.average !== b.average) {
 			return sortReturn(a.average, b.average);
 		} else {
