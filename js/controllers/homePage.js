@@ -116,6 +116,7 @@ function populateDetailsFromJson ($scope, $http)  {
                  overallLadderPlayer.name = seasonResults[i].name;
                  overallLadderPlayer.played = seasonResults[i].played;
                  overallLadderPlayer.won = seasonResults[i].won;
+                 overallLadderPlayer.last = seasonResults[i].last;
                  overallLadderPlayer.points = seasonResults[i].points;
                  overallLadderPlayer.averagePosition = seasonResults[i].averagePosition;
                  overallLadderItems[seasonResults[i].name] = overallLadderPlayer;
@@ -123,6 +124,7 @@ function populateDetailsFromJson ($scope, $http)  {
                    var existingPlayer = overallLadderItems[seasonResults[i].name];
                    existingPlayer.played = existingPlayer.played + seasonResults[i].played;
                    existingPlayer.won = existingPlayer.won + seasonResults[i].won;
+                   existingPlayer.last = existingPlayer.last + seasonResults[i].last;
                    existingPlayer.points = existingPlayer.points + seasonResults[i].points;
                    existingPlayer.averagePosition = (existingPlayer.averagePosition + seasonResults[i].averagePosition) / noOfSeasons
                    overallLadderItems[seasonResults[i].name] = existingPlayer;
@@ -139,6 +141,7 @@ function populateDetailsFromJson ($scope, $http)  {
                          overallLadder.push(overallLadderItems[ladderItem]);
                }
                $scope.allSeasonsLadder = overallLadder;
+               var blah = "";
             });
         });
     });
