@@ -114,6 +114,7 @@ function populateDetailsFromJson ($scope, $http)  {
               var overallLadderPlayer = {};
               if (overallLadderItems[seasonResults[i].name] == undefined) {
                  overallLadderPlayer.name = seasonResults[i].name;
+                 overallLadderPlayer.nationality = seasonResults[i].nationality;
                  overallLadderPlayer.played = seasonResults[i].played;
                  overallLadderPlayer.won = seasonResults[i].won;
                  overallLadderPlayer.last = seasonResults[i].last;
