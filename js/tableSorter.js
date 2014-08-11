@@ -4,9 +4,11 @@ function calculatePlayerMovement(playerData, player, season) {
         var playerLadderData = new Object();
         var eventNumber = playerData.length - i;
         var eventPlayerPosition = new Array();
-        for (j=0; j < playerData[i]["event" + (playerData.length - i)].length; j++) {
-            if (playerData[i]["event" + (playerData.length - i)][j].points > 0) {
-                getUnsortedLadderForEvent(playerLadderData, playerData[i]["event" + (playerData.length - i)][j]);
+        var blah = playerData.length - i;
+        var eventDetails = "event" + playerData[i]["eventId"];
+        for (j=0; j < playerData[i][eventDetails].length; j++) {
+            if (playerData[i][eventDetails][j].points > 0) {
+                getUnsortedLadderForEvent(playerLadderData, playerData[i][eventDetails][j]);
             }
         }
         var sortedLadder = sortEventData(playerLadderData);

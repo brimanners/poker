@@ -6,6 +6,7 @@ var ladderModule = angular.module('poker', []);        // poker module is the na
 ladderModule.controller('homePageController', function ($scope, $http) {
     populateDetailsFromJson($scope, $http);   // calls ajax request to read ladder results from json file generated via clojure app :)
     $scope.displayTable = [];
+    $scope.displayExtra = false;
 
     // this function feel like they should be a in general util type area - need to work out scoping so all angular controller can see....
     $scope.positionSuffix = function(position) {
@@ -71,6 +72,13 @@ ladderModule.controller('homePageController', function ($scope, $http) {
           });
      }
 
+$scope.clicked = function() {
+   if ($scope.displayExtra == true) {
+     $scope.displayExtra = false;
+   } else {
+     $scope.displayExtra = true;
+   }
+ }
 
 });
 
@@ -87,9 +95,10 @@ function populateDetailsFromJson ($scope, $http)  {
         } else {
             $scope.displayMovement = true;
         }
-        statistics.players = data[0]["event" + noOfTourneys];
+        var totalTourneys =  data[0]["event" + data[0]["eventId"]];
+        statistics.players = data[0]["event" + totalTourneys];
         for (i = 0; i < noOfTourneys; i ++) {
-             eventTables[i + 1] = data[noOfTourneys - 1 - i]["event" + (i + 1)];
+             eventTables[i + 1] = data[noOfTourneys - 1 - i]["event" + data[noOfTourneys - 1 - i]["eventId"]];
              for (j = 0; j < eventTables[i + 1].length; j ++) {
                 var movement = 0;
                 if (i > 0) {
@@ -142,7 +151,6 @@ function populateDetailsFromJson ($scope, $http)  {
                          overallLadder.push(overallLadderItems[ladderItem]);
                }
                $scope.allSeasonsLadder = overallLadder;
-               var blah = "";
             });
         });
     });
