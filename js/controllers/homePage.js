@@ -96,7 +96,7 @@ function populateDetailsFromJson ($scope, $http)  {
             $scope.displayMovement = true;
         }
         var totalTourneys =  data[0]["event" + data[0]["eventId"]];
-        statistics.players = data[0]["event" + totalTourneys];
+        statistics.players = totalTourneys;
         for (i = 0; i < noOfTourneys; i ++) {
              eventTables[i + 1] = data[noOfTourneys - 1 - i]["event" + data[noOfTourneys - 1 - i]["eventId"]];
              for (j = 0; j < eventTables[i + 1].length; j ++) {
@@ -119,36 +119,44 @@ function populateDetailsFromJson ($scope, $http)  {
 
         function accumulateOverallLadder(seasonResults) {
            var noOfSeasons = 2;  // code hack for average position calc - should be driven by json file of year lists?
-           for (i = 0; i < seasonResults.length; i ++) {
+           for (j = 0; j < seasonResults.length; j ++) {
               var overallLadderPlayer = {};
-              if (overallLadderItems[seasonResults[i].name] == undefined) {
-                 overallLadderPlayer.name = seasonResults[i].name;
-                 overallLadderPlayer.nationality = seasonResults[i].nationality;
-                 overallLadderPlayer.played = seasonResults[i].played;
-                 overallLadderPlayer.won = seasonResults[i].won;
-                 overallLadderPlayer.last = seasonResults[i].last;
-                 overallLadderPlayer.points = seasonResults[i].points;
-                 overallLadderPlayer.averagePosition = seasonResults[i].averagePosition;
-                 overallLadderItems[seasonResults[i].name] = overallLadderPlayer;
+              var event = seasonResults[j]
+              if (overallLadderItems[event.name] == undefined) {
+                 overallLadderPlayer.name = event.name;
+                 overallLadderPlayer.nationality = event.nationality;
+                 overallLadderPlayer.played = event.played;
+                 overallLadderPlayer.won = event.won;
+                 overallLadderPlayer.last = event.last;
+                 overallLadderPlayer.points = event.points;
+                 overallLadderPlayer.averagePosition = event.averagePosition;
+                 overallLadderItems[event.name] = overallLadderPlayer;
               } else {
-                   var existingPlayer = overallLadderItems[seasonResults[i].name];
-                   existingPlayer.played = existingPlayer.played + seasonResults[i].played;
-                   existingPlayer.won = existingPlayer.won + seasonResults[i].won;
-                   existingPlayer.last = existingPlayer.last + seasonResults[i].last;
-                   existingPlayer.points = existingPlayer.points + seasonResults[i].points;
-                   existingPlayer.averagePosition = (existingPlayer.averagePosition + seasonResults[i].averagePosition) / noOfSeasons
-                   overallLadderItems[seasonResults[i].name] = existingPlayer;
+                   var existingPlayer = overallLadderItems[event.name];
+                   existingPlayer.played = existingPlayer.played + event.played;
+                   existingPlayer.won = existingPlayer.won + event.won;
+                   existingPlayer.last = existingPlayer.last + event.last;
+                   existingPlayer.points = existingPlayer.points + event.points;
+                   existingPlayer.averagePosition = (existingPlayer.averagePosition + event.averagePosition) / noOfSeasons
+                   overallLadderItems[event.name] = existingPlayer;
               }
            }
         }
 
         $http.get('../json/2014/current-table.json').success(function (data) {
-           accumulateOverallLadder(data[0]["event" + data.length])
+
+              accumulateOverallLadder(data[0]["event" + data[0].eventId]);
+//           for (i = 0; i < data.length; i++) {
+//              accumulateOverallLadder(data[i]);
+//           }
 
             $http.get('../json/2013/current-table.json').success(function (data) {
-               accumulateOverallLadder(data[0]["event" + data.length])
+               accumulateOverallLadder(data[0]["event" + data[0].eventId]);
+//               for (i = 0; i < data.length; i++) {
+//                  accumulateOverallLadder(data[i]);
+//               }
                for (ladderItem in overallLadderItems) {
-                         overallLadder.push(overallLadderItems[ladderItem]);
+                 overallLadder.push(overallLadderItems[ladderItem]);
                }
                $scope.allSeasonsLadder = overallLadder;
             });

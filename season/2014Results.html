@@ -101,7 +101,7 @@
                         </td>
                         <td style="padding-left:10px;">
                             <select ng-model="eventId" ng-change="tableChanged()" id="eventNumber">
-                      	        <option ng-repeat="tournament in statistics.events" ng-selected="{{statistics.events.length == $index + 1}}" value="{{tournament.no}}">{{$index + 1}}</option>
+                      	        <option ng-repeat="tournament in statistics.events" ng-selected="{{statistics.events.length == $index + 1}}" value="{{$index + 1}}">{{$index + 1}}</option>
                             </select>
                         </td>
                         <td style="padding-left:440px;"><button ng-model="poker" ng-click="clicked()" ng-hide="displayExtra">More detail</button></td>
