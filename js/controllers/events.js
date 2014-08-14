@@ -69,15 +69,18 @@ eventModule.controller('event-controller', function ($scope, $http) {
       $scope.playerMenuDropdown = players;
    });
 
-    var blah = '../json/' + season + '/current-table.json';
     $http.get('../json/' + season + '/current-table.json').success(function (data) {
         var eventTables = {};
         var noOfTourneys = data.length;
         for (i = 0; i < noOfTourneys; i ++) {
-            eventTables[i + 1] = data[noOfTourneys - 1 - i]["event" + (i + 1)];
+            eventTables[i + 1] = data[noOfTourneys - 1 - i]["event" + data[noOfTourneys - 1 - i]["eventId"]];
+
+//            eventTables[i + 1] = data[noOfTourneys - 1 - i]["event" + (i + 1)];
             results.eventTables = eventTables;
         }
-        getUrlsForPlayers(data[0]["event" + noOfTourneys]);
+        getUrlsForPlayers(data[0]["event" + data[0]["eventId"]]);
+
+        var blah = "";
      });
 
      $http.get('../json/general/extras.json').success(function (data) {

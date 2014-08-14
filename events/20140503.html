@@ -138,7 +138,7 @@
                     <th>Points</th>
                 </tr>
                 </tr>
-                <tr ng-repeat="result in results.eventTables[8] | filter:gotPoints | orderBy: ['-points','-won', 'played', 'name']">
+                <tr ng-repeat="result in results.eventTables[3] | filter:gotPoints | orderBy: ['-points','-won', 'played', 'name']">
                     <td>{{$index + 1}}<sup>{{positionSuffix($index + 1)}}</sup></td>
                     <td style="text-align:left; padding-left:10px;">{{result.name}}</td>
                     <td>{{result.played}}</td>

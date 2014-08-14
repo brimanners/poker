@@ -82,6 +82,14 @@ $scope.clicked = function() {
 
 });
 
+
+// WIP - Or do we just create an array in the JSON instead of client side data manipulation?
+function convertListToArray(eventData) {
+  for (k = 0; k < eventData.length; k++) {
+      eventData[k].positionArray = eventData[k].positions.split(" ");
+  }
+}
+
 function populateDetailsFromJson ($scope, $http)  {
     var statistics = {};
     var eventTables = {};
@@ -146,15 +154,9 @@ function populateDetailsFromJson ($scope, $http)  {
         $http.get('../json/2014/current-table.json').success(function (data) {
 
               accumulateOverallLadder(data[0]["event" + data[0].eventId]);
-//           for (i = 0; i < data.length; i++) {
-//              accumulateOverallLadder(data[i]);
-//           }
 
             $http.get('../json/2013/current-table.json').success(function (data) {
                accumulateOverallLadder(data[0]["event" + data[0].eventId]);
-//               for (i = 0; i < data.length; i++) {
-//                  accumulateOverallLadder(data[i]);
-//               }
                for (ladderItem in overallLadderItems) {
                  overallLadder.push(overallLadderItems[ladderItem]);
                }
