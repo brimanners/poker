@@ -41,7 +41,7 @@ player.controller('playerController', function ($scope, $http) {
 
 
    $http.get('../json/' + playerYear + '/current-table.json').success(function (data) {
-      playerDetails.results = data[0]["event" + data.length];
+      playerDetails.results = data[0]["event" + data[0]["eventId"]];
       for (i = 0; i < playerDetails.results.length; i++) {
         var playerName = changeNameToParameterType(playerDetails.results[i].name);
         if (playerName == player) {
