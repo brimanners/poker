@@ -86,8 +86,10 @@
         </p>
     </div>
     <div class="body-content">
-        <h4 style="color:blue;" class="hidden" id="newsTicker"><b><i><span id="news">Latest News: </span></i></b>{{newsItem}}</h4>
-        <table border="0">
+        <div ng-hide="newsItem == ''">
+            <h4 style="color:blue;" class="hidden" id="newsTicker"><b><i><span id="news">Latest News: </span></i></b>{{newsItem}}</h4>
+        </div>
+        <table border="0" ng-show="displayCountdown">
             <tr>
                 <td id="countdown-text">Time to next event: <b><span id="countdown-holder"></span></b</td>
             </tr>

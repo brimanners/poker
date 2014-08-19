@@ -46,6 +46,11 @@ ladderModule.controller('homePageController', function ($scope, $http) {
             var nextEventDate = data[0]["event-date"];
             var nextEventTime = data[0]["event-time"];
 
+            $scope.displayCountdown = false;
+            if (nextEventDate !== '' || nextEventDate != undefined) {
+               $scope. displayCountdown= true;
+            }
+
              // JS Date object has zero based months (e.g. 0 = January, 11 = December, so subtract one - TODO - JS String formatter?
              var month = parseInt(nextEventDate.substring(5,7) - 1);
              if (month < 10) {
