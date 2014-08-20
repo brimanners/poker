@@ -115,9 +115,12 @@
                         <thead>
                             <tr>
                                 <th>Position</th>
-                                <th style="text-align:left; width="25%"; padding-left:50px; white-space: no-wrap;">Name</th>
+                                <th style="text-align:left; padding-left:10px; width:100px; white-space:nowrap;">Name</th>
                                 <th class="header-center">Played</th>
-                                <th class="header-center">Won</th>
+                                <th class="header-center">1<sup>st</sup></th>
+                                <th class="header-center">2<sup>nd</sup></th>
+                                <th class="header-center">3<sup>rd</sup></th>
+                                <th class="header-center">4<sup>th</sup></th>
                                 <th class="header-center">Last</th>
                                 <th class="header-center">Win Ratio</th>
                                 <th class="header-center">Last Ratio</th>
@@ -130,17 +133,20 @@
                         <tbody ng-repeat="result in displayTable | filter:gotPoints | orderBy: ['-points', 'played', '-won', 'averagePosition', 'name']">
                             <tr>
                                <td>{{$index + 1}}<sup>{{positionSuffix($index + 1)}}</sup></td>
-                               <td style="text-align:left; width="20%"; padding-left:1px; white-space: no-wrap;">
+                               <td style="text-align:left; padding-left:10px; width:100px; white-space:nowrap;">
                                    <img src="../images/flags/{{result.nationality}}.png" style="width="25px; height="25px;" alt="flag">
                                    <a href="{{result.url}}">{{result.name}}</a>
                                </td>
                                <td>{{result.played}}</td>
                                <td>{{result.won}}</td>
-                                <td>{{result.last}}</td>
-                                <td>{{result.won / result.played * 100 | number:2}}%</td>
-                                <td>{{result.last / result.played * 100 | number:2}}%</td>
-                                <td>{{result.points / result.played | number:2}}</td>
-                                <td>{{result.averagePosition | number:2}}</td>
+                               <td>{{result.second}}</td>
+                               <td>{{result.third}}</td>
+                               <td>{{result.fourth}}</td>
+                               <td>{{result.last}}</td>
+                               <td>{{result.won / result.played * 100 | number:2}}%</td>
+                               <td>{{result.last / result.played * 100 | number:2}}%</td>
+                               <td>{{result.points / result.played | number:2}}</td>
+                               <td>{{result.averagePosition | number:2}}</td>
                                <td style="color: blue"><b>{{result.points}}</b></td>
                                <div>
                                    <td>
@@ -191,7 +197,10 @@
                           <th>Position</th>
                           <th style="text-align:left; padding-left:10px;">Name</th>
                           <th>Played</th>
-                          <th>Won</th>
+                          <th class="header-center">1<sup>st</sup></th>
+                          <th class="header-center">2<sup>nd</sup></th>
+                          <th class="header-center">3<sup>rd</sup></th>
+                          <th class="header-center">4<sup>th</sup></th>
                           <th>Last</th>
                           <th>Win Ratio</th>
                           <th>Last Ratio</th>
@@ -201,12 +210,15 @@
                       </tr>
                       <tr ng-repeat="result in allSeasonsLadder | orderBy: ['-points', 'played', '-won', 'averagePosition', 'name']" >
                          <td>{{$index + 1}}<sup>{{positionSuffix($index + 1)}}</sup></td>
-                         <td style="text-align:left; padding-left:10px;">
+                         <td style="text-align:left;">
                              <img src='../images/flags/{{result.nationality}}.png' style="width="25px; height="25px;" alt="flag">
                              <a href="{{result.url}}">{{result.name}}</a>
                          </td>
                          <td>{{result.played}}</td>
                          <td>{{result.won}}</td>
+                         <td>{{result.second}}</td>
+                         <td>{{result.third}}</td>
+                         <td>{{result.fourth}}</td>
                          <td>{{result.last}}</td>
                          <td>{{result.won / result.played * 100 | number:2}} %</td>
                          <td>{{result.last / result.played * 100 | number:2}} %</td>

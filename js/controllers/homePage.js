@@ -140,6 +140,9 @@ function populateDetailsFromJson ($scope, $http)  {
                  overallLadderPlayer.nationality = event.nationality;
                  overallLadderPlayer.played = event.played;
                  overallLadderPlayer.won = event.won;
+                 overallLadderPlayer.second = event.second;
+                 overallLadderPlayer.third = event.third;
+                 overallLadderPlayer.fourth = event.fourth;
                  overallLadderPlayer.last = event.last;
                  overallLadderPlayer.points = event.points;
                  overallLadderPlayer.averagePosition = event.averagePosition;
@@ -148,6 +151,9 @@ function populateDetailsFromJson ($scope, $http)  {
                    var existingPlayer = overallLadderItems[event.name];
                    existingPlayer.played = existingPlayer.played + event.played;
                    existingPlayer.won = existingPlayer.won + event.won;
+                   existingPlayer.second = existingPlayer.second + event.second;
+                   existingPlayer.third = existingPlayer.third + event.third;
+                   existingPlayer.fourth = existingPlayer.fourth + event.fourth;
                    existingPlayer.last = existingPlayer.last + event.last;
                    existingPlayer.points = existingPlayer.points + event.points;
                    existingPlayer.averagePosition = (existingPlayer.averagePosition + event.averagePosition) / noOfSeasons
@@ -167,6 +173,7 @@ function populateDetailsFromJson ($scope, $http)  {
                }
                $scope.allSeasonsLadder = overallLadder;
             });
+            $scope.allSeasonsLadder = overallLadder;
         });
     });
 
