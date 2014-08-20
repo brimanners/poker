@@ -42,6 +42,7 @@ body
 
 .results tbody tr td {
     text-align:center;
+    white-space:nowrap;
 }
 
 .donut {

@@ -195,7 +195,7 @@
                   <table class="results table table-striped table-bordered table-condensed table-hover" id="ladder">
                       <tr>
                           <th>Position</th>
-                          <th style="text-align:left; padding-left:10px;">Name</th>
+                          <th style="text-align:left; padding-left:10px; white-space:nowrap;">Name</th>
                           <th>Played</th>
                           <th class="header-center">1<sup>st</sup></th>
                           <th class="header-center">2<sup>nd</sup></th>
@@ -210,7 +210,7 @@
                       </tr>
                       <tr ng-repeat="result in allSeasonsLadder | orderBy: ['-points', 'played', '-won', 'averagePosition', 'name']" >
                          <td>{{$index + 1}}<sup>{{positionSuffix($index + 1)}}</sup></td>
-                         <td style="text-align:left;">
+                         <td style="text-align:left; white-space:nowrap;">
                              <img src='../images/flags/{{result.nationality}}.png' style="width="25px; height="25px;" alt="flag">
                              <a href="{{result.url}}">{{result.name}}</a>
                          </td>
@@ -237,6 +237,9 @@
                     <th style="text-align:left; padding-left:10px;">Name</th>
                     <th>Played</th>
                     <th>Won</th>
+                    <th>2<sup>nd</sup></th>
+                    <th>3<sup>rd</sup></th>
+                    <th>4<sup>th</sup></th>
                     <th>Last</th>
                     <th>Win Ratio</th>
                     <th>Last Ratio</th>
@@ -253,6 +256,9 @@
                    </td>
                    <td>{{result.played}}</td>
                    <td>{{result.won}}</td>
+                   <td>{{result.second}}</td>
+                   <td>{{result.third}}</td>
+                   <td>{{result.fourth}}</td>
                    <td>{{result.last}}</td>
                    <td>{{result.won / result.played * 100 | number:2}} %</td>
                    <td>{{result.last / result.played * 100 | number:2}} %</td>
