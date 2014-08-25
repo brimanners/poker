@@ -1,3 +1,15 @@
+
+#fadeandscale {
+  transform: scale(0.8);
+}
+.popup_visible #fadeandscale {
+  transform: scale(1);
+}
+
+.poker_button {
+  width: 150px;
+}
+
 .results tbody tr th {
     text-align:center;
     font-size: 1.0em;
@@ -78,4 +90,3 @@ body
             height                      : 220px; /*300-80*/
         }
     }
-

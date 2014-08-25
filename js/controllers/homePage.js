@@ -85,6 +85,10 @@ $scope.clicked = function() {
    }
  }
 
+
+ $scope.displayPoints = function() {
+     $scope.displayPointsChart = true;
+  }
 });
 
 
