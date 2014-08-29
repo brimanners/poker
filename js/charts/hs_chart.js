@@ -40,7 +40,7 @@ $(function () {
             data: [0, 2, 13, 13, 24]
         }, {
             name: 'Mark L',
-            data: [0, 0, 8, 19, 20]
+            data: [0, 0, 8, 19, 19]
         }, {
             name: 'Mark V',
             data: [1, 11, 16, 18, 19]

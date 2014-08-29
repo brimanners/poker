@@ -24,6 +24,11 @@ extras.controller('extrasController', function ($scope, $http) {
          extraDetails.extras = data;
    });
 
+  $http.get('../json/general/blind-levels.json').success(function (data) {
+    $scope.blind_levels = data;
+  });
+
+
    //  Get menu dropdown of players for relevant season
    $http.get('../json/general/players.json').success(function (data) {
        var players = [];
