@@ -69,15 +69,15 @@
 </div>
 <div class="container">
 
-    <div class="jumbotron">
-        <h2>{{playerLongName}} statistics and analysis for year {{year}}</h2>
+    <div class="jumbotron table_border">
+        <h2 class="shadow" id="header1">{{playerLongName}} statistics and analysis for year {{year}}</h2>
         <p>....because you can never have enough tables, charts and graphs.</p>
         <p>&nbsp;</p>
     </div>
     <div class="body-content">
         <div class="row">
             <div class="col-lg-8">
-                <table class="results table table-striped table-bordered table-condensed table-hover">
+                <table class="table_border results table table-striped table-bordered table-condensed table-hover">
                     <tr>
                         <th>Position</th>
                         <th>Played</th>
@@ -101,7 +101,7 @@
         </div>
         <div class="row">
             <div class="col-lg-8">
-                <table class="results table table-striped table-bordered table-condensed table-hover">
+                <table class="table_border results table table-striped table-bordered table-condensed table-hover">
                     <tr>
                         <th>Date</th>
                         <th>Location</th>
@@ -120,10 +120,11 @@
                     </tr>
                 </table>
             </div>
-            <div class="col-lg-4">
-               <img ng-show="playerDetails.image != null" class="border" src="{{playerDetails.image}}" style="float:right; padding:10px">
+            <div class="col-lg-3">
+               <img ng-show="playerDetails.image != null" class="border" src="{{playerDetails.image}}" style="float:right;">
             </div>
         </div>
+        <p></p>
         <div class="row">
             <div class="col-lg-10">
                 <table>
@@ -159,7 +160,7 @@
 
         <div class="row">
             <div class="col-lg-10">
-                <div id='chart_div'></div>
+                <divid='chart_div'></div>
             </div>
         </div>
     </div>

@@ -1,8 +1,30 @@
+#header1 {
+  color: yellow;
+}
+
+#main_body {
+background-color: light-green;}
+
+.shadow {
+   text-shadow: 3px 3px 3px green;
+}
+
 .border  {
     border: 0.1px solid;
     border-radius: 25px;
-    box-shadow: 2px 2px 2px #888888;
+    box-shadow: 5px 5px 5px #888888;
 }
+
+.table_border  {
+    border-radius: 5px;
+    box-shadow: 15px 15px 15px #888888;
+}
+
+.button_border  {
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px #888888;
+}
+
 
 #fadeandscale {
   transform: scale(0.8);

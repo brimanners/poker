@@ -69,8 +69,8 @@
 </div>
 <div class="container">
 
-<div class="jumbotron">
-    <h2>The "Wrestle" at the wombats house"</h2>
+<div class="jumbotron table_border">
+    <h2 class="shadow" id="header1">The "Wrestle" at the wombats house"</h2>
 
     <p>&nbsp;</p>
 
@@ -78,33 +78,48 @@
 </div>
 <div class="body-content">
 <div class="row">
-    <div class="col-lg-3">
-        <div>
-            <table class="results table table-striped table-bordered table-condensed table-hover">
-                <tr>
-                    <th>Date</th>
-                    <th>Location</th>
-                    <th>Game</th>
-                    <th>Players</th>
-                </tr>
-                <tr>
-                    <td>{{tournaments.tournamentOne[0].eventDate}}</sup></td>
-                    <td>{{tournaments.tournamentOne[0].location}}</td>
-                    <td>{{tournaments.tournamentOne[0].tournament}}</td>
-                    <td>{{tournaments.tournamentOne[0].noOfPlayers}}</td>
-                </tr>
-            </table>
-        </div>
+    <div class="col-lg-8">
+        <table>
+            <tr>
+                <td>
+                    <table class="table_border results table table-striped table-bordered table-condensed table-hover">
+                        <tr>
+                            <th>Date</th>
+                            <th>Location</th>
+                            <th>Game</th>
+                            <th>Players</th>
+                        </tr>
+                        <tr>
+                            <td>{{tournaments.tournamentOne[0].eventDate}}</td>
+                            <td>{{tournaments.tournamentOne[0].location}}</td>
+                            <td>{{tournaments.tournamentOne[0].tournament}}</td>
+                            <td>{{tournaments.tournamentOne[0].noOfPlayers}}</td>
+                        </tr>
+                    </table>
+                </td>
+                <td style="padding-left:180px;">
+                    <table class="table_border results table table-striped table-bordered table-condensed table-hover">
+                        <tr>
+                            <th>Bounty Winner</th>
+                        </tr>
+                        <tr>
+                            <td>{{tournaments.tournamentOne[0].bountyWinner}}</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
     </div>
 </div>
 <div class="row">
     <div class="col-lg-3">
         <div>
-            <table class="results table table-striped table-bordered table-condensed table-hover">
+            <table class="table_border results table table-striped table-bordered table-condensed table-hover">
                 <tr>
                     <th>Position</th>
                     <th style="text-align:left; padding-left:10px;">Name</th>
                     <th>Points</th>
+
                 </tr>
                 <tr ng-show="result.event == 10 && result.tournament == 1"
                     ng-repeat="result in results.eventResults | orderBy: ['event','tournament', '-points']">
@@ -113,20 +128,12 @@
                     <td>{{result.points}}</td>
                 </tr>
             </table>
-            <table class="results table table-striped table-bordered table-condensed table-hover">
-                <tr>
-                    <th>Bounty Winner</th>
-                </tr>
-                <tr>
-                    <td>{{tournaments.tournamentOne[0].bountyWinner}}</td>
-                </tr>
-            </table>
         </div>
     </div>
     <!--<p>Hello result {{results.eventTables}}</p>-->
     <div class="col-lg-6">
         <div>
-            <table class="results table table-striped table-bordered table-condensed table-hover">
+            <table class="table_border results table table-striped table-bordered table-condensed table-hover">
                 <tr>
                 <tr>
                     <th>Position</th>
