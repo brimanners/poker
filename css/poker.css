@@ -1,5 +1,12 @@
 #header1 {
   color: yellow;
+     font-family: 'Lobster', cursive;
+}
+
+#header1 span {
+    color: yellow;
+    text-shadow: 3px 3px 0 #ad2960,
+                 10px 10px 0 rgba(255, 255, 255, 0.4);
 }
 
 #main_body {
@@ -88,6 +95,9 @@ body
     width: 500px;
     height: 400px;
 }
+
+
+
 
 
  /*--- ipad ---*/

@@ -31,44 +31,48 @@ $(function () {
         },
         series: [{
             name: 'Brian M',
-            data: [8, 16, 30, 33, 50]
+            data: [8, 16, 30, 33, 50, 53]
         }, {
             name: 'Ben I',
-            data: [6, 10, 14, 28, 36]
+            data: [6, 10, 14, 28, 36, 40]
         }, {
             name: 'Dave M',
-            data: [0, 2, 13, 13, 24]
+            data: [0, 2, 13, 13, 24, 30]
         }, {
             name: 'Mark L',
-            data: [0, 0, 8, 19, 19]
+            data: [0, 0, 8, 19, 19, 30]
         }, {
             name: 'Mark V',
-            data: [1, 11, 16, 18, 19]
+            data: [1, 11, 16, 18, 19, 19]
         }, {
              name: 'Simon W',
-             data: [0, 0, 2, 2, 16]
+             data: [0, 0, 2, 2, 16, 16]
         }, {
              name: 'Jade W',
-             data: [0, 6, 7, 12, 15]
+             data: [0, 6, 7, 12, 15, 30]
         }, {
             name: 'Steve W',
-            data: [4, 4, 12, 12, 12]
+            data: [4, 4, 12, 12, 12, 21]
         }, {
              name: 'Junior A',
-             data: [0, 0, 3, 3, 8]
+             data: [0, 0, 3, 3, 8, 26]
         }, {
             name: 'Paul B',
-            data: [0, 0, 0, 4, 8]
+            data: [0, 0, 0, 4, 8, 13]
         },{
             name: 'Andy F',
-            data: [2, 3, 3, 4, 4]
+            data: [2, 3, 3, 4, 4, 6]
         }, {
             name: 'Simon M',
-            data: [0, 3, 3, 3, 3]
+            data: [0, 3, 3, 3, 3, 3]
          }, {
              name: 'Carlos P',
-             data: [0, 0, 0, 0, 2]
+             data: [0, 0, 0, 0, 2, 14]
           }
+          , {
+           name: 'Michael R',
+           data: [0, 0, 0, 0, 0, 1]
+        }
         ]
     });
 });
