@@ -139,7 +139,7 @@
                         <th class="header-center"><a href="" data-ng-click="reverse = predicate == 'last' && !reverse; predicate = 'last'">Last</a></th>
                         <th class="header-center"><a href="" data-ng-click="reverse = predicate == 'winRatio' && !reverse; predicate = 'winRatio'">Win Ratio</a></th>
                         <th class="header-center"><a href="" data-ng-click="reverse = predicate == 'lastRatio' && !reverse; predicate = 'lastRatio'">Last Ratio</a></th>
-                        <th class="header-center"><a href="" data-ng-click="reverse = predicate == 'avePoints' && !reverse; predicate = 'avePoints'">Ave Points</a></th>
+                        <th class="header-center"><a href="" data-ng-click="reverse = predicate == 'averagePoints' && !reverse; predicate = 'averagePoints'">Ave Points</a></th>
                         <th class="header-center"><a href="" data-ng-click="reverse = predicate == 'averagePosition' && !reverse; predicate = 'averagePosition'">Ave Position</a></th>
                         <th class="header-center"><a href="" data-ng-click="reverse = predicate == 'points' && !reverse; predicate = 'points'">Total Points</a></th>
                         <th data-ng-show="predicate == 'points' && reverse == true" class="header-center">Movement</th>
@@ -161,7 +161,7 @@
                        <td>{{result.last}}</td>
                        <td>{{result.winRatio | number:2}}%</td>
                        <td>{{result.lastRatio | number:2}}%</td>
-                       <td>{{result.avePoints | number:2}}</td>
+                       <td>{{result.averagePoints | number:2}}</td>
                        <td>{{result.averagePosition | number:2}}</td>
                        <td style="color: blue"><b>{{result.points}}</b></td>
                        <div>
@@ -201,11 +201,10 @@
                           <th class="header-center"><a href="" data-ng-click="reverse = predicate == 'last' && !reverse; predicate = 'last'">Last</a></th>
                           <th class="header-center"><a href="" data-ng-click="reverse = predicate == 'winRatio' && !reverse; predicate = 'winRatio'">Win Ratio</a></th>
                           <th class="header-center"><a href="" data-ng-click="reverse = predicate == 'lastRatio' && !reverse; predicate = 'lastRatio'">Last Ratio</a></th>
-                          <th class="header-center"><a href="" data-ng-click="reverse = predicate == 'avePoints' && !reverse; predicate = 'avePoints'">Ave Points</a></th>
+                          <th class="header-center"><a href="" data-ng-click="reverse = predicate == 'averagePoints' && !reverse; predicate = 'averagePoints'">Ave Points</a></th>
                           <th class="header-center"><a href="" data-ng-click="reverse = predicate == 'averagePosition' && !reverse; predicate = 'averagePosition'">Ave Position</a></th>
                           <th class="header-center"><a href="" data-ng-click="reverse = predicate == 'points' && !reverse; predicate = 'points'">Total Points</a></th>
                       </tr>
-                      <!--<tr ng-repeat="result in allSeasonsLadder | filter:player | orderBy: ['-points', 'played', '-won', 'averagePosition', 'name']" >-->
                       <tbody class="animate" data-ng-repeat="result in allSeasonsLadder | filter:player | filter:gotPoints | orderBy:predicate:reverse">
                          <td>{{$index + 1}}<sup>{{positionSuffix($index + 1)}}</sup></td>
                          <td style="text-align:left; white-space:nowrap;">
@@ -220,7 +219,7 @@
                          <td>{{result.last}}</td>
                          <td>{{result.winRatio | number:2}} %</td>
                          <td>{{result.lastRatio | number:2}} %</td>
-                         <td>{{result.points / result.played | number:2}}</td>
+                         <td>{{result.averagePoints | number:2}}</td>
                          <td>{{result.averagePosition | number:2}}</td>
                          <td style="color: blue"><b>{{result.points}}</b></td>
                      </tr>
@@ -232,20 +231,21 @@
                 <tr>
                     <th>Position</th>
                     <th style="text-align:left; padding-left:10px;">Name</th>
-                    <th>Played</th>
-                    <th>Won</th>
-                    <th>2<sup>nd</sup></th>
-                    <th>3<sup>rd</sup></th>
-                    <th>4<sup>th</sup></th>
-                    <th>Last</th>
-                    <th>Win Ratio</th>
-                    <th>Last Ratio</th>
-                    <th>Ave Points</th>
-                    <th>Ave Position</th>
-                    <th>Total Points</th>
+                    <th class="header-center"><a href="" data-ng-click="reverse = predicate == 'played' && !reverse; predicate = 'played'">Played</a></th>
+                    <th class="header-center"><a href="" data-ng-click="reverse = predicate == 'won' && !reverse; predicate = 'won'">1<sup>st</sup></a></th>
+                    <th class="header-center"><a href="" data-ng-click="reverse = predicate == 'second' && !reverse; predicate = 'second'">2<sup>nd</sup></a></th>
+                    <th class="header-center"><a href="" data-ng-click="reverse = predicate == 'third' && !reverse; predicate = 'third'">3<sup>rd</sup></a></th>
+                    <th class="header-center"><a href="" data-ng-click="reverse = predicate == 'fourth' && !reverse; predicate = 'fourth'">4<sup>th</sup></a></th>
+                    <th class="header-center"><a href="" data-ng-click="reverse = predicate == 'last' && !reverse; predicate = 'last'">Last</a></th>
+                    <th class="header-center"><a href="" data-ng-click="reverse = predicate == 'winRatio' && !reverse; predicate = 'winRatio'">Win Ratio</a></th>
+                    <th class="header-center"><a href="" data-ng-click="reverse = predicate == 'lastRatio' && !reverse; predicate = 'lastRatio'">Last Ratio</a></th>
+                    <th class="header-center"><a href="" data-ng-click="reverse = predicate == 'averagePoints' && !reverse; predicate = 'averagePoints'">Ave Points</a></th>
+                    <th class="header-center"><a href="" data-ng-click="reverse = predicate == 'averagePosition' && !reverse; predicate = 'averagePosition'">Ave Position</a></th>
+                    <th class="header-center"><a href="" data-ng-click="reverse = predicate == 'points' && !reverse; predicate = 'points'">Total Points</a></th>
                     <th>Position/Players</th>
                 </tr>
-                <tr ng-repeat="result in formTable | filter:player | filter:gotPoints | orderBy: ['-points', 'played', '-won', 'averagePosition', 'name']" >
+                <!--<tr ng-repeat="result in formTable | filter:player | filter:gotPoints | orderBy: ['-points', 'played', '-won', 'averagePosition', 'name']" >-->
+                <tbody class="animate" data-ng-repeat="result in formTable | filter:player | filter:gotPoints | orderBy:predicate:reverse">
                    <td>{{$index + 1}}<sup>{{positionSuffix($index + 1)}}</sup></td>
                    <td style="text-align:left; padding-left:10px;">
                        <img src='../images/flags/{{result.nationality}}.png' style="width:30px; height:25px;" alt="flag">
@@ -259,7 +259,7 @@
                    <td>{{result.last}}</td>
                    <td>{{result.won / result.played * 100 | number:2}} %</td>
                    <td>{{result.last / result.played * 100 | number:2}} %</td>
-                   <td>{{result.points / result.played | number:2}}</td>
+                   <td>{{result.averagePoints | number:2}}</td>
                    <td>{{result.averagePosition | number:2}}</td>
                    <td style="color: blue"><b>{{result.points}}</b></td>
                    <td>{{result.positionPlayers}}</td>

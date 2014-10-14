@@ -120,7 +120,7 @@ function populateDetailsFromJson ($scope, $http)  {
              for (j = 0; j < eventTables[i + 1].length; j ++) {
                 eventTables[i + 1][j].winRatio = eventTables[i + 1][j].won / eventTables[i + 1][j].played * 100;
                 eventTables[i + 1][j].lastRatio = eventTables[i + 1][j].last / eventTables[i + 1][j].played  * 100;
-                eventTables[i + 1][j].avePoints = eventTables[i + 1][j].points / eventTables[i + 1][j].played;
+                eventTables[i + 1][j].averagePoints = eventTables[i + 1][j].points / eventTables[i + 1][j].played;
                 var movement = 0;
                 if (i > 0) {
                      ladderMovement = getLadderMovement((i + 1) + ":" + eventTables[i + 1][j].name) -
@@ -155,6 +155,7 @@ function populateDetailsFromJson ($scope, $http)  {
                  overallLadderPlayer.winRatio = (event.won / event.played) * 100;
                  overallLadderPlayer.lastRatio = (event.last / event.played) * 100;
                  overallLadderPlayer.points = event.points;
+                 overallLadderPlayer.averagePoints = event.points / event.played;
                  overallLadderPlayer.averagePosition = event.averagePosition;
                  overallLadderItems[event.name] = overallLadderPlayer;
               } else {
@@ -168,6 +169,7 @@ function populateDetailsFromJson ($scope, $http)  {
                    existingPlayer.winRatio = (existingPlayer.won / existingPlayer.played) * 100;
                    existingPlayer.lastRatio = (existingPlayer.last / existingPlayer.played) * 100;
                    existingPlayer.points = existingPlayer.points + event.points;
+                   existingPlayer.averagePoints = existingPlayer.points / existingPlayer.played;
                    existingPlayer.averagePosition = (existingPlayer.averagePosition + event.averagePosition) / noOfSeasons
                    overallLadderItems[event.name] = existingPlayer;
               }
@@ -212,8 +214,13 @@ function populateDetailsFromJson ($scope, $http)  {
 
 
     $http.get('../json/' + season + '/form-table.json').success(function (data) {
-            $scope.formTable = data;
-            getUrlsForPlayers(data, season);
+        for (i = 0; i < data.length; i++) {
+            data[i].averagePoints = data[i].points / data[i].played;
+            data[i].winRatio = data[i].won / data[i].played * 100;
+            data[i].lastRatio = data[i].last / data[i].played * 100;
+        }
+        $scope.formTable = data;
+        getUrlsForPlayers(data, season);
     });
 
     // Used for dropdown menus
