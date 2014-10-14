@@ -105,6 +105,7 @@ function populateDetailsFromJson ($scope, $http)  {
 
     $http.get('../json/' + season + '/current-table.json').success(function (data) {
         noOfTourneys = data.length;
+
         playerEventPosition = calculatePlayerMovement(data);
         $scope.eventId = data.length;
         if ($scope.eventId == 1) {
@@ -117,6 +118,9 @@ function populateDetailsFromJson ($scope, $http)  {
         for (i = 0; i < noOfTourneys; i ++) {
              eventTables[i + 1] = data[noOfTourneys - 1 - i]["event" + data[noOfTourneys - 1 - i]["eventId"]];
              for (j = 0; j < eventTables[i + 1].length; j ++) {
+                eventTables[i + 1][j].winRatio = eventTables[i + 1][j].won / eventTables[i + 1][j].played * 100;
+                eventTables[i + 1][j].lastRatio = eventTables[i + 1][j].last / eventTables[i + 1][j].played  * 100;
+                eventTables[i + 1][j].avePoints = eventTables[i + 1][j].points / eventTables[i + 1][j].played;
                 var movement = 0;
                 if (i > 0) {
                      ladderMovement = getLadderMovement((i + 1) + ":" + eventTables[i + 1][j].name) -
@@ -148,6 +152,8 @@ function populateDetailsFromJson ($scope, $http)  {
                  overallLadderPlayer.third = event.third;
                  overallLadderPlayer.fourth = event.fourth;
                  overallLadderPlayer.last = event.last;
+                 overallLadderPlayer.winRatio = (event.won / event.played) * 100;
+                 overallLadderPlayer.lastRatio = (event.last / event.played) * 100;
                  overallLadderPlayer.points = event.points;
                  overallLadderPlayer.averagePosition = event.averagePosition;
                  overallLadderItems[event.name] = overallLadderPlayer;
@@ -159,6 +165,8 @@ function populateDetailsFromJson ($scope, $http)  {
                    existingPlayer.third = existingPlayer.third + event.third;
                    existingPlayer.fourth = existingPlayer.fourth + event.fourth;
                    existingPlayer.last = existingPlayer.last + event.last;
+                   existingPlayer.winRatio = (existingPlayer.won / existingPlayer.played) * 100;
+                   existingPlayer.lastRatio = (existingPlayer.last / existingPlayer.played) * 100;
                    existingPlayer.points = existingPlayer.points + event.points;
                    existingPlayer.averagePosition = (existingPlayer.averagePosition + event.averagePosition) / noOfSeasons
                    overallLadderItems[event.name] = existingPlayer;
@@ -168,7 +176,7 @@ function populateDetailsFromJson ($scope, $http)  {
 
         $http.get('../json/2014/current-table.json').success(function (data) {
 
-              accumulateOverallLadder(data[0]["event" + data[0].eventId]);
+            accumulateOverallLadder(data[0]["event" + data[0].eventId]);
 
             $http.get('../json/2013/current-table.json').success(function (data) {
                accumulateOverallLadder(data[0]["event" + data[0].eventId]);
