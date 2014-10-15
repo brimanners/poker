@@ -105,7 +105,7 @@
                             <option ng-repeat="tournament in statistics.events" ng-selected="{{statistics.events.length == $index + 1}}" value="{{$index + 1}}">{{$index + 1}}</option>
                         </select>
                     </td>
-                    <td>&nbsp;&nbsp;&nbsp;&nbsp;Search: <input type="text" ng-model="player"/></span></td>
+                    <td>&nbsp;&nbsp;&nbsp;&nbsp;Filter: <input type="text" ng-model="player"/></span></td>
                     <td style="padding-left:50px;"><button class="button_border poker_button" ng-model="poker" ng-click="clicked()" ng-hide="displayExtra">Results</button></td>
                     <td><button class="button_border poker_button" ng-model="poker" ng-click="clicked()" ng-show="displayExtra">Close results</button></td>
                     <td><button class="button_border poker_button my_popup_open" ng-model="poker" ng-click="displayPoints()">Points</button></td>
@@ -116,12 +116,6 @@
                     <div class="table_border" id="container" style="width:800px; height:=1000px; background-color: #F5FFFA; border: solid" ng-show="displayPointsChart"></div>
                </div>
             </div>
-
-
-            <!--<pre>Sorting predicate = {{predicate}}; reverse = {{reverse}}</pre>-->
-            <!--<hr/>-->
-            <!--[ <a href="" ng-click="predicate=''">unsorted</a> ]-->
-
 
             <!-- Season ladder -->
             <table data-ng-table="tableParams" id="ladder" class="table_border results table table-striped table-bordered table-condensed table-hover">
@@ -142,7 +136,7 @@
                         <th class="header-center"><a href="" data-ng-click="reverse = predicate == 'averagePoints' && !reverse; predicate = 'averagePoints'">Ave Points</a></th>
                         <th class="header-center"><a href="" data-ng-click="reverse = predicate == 'averagePosition' && !reverse; predicate = 'averagePosition'">Ave Position</a></th>
                         <th class="header-center"><a href="" data-ng-click="reverse = predicate == 'points' && !reverse; predicate = 'points'">Total Points</a></th>
-                        <th data-ng-show="predicate == 'points' && reverse == true" class="header-center">Movement</th>
+                        <th data-ng-show="predicate == 'points' && reverse == true && player == ''" class="header-center">Movement</th>
                     </tr>
                 </thead>
                 <!--<tbody class="animate" ng-repeat="result in displayTable | filter:player | filter:gotPoints | orderBy: ['-points', 'played', '-won', 'averagePosition', 'name']">-->
@@ -165,7 +159,7 @@
                        <td>{{result.averagePosition | number:2}}</td>
                        <td style="color: blue"><b>{{result.points}}</b></td>
                        <div>
-                           <td data-ng-show="predicate == 'points' && reverse == true">
+                           <td data-ng-show="predicate == 'points' && reverse == true && player == ''">
                                 <div data-ng-if="result.movement > 0">
                                     <img src="../images/down.png" alt=""> {{result.movement}}
                                 </div>
