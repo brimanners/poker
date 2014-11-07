@@ -7,6 +7,7 @@ ladderModule.controller('homePageController', function ($scope, $http) {
     populateDetailsFromJson($scope, $http);   // calls ajax request to read ladder results from json file generated via clojure app :)
     $scope.displayTable = [];
     $scope.displayExtra = false;
+    $scope.displayAllPlayerButton = false;
 
     // this function feel like they should be a in general util type area - need to work out scoping so all angular controller can see....
     $scope.positionSuffix = function(position) {
@@ -34,6 +35,19 @@ ladderModule.controller('homePageController', function ($scope, $http) {
     $scope.gotPoints = function(result) {
           return result.points > 0
     };
+
+    $scope.clearPlayer = function(scope) {
+      $scope.displayAllPlayerButton = true;
+      var blah = "";
+    }
+
+    $scope.displayAllPlayers = function(scope) {
+       $scope.displayAllPlayerButton = false;
+       for (i = 0; k < $scope.displayTable.length; i++) {
+         $scope.displayTable[i].hidePlayer = false;
+       }
+       var blah = "";
+    }
 
      //  Get news ticker item
     $http.get('../json/general/news-item.json').success(function (data) {
@@ -121,6 +135,7 @@ function populateDetailsFromJson ($scope, $http)  {
                 eventTables[i + 1][j].winRatio = eventTables[i + 1][j].won / eventTables[i + 1][j].played * 100;
                 eventTables[i + 1][j].lastRatio = eventTables[i + 1][j].last / eventTables[i + 1][j].played  * 100;
                 eventTables[i + 1][j].averagePoints = eventTables[i + 1][j].points / eventTables[i + 1][j].played;
+                eventTables[i + 1][j].hidePlayer = false;
                 var movement = 0;
                 if (i > 0) {
                      ladderMovement = getLadderMovement((i + 1) + ":" + eventTables[i + 1][j].name) -
