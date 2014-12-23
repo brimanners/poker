@@ -36,7 +36,6 @@ extras.controller('extrasController', function ($scope, $http) {
        if (minutes < 9) {
          minutes = "0" + minutes;
        }
-//       $scope.blind_levels[i].estimatedTime = dateCalc.getHours() + ":" + minutes;
        $scope.blind_levels[i].estimatedTime = dateCalc.toLocaleTimeString();
     }
   });

@@ -41,13 +41,13 @@
                 <li class="dropdown" data-no-collapse="true">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Event History<b class="caret"></b></a>
                     <ul class="dropdown-menu" >
-                        <li ng-show="event.year == '2014'" ng-repeat="event in statistics.events  | orderBy: ['-no']"><a href="{{event.url}}">{{event.eventDate}} @ {{event.location}}</a></li>
+                        <li ng-show="event.year == '2015'" ng-repeat="event in statistics.events  | orderBy: ['-no']"><a href="{{event.url}}">{{event.eventDate}} @ {{event.location}}</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Players<b class="caret"></b></a>
                     <ul class="dropdown-menu">
-                        <li ng-show="player.year == '2014'" ng-repeat="player in statistics.playerMenuDropdown | orderBy: ['name']"><a href="{{player.url}}">{{player.name}}</a></li>
+                        <li ng-show="player.year == '2015'" ng-repeat="player in statistics.playerMenuDropdown | orderBy: ['name']"><a href="{{player.url}}">{{player.name}}</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
@@ -57,11 +57,21 @@
                     </ul>
                 </li>
                 <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">2014 History<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="2014Results.html">Season wrap up</a></li>
+                        <li class="menu_year">&nbsp;Events</li>
+                        <li ng-repeat="event in statistics.CCXIV_Events | orderBy: ['-no']"><a href="{{event.url}}">{{event.eventDate}} @ {{event.location}}</a></li>
+                        <li class="menu_year">&nbsp;Players</li>
+                        <li ng-show="player.year == '2014'" ng-repeat="player in statistics.playerMenuDropdown | orderBy: ['name']"><a href="{{player.url}}">{{player.name}}</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">2013 History<b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         <li><a href="2013Results.html">Season wrap up</a></li>
                         <li class="menu_year">&nbsp;Events</li>
-                        <li ng-repeat="event in statistics.previousEvents | orderBy: ['-no']"><a href="{{event.url}}">{{event.eventDate}} @ {{event.location}}</a></li>
+                        <li ng-repeat="event in statistics.CCXIII_Events | orderBy: ['-no']"><a href="{{event.url}}">{{event.eventDate}} @ {{event.location}}</a></li>
                         <li class="menu_year">&nbsp;Players</li>
                         <li ng-show="player.year == '2013'" ng-repeat="player in statistics.playerMenuDropdown | orderBy: ['name']"><a href="{{player.url}}">{{player.name}}</a></li>
                     </ul>
@@ -155,7 +165,7 @@
                         <th>Location</th>
                         <th>Tournaments</th>
                     </tr>
-                    <tr ng-repeat="event in statistics.previousEvents">
+                    <tr ng-repeat="event in statistics.CCXIII_Events">
                         <td>{{$index + 1}}<sup>{{positionSuffix($index + 1)}}</sup></td>
                         <td><a href="{{event.url}}">{{event.eventDate}}</a></td>
                         <td>{{event.location}}</td>

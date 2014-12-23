@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <meta name="season" content="2014">
+    <meta name="season" content="2015">
     <title>Poker Results</title>
     <!-- Bootstrap core CSS -->
     <link href="../css/bootstrap.css" rel="stylesheet">
@@ -47,7 +47,7 @@
         <div class="nav-collapse collapse">
             <ul class="nav navbar-nav">
                 <li class="dropdown" data-no-collapse="true">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Event history<b class="caret"></b></a>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Event History<b class="caret"></b></a>
                     <ul class="dropdown-menu" >
                         <li ng-show="event.year == '2015'" ng-repeat="event in statistics.events | orderBy: ['-no']"><a href="{{event.url}}">{{event.eventDate}} @ {{event.location}}</a></li>
                     </ul>
@@ -94,12 +94,21 @@
 <div class="container">
 
     <div class="jumbotron table_border">
-            <h2 class="shadow" id="header1"><span>2014 - 'The Square' Poker Results</span></h2>
+            <h2 class="shadow" id="header1"><span>2015 - 'The Square' Poker Results</span></h2>
             <p id="header2">
-                <br/>The second season of "The Square Poker". Scroll down for a season wrap-up.
+                Here you'll find all the latest scores from each tournament held,
+                latest news, statistics and ammunition for bragging rights :)
             </p>
     </div>
     <div class="body-content">
+        <div ng-hide="newsItem == ''">
+            <h4 style="color:blue;" class="hidden" id="newsTicker"><b><i><span id="news">Latest News: </span></i></b>{{newsItem}}</h4>
+        </div>
+        <table border="0" ng-show="displayCountdown">
+            <tr>
+                <td id="countdown-text">Time to next event: <b><span id="countdown-holder"></span></b</td>
+            </tr>
+        </table>
         <div class="col-lg-10">
             <table>
                 <tr>
@@ -107,14 +116,8 @@
                         <h3 style="white-space:nowrap;">Ladder after event number:</h3>
                     </td>
                     <td style="padding-left:10px;">
-                        <select ng-model="eventId" ng-change="tableChanged()" id="eventNumber">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                            <option value="6">6</option>
-                            <option value="7">7</option>
+                        <select ng-model="eventId" ng-change="tableChanged()" id="eventNumber" class="button_border">
+                            <option ng-repeat="tournament in statistics.events" ng-selected="{{statistics.events.length == $index + 1}}" value="{{$index + 1}}">{{$index + 1}}</option>
                         </select>
                     </td>
                     <td>&nbsp;&nbsp;&nbsp;&nbsp;Filter: <input type="text" ng-model="player"/></span></td>
@@ -195,62 +198,89 @@
                 </tbody>
             </table>
         </div>
-        <br/>
-        <div class="col-lg-12">
-            <h3>Season wrap up</h3>
-            <p>
-                As players removed their inaugral season P plates, and matured into top notch finely tuned poker machines, the second season was going to
-                have more twists and turns than two snakes making out. The new years hangovers had only just receded before 5 players headed over to
-                the home of Poker (Ben's) for the first of 7 single game events over the next 12 months.
-            </p>
-            <p>
-                Andy finally made a game, and Ben showed off his technical skills with the blinds on the big screen. Brian took the honours with Ben offering
-                prophetic words in his commentary "will Brian's dominance be a sign of things to come in 2014"?
-            </p>
-            <p>
-                As daylight follows sun, Jades full beer follows empty beer, Brian hosted the event after Ben, with 7 players enjoying the new super bonus idea. Andy
-                making his second game in a row along with most of the usual suspects watching in awe as Mark V again took out the honours at his favourite
-                poker location, with Brian taking the runners-up spot.
-            </p>
-            <p>
-                Mark V hosted event 3, with 8 players now offering a bigger crowd for Mark to show off his culinary skills. We also welcomed
-                two new players, Simon M (renamed to Simon W) due to naming conflicts (read that as bad website design by Brian), and Junior, providing
-                some Brazilian flair to the event. Again Brian took out the honours followed by Dave (who had been swotting up on the game) making
-                a well earned foray into the medal positions. And of course, it was be remiss of me not to mention the lemon trees!
-            </p>
-            <p>
-                Yet another new venue for event 4, with players given a workout as they ventured up to the oxygen reduced altitude of
-                Mark L's, happy in the knowledge that Simon W wasn't turning up in his Borat party attire! The host Mark L didn't disappoint though, and took out second place to Ben, despite being the "drunkest on ground" due
-                to his early start during food preparations. Good nosh though - excellent gravy!
-            </p>
-            <p>
-                Event 5 had to be remembered for the most formal dining experience. Simon W offering up to a new record of 9 players, an
-                extravagant sea food paella that would rate highly on any episode of Master Chef. We also welcomed a new player Carlos, that added to our international
-                line-up and had Brian scouring the internet for a new flag for the website. As for the game, home advantage nearly
-                came to bear with Simon W just missing out of the top spot, as Brian pipped him to the post.
-            </p>
-            <p>
-                Event 6 again returned to Ben's who has a very understanding wife who allows Ben to host numerous times. A multi-table situation was almost on the cards
-                until some late scratchings ended up with another record of 10 players filling the 10 seater table and pushing the limits of the recycling bin.
-                The topsy turvy battle eventually gave Junior bragging rights as he gained his first win in only 3 attempts.
-                Carlos finished in a healthy 3rd, with Jade in 2nd spot, an Englishman filling in a South American sandwich.
-            </p>
-            <p>
-                And to finish up the season, Brian hosted 5 players in a pre-christmas pizza laden event, although Brian was already
-                guaranteed the championship, as Ben was too far behind to bridge the gap. Another fitting finale saw Ben take out
-                third place and consolidate the 2014 silver medal position. Junior though came second and took out the bronze
-                medal after a last gasp, line pipping, overtaking manoeuver, leaving Dave and Jade in his poker exhaust fumes. No doubt
-                Junior will remind them at regular intervals going forward.
-                Brian took the 1st place points, ending the season with 4 wins out of 7 games, and crowned  2014 champion. Similar
-                to Ben in 2013, he held the top spot on the ladder from game one to the season completion.
-            </p>
-            <p>
-                2014 - So many memories and beers consumed. Season 3 can only get better as players skill levels improve, so here's to a successful 2015 poker calendar!
-            </p>
+        <div class="col-lg-10">
+                  <h3>All seasons ladder</h3>
+                  <table class="table_border results table table-striped table-bordered table-condensed table-hover" id="ladder">
+                      <span data-ng-init="predicate= 'points'"></span>
+                      <span data-ng-init="reverse=true"></span>
+                      <tr>
+                          <th>Position</th>
+                          <th style="text-align:left; padding-left:10px; width:100px; white-space:nowrap;"><a href="" ng-click="reverse = predicate == 'name' && !reverse; predicate = 'name'">Name</a></th>
+                          <th class="header-center"><a href="" data-ng-click="reverse = predicate == 'played' && !reverse; predicate = 'played'">Played</a></th>
+                          <th class="header-center"><a href="" data-ng-click="reverse = predicate == 'won' && !reverse; predicate = 'won'">1<sup>st</sup></a></th>
+                          <th class="header-center"><a href="" data-ng-click="reverse = predicate == 'second' && !reverse; predicate = 'second'">2<sup>nd</sup></a></th>
+                          <th class="header-center"><a href="" data-ng-click="reverse = predicate == 'third' && !reverse; predicate = 'third'">3<sup>rd</sup></a></th>
+                          <th class="header-center"><a href="" data-ng-click="reverse = predicate == 'fourth' && !reverse; predicate = 'fourth'">4<sup>th</sup></a></th>
+                          <th class="header-center"><a href="" data-ng-click="reverse = predicate == 'last' && !reverse; predicate = 'last'">Last</a></th>
+                          <th class="header-center"><a href="" data-ng-click="reverse = predicate == 'winRatio' && !reverse; predicate = 'winRatio'">Win Ratio</a></th>
+                          <th class="header-center"><a href="" data-ng-click="reverse = predicate == 'lastRatio' && !reverse; predicate = 'lastRatio'">Last Ratio</a></th>
+                          <th class="header-center"><a href="" data-ng-click="reverse = predicate == 'averagePoints' && !reverse; predicate = 'averagePoints'">Ave Points</a></th>
+                          <th class="header-center"><a href="" data-ng-click="reverse = predicate == 'averagePosition' && !reverse; predicate = 'averagePosition'">Ave Position</a></th>
+                          <th class="header-center"><a href="" data-ng-click="reverse = predicate == 'points' && !reverse; predicate = 'points'">Total Points</a></th>
+                      </tr>
+                      <tbody class="animate" data-ng-repeat="result in allSeasonsLadder | filter:player | filter:gotPoints | orderBy:predicate:reverse">
+                         <td>{{$index + 1}}<sup>{{positionSuffix($index + 1)}}</sup></td>
+                         <td style="text-align:left; white-space:nowrap;">
+                             <img src='../images/flags/{{result.nationality}}.png' style="width:30px; height:25px;" alt="flag">
+                             <a href="{{result.url}}">{{result.name}}</a>
+                         </td>
+                         <td>{{result.played}}</td>
+                         <td>{{result.won}}</td>
+                         <td>{{result.second}}</td>
+                         <td>{{result.third}}</td>
+                         <td>{{result.fourth}}</td>
+                         <td>{{result.last}}</td>
+                         <td>{{result.winRatio | number:2}} %</td>
+                         <td>{{result.lastRatio | number:2}} %</td>
+                         <td>{{result.averagePoints | number:2}}</td>
+                         <td>{{result.averagePosition | number:2}}</td>
+                         <td style="color: blue; background-color: LightSkyBlue;"><b>{{result.points}}</b></td>
+                     </tr>
+                  </table>
+              </div>
+        <div class="col-lg-10">
+            <h3>Recent form..... (Each players last 5 results)</h3>
+            <table class="table_border results table table-striped table-bordered table-condensed table-hover" id="ladder">
+                <tr>
+                    <th>Position</th>
+                    <th style="text-align:left; padding-left:10px;">Name</th>
+                    <th class="header-center"><a href="" data-ng-click="reverse = predicate == 'played' && !reverse; predicate = 'played'">Played</a></th>
+                    <th class="header-center"><a href="" data-ng-click="reverse = predicate == 'won' && !reverse; predicate = 'won'">1<sup>st</sup></a></th>
+                    <th class="header-center"><a href="" data-ng-click="reverse = predicate == 'second' && !reverse; predicate = 'second'">2<sup>nd</sup></a></th>
+                    <th class="header-center"><a href="" data-ng-click="reverse = predicate == 'third' && !reverse; predicate = 'third'">3<sup>rd</sup></a></th>
+                    <th class="header-center"><a href="" data-ng-click="reverse = predicate == 'fourth' && !reverse; predicate = 'fourth'">4<sup>th</sup></a></th>
+                    <th class="header-center"><a href="" data-ng-click="reverse = predicate == 'last' && !reverse; predicate = 'last'">Last</a></th>
+                    <th class="header-center"><a href="" data-ng-click="reverse = predicate == 'winRatio' && !reverse; predicate = 'winRatio'">Win Ratio</a></th>
+                    <th class="header-center"><a href="" data-ng-click="reverse = predicate == 'lastRatio' && !reverse; predicate = 'lastRatio'">Last Ratio</a></th>
+                    <th class="header-center"><a href="" data-ng-click="reverse = predicate == 'averagePoints' && !reverse; predicate = 'averagePoints'">Ave Points</a></th>
+                    <th class="header-center"><a href="" data-ng-click="reverse = predicate == 'averagePosition' && !reverse; predicate = 'averagePosition'">Ave Position</a></th>
+                    <th class="header-center"><a href="" data-ng-click="reverse = predicate == 'points' && !reverse; predicate = 'points'">Total Points</a></th>
+                    <th>Position/Players</th>
+                </tr>
+                <!--<tr ng-repeat="result in formTable | filter:player | filter:gotPoints | orderBy: ['-points', 'played', '-won', 'averagePosition', 'name']" >-->
+                <tbody class="animate" data-ng-repeat="result in formTable | filter:player | filter:gotPoints | orderBy:predicate:reverse">
+                   <td>{{$index + 1}}<sup>{{positionSuffix($index + 1)}}</sup></td>
+                   <td style="text-align:left; padding-left:10px;">
+                       <img src='../images/flags/{{result.nationality}}.png' style="width:30px; height:25px;" alt="flag">
+                       <a href="{{result.url}}">{{result.name}}</a>
+                   </td>
+                   <td>{{result.played}}</td>
+                   <td>{{result.won}}</td>
+                   <td>{{result.second}}</td>
+                   <td>{{result.third}}</td>
+                   <td>{{result.fourth}}</td>
+                   <td>{{result.last}}</td>
+                   <td>{{result.won / result.played * 100 | number:2}} %</td>
+                   <td>{{result.last / result.played * 100 | number:2}} %</td>
+                   <td>{{result.averagePoints | number:2}}</td>
+                   <td>{{result.averagePosition | number:2}}</td>
+                   <td style="color: blue; background-color: LightSkyBlue;"><b>{{result.points}}</b></td>
+                   <td>{{result.positionPlayers}}</td>
+               </tr>
+            </table>
         </div>
-
+        <br/>
         <div class="col-lg-7">
-
             <footer>
                 <p>&copy; BJIT website productions 2014</p>
             </footer>

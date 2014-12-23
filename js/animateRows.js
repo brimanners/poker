@@ -73,4 +73,9 @@ $(document).ready(function() {
         setTimeout (function () {
             $('#level14').removeClass('invisible').addClass(animation);
         },interval);
+
+    interval = interval + timeOutInterval;
+        setTimeout (function () {
+            $('#level15').removeClass('invisible').addClass(animation);
+        },interval);
 });

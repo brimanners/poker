@@ -55,7 +55,7 @@ ladderModule.controller('homePageController', function ($scope, $http) {
     });
 
      // Set countdown time to next event
-     if (season == "2014"){
+     if (season == "2015"){
         $http.get('../json/general/next-event.json').success(function (data) {
             var nextEventDate = data[0]["event-date"];
             var nextEventTime = data[0]["event-time"];
@@ -154,7 +154,7 @@ function populateDetailsFromJson ($scope, $http)  {
         var overallLadderItems = {};
 
         function accumulateOverallLadder(seasonResults) {
-           var noOfSeasons = 2;  // code hack for average position calc - should be driven by json file of year lists?
+           var noOfSeasons = 3;  // code hack for average position calc - should be driven by json file of year lists?
            for (j = 0; j < seasonResults.length; j ++) {
               var overallLadderPlayer = {};
               var event = seasonResults[j]
@@ -191,7 +191,7 @@ function populateDetailsFromJson ($scope, $http)  {
            }
         }
 
-        $http.get('../json/2014/current-table.json').success(function (data) {
+        $http.get('../json/2015/current-table.json').success(function (data) {
 
             accumulateOverallLadder(data[0]["event" + data[0].eventId]);
 
@@ -239,7 +239,7 @@ function populateDetailsFromJson ($scope, $http)  {
     });
 
     // Used for dropdown menus
-    $http.get('../json/2014/event-history.json').success(function (data) {
+    $http.get('../json/2015/event-history.json').success(function (data) {
         for (i = 0; i < data.length; i ++) { // append year so menu dropdown can section values
             data[i].year = data[i].eventDate.substring(data[i].eventDate.length - 4, data[i].eventDate.length);
         }
@@ -247,11 +247,19 @@ function populateDetailsFromJson ($scope, $http)  {
         getUrlForEvents(data);
     });
 
+    $http.get('../json/2014/event-history.json').success(function (data) {
+            for (i = 0; i < data.length; i ++) { // append year so menu dropdown can section values
+                data[i].year = data[i].eventDate.substring(data[i].eventDate.length - 4, data[i].eventDate.length);
+            }
+            statistics.CCXIV_Events = data;
+            getUrlForEvents(data);
+    });
+
     $http.get('../json/2013/event-history.json').success(function (data) {
         for (i = 0; i < data.length; i ++) { // append year so menu dropdown can section values
             data[i].year = data[i].eventDate.substring(data[i].eventDate.length - 4, data[i].eventDate.length);
         }
-        statistics.previousEvents = data;
+        statistics.CCXIII_Events = data;
         getUrlForEvents(data);
     });
 

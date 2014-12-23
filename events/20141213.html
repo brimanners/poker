@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="event" id="ng-app">
+<!-- the ng-app name 'event1' is referenced the corresponding controller logic -->
+<head> `
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="eventDate" content="13_12_2014">
+    <meta name="noOfTournaments" content="1">
+    <title>Poker Results</title>
+    <!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <link href="../css/poker.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="src/css/jumbotron.css" rel="stylesheet">
+    <script type="text/javascript" src="../js/jquery-1.10.2.min.js"></script>
+    <!-- temp local hosting until prod release -->
+    <script type="text/javascript" src="../js/angular.min.js"></script>
+    <!-- temp local hosting until prod release -->
+    <script type="text/javascript" src="../js/bootstrap.js"></script>
+    <script type="text/javascript" src="http://twitter.github.com/bootstrap/assets/js/bootstrap-dropdown.js"></script>
+</head>
+<body ng-controller="event-controller" ng-cloak>
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container" id="navigationBar">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html">Home</a>
+
+        <!-- Menus -->
+        <div class="nav-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li class="dropdown" data-no-collapse="true">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Event History<b class="caret"></b></a>
+                    <ul class="dropdown-menu" >
+                        <li ng-show="event.year == '2015'" ng-repeat="event in results.events | orderBy: ['-no']"><a href="{{event.url}}">{{event.eventDate}} @ {{event.location}}</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Players<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li ng-show="player.year == '2015'" ng-repeat="player in playerMenuDropdown | orderBy: ['name']"><a href="{{player.url}}">{{player.name}}</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Extras <b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li ng-repeat="extra in results.extras"><a href="{{extra.url}}">{{extra.name}}</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">2014 History<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="2014Results.html">Season wrap up</a></li>
+                        <li class="menu_year">&nbsp;Events</li>
+                        <li ng-repeat="event in statistics.CCXIV_Events | orderBy: ['-no']"><a href="{{event.url}}">{{event.eventDate}} @ {{event.location}}</a></li>
+                        <li class="menu_year">&nbsp;Players</li>
+                        <li ng-show="player.year == '2014'" ng-repeat="player in statistics.playerMenuDropdown | orderBy: ['name']"><a href="{{player.url}}">{{player.name}}</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">2013 History<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../season/2013Results.html">Season wrap up</a></li>
+                        <li class="menu_year">&nbsp;Events</li>
+                        <li ng-repeat="event in results.CCXIII_Events | orderBy: ['-no']"><a href="{{event.url}}">{{event.eventDate}} @ {{event.location}}</a></li>
+                        <li class="menu_year">&nbsp;Players</li>
+                        <li ng-show="player.year == '2013'" ng-repeat="player in playerMenuDropdown | orderBy: ['name']"><a href="{{player.url}}">{{player.name}}</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <a class="navbar-brand" href="../statistics/statistics.html">Statistics</a>
+        </div>
+    </div>
+</div>
+<div class="container">
+
+<div class="jumbotron table_border">
+    <h2 class="shadow" id="header1">Christmas poker at Brian's</h2>
+
+    <p>&nbsp;</p>
+
+    <p>.....Pizza and poker....</p>
+</div>
+<div class="body-content">
+<div class="row">
+    <div class="col-lg-8">
+        <table>
+            <tr>
+                <td>
+                    <table class="table_border results table table-striped table-bordered table-condensed table-hover">
+                        <tr>
+                            <th>Date</th>
+                            <th>Location</th>
+                            <th>Game</th>
+                            <th>Players</th>
+                        </tr>
+                        <tr>
+                            <td>{{tournaments.tournamentOne[0].eventDate}}</td>
+                            <td>{{tournaments.tournamentOne[0].location}}</td>
+                            <td>{{tournaments.tournamentOne[0].tournament}}</td>
+                            <td>{{tournaments.tournamentOne[0].noOfPlayers}}</td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-3">
+        <div>
+            <table class="table_border results table table-striped table-bordered table-condensed table-hover">
+                <tr>
+                    <th>Position</th>
+                    <th style="text-align:left; padding-left:10px;">Name</th>
+                    <th>Points</th>
+                    <th>Won</th>
+                </tr>
+                <tr ng-show="result.event == 12 && result.tournament == 1"
+                    ng-repeat="result in results.eventResults | orderBy: ['event','tournament', '-points']">
+                    <td>{{result.position}}<sup>{{positionSuffix(result.position)}}</sup></td>
+                    <td style="text-align:left; padding-left:10px;">{{result.name}}</td>
+                    <td>{{result.points}}</td>
+                    <td>{{result.cash | currency}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <!--<p>Hello result {{results.eventTables}}</p>-->
+    <div class="col-lg-6">
+        <div>
+            <table class="table_border results table table-striped table-bordered table-condensed table-hover">
+                <tr>
+                <tr>
+                    <th>Position</th>
+                    <th style="text-align:left; padding-left:10px;">Name</th>
+                    <th>Played</th>
+                    <th>Won</th>
+                    <th>Win Ratio</th>
+                    <th>Ave Points</th>
+                    <th>Ave Position</th>
+                <th>Points</th>
+                </tr>
+                </tr>
+                <tr ng-repeat="result in results.eventTables[7] | filter:gotPoints | orderBy: ['-points','-won', 'played', 'name']">
+                    <td>{{$index + 1}}<sup>{{positionSuffix($index + 1)}}</sup></td>
+                    <td style="text-align:left; padding-left:10px;">{{result.name}}</td>
+                    <td>{{result.played}}</td>
+                    <td>{{result.won}}</td>
+                    <td>{{result.won / result.played * 100| number:2}} %</td>
+                    <td>{{result.points / result.played | number:2}}</td>
+                    <td>{{result.averagePosition | number:2}}</td>
+                    <td>{{result.points}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div id="commentary">
+        <h3 style="color:black">Commentary...</h3>
+
+    </div>
+</div>
+
+    <p>
+        Another season comes to an end after a fun filled festive night at Brian's. The numbers of players may have been down due to various work, birthday, wedding anniversary and sporting committments, but it didn't detract much from the proceedings as the famous five players endulged in the customary pre-game banter.
+    </p>
+    <p>
+        Pre-game food loading was initiated with various meaty Pizza's being consumed over a cold one with Simon gingerly getting "back on it" after a previous day drinking extravaganza.
+    </p>
+    <p>
+        With less players involved, and as a Christmas bonus, each players starting stack received a nice extra $5,000 present. People must have been in the festive sharing spirit as the first few hands culminated with big pots going towards Simon and Junior. Ben was being tighter than Rudolph the reindeers arse in a snow storm, folding the majority of the early hands but soon picked up some good cards (I assume) as he bet on each street with a final river bet of $2,000 that took down the pot without having to show his cards.
+    </p>
+    <p>
+        Simon must have been on Santa's nice list as he was the recipient of the nights first pocket Ace's, and helped himself to some of Ben's stack as a result. Not long after though, Ben also picked up the pocket rockets and with two 7's on the board, Junior attempted a bluff that had Ben wondering whether he was about to get his aces cracked. Junior pushed out a $4,000 bet, but Ben didn't believe his story and after some consideration, correctly called.
+    </p>
+    <p>
+        Not for the first time, Junior decided to check out the waterproof qualities of the table with his beer. Here's hoping Santa brings him some glue, so at the next event, he can stick his beer into the cup holder and we can provide a straw :)
+    </p>
+    <p>
+        Carlos' was doing a good impression of Ebinizer Scrooge as his frustration levels were increasing due to his pre-flop calls being followed by other players bets that were too strong for him to call.
+        Despite each occasion testing out the tables strength with his folds, it was all smiles a short time later, as he chased a flush all the way to the river to receive a nice gift wrapped chip present.
+    </p>
+    <p>
+        Simon must have been a really really good boy this year, as after his earlier pocket aces, Santa now ticked off the second item on his list - pocket K's, With an Ace on the flop, Ben continued pushing chips into the middle dominantely, but Simon still called. Culminating with a $5,000 bet on the river, Simon had a difficult decision to make, but he called and exposed Ben's bluff. And of course, the Christmas story never ends there, as Carlos would have won with an Ace had he been in the hand.
+    </p>
+    <p>
+        For some unknown reason, Junior's eyes were now starting to exude tears. Maybe he was suffering from a bout of post gardening hayfever, over excited about Christmas or were the melancholy songs just too much for him to bear? He was crying for joy soon after though, after taking a big chunk of Simons stack after Simon didn't believe his bets and called. Simon waved bon voyage to his chips and stated to Junior "You won thanks to my stupidity". Junior didn't care how he won them. Shortly after, Junior also received another chip up, despite him thinking he had staight, when in fact he had a flush.
+    </p>
+    <p>
+        As the daylight gave way to the twinkling christmas lights, the weather was starting to change, as outside there were several gusty bouts of wind as reported by Simon and Carlos. Back inside in the comfortable climate of the air-conditioned playing arena, the board was offering aces on the flop on numerous occasions which meant for lots of interesting betting opportunities, and on one occasion, Carlos held an Ace, but everyone smelled a rat (or was that wind?), so he only won a small pot.
+    </p>
+    <p>
+        Brian received a nice chip up after hitting two pair (8,9) on the flop showing A, 8, 9. Junior thought his ace was good and was profligate with his chips as a result.
+    </p>
+    <p>
+        Carlos had been declaring he wanted an early night several times during the proceedings, and his wish came true as it wasn't long before he became the first victim as his stack was blinded out to the point he could only post the ante. Unlucky Carlos, and even unluckier when he was called as the super bonus draw, but it does mean that next time, the super bonus rolls over to $38 plus $2 times the number of players at the next event.
+    </p>
+    <p>
+        Simon was now getting low stacked, so took his opportunity to get all his chips in the middle and hit a straight on the river. Unfortunately for him, Junior had the same straight so the pot was split. Well, Christmas is a time for sharing! And again, they went into battle a few hands later, but this time, Junior's pair of aces held and knocked Simon out in 4th place, just missing out on the money.
+    </p>
+    <p>
+        Maybe the tears and beer was now starting to cloud Juniors judgements, as he checked down his cards to the river, stating he had nothing. Brian turned over a pair, and Junior resigning himself to a loss turned over the nut-flush!
+    </p>
+    <p>
+        The biggest hand of the night had Brian and Ben going into battle as the small and big blinds respectively. Brian called with (K,6) and Ben checked his pocket aces hoping to lure Brian into his pending trap. The flop though offered K, 6, 3, so Brian pushed out a reasonable bet. Ben instantly pushed all in, and Brian instantaenously snap called. Ben needed an Ace, but unluckily for him, the turn and river didn't help, and meant he went out in 3rd place. Ben's decision to slow play his aces was not a bad decision with heads-up in the big blind, but does show how it can come unstuck...unlucky Ben.
+    </p>
+    <p>
+        The final two players (Brian and Junior) had comparable chip stacks, and with Simon taking on the dealing, the chips were moving backwards and forwards like a ping pong ball in a Christmas morning table tennis gift set.
+        Brian did eventually take a big chunk of Juniors stack leaving him perilously close to elimination. The final hand saw Junior having to go all in with a mediocre hand,
+        and Brian also only had a poor starting hand (6 4) but with only a few chips to call, he was not going to fold. And with a 6 hitting on the turn, indicated the end of the night.
+    </p>
+    <p>
+        The final 2014 ladder has Brian taking out the first place with 4 wins out of seven games, and Ben in 2nd place spot with one win, but lots of consistent high place finishes. Junior's recent form, means he storms up the ladder leapfrogging Dave and Jade into the 3rd place spot, and will no doubt use this as bragging rights at the Friday BBQ's! A whole host of players crowd the middle of the ladder, but again, Mark L's statistics are very healthy, and if he can make more events, we can see if he can maintain his form and be at the top end of the ladder next year. Michael rounds off the ladder with his consistent last place finishing, but hopefully next year he can make amends. Well, at least for Michael, the only way is up!
+    </p>
+    <p>
+        Thanks guys for yet another fun night. Wishing everyone a wonderful christmas and new year, and here's to hopefully a packed 2015 Augusta square calendar.
+    </p>
+
+</div>
+<footer>
+    <p>&copy; BJIT website productions 2014</p>
+</footer>
+
+</div>
+<!-- /container -->
+<script type="text/javascript" src="../js/controllers/events.js"></script>
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-40877102-1', 'iinet.net.au');
+    ga('send', 'pageview');
+
+</script>
+</body>
+</html>
