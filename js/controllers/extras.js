@@ -8,16 +8,17 @@ extras.controller('extrasController', function ($scope, $http) {
        for (i = 0; i < data.length; i ++) { // append year so menu dropdown can section values
            data[i].year = data[i].eventDate.substring(data[i].eventDate.length - 4, data[i].eventDate.length);
        }
-       extraDetails.events = data;
-       getUrlForEvents(data);
+       extraDetails.CCXIV_Events = data;
+       getUrlForEvents(extraDetails.CCXIV_Events);
    });
 
    $http.get('../json/2013/event-history.json').success(function (data) {
        for (i = 0; i < data.length; i ++) { // append year so menu dropdown can section values
            data[i].year = data[i].eventDate.substring(data[i].eventDate.length - 4, data[i].eventDate.length);
        }
-       extraDetails.previousEvents = data;
-       getUrlForEvents(data);
+
+       extraDetails.CCXIII_Events = data;
+       getUrlForEvents(extraDetails.CCXIII_Events);
    });
 
    $http.get('../json/general/extras.json').success(function (data) {

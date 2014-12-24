@@ -57,7 +57,7 @@
                         <ul class="dropdown-menu">
                             <li><a href="2014Results.html">Season wrap up</a></li>
                             <li class="menu_year">&nbsp;Events</li>
-                            <li ng-repeat="event in statistics.CCXIV_Events | orderBy: ['-no']"><a href="{{event.url}}">{{event.eventDate}} @ {{event.location}}</a></li>
+                            <li ng-repeat="event in results.CCXIV_Events | orderBy: ['-no']"><a href="{{event.url}}">{{event.eventDate}} @ {{event.location}}</a></li>
                             <li class="menu_year">&nbsp;Players</li>
                             <li ng-show="player.year == '2014'" ng-repeat="player in statistics.playerMenuDropdown | orderBy: ['name']"><a href="{{player.url}}">{{player.name}}</a></li>
                         </ul>
@@ -67,7 +67,7 @@
                         <ul class="dropdown-menu">
                             <li><a href="../season/2013Results.html">Season wrap up</a></li>
                             <li class="menu_year">&nbsp;Events</li>
-                            <li ng-repeat="event in results.previousEvents | orderBy: ['-no']"><a href="{{event.url}}">{{event.eventDate}} @ {{event.location}}</a></li>
+                            <li ng-repeat="event in results.CCXIII_Events | orderBy: ['-no']"><a href="{{event.url}}">{{event.eventDate}} @ {{event.location}}</a></li>
                             <li class="menu_year">&nbsp;Players</li>
                             <li ng-show="player.year == '2013'" ng-repeat="player in playerMenuDropdown | orderBy: ['name']"><a href="{{player.url}}">{{player.name}}</a></li>
                         </ul>
