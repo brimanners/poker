@@ -191,7 +191,7 @@ function populateDetailsFromJson ($scope, $http)  {
            }
         }
 
-        $http.get('../json/2015/current-table.json').success(function (data) {
+        $http.get('../json/2014/current-table.json').success(function (data) {
 
             accumulateOverallLadder(data[0]["event" + data[0].eventId]);
 
