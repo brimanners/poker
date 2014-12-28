@@ -252,7 +252,7 @@ function populateDetailsFromJson ($scope, $http)  {
                 data[i].year = data[i].eventDate.substring(data[i].eventDate.length - 4, data[i].eventDate.length);
             }
             statistics.CCXIV_Events = data;
-            getUrlForEvents(data);
+            getUrlForEvents(statistics.CCXIV_Events);
     });
 
     $http.get('../json/2013/event-history.json').success(function (data) {
@@ -260,7 +260,7 @@ function populateDetailsFromJson ($scope, $http)  {
             data[i].year = data[i].eventDate.substring(data[i].eventDate.length - 4, data[i].eventDate.length);
         }
         statistics.CCXIII_Events = data;
-        getUrlForEvents(data);
+        getUrlForEvents(statistics.CCXIII_Events);
     });
 
     $http.get('../json/general/extras.json').success(function (data) {

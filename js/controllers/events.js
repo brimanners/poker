@@ -45,17 +45,13 @@ eventModule.controller('event-controller', function ($scope, $http) {
         for (i = 0; i < data.length; i ++) { // append year so menu dropdown can section values
             data[i].year = data[i].eventDate.substring(data[i].eventDate.length - 4, data[i].eventDate.length);
         }
-//        results.previousEvents = data;
-//        getUrlForEvents(results.previousEvents);
-
         results.CCXIII_Events = data;
         getUrlForEvents(results.CCXIII_Events);
-
-
     });
 
     $http.get('../json/' + season + '/event_results.json').success(function (data) {
        results.eventResults = data; /* Tournament results - i.e. position, player and points */
+       var blah = "";
     });
 
     //  Get menu dropdown of players for relevant season
