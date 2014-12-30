@@ -216,13 +216,13 @@
                           <th class="header-center"><a href="" data-ng-click="reverse = predicate == 'lastRatio' && !reverse; predicate = 'lastRatio'">Last Ratio</a></th>
                           <th class="header-center"><a href="" data-ng-click="reverse = predicate == 'averagePoints' && !reverse; predicate = 'averagePoints'">Ave Points</a></th>
                           <th class="header-center"><a href="" data-ng-click="reverse = predicate == 'averagePosition' && !reverse; predicate = 'averagePosition'">Ave Position</a></th>
+                          <th class="header-center"><a href="" data-ng-click="reverse = predicate == 'cash' && !reverse; predicate = 'cash'">Career earnings</a></th>
                           <th class="header-center"><a href="" data-ng-click="reverse = predicate == 'points' && !reverse; predicate = 'points'">Total Points</a></th>
                       </tr>
                       <tbody class="animate" data-ng-repeat="result in allSeasonsLadder | filter:player | filter:gotPoints | orderBy:predicate:reverse">
                          <td>{{$index + 1}}<sup>{{positionSuffix($index + 1)}}</sup></td>
                          <td style="text-align:left; white-space:nowrap;">
-                             <img src='../images/flags/{{result.nationality}}.png' style="width:30px; height:25px;" alt="flag">
-                             <a href="{{result.url}}">{{result.name}}</a>
+                             <img src='../images/flags/{{result.nationality}}.png' style="width:30px; height:25px;" alt="flag">{{result.name}}
                          </td>
                          <td>{{result.played}}</td>
                          <td>{{result.won}}</td>
@@ -234,6 +234,7 @@
                          <td>{{result.lastRatio | number:2}} %</td>
                          <td>{{result.averagePoints | number:2}}</td>
                          <td>{{result.averagePosition | number:2}}</td>
+                         <td>{{result.cash | currency}}</td>
                          <td style="color: blue; background-color: LightSkyBlue;"><b>{{result.points}}</b></td>
                      </tr>
                   </table>
@@ -261,8 +262,7 @@
                 <tbody class="animate" data-ng-repeat="result in formTable | filter:player | filter:gotPoints | orderBy:predicate:reverse">
                    <td>{{$index + 1}}<sup>{{positionSuffix($index + 1)}}</sup></td>
                    <td style="text-align:left; padding-left:10px;">
-                       <img src='../images/flags/{{result.nationality}}.png' style="width:30px; height:25px;" alt="flag">
-                       <a href="{{result.url}}">{{result.name}}</a>
+                       <img src='../images/flags/{{result.nationality}}.png' style="width:30px; height:25px;" alt="flag">{{result.name}}
                    </td>
                    <td>{{result.played}}</td>
                    <td>{{result.won}}</td>

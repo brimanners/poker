@@ -152,6 +152,7 @@
                         <th class="header-center"><a href="" data-ng-click="reverse = predicate == 'averagePosition' && !reverse; predicate = 'averagePosition'">Ave Position</a></th>
                         <th class="header-center"><a href="" data-ng-click="reverse = predicate == 'points' && !reverse; predicate = 'points'">Total Points</a></th>
                         <th data-ng-show="predicate == 'points' && reverse == true && player == ''" class="header-center">Movement</th>
+                        <th class="header-center"><a href="" data-ng-click="reverse = predicate == 'cash' && !reverse; predicate = 'cash'">Season earnings</a></th>
                         <th class="header-center">Hide?</th>
                     </tr>
                 </thead>
@@ -186,6 +187,7 @@
                                 </div>
                             </td>
                         </div>
+                        <td>{{result.cash | currency}}</td>
                         <td><input type='checkbox' data-ng-click="clearPlayer()" ng-model="result.hidePlayer" checked="result.hidePlayer"/></td>
                     </tr>
                     <tr id="positionResults" data-ng-show="displayExtra">
