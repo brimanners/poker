@@ -54,7 +54,7 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">2014 History<b class="caret"></b></a>
                     <ul class="dropdown-menu">
-                        <li><a href="2014Results.html">Season wrap up</a></li>
+                        <li><a href="../season/2014Results.html">Season wrap up</a></li>
                         <li class="menu_year">&nbsp;Events</li>
                         <li ng-repeat="event in playerDetails.CCXIV_Events | orderBy: ['-no']"><a href="{{event.url}}">{{event.eventDate}} @ {{event.location}}</a></li>
                         <li class="menu_year">&nbsp;Players</li>
@@ -130,10 +130,11 @@
                         <td>{{event.position}}<sup>{{positionSuffix(event.position)}}</sup></td>
                         <td>{{event.noOfPlayers}}</td>
                         <td>{{event.points}}</td>
-                        <td>{{event.cash}}</td>
+                        <td>{{event.cash | currency}}</td>
                     </tr>
                 </table>
             </div>
+            <div class="col-lg-1"></div>
             <div class="col-lg-3">
                <img ng-show="playerDetails.image != null" class="border" src="{{playerDetails.image}}" style="float:right;">
             </div>

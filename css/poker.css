@@ -32,6 +32,9 @@ background-color: light-green;}
     box-shadow: 5px 5px 5px #888888;
 }
 
+.background-gold {
+    background-color: gold;
+}
 
 #fadeandscale {
   transform: scale(0.8);

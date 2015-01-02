@@ -109,6 +109,87 @@
                 <td id="countdown-text">Time to next event: <b><span id="countdown-holder"></span></b</td>
             </tr>
         </table>
+        <br/>
+        <div class="col-lg-13">
+            <h4>2015 Events</h4>
+            <div class="col-lg-3">
+                <table class="table_border table table-striped table-bordered table-condensed table-hover" id="eventList">
+                    <tr>
+                        <th>Event</th>
+                        <th>Date</th>
+                        <th>Location</th>
+                    </tr>
+                    <tr>
+                        <td>1<sup>st</sup></td>
+                        <td>February 7<sup>th</sup></td>
+                        <td>Dave's</td>
+                    </tr>
+                    <tr>
+                       <td>2<sup>nd</sup></td>
+                       <td>March 21<sup>st</sup></td>
+                       <td>Mark L's</td>
+                    </tr>
+                 </table>
+            </div>
+            <div class="col-lg-3">
+                <table class="table_border table table-striped table-bordered table-condensed table-hover" id="eventList">
+                    <tr>
+                        <th>Event</th>
+                        <th>Date</th>
+                        <th>Location</th>
+                    </tr>
+                    <tr>
+                        <td>3<sup>rd</sup></td>
+                        <td>May 2<sup>nd</sup></td>
+                        <td>Junior's</td>
+                    </tr>
+                    <tr>
+                        <td>4<sup>th</sup></td>
+                        <td>June 13<sup>th</sup></td>
+                        <td>Mark V's</td>
+                    </tr>
+                </table>
+             </div>
+            <div class="col-lg-3">
+                <table class="table_border table table-striped table-bordered table-condensed table-hover" id="eventList">
+                    <tr>
+                        <th>Event</th>
+                        <th>Date</th>
+                        <th>Location</th>
+                    </tr>
+                    <tr>
+                        <td>5<sup>th</sup></td>
+                        <td>July 18<sup>th</sup></td>
+                        <td>Location TBD</td>
+                    </tr>
+                    <tr>
+                       <td>6<sup>th</sup></td>
+                       <td>August 22<sup>nd</sup></td>
+                       <td>Location TBD</td>
+                   </tr>
+                 </table>
+            </div>
+            <div class="col-lg-3">
+                <table class="table_border table table-striped table-bordered table-condensed table-hover" id="eventList">
+                    <tr>
+                        <th>Event</th>
+                        <th>Date</th>
+                        <th>Location</th>
+                    </tr>
+                    <tr>
+                        <td>7<sup>th</sup></td>
+                        <td>October 10<sup>th</sup></td>
+                        <td>Location TBD</td>
+                    </tr>
+                    <tr>
+                        <td>8<sup>th</sup></td>
+                        <td>November 28<sup>th</sup></td>
+                        <td>Location TBD</td>
+                    </tr>
+                 </table>
+            </div>
+
+        </div>
         <!--<div class="col-lg-10">-->
             <!--<table>-->
                 <!--<tr>-->
@@ -216,6 +297,18 @@
                           <th class="header-center"><a href="" data-ng-click="reverse = predicate == 'lastRatio' && !reverse; predicate = 'lastRatio'">Last Ratio</a></th>
                           <th class="header-center"><a href="" data-ng-click="reverse = predicate == 'averagePoints' && !reverse; predicate = 'averagePoints'">Ave Points</a></th>
                           <th class="header-center"><a href="" data-ng-click="reverse = predicate == 'averagePosition' && !reverse; predicate = 'averagePosition'">Ave Position</a></th>
+                          <th class="header-center">
+                              <a href="" data-ng-click="reverse = predicate == 'gold' && !reverse; predicate = 'gold'"><img src='../images/medals/gold_medal.png' style="width:30px; height:40px;" alt="gold"></a>
+                          </th>
+                          <th class="header-center">
+                              <a href="" data-ng-click="reverse = predicate == 'silver' && !reverse; predicate = 'silver'"><img src='../images/medals/silver_medal.png' style="width:30px; height:40px;" alt="silver"></a>
+                          </th>
+                          <th class="header-center">
+                              <a href="" data-ng-click="reverse = predicate == 'bronze' && !reverse; predicate = 'bronze'"><img src='../images/medals/bronze_medal.png' style="width:30px; height:40px;" alt="bronze"></a>
+                          </th>
+                          <th class="header-center">
+                              <a href="" data-ng-click="reverse = predicate == 'spoon' && !reverse; predicate = 'spoon'"><img src='../images/medals/last.png' style="width:30px; height:40px;" alt="spoon"></a>
+                          </th>
                           <th class="header-center"><a href="" data-ng-click="reverse = predicate == 'cash' && !reverse; predicate = 'cash'">Career earnings</a></th>
                           <th class="header-center"><a href="" data-ng-click="reverse = predicate == 'points' && !reverse; predicate = 'points'">Total Points</a></th>
                       </tr>
@@ -234,6 +327,10 @@
                          <td>{{result.lastRatio | number:2}} %</td>
                          <td>{{result.averagePoints | number:2}}</td>
                          <td>{{result.averagePosition | number:2}}</td>
+                         <td style="background-color: gold;">{{result.gold || 0}}</td>
+                         <td style="background-color: silver;">{{result.silver || 0}}</td>
+                         <td style="background-color: sandybrown;">{{result.bronze || 0}}</td>
+                         <td>{{result.spoon || 0}}</td>
                          <td>{{result.cash | currency}}</td>
                          <td style="color: blue; background-color: LightSkyBlue;"><b>{{result.points}}</b></td>
                      </tr>

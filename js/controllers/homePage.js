@@ -187,8 +187,7 @@ function populateDetailsFromJson ($scope, $http)  {
                    existingPlayer.winRatio = (existingPlayer.won / existingPlayer.played) * 100;
                    existingPlayer.lastRatio = (existingPlayer.last / existingPlayer.played) * 100;
                    existingPlayer.points = existingPlayer.points + event.points;
-                   existingPlayer.averagePoints = existingPlayer.points / existingPlayer.played;
-                   existingPlayer.averagePosition = (existingPlayer.averagePosition + event.averagePosition) / noOfSeasons
+                   existingPlayer.averagePoints = existingPlayer.points / existingPlayer.played; // TODO - This is the last seasons average as it can not be calculated in this way
                    if (event.cash !== undefined) {
                     existingPlayer.cash = existingPlayer.cash + parseFloat(event.cash);
                    }
@@ -198,18 +197,31 @@ function populateDetailsFromJson ($scope, $http)  {
         }
 
         $http.get('../json/2014/current-table.json').success(function (data) {
-
             accumulateOverallLadder(data[0]["event" + data[0].eventId]);
 
             $http.get('../json/2013/current-table.json').success(function (data) {
                accumulateOverallLadder(data[0]["event" + data[0].eventId]);
+            });
+
+            $http.get('../json/general/championship-medals.json').success(function (data) {
+               for (var ladderItem in overallLadderItems) {
+                 for (var j = 0; j < data.length; j ++) {
+                   if (overallLadderItems[ladderItem].name == data[j].name) {
+                     overallLadderItems[ladderItem].gold = data[j].gold;
+                     overallLadderItems[ladderItem].silver = data[j].silver;
+                     overallLadderItems[ladderItem].bronze = data[j].bronze;
+                     overallLadderItems[ladderItem].spoon = data[j].spoon;
+                   }
+                 }
+               }
                for (ladderItem in overallLadderItems) {
-                 overallLadder.push(overallLadderItems[ladderItem]);
+                  overallLadder.push(overallLadderItems[ladderItem]);
                }
                $scope.allSeasonsLadder = overallLadder;
             });
-            $scope.allSeasonsLadder = overallLadder;
         });
+
+
     });
 
     //  Get menu dropdown of players for relevant season
