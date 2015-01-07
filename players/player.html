@@ -86,6 +86,15 @@
     </div>
     <div class="body-content">
         <div class="row">
+            <!--<div class="col-lg-8">-->
+                <!--Select season &nbsp;<select name="sasdasd" id="season">-->
+                    <!--<option value="1" selected="selected">All Seasons</option>-->
+                    <!--<option value="2">2013</option>-->
+                    <!--<option value="3">2014</option>-->
+                    <!--<option value="3">2015</option>-->
+                 <!--</select>-->
+            <!--</div>-->
+            <!--<div><p>&nbsp;</p></div>-->
             <div class="col-lg-8">
                 <table class="table_border results table table-striped table-bordered table-condensed table-hover">
                     <tr>
@@ -115,6 +124,7 @@
             <div class="col-lg-8">
                 <table class="table_border results table table-striped table-bordered table-condensed table-hover">
                     <tr>
+                        <th>Game No.</th>
                         <th>Date</th>
                         <th>Location</th>
                         <th>Tournament No.</th>
@@ -124,6 +134,7 @@
                         <th>Won</th>
                     </tr>
                     <tr ng-repeat="event in playerDetails.eventDetails">
+                        <td>{{$index + 1}}</td>
                         <td>{{event.eventDate}}</td>
                         <td>{{event.location}}</td>
                         <td>{{event.tournament}}<sup>{{positionSuffix(event.tournament)}}</sup></td>
@@ -170,17 +181,27 @@
                     <td>&nbsp;</td>
                 </table>
             </div>
+            <div class="col-lg-10">
+               <table>
+                   <tr>
+                       <td>
+                           <div id="quartilePieChart_div" style="height: 200px; width: 500px;"></div>
+                       </td>
+                   </tr>
+                   <td>&nbsp;</td>
+               </table>
+           </div>
         </div>
         <br/>
 
         <div class="row">
             <div class="col-lg-10">
-                <divid='chart_div'></div>
+                <div id='chart_div'></div>
             </div>
         </div>
     </div>
     <footer>
-        <p>&copy; BJIT website productions 2014</p> <!-- TODO replace year with angular derived current year-->
+        <p>&copy; BJIT website productions 2015</p> <!-- TODO replace year with angular derived current year-->
     </footer>
 
 </div>

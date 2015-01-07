@@ -13,7 +13,20 @@ player.controller('playerController', function ($scope, $http) {
            }
    }
 
-   var playerYear = getURLParameter('year')
+   var playerYear = getURLParameter('year');        // TODO - this is the current single version - use range below for reading all details
+
+   var playerStartYear = "";
+   var playerEndYear = "";
+   if (getURLParameter('year') == "ALL") {
+//   if ("ALL" == "ALL") {
+     playerStartYear = "2013";  // Can leave hardcoded - as this is the earliest season we had.
+     playerEndYear = "" + new Date().getFullYear();
+   } else {
+     playerStartYear = getURLParameter('year')
+     playerEndYear = getURLParameter('year')
+   }
+
+
    var player = getURLParameter('name');
 
     // player image
@@ -80,17 +93,22 @@ player.controller('playerController', function ($scope, $http) {
       $scope.playerMenuDropdown = players;
    });
 
-   $http.get('../json/' + playerYear + '/' + player + '_event_history.json').success(function (data) {
-        playerDetails.eventDetails = data;
-        var playerCumulativePoints = new Array();
-        var accumulate = 0;
-        for (i = 0; i < data.length; i ++) {
-            accumulate = accumulate + data[i].points
-            playerCumulativePoints[i] = accumulate;
-            playerDetails.cumulativePoints = playerCumulativePoints;
-        }
-        drawPointsAccumulationLineGraph(playerDetails.cumulativePoints);
-    });
+   for (year = parseInt(playerStartYear); year <= parseInt(playerEndYear); year++) {
+       var events = 0;
+       playerDetails.eventDetails = new Array();
+       $http.get('../json/' + year + '/' + player + '_event_history.json').success(function (data) {
+            var playerCumulativePoints = new Array();
+            var accumulate = 0;
+            for (i = 0; i < data.length; i ++) {
+                playerDetails.eventDetails[events] = data[i];
+                events ++;
+                accumulate = accumulate + data[i].points
+                playerCumulativePoints[i] = accumulate;
+                playerDetails.cumulativePoints = playerCumulativePoints;
+            }
+            drawPointsAccumulationLineGraph(playerDetails.cumulativePoints);
+        });
+    }
 
     $http.get('../json/' + playerYear + '/current-table.json').success(function (data) {
         noOfTourneys = data.length;
@@ -117,8 +135,6 @@ function getUrlsForPlayers(players) {
         var nameParts = players[i].name.split(" ");
         players[i].url = "../players/player.html?name=" + nameParts[0].toLowerCase() + nameParts[1] + '&year=2014';
     }
-    var blah = "";
-
     return players;
 }
 

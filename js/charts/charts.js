@@ -137,6 +137,33 @@ function drawPieChart(finishingPositionsOccurrences) {
     pieChart.draw(data, options);
 };
 
+
+function drawQuartilePieChart(quartiles) {
+	// Create the data table.
+	var pieChartData = [];
+	var quartileDesc = [];
+	quartileDesc[0] = "Top 25%";
+	quartileDesc[1] = "25 - 50%";
+	quartileDesc[2] = "50 - 75%";
+	quartileDesc[3] = "75 - 100%";
+	pieChartData.push(['Quartile', 'Occurrences']);
+	for (var i = 0; i < quartiles.length; i++) {
+		var item = [quartileDesc[i], quartiles[i]];
+		pieChartData.push(item);
+    }
+
+
+    var data = google.visualization.arrayToDataTable(pieChartData);
+    var options = {'title':'Finishing positions',
+                   'width':500,
+                   'height':200,
+                   is3D: true};
+
+	var pieChart = new google.visualization.PieChart(document.getElementById('quartilePieChart_div'));
+    pieChart.draw(data, options);
+};
+
+
 function drawDonutChart(donutDataValues, title, divToReplace) {
 
     var data = google.visualization.arrayToDataTable(donutDataValues);

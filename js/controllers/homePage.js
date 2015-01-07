@@ -196,31 +196,34 @@ function populateDetailsFromJson ($scope, $http)  {
            }
         }
 
-        $http.get('../json/2014/current-table.json').success(function (data) {
+        $http.get('../json/2015/current-table.json').success(function (data) {
             accumulateOverallLadder(data[0]["event" + data[0].eventId]);
 
-            $http.get('../json/2013/current-table.json').success(function (data) {
-               accumulateOverallLadder(data[0]["event" + data[0].eventId]);
-            });
+            $http.get('../json/2014/current-table.json').success(function (data) {
+                accumulateOverallLadder(data[0]["event" + data[0].eventId]);
 
-            $http.get('../json/general/championship-medals.json').success(function (data) {
-               for (var ladderItem in overallLadderItems) {
-                 for (var j = 0; j < data.length; j ++) {
-                   if (overallLadderItems[ladderItem].name == data[j].name) {
-                     overallLadderItems[ladderItem].gold = data[j].gold;
-                     overallLadderItems[ladderItem].silver = data[j].silver;
-                     overallLadderItems[ladderItem].bronze = data[j].bronze;
-                     overallLadderItems[ladderItem].spoon = data[j].spoon;
+                $http.get('../json/2013/current-table.json').success(function (data) {
+                   accumulateOverallLadder(data[0]["event" + data[0].eventId]);
+                });
+
+                $http.get('../json/general/championship-medals.json').success(function (data) {
+                   for (var ladderItem in overallLadderItems) {
+                     for (var j = 0; j < data.length; j ++) {
+                       if (overallLadderItems[ladderItem].name == data[j].name) {
+                         overallLadderItems[ladderItem].gold = data[j].gold;
+                         overallLadderItems[ladderItem].silver = data[j].silver;
+                         overallLadderItems[ladderItem].bronze = data[j].bronze;
+                         overallLadderItems[ladderItem].spoon = data[j].spoon;
+                       }
+                     }
                    }
-                 }
-               }
-               for (ladderItem in overallLadderItems) {
-                  overallLadder.push(overallLadderItems[ladderItem]);
-               }
-               $scope.allSeasonsLadder = overallLadder;
+                   for (ladderItem in overallLadderItems) {
+                      overallLadder.push(overallLadderItems[ladderItem]);
+                   }
+                   $scope.allSeasonsLadder = overallLadder;
+                });
             });
-        });
-
+         });
 
     });
 
