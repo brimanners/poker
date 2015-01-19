@@ -106,7 +106,7 @@
         </div>
         <table border="0" ng-show="displayCountdown">
             <tr>
-                <td id="countdown-text">Time to next event: <b><span id="countdown-holder"></span></b</td>
+                <td id="countdown-text" class="hidden">Time to next event: <b><span id="countdown-holder"></span></b</td>
             </tr>
         </table>
         <br/>
@@ -327,8 +327,8 @@
                          <td>{{result.last}}</td>
                          <td>{{result.winRatio | number:2}} %</td>
                          <td>{{result.lastRatio | number:2}} %</td>
-                         <td>{{result.averagePoints | number:2}}</td>
-                         <td>{{result.averagePosition | number:2}}</td>
+                         <td>{{result.points / result.played | number:2}}</td>
+                         <td>{{result.totalPositions / result.played | number:2}}</td>
                          <td style="background-color: gold;">{{result.gold || 0}}</td>
                          <td style="background-color: silver;">{{result.silver || 0}}</td>
                          <td style="background-color: sandybrown;">{{result.bronze || 0}}</td>
@@ -384,7 +384,6 @@
                 <p>&copy; BJIT website productions <span id="currentYear"></span></p>
             </footer>
         </div>
-
     </div>
     <!-- /container -->
     <script type="text/javascript" src="../js/controllers/homePage.js"></script>

@@ -43,6 +43,10 @@ background-color: light-green;}
   transform: scale(1);
 }
 
+.allSeasonsHeader td {
+    background-color:cyan;
+}
+
 .poker_button {
   width: 150px;
 }
@@ -50,6 +54,10 @@ background-color: light-green;}
 .results tbody tr th {
     text-align:center;
     font-size: 1.0em;
+}
+
+.small-table {
+    font-size: 11px;
 }
 
 #countdown-holder {

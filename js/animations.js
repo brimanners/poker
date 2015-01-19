@@ -7,22 +7,35 @@ $(document).ready(function() {
         $element.animate({ opacity: 0 },1000).animate({ opacity: 1},1000);
     },3000);
 
-
    setTimeout (function () {
         $('#newsTicker').removeClass('hidden').addClass('animated bounceInRight')
    },1000);
 
    setTimeout (function () {
-        $('#nextEvent').addClass('animated wobble')
+      $('#countdown-text').removeClass('hidden').addClass('animated bounceInLeft')
+   },2000);
+
+   setTimeout (function () {
+      $('#countdown-holder').addClass('animated swing')
+   },3000);
+
+   setTimeout (function () {
+         $('#countdown-holder').removeClass('animated swing')
    },4000);
 
    setTimeout (function () {
-        $('#nextEvent').removeClass('animated wobble');
-   },6000);
+            $('#countdown-holder').addClass('animated swing')
+   },4500);
 
    setTimeout (function () {
-        $('#nextEvent').addClass('animated wobble');
-   },6100);
+            $('#countdown-holder').removeClass('animated swing')
+      },5500);
+
+  setTimeout (function () {
+           $('#countdown-holder').addClass('animated swing')
+  },6000);
+
+//countdown-holder
 
    setTimeout (function () {
         $('#nextEvent').removeClass('animated wobble');

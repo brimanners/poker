@@ -155,44 +155,49 @@ function populateDetailsFromJson ($scope, $http)  {
 
         function accumulateOverallLadder(seasonResults) {
            var noOfSeasons = 3;  // code hack for average position calc - should be driven by json file of year lists?
-           for (j = 0; j < seasonResults.length; j ++) {
-              var overallLadderPlayer = {};
-              var event = seasonResults[j]
-              if (overallLadderItems[event.name] == undefined) {
-                 overallLadderPlayer.name = event.name;
-                 overallLadderPlayer.nationality = event.nationality;
-                 overallLadderPlayer.played = event.played;
-                 overallLadderPlayer.won = event.won;
-                 overallLadderPlayer.second = event.second;
-                 overallLadderPlayer.third = event.third;
-                 overallLadderPlayer.fourth = event.fourth;
-                 overallLadderPlayer.last = event.last;
-                 overallLadderPlayer.winRatio = (event.won / event.played) * 100;
-                 overallLadderPlayer.lastRatio = (event.last / event.played) * 100;
-                 overallLadderPlayer.points = event.points;
-                 overallLadderPlayer.averagePoints = event.points / event.played;
-                 overallLadderPlayer.averagePosition = event.averagePosition;
-                 if (event.cash !== undefined) {
-                    overallLadderPlayer.cash = parseFloat(event.cash);
-                 }
-                 overallLadderItems[event.name] = overallLadderPlayer;
-              } else {
-                   var existingPlayer = overallLadderItems[event.name];
-                   existingPlayer.played = existingPlayer.played + event.played;
-                   existingPlayer.won = existingPlayer.won + event.won;
-                   existingPlayer.second = existingPlayer.second + event.second;
-                   existingPlayer.third = existingPlayer.third + event.third;
-                   existingPlayer.fourth = existingPlayer.fourth + event.fourth;
-                   existingPlayer.last = existingPlayer.last + event.last;
-                   existingPlayer.winRatio = (existingPlayer.won / existingPlayer.played) * 100;
-                   existingPlayer.lastRatio = (existingPlayer.last / existingPlayer.played) * 100;
-                   existingPlayer.points = existingPlayer.points + event.points;
-                   existingPlayer.averagePoints = existingPlayer.points / existingPlayer.played; // TODO - This is the last seasons average as it can not be calculated in this way
-                   if (event.cash !== undefined) {
-                    existingPlayer.cash = existingPlayer.cash + parseFloat(event.cash);
-                   }
-                   overallLadderItems[event.name] = existingPlayer;
-              }
+           if (seasonResults != undefined) {
+               for (j = 0; j < seasonResults.length; j ++) {
+                  var overallLadderPlayer = {};
+                  var event = seasonResults[j]
+                  if (overallLadderItems[event.name] == undefined) {
+                     overallLadderPlayer.name = event.name;
+                     overallLadderPlayer.nationality = event.nationality;
+                     overallLadderPlayer.played = event.played;
+                     overallLadderPlayer.won = event.won;
+                     overallLadderPlayer.second = event.second;
+                     overallLadderPlayer.third = event.third;
+                     overallLadderPlayer.fourth = event.fourth;
+                     overallLadderPlayer.last = event.last;
+                     overallLadderPlayer.winRatio = (event.won / event.played) * 100;
+                     overallLadderPlayer.lastRatio = (event.last / event.played) * 100;
+                     overallLadderPlayer.points = event.points;
+                     overallLadderPlayer.averagePoints = event.points / event.played;
+                     overallLadderPlayer.totalPositions = parseInt(event.totalPositions);
+                     if (event.cash !== undefined) {
+                        overallLadderPlayer.cash = parseFloat(event.cash);
+                     }
+                     overallLadderItems[event.name] = overallLadderPlayer;
+                  } else {
+                       var existingPlayer = overallLadderItems[event.name];
+                       existingPlayer.played = existingPlayer.played + event.played;
+                       existingPlayer.won = existingPlayer.won + event.won;
+                       existingPlayer.second = existingPlayer.second + event.second;
+                       existingPlayer.third = existingPlayer.third + event.third;
+                       existingPlayer.fourth = existingPlayer.fourth + event.fourth;
+                       existingPlayer.last = existingPlayer.last + event.last;
+                       existingPlayer.winRatio = (existingPlayer.won / existingPlayer.played) * 100;
+                       existingPlayer.lastRatio = (existingPlayer.last / existingPlayer.played) * 100;
+                       existingPlayer.points = existingPlayer.points + event.points;
+                       if (event.totalPositions != undefined) { // TEMP TIL WE BACK FILL OLD CURRENT TABLE WITH TOTAL POSIUTIONS
+                           existingPlayer.totalPositions = existingPlayer.totalPositions + parseInt(event.totalPositions);
+                       }
+
+                       if (event.cash !== undefined) {
+                        existingPlayer.cash = existingPlayer.cash + parseFloat(event.cash);
+                       }
+                       overallLadderItems[event.name] = existingPlayer;
+                  }
+               }
            }
         }
 

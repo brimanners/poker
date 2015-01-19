@@ -1,5 +1,4 @@
 google.load('visualization', '1.0', {'packages':['corechart']});
-google.load('visualization', '1', {packages:['gauge']});
 
 function drawLineGraph(finishingPositions, noOfPlayers) {
 	var lineGraphData = [];
@@ -210,7 +209,6 @@ function drawPlayerStatscallback(played, wins, top3, last, bounties, hosted, dis
           ['Wins', wins],
           ['Top 3', top3],
           ['Last', last],
-		  ['Bounties', bounties],
 		  ['Hosted', hosted]
         ]);
         if (displayWidth == "") {
@@ -241,6 +239,10 @@ function drawPlayerStats(statistics) {
     var hosted = statistics.hosted;
     var displayWidth = 1000;
     var displayHeight = 220;
+    var maximumDisplay = 10;
+    if (played > 10 ) {
+      maximumDisplay = played + 5;
+    }
 
     var data = google.visualization.arrayToDataTable([
       ['Label', 'Value'],
@@ -248,18 +250,21 @@ function drawPlayerStats(statistics) {
       ['Wins', wins],
       ['Top 3', top3],
       ['Last', last],
-      ['Bounties', bounties],
+//      ['Bounties', bounties],
       ['Hosted', hosted]
     ]);
 
 
     var options = {
-      max: 10,
+      max: maximumDisplay,
       width: displayWidth, height: displayHeight,
       redFrom: 0, redTo: 1,
-      yellowFrom:1, yellowTo: 5,
-      minorTicks: 5
+      yellowFrom:1, yellowTo: (maximumDisplay - 5),
+      minorTicks: 5,
+      animation:{duration: 1000, easing: 'inAndOut'}
     };
     var chart = new google.visualization.Gauge(document.getElementById("chart_div"));
-    chart.draw(data, options);
+    setTimeout(function() {
+      chart.draw(data, options);
+    },500);
 }
