@@ -128,8 +128,7 @@
                     <tr data-ng-show="selectedOption.value == 'ALL'"><td>&nbsp;</td></tr>
                     <tr data-ng-show="result.name == '{{player}}' && result.played > 0 && key != '0'" data-ng-repeat="(key, result) in seasonResults | orderBy: ['season']">
                         <td>{{result.season}}</td>
-                        <!--<td>WIP {{$index + 1}}<sup>{{positionSuffix($index + 1)}}</sup></td>-->
-                        <td>WIP</td>
+                        <td>{{result.tablePosition}}<sup>{{positionSuffix(result.tablePosition)}}</sup></td>
                         <td>{{result.played}}</td>
                         <td>{{result.won}}</td>
                         <td>{{result.second}}</td>

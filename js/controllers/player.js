@@ -39,6 +39,30 @@ player.controller('playerController', function ($scope, $http) {
      }
    }
 
+   function dynamicSort(property) {
+       var sortOrder = 1;
+       if(property[0] === "-") {
+           sortOrder = -1;
+           property = property.substr(1);
+       }
+       return function (a,b) {
+           var result = (a[property] < b[property]) ? -1 : (a[property] > b[property]) ? 1 : 0;
+           return result * sortOrder;
+       }
+   }
+
+   function dynamicSortMultiple() {
+       var props = arguments;
+       return function (obj1, obj2) {
+           var i = 0, result = 0, numberOfProperties = props.length;
+           while(result === 0 && i < numberOfProperties) {
+               result = dynamicSort(props[i])(obj1, obj2);
+               i++;
+           }
+           return result;
+       }
+   }
+
    var allSeasonResults = {};
    function clearOverallStats() {
       allSeasonResults.played = 0;
@@ -81,9 +105,15 @@ player.controller('playerController', function ($scope, $http) {
         for (resultYear = parseInt(playerStartYear); resultYear <= parseInt(playerEndYear); resultYear++) {
            $http.get('../json/' + resultYear + '/current-table.json').success(function (data) {
                  playerDetails.results = data[0]["event" + data[0]["eventId"]];
+                 var sortedResults = playerDetails.results.sort(dynamicSortMultiple("-points", "-played", "-won", "-averagePoints", "name"));
                  for (i = 0; i < playerDetails.results.length; i++) {
                    var playerName = changeNameToParameterType(playerDetails.results[i].name);
                    if (playerName == player) {
+                       for (sorted = 0; sorted < sortedResults.length; sorted ++) {
+                         if (sortedResults[sorted].name == playerDetails.results[i].name) {
+                            playerDetails.results[i].tablePosition = i + 1;
+                         }
+                       }
                        playerDetails.results[i].season = data[0]["season"];
                        seasonResults[data[0]["season"]] = playerDetails.results[i];
                        $scope.playerLongName = playerDetails.results[i].name + "'s";

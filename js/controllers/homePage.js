@@ -154,7 +154,6 @@ function populateDetailsFromJson ($scope, $http)  {
         var overallLadderItems = {};
 
         function accumulateOverallLadder(seasonResults) {
-           var noOfSeasons = 3;  // code hack for average position calc - should be driven by json file of year lists?
            if (seasonResults != undefined) {
                for (j = 0; j < seasonResults.length; j ++) {
                   var overallLadderPlayer = {};
