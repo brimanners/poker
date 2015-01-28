@@ -77,22 +77,20 @@ player.controller('playerController', function ($scope, $http) {
    }
 
    function accumulateAllSeasons(seasonResults, season) {
-       if ($scope.selectedOption.value == "ALL") {
-           allSeasonResults.played = allSeasonResults.played + seasonResults[season].played;
-           allSeasonResults.won = allSeasonResults.won + seasonResults[season].won;
-           allSeasonResults.second = allSeasonResults.second + seasonResults[season].second;
-           allSeasonResults.third = allSeasonResults.third + seasonResults[season].third;
-           allSeasonResults.fourth = allSeasonResults.fourth + seasonResults[season].fourth;
-           allSeasonResults.last = allSeasonResults.last + seasonResults[season].last;
-           allSeasonResults.points = allSeasonResults.points + seasonResults[season].points;
-           allSeasonResults.season = "All Seasons";
-           allSeasonResults.name = seasonResults[season].name;
-           allSeasonResults.cash = allSeasonResults.cash + parseFloat(seasonResults[season].cash);
-           if (allSeasonResults.played > 0) {
-              allSeasonResults.averagePosition = $scope.playerAccumulatedPositions / parseFloat(allSeasonResults.played);
-           }
-           $scope.seasonResults[0] = allSeasonResults;
+       allSeasonResults.played = allSeasonResults.played + seasonResults[season].played;
+       allSeasonResults.won = allSeasonResults.won + seasonResults[season].won;
+       allSeasonResults.second = allSeasonResults.second + seasonResults[season].second;
+       allSeasonResults.third = allSeasonResults.third + seasonResults[season].third;
+       allSeasonResults.fourth = allSeasonResults.fourth + seasonResults[season].fourth;
+       allSeasonResults.last = allSeasonResults.last + seasonResults[season].last;
+       allSeasonResults.points = allSeasonResults.points + seasonResults[season].points;
+       allSeasonResults.season = "All Seasons";
+       allSeasonResults.name = seasonResults[season].name;
+       allSeasonResults.cash = allSeasonResults.cash + parseFloat(seasonResults[season].cash);
+       if (allSeasonResults.played > 0) {
+          allSeasonResults.averagePosition = $scope.playerAccumulatedPositions / parseFloat(allSeasonResults.played);
        }
+       $scope.seasonResults[0] = allSeasonResults;
    }
 
    $scope.getSeasonSummary = function(playerStartYear, playerEndYear) {
@@ -105,6 +103,10 @@ player.controller('playerController', function ($scope, $http) {
         for (resultYear = parseInt(playerStartYear); resultYear <= parseInt(playerEndYear); resultYear++) {
            $http.get('../json/' + resultYear + '/current-table.json').success(function (data) {
                  playerDetails.results = data[0]["event" + data[0]["eventId"]];
+
+                 // overall position - we would need to accumulate each season current table - accumulate points, played, won etc....and then create sort item
+                 // and get player details from it - lot of overhead for one item?
+
                  var sortedResults = playerDetails.results.sort(dynamicSortMultiple("-points", "-played", "-won", "-averagePoints", "name"));
                  for (i = 0; i < playerDetails.results.length; i++) {
                    var playerName = changeNameToParameterType(playerDetails.results[i].name);
@@ -122,7 +124,11 @@ player.controller('playerController', function ($scope, $http) {
                  }
                  getUrlsForPlayers(playerDetails.results);
                  $scope.seasonResults = seasonResults;
-                 accumulateAllSeasons($scope.seasonResults, seasonResults[data[0]["season"]].season);
+                 $scope.displayYear = "year";
+                 if ($scope.selectedOption.value == "ALL") {
+                       accumulateAllSeasons($scope.seasonResults, seasonResults[data[0]["season"]].season);
+                       $scope.displayYear = "";
+                 }
            });
         }
    }
