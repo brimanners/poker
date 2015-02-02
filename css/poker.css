@@ -47,6 +47,10 @@ background-color: light-green;}
     background-color:cyan;
 }
 
+.dropdown-menu li {
+    font-size: 12px;
+}
+
 .poker_button {
   width: 150px;
 }
