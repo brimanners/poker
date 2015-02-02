@@ -8,6 +8,14 @@ eventModule.controller('statistics-controller', function ($scope, $http) {
       var noOfTournaments = parseInt($('meta[name="noOfTournaments"]').attr("content"));
 
     // Generic - event history dropdown
+   $http.get('../json/2015/event-history.json').success(function (data) {
+        for (i = 0; i < data.length; i ++) { // append year so menu dropdown can section values
+            data[i].year = data[i].eventDate.substring(data[i].eventDate.length - 4, data[i].eventDate.length);
+        }
+        results.events = data;
+        getUrlForEvents(results.events);
+     });
+
     $http.get('../json/2014/event-history.json').success(function (data) {
         for (i = 0; i < data.length; i ++) { // append year so menu dropdown can section values
             data[i].year = data[i].eventDate.substring(data[i].eventDate.length - 4, data[i].eventDate.length);

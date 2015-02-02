@@ -4,6 +4,14 @@ extras.controller('extrasController', function ($scope, $http) {
    var extraDetails = {};
 
    // Used for dropdown menus
+   $http.get('../json/2015/event-history.json').success(function (data) {
+            for (i = 0; i < data.length; i ++) { // append year so menu dropdown can section values
+                data[i].year = data[i].eventDate.substring(data[i].eventDate.length - 4, data[i].eventDate.length);
+            }
+            extraDetails.events = data;
+            getUrlForEvents(extraDetails.events);
+     });
+
    $http.get('../json/2014/event-history.json').success(function (data) {
        for (i = 0; i < data.length; i ++) { // append year so menu dropdown can section values
            data[i].year = data[i].eventDate.substring(data[i].eventDate.length - 4, data[i].eventDate.length);

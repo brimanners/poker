@@ -33,6 +33,14 @@ eventModule.controller('event-controller', function ($scope, $http) {
           }
       }
 
+    $http.get('../json/2015/event-history.json').success(function (data) {
+            for (i = 0; i < data.length; i ++) { // append year so menu dropdown can section values
+                data[i].year = data[i].eventDate.substring(data[i].eventDate.length - 4, data[i].eventDate.length);
+            }
+            results.events = data;
+            getUrlForEvents(results.events);
+     });
+
     $http.get('../json/2014/event-history.json').success(function (data) {
         for (i = 0; i < data.length; i ++) { // append year so menu dropdown can section values
             data[i].year = data[i].eventDate.substring(data[i].eventDate.length - 4, data[i].eventDate.length);

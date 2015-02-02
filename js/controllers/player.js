@@ -182,6 +182,14 @@ player.controller('playerController', function ($scope, $http) {
         playerDetails.image = imageUrl;
    });
 
+   $http.get('../json/2015/event-history.json').success(function (data) {
+        for (i = 0; i < data.length; i ++) { // append year so menu dropdown can section values
+            data[i].year = data[i].eventDate.substring(data[i].eventDate.length - 4, data[i].eventDate.length);
+        }
+        playerDetails.events = data;
+        getUrlForEvents(playerDetails.events);
+    });
+
    $http.get('../json/2014/event-history.json').success(function (data) {
        for (i = 0; i < data.length; i ++) { // append year so menu dropdown can section values
            data[i].year = data[i].eventDate.substring(data[i].eventDate.length - 4, data[i].eventDate.length);
@@ -252,6 +260,7 @@ player.controller('playerController', function ($scope, $http) {
        var pieChartData = [];
        var accumulate = false;
 
+       var selectedYear = playerStartYear;
        if (playerStartYear == "ALL") {
              playerStartYear = "2013";  // Can leave hardcoded - as this is the earliest season we had.
              playerEndYear = "" + new Date().getFullYear();
@@ -304,7 +313,9 @@ player.controller('playerController', function ($scope, $http) {
 
             })
             .fail(function() {
-                alert("cannot read json data - invalid json or chrome cross domain local file issue");
+                if (selectedYear !== "ALL") {
+                    alert("No player statistics found for this year");
+                }
             });
        }
 
