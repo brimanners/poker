@@ -150,7 +150,7 @@ player.controller('playerController', function ($scope, $http) {
                    playerDetails.eventDetails[events] = data[i];
                    playerDetails.eventDetails[events].displayDate = new Date(
                         playerDetails.eventDetails[events].eventDate.substring(6,10),
-                        playerDetails.eventDetails[events].eventDate.substring(3,5),
+                        playerDetails.eventDetails[events].eventDate.substring(3,5) - 1,
                         playerDetails.eventDetails[events].eventDate.substring(0,2)
                    );
                    events ++;

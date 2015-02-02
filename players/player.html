@@ -213,9 +213,9 @@
                         <th>Points</th>
                         <th>Won</th>
                     </tr>
-                    <tr data-ng-repeat="event in playerDetails.eventDetails | orderBy:['displayDate', 'tournament']">
+                    <tr data-ng-repeat="event in playerDetails.eventDetails | orderBy: eventDate | orderBy: tournament">
                         <td>{{$index + 1}}</td>
-                        <td>{{event.eventDate}}</td>
+                        <td>{{event.displayDate | date:'longDate'}}</td>
                         <td>{{event.location}}</td>
                         <td>{{event.tournament}}<sup>{{positionSuffix(event.tournament)}}</sup></td>
                         <td>{{event.position}}<sup>{{positionSuffix(event.position)}}</sup></td>
