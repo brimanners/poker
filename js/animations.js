@@ -7,9 +7,31 @@ $(document).ready(function() {
         $element.animate({ opacity: 0 },1000).animate({ opacity: 1},1000);
     },3000);
 
+   var nextLocationAnimation = 'animated swing';
+
    setTimeout (function () {
         $('#newsTicker').removeClass('hidden').addClass('animated bounceInRight')
    },1000);
+
+   setTimeout (function () {
+       $('#nextLocation').addClass(nextLocationAnimation)
+   },3000);
+
+   setTimeout (function () {
+         $('#nextLocation').removeClass(nextLocationAnimation)
+   },4000);
+
+   setTimeout (function () {
+      $('#nextLocation').addClass(nextLocationAnimation)
+   },4500);
+
+   setTimeout (function () {
+      $('#nextLocation').removeClass(nextLocationAnimation)
+   },5500);
+
+   setTimeout (function () {
+      $('#nextLocation').addClass(nextLocationAnimation)
+   },6000);
 
    setTimeout (function () {
       $('#countdown-text').removeClass('hidden').addClass('animated bounceInLeft')
@@ -29,7 +51,7 @@ $(document).ready(function() {
 
    setTimeout (function () {
             $('#countdown-holder').removeClass('animated swing')
-      },5500);
+   },5500);
 
   setTimeout (function () {
            $('#countdown-holder').addClass('animated swing')

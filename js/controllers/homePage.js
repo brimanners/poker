@@ -46,7 +46,6 @@ ladderModule.controller('homePageController', function ($scope, $http) {
        for (i = 0; k < $scope.displayTable.length; i++) {
          $scope.displayTable[i].hidePlayer = false;
        }
-       var blah = "";
     }
 
      //  Get news ticker item

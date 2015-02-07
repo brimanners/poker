@@ -47,6 +47,21 @@ background-color: light-green;}
     background-color:cyan;
 }
 
+#nextLocation {
+    font-weight:bold;
+    color: blue;
+}
+
+.event-bold {
+  font-weight: bold;
+  font-size:13px;
+}
+
+.event-completed {
+    opacity: 0.6;
+    font-color: red;
+}
+
 .dropdown-menu li {
     font-size: 12px;
 }
