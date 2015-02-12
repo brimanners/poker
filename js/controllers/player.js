@@ -73,6 +73,7 @@ player.controller('playerController', function ($scope, $http) {
       allSeasonResults.last = 0;
       allSeasonResults.points = 0;
       allSeasonResults.cash = 0;
+      allSeasonResults.cashes = 0;
       allSeasonResults.averagePosition = 0;
    }
 
@@ -87,6 +88,7 @@ player.controller('playerController', function ($scope, $http) {
        allSeasonResults.season = "All Seasons";
        allSeasonResults.name = seasonResults[season].name;
        allSeasonResults.cash = allSeasonResults.cash + parseFloat(seasonResults[season].cash);
+       allSeasonResults.cashes = allSeasonResults.cashes + parseFloat(seasonResults[season].cashes);
        if (allSeasonResults.played > 0) {
           allSeasonResults.averagePosition = $scope.playerAccumulatedPositions / parseFloat(allSeasonResults.played);
        }

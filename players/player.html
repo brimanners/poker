@@ -106,8 +106,10 @@
                         <th>Last ratio</th>
                         <th>Ave points</th>
                         <th>Ave position</th>
-                        <th>Points</th>
                         <th>Won</th>
+                        <th>In the money</th>
+                        <th>In the money%</th>
+                        <th>Points</th>
                     </tr>
                     <tr ng-show="result.name == '{{player}}' && result.played > 0 && key == '0'" data-ng-repeat="(key, result) in seasonResults | orderBy: ['-points','-won', 'played', 'name']" class="allSeasonsHeader">
                         <td>{{result.season}}</td>
@@ -122,8 +124,10 @@
                         <td>{{result.last / result.played * 100 | number:2}} %</td>
                         <td>{{result.points / result.played | number:2}}</td>
                         <td>{{result.averagePosition | number:2}}</td>
-                        <td>{{result.points}}</td>
                         <td>{{result.cash | currency}}</td>
+                        <td>{{result.cashes | number:0}}</td>
+                        <td>{{result.cashes / result.played * 100 | number:2}}%</td>
+                        <td>{{result.points}}</td>
                     </tr>
                     <tr data-ng-show="selectedOption.value == 'ALL'"><td>&nbsp;</td></tr>
                     <tr data-ng-show="result.name == '{{player}}' && result.played > 0 && key != '0'" data-ng-repeat="(key, result) in seasonResults | orderBy: ['season']">
@@ -139,8 +143,10 @@
                         <td>{{result.last / result.played * 100 | number:2}} %</td>
                         <td>{{result.points / result.played | number:2}}</td>
                         <td>{{result.averagePosition | number:2}}</td>
-                        <td>{{result.points}}</td>
                         <td>{{result.cash | currency}}</td>
+                        <td>{{result.cashes | number:0}}</td>
+                        <td>{{result.cashes / result.played * 100 | number:2}}%</td>
+                        <td>{{result.points}}</td>
                     </tr>
                 </table>
             </div>

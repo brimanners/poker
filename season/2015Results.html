@@ -120,9 +120,9 @@
                         <th>Location</th>
                     </tr>
                     <tr class="event-completed">
-                        <td><s>1<sup>st</sup></s></td>
-                        <td><s>February 7<sup>th</sup></s></td>
-                        <td><s>Dave's</s></td>
+                        <td><a href="../events/20150207.html"><s>1<sup>st</sup></s></a></td>
+                        <td><a href="../events/20150207.html"><s>February 7<sup>th</sup></s></a></td>
+                        <td><a href="../events/20150207.html"><s>Dave's</s></a></td>
                     </tr>
                     <tr id="nextLocation">
                        <td>2<sup>nd</sup></td>
@@ -235,6 +235,8 @@
                         <th class="header-center"><a href="" data-ng-click="reverse = predicate == 'averagePoints' && !reverse; predicate = 'averagePoints'">Ave Points</a></th>
                         <th class="header-center"><a href="" data-ng-click="reverse = predicate == 'averagePosition' && !reverse; predicate = 'averagePosition'">Ave Position</a></th>
                         <th class="header-center"><a href="" data-ng-click="reverse = predicate == 'cash' && !reverse; predicate = 'cash'">Season earnings</a></th>
+                        <th class="header-center"><a href="" data-ng-click="reverse = predicate == 'cashes' && !reverse; predicate = 'paid'">In the money</a></th>
+                        <th class="header-center"><a href="" data-ng-click="reverse = predicate == 'itm' && !reverse; predicate = 'itm'">In the money%</a></th>
                         <th class="header-center"><a href="" data-ng-click="reverse = predicate == 'points' && !reverse; predicate = 'points'">Total Points</a></th>
                         <th data-ng-show="predicate == 'points' && reverse == true && player == ''" class="header-center">Movement</th>
                         <th class="header-center">Hide?</th>
@@ -257,7 +259,9 @@
                        <td>{{result.lastRatio | number:2}}%</td>
                        <td>{{result.averagePoints | number:2}}</td>
                        <td>{{result.averagePosition | number:2}}</td>
-                       <td>{{result.cash | currency}}</td>
+                       <td class="dosh">{{result.cash | currency}}</td>
+                       <td class="dosh">{{result.cashes | number:0}}</td>
+                       <td class="dosh">{{result.cashes / result.played * 100 | number:2}}%</td>
                        <td style="color: blue; background-color: LightSkyBlue;"><b>{{result.points}}</b></td>
                        <div>
                            <td data-ng-show="predicate == 'points' && reverse == true && player == ''">
@@ -299,19 +303,21 @@
                           <th class="header-center"><a href="" data-ng-click="reverse = predicate == 'lastRatio' && !reverse; predicate = 'lastRatio'">Last Ratio</a></th>
                           <th class="header-center"><a href="" data-ng-click="reverse = predicate == 'averagePoints' && !reverse; predicate = 'averagePoints'">Ave Points</a></th>
                           <th class="header-center"><a href="" data-ng-click="reverse = predicate == 'averagePosition' && !reverse; predicate = 'averagePosition'">Ave Position</a></th>
-                          <th class="header-center">
-                              <a href="" data-ng-click="reverse = predicate == 'gold' && !reverse; predicate = 'gold'"><img src='../images/medals/gold_medal.png' style="width:30px; height:40px;" alt="gold"></a>
-                          </th>
-                          <th class="header-center">
-                              <a href="" data-ng-click="reverse = predicate == 'silver' && !reverse; predicate = 'silver'"><img src='../images/medals/silver_medal.png' style="width:30px; height:40px;" alt="silver"></a>
-                          </th>
-                          <th class="header-center">
-                              <a href="" data-ng-click="reverse = predicate == 'bronze' && !reverse; predicate = 'bronze'"><img src='../images/medals/bronze_medal.png' style="width:30px; height:40px;" alt="bronze"></a>
-                          </th>
-                          <th class="header-center">
-                              <a href="" data-ng-click="reverse = predicate == 'spoon' && !reverse; predicate = 'spoon'"><img src='../images/medals/last.png' style="width:30px; height:40px;" alt="spoon"></a>
-                          </th>
                           <th class="header-center"><a href="" data-ng-click="reverse = predicate == 'cash' && !reverse; predicate = 'cash'">Career earnings</a></th>
+                          <th class="header-center"><a href="" data-ng-click="reverse = predicate == 'cashed' && !reverse; predicate = 'cashed'">In the money</a></th>
+                          <th class="header-center"><a href="" data-ng-click="reverse = predicate == 'cashedPer' && !reverse; predicate = 'cashedPer'">In the money%</a></th>
+                          <th class="header-center">
+                            <a href="" data-ng-click="reverse = predicate == 'gold' && !reverse; predicate = 'gold'"><img src='../images/medals/gold_medal.png' style="width:30px; height:40px;" alt="gold"></a>
+                          </th>
+                          <th class="header-center">
+                            <a href="" data-ng-click="reverse = predicate == 'silver' && !reverse; predicate = 'silver'"><img src='../images/medals/silver_medal.png' style="width:30px; height:40px;" alt="silver"></a>
+                          </th>
+                          <th class="header-center">
+                            <a href="" data-ng-click="reverse = predicate == 'bronze' && !reverse; predicate = 'bronze'"><img src='../images/medals/bronze_medal.png' style="width:30px; height:40px;" alt="bronze"></a>
+                          </th>
+                          <th class="header-center">
+                            <a href="" data-ng-click="reverse = predicate == 'spoon' && !reverse; predicate = 'spoon'"><img src='../images/medals/last.png' style="width:30px; height:40px;" alt="spoon"></a>
+                          </th>
                           <th class="header-center"><a href="" data-ng-click="reverse = predicate == 'points' && !reverse; predicate = 'points'">Total Points</a></th>
                       </tr>
                       <tbody class="animate" data-ng-repeat="result in allSeasonsLadder | filter:player | filter:gotPoints | orderBy:predicate:reverse">
@@ -329,11 +335,13 @@
                          <td>{{result.lastRatio | number:2}} %</td>
                          <td>{{result.points / result.played | number:2}}</td>
                          <td>{{result.totalPositions / result.played | number:2}}</td>
-                         <td style="background-color: gold;">{{result.gold || 0}}</td>
-                         <td style="background-color: silver;">{{result.silver || 0}}</td>
-                         <td style="background-color: sandybrown;">{{result.bronze || 0}}</td>
-                         <td>{{result.spoon || 0}}</td>
                          <td>{{result.cash | currency}}</td>
+                         <td>{{result.cashes | number:0}}</td>
+                         <td>{{result.cashes / result.played * 100 | number:2}} %</td>
+                         <td style="background-color: gold;">{{result.gold || 0}}</td>
+                          <td style="background-color: silver;">{{result.silver || 0}}</td>
+                          <td style="background-color: sandybrown;">{{result.bronze || 0}}</td>
+                          <td>{{result.spoon || 0}}</td>
                          <td style="color: blue; background-color: LightSkyBlue;"><b>{{result.points}}</b></td>
                      </tr>
                   </table>

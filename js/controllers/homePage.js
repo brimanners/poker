@@ -171,6 +171,7 @@ function populateDetailsFromJson ($scope, $http)  {
                      overallLadderPlayer.points = event.points;
                      overallLadderPlayer.averagePoints = event.points / event.played;
                      overallLadderPlayer.totalPositions = parseInt(event.totalPositions);
+                     overallLadderPlayer.cashes = parseFloat(event.cashes);
                      if (event.cash !== undefined) {
                         overallLadderPlayer.cash = parseFloat(event.cash);
                      }
@@ -189,7 +190,7 @@ function populateDetailsFromJson ($scope, $http)  {
                        if (event.totalPositions != undefined) { // TEMP TIL WE BACK FILL OLD CURRENT TABLE WITH TOTAL POSIUTIONS
                            existingPlayer.totalPositions = existingPlayer.totalPositions + parseInt(event.totalPositions);
                        }
-
+                       existingPlayer.cashes = existingPlayer.cashes + parseFloat(event.cashes);
                        if (event.cash !== undefined) {
                         existingPlayer.cash = existingPlayer.cash + parseFloat(event.cash);
                        }

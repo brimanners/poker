@@ -30,19 +30,31 @@ $(function () {
             borderWidth: 0
         },
         series: [{
-            name: 'Brian M',
+            name: 'Ben I',
+            data: [14]
+        }, {
+            name: 'Simon W',
+            data: [11]
+        }, {
+            name: 'Paul B',
             data: [8]
         }, {
             name: 'Steve W',
-            data: [6]
+            data: [5]
         }, {
             name: 'Dave M',
             data: [4]
-        }, {
-            name: 'Ben I',
+        },
+        {
+            name: 'Mark L',
+            data: [3]
+        },
+        {
+            name: 'Mark V',
             data: [2]
-        }, {
-            name: 'Junior',
+        },
+        {
+            name: 'Craig X',
             data: [1]
         }
         ]
