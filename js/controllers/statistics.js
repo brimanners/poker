@@ -143,9 +143,9 @@ $(document).ready(function(){
     var playerMap = new Object();
     $.ajax({
         url: '../json/general/players.json', dataType: 'json', async: false, success: function(data) {
-
-            gatherDonutStats(playerMap, "2015", data) // current season - grab from meta data?
-            outputDonutData(playerMap, "2015")
+            var currentYear = new Date().getFullYear().toString();
+            gatherDonutStats(playerMap, currentYear, data);
+            outputDonutData(playerMap, currentYear);
             animateIn();
         }
      });
