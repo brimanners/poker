@@ -31,31 +31,47 @@ $(function () {
         },
         series: [{
             name: 'Ben I',
-            data: [14]
+            data: [14, 18]
         }, {
             name: 'Simon W',
-            data: [11]
+            data: [11, 16]
         }, {
             name: 'Paul B',
-            data: [8]
+            data: [8, 10]
         }, {
             name: 'Steve W',
-            data: [5]
+            data: [5, 5]
         }, {
             name: 'Dave M',
-            data: [4]
+            data: [4, 16]
         },
         {
             name: 'Mark L',
-            data: [3]
+            data: [3, 21]
         },
         {
             name: 'Mark V',
-            data: [2]
+            data: [2, 17]
+        },
+        {
+            name: 'Brian M',
+            data: [0, 6]
+        },
+        {
+            name: 'Andy F',
+            data: [0, 9]
+        },
+        {
+            name: 'Junior A',
+            data: [0, 3]
+        },
+        {
+            name: 'Jade W',
+            data: [0, 1]
         },
         {
             name: 'Craig X',
-            data: [1]
+            data: [1, 1]
         }
         ]
     });

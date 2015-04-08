@@ -134,6 +134,7 @@ function populateDetailsFromJson ($scope, $http)  {
                 eventTables[i + 1][j].winRatio = eventTables[i + 1][j].won / eventTables[i + 1][j].played * 100;
                 eventTables[i + 1][j].lastRatio = eventTables[i + 1][j].last / eventTables[i + 1][j].played  * 100;
                 eventTables[i + 1][j].averagePoints = eventTables[i + 1][j].points / eventTables[i + 1][j].played;
+                eventTables[i + 1][j].averageCashes = eventTables[i + 1][j].cashes / eventTables[i + 1][j].played;
                 eventTables[i + 1][j].hidePlayer = false;
                 var movement = 0;
                 if (i > 0) {
@@ -172,6 +173,7 @@ function populateDetailsFromJson ($scope, $http)  {
                      overallLadderPlayer.averagePoints = event.points / event.played;
                      overallLadderPlayer.totalPositions = parseInt(event.totalPositions);
                      overallLadderPlayer.cashes = parseFloat(event.cashes);
+                     overallLadderPlayer.averageCashes = (overallLadderPlayer.cashes / 1) * 100
                      if (event.cash !== undefined) {
                         overallLadderPlayer.cash = parseFloat(event.cash);
                      }
@@ -187,10 +189,13 @@ function populateDetailsFromJson ($scope, $http)  {
                        existingPlayer.winRatio = (existingPlayer.won / existingPlayer.played) * 100;
                        existingPlayer.lastRatio = (existingPlayer.last / existingPlayer.played) * 100;
                        existingPlayer.points = existingPlayer.points + event.points;
+                       existingPlayer.averagePoints = existingPlayer.points / existingPlayer.played;
                        if (event.totalPositions != undefined) { // TEMP TIL WE BACK FILL OLD CURRENT TABLE WITH TOTAL POSIUTIONS
                            existingPlayer.totalPositions = existingPlayer.totalPositions + parseInt(event.totalPositions);
                        }
                        existingPlayer.cashes = existingPlayer.cashes + parseFloat(event.cashes);
+                       existingPlayer.averageCashes = (existingPlayer.cashes / existingPlayer.played) * 100
+                       console.log("existing player " + existingPlayer.name + " - cashes/played " + existingPlayer.cashes + "/" + existingPlayer.played + " = " + overallLadderPlayer.averageCashes);
                        if (event.cash !== undefined) {
                         existingPlayer.cash = existingPlayer.cash + parseFloat(event.cash);
                        }
