@@ -36,60 +36,8 @@
     <script type="text/javascript" src="../js/overlay.js"></script>
 </head>
 <body ng-controller="homePageController" ng-cloak class="yui3-skin-sam">
-<div class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container" id="navigationBar">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="../index.html">Home</a>
-        <div class="nav-collapse collapse">
-            <ul class="nav navbar-nav">
-                <li class="dropdown" data-no-collapse="true">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Event History<b class="caret"></b></a>
-                    <ul class="dropdown-menu" >
-                        <li ng-show="event.year == '2015'" ng-repeat="event in statistics.events | orderBy: ['-no']"><a href="{{event.url}}">{{event.eventDate}} @ {{event.location}}</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Players<b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                        <li ng-show="player.year == '2015'" ng-repeat="player in statistics.playerMenuDropdown | orderBy: ['name']"><a href="{{player.url}}">{{player.name}}</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Extras <b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                        <li ng-repeat="extra in statistics.extras"><a href="{{extra.url}}">{{extra.name}}</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">2014 History<b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="2014Results.html">Season wrap up</a></li>
-                        <li class="menu_year">&nbsp;Events</li>
-                        <li ng-repeat="event in statistics.CCXIV_Events | orderBy: ['-no']"><a href="{{event.url}}">{{event.eventDate}} @ {{event.location}}</a></li>
-                        <li class="menu_year">&nbsp;Players</li>
-                        <li ng-show="player.year == '2014'" ng-repeat="player in statistics.playerMenuDropdown | orderBy: ['name']"><a href="{{player.url}}">{{player.name}}</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">2013 History<b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="2013Results.html">Season wrap up</a></li>
-                        <li class="menu_year">&nbsp;Events</li>
-                        <li ng-repeat="event in statistics.CCXIII_Events | orderBy: ['-no']"><a href="{{event.url}}">{{event.eventDate}} @ {{event.location}}</a></li>
-                        <li class="menu_year">&nbsp;Players</li>
-                        <li ng-show="player.year == '2013'" ng-repeat="player in statistics.playerMenuDropdown | orderBy: ['name']"><a href="{{player.url}}">{{player.name}}</a></li>
-                    </ul>
-                </li>
-            </ul>
-            <a class="navbar-brand" href="../statistics/statistics.html">Statistics</a>
-        </div>
-        <!--/.nav-collapse -->
-    </div>
-</div>
+
+<menus></menus> <!-- Custom directive to show all the menu items - see js/directives/menus.js for details -->
 
 <div class="container">
 
@@ -235,7 +183,7 @@
                         <th class="header-center"><a href="" data-ng-click="reverse = predicate == 'averagePoints' && !reverse; predicate = 'averagePoints'">Ave Points</a></th>
                         <th class="header-center"><a href="" data-ng-click="reverse = predicate == 'averagePosition' && !reverse; predicate = 'averagePosition'">Ave Position</a></th>
                         <th class="header-center"><a href="" data-ng-click="reverse = predicate == 'cash' && !reverse; predicate = 'cash'">Season earnings</a></th>
-                        <th class="header-center"><a href="" data-ng-click="reverse = predicate == 'cashes' && !reverse; predicate = 'paid'">In the money</a></th>
+                        <th class="header-center"><a href="" data-ng-click="reverse = predicate == 'cashes' && !reverse; predicate = 'cashes'">In the money</a></th>
                         <th class="header-center"><a href="" data-ng-click="reverse = predicate == 'averageCashes' && !reverse; predicate = 'averageCashes'">In the money%</a></th>
                         <th class="header-center"><a href="" data-ng-click="reverse = predicate == 'points' && !reverse; predicate = 'points'">Total Points</a></th>
                         <th data-ng-show="predicate == 'points' && reverse == true && player == ''" class="header-center">Movement</th>
@@ -334,7 +282,7 @@
                          <td>{{result.winRatio | number:2}} %</td>
                          <td>{{result.lastRatio | number:2}} %</td>
                          <td>{{result.averagePoints | number:2}}</td>
-                         <td>{{result.totalPositions / result.played | number:2}}</td>
+                         <td>{{result.averagePosition | number:2}}</td>
                          <td>{{result.cash | currency}}</td>
                          <td>{{result.cashes | number:0}}</td>
                          <td>{{result.averageCashes | number:2}} %</td>
@@ -395,6 +343,7 @@
     </div>
     <!-- /container -->
     <script type="text/javascript" src="../js/controllers/homePage.js"></script>
+    <script type="text/javascript" src="../js/directives/menus.js"></script>
     <script>
         document.getElementById("currentYear").innerHTML = new Date().getFullYear();
     </script>
