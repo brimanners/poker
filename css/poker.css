@@ -64,6 +64,7 @@ background-color: light-green;}
 .event-completed {
     opacity: 0.6;
     font-color: red;
+    text-decoration: line-through;
 }
 
 .dropdown-menu li {
