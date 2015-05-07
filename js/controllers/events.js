@@ -1,6 +1,6 @@
-var eventModule = angular.module('event', []);        // poker is the name of the ng-app on the template
+var app = angular.module('poker', []);        // poker is the name of the ng-app on the teeventModuleate
 
-eventModule.controller('event-controller', function ($scope, $http) {
+app.controller('event-controller', function ($scope, $http) {
       var results = {};         // create a model object that can be put on the scope later
       var tournaments = {};
       var eventDate = $('meta[name="eventDate"]').attr("content");
@@ -97,6 +97,7 @@ eventModule.controller('event-controller', function ($scope, $http) {
      });
 
      $scope.results = results;
+     $scope.statistics = results;
 
     $scope.gotPoints = function(result) {
       return result.points > 0

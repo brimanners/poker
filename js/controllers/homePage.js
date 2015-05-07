@@ -1,9 +1,9 @@
 var playerEventPosition;
 var season = $('meta[name="season"]').attr("content");
 
-var ladderModule = angular.module('poker', []);        // poker module is the name of the ng-app on the template
+var app = angular.module('poker', []);        // poker module is the name of the ng-app on the template stored on the html tag
 
-ladderModule.controller('homePageController', function ($scope, $http) {
+app.controller('homePageController', function ($scope, $http) {
     populateDetailsFromJson($scope, $http);   // calls ajax request to read ladder results from json file generated via clojure app :)
     $scope.displayTable = [];
     $scope.displayExtra = false;
@@ -104,7 +104,6 @@ $scope.clicked = function() {
   }
 });
 
-
 // WIP - Or do we just create an array in the JSON instead of client side data manipulation?
 function convertListToArray(eventData) {
   for (k = 0; k < eventData.length; k++) {
@@ -172,6 +171,7 @@ function populateDetailsFromJson ($scope, $http)  {
                      overallLadderPlayer.points = event.points;
                      overallLadderPlayer.averagePoints = event.points / event.played;
                      overallLadderPlayer.totalPositions = parseInt(event.totalPositions);
+                     overallLadderPlayer.averagePosition = (parseInt(event.totalPositions) / 1);
                      overallLadderPlayer.cashes = parseFloat(event.cashes);
                      overallLadderPlayer.averageCashes = (overallLadderPlayer.cashes / 1) * 100
                      if (event.cash !== undefined) {
@@ -190,12 +190,12 @@ function populateDetailsFromJson ($scope, $http)  {
                        existingPlayer.lastRatio = (existingPlayer.last / existingPlayer.played) * 100;
                        existingPlayer.points = existingPlayer.points + event.points;
                        existingPlayer.averagePoints = existingPlayer.points / existingPlayer.played;
-                       if (event.totalPositions != undefined) { // TEMP TIL WE BACK FILL OLD CURRENT TABLE WITH TOTAL POSIUTIONS
+                       if (event.totalPositions != undefined) { // TEMP TIL WE BACK FILL OLD CURRENT TABLE WITH TOTAL POSITIONS
                            existingPlayer.totalPositions = existingPlayer.totalPositions + parseInt(event.totalPositions);
+                           existingPlayer.averagePosition = (existingPlayer.totalPositions / existingPlayer.played);
                        }
                        existingPlayer.cashes = existingPlayer.cashes + parseFloat(event.cashes);
                        existingPlayer.averageCashes = (existingPlayer.cashes / existingPlayer.played) * 100
-                       console.log("existing player " + existingPlayer.name + " - cashes/played " + existingPlayer.cashes + "/" + existingPlayer.played + " = " + overallLadderPlayer.averageCashes);
                        if (event.cash !== undefined) {
                         existingPlayer.cash = existingPlayer.cash + parseFloat(event.cash);
                        }
@@ -235,28 +235,6 @@ function populateDetailsFromJson ($scope, $http)  {
          });
 
     });
-
-    //  Get menu dropdown of players for relevant season
-    $http.get('../json/general/players.json').success(function (data) {
-        var players = [];
-        var nationality = {};
-        for (i = 0; i < data.length; i++) {
-            for (j = 0; j < data[i].players.length; j++) {
-                var player = {};
-                var playerNationality = [];
-                player.name = data[i].players[j].name;
-                player.year = data[i].year;
-                var nameParts = player.name.split(" ");
-                player.url = "../players/player.html?name=" + nameParts[0].toLowerCase() + nameParts[1] + '&year=' + data[i].year;
-                players.push(player);
-                nationality[player.name] = data[i].players[j].Nationality;
-                playerNationality.push(nationality);
-            }
-       }
-       $scope.playerNationality = playerNationality;
-       $scope.statistics.playerMenuDropdown = players;
-    });
-
 
     $http.get('../json/' + season + '/form-table.json').success(function (data) {
         for (i = 0; i < data.length; i++) {

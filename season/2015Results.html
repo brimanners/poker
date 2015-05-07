@@ -37,7 +37,8 @@
 </head>
 <body ng-controller="homePageController" ng-cloak class="yui3-skin-sam">
 
-<menus></menus> <!-- Custom directive to show all the menu items - see js/directives/menus.js for details -->
+<menus data-ng-controller="menusController"></menus> <!-- Custom directive to show all the menu items - see js/directives/menus.js for details -->
+<!-- TODO - Create a localised controller for all menu details and only load to local scope-->
 
 <div class="container">
 
@@ -58,6 +59,10 @@
             </tr>
         </table>
         <br/>
+        <!--<div data-ng-controller="menusController">-->
+            <!--<p>Hello</p>-->
+        <!--</div>-->
+
         <div class="col-lg-13 event-bold">
             <h4>2015 Events</h4>
             <div class="col-lg-3">
@@ -86,12 +91,12 @@
                         <th>Date</th>
                         <th>Location</th>
                     </tr>
-                    <tr id="nextLocation">
+                    <tr class="event-completed">
                         <td><a href="../events/20150502.html">3<sup>rd</sup></a></td>
                         <td><a href="../events/20150502.html">May 2<sup>nd</sup></a></td>
                         <td><a href="../events/20150502.html">Junior's</a></td>
                     </tr>
-                    <tr>
+                    <tr id="nextLocation">
                         <td>4<sup>th</sup></td>
                         <td>June 13<sup>th</sup></td>
                         <td>Mark V's</td>
@@ -108,7 +113,7 @@
                     <tr>
                         <td>5<sup>th</sup></td>
                         <td>July 18<sup>th</sup></td>
-                        <td>TBD</td>
+                        <td>Jade's</td>
                     </tr>
                     <tr>
                        <td>6<sup>th</sup></td>
@@ -171,7 +176,7 @@
                 <thead>
                     <tr class="first">
                         <th class="first">Position</th>
-                        <th style="text-align:left; padding-left:10px; width:100px; white-space:nowrap;"><a href="" ng-click="reverse = predicate == 'name' && !reverse; predicate = 'name'">Name</a></th>
+                        <th style="text-align:left; padding-left:10px; width:100px; white-space:nowrap;"><a href="" data-ng-click="reverse = predicate == 'name' && !reverse; predicate = 'name'">Name</a></th>
                         <th class="header-center"><a href="" data-ng-click="reverse = predicate == 'played' && !reverse; predicate = 'played'">Played</a></th>
                         <th class="header-center"><a href="" data-ng-click="reverse = predicate == 'won' && !reverse; predicate = 'won'">1<sup>st</sup></a></th>
                         <th class="header-center"><a href="" data-ng-click="reverse = predicate == 'second' && !reverse; predicate = 'second'">2<sup>nd</sup></a></th>
@@ -338,11 +343,12 @@
         <div class="col-lg-7">
             <footer>
                 <p>&copy; BJIT website productions <span id="currentYear"></span></p>
-            </footer>
+            </foo\ter>
         </div>
     </div>
     <!-- /container -->
     <script type="text/javascript" src="../js/controllers/homePage.js"></script>
+    <script type="text/javascript" src="../js/controllers/menusController.js"></script>
     <script type="text/javascript" src="../js/directives/menus.js"></script>
     <script>
         document.getElementById("currentYear").innerHTML = new Date().getFullYear();

@@ -37,7 +37,7 @@
 </head>
 <body ng-controller="homePageController" ng-cloak class="yui3-skin-sam">
 
-    <menus></menus> <!-- Custom directive to show all the menu items - see js/directives/menus.js for details -->
+    <menus data-ng-controller="menusController"></menus> <!-- Custom directive to show all the menu items - see js/directives/menus.js for details -->
 
     <div class="container">
         <div class="jumbotron table_border">
@@ -221,6 +221,7 @@
         </div>
         <!-- /container -->
         <script type="text/javascript" src="../js/controllers/homePage.js"></script>
+        <script type="text/javascript" src="../js/controllers/menusController.js"></script>
         <script type="text/javascript" src="../js/directives/menus.js"></script>
         <script>
                document.getElementById("currentYear").innerHTML = new Date().getFullYear();
