@@ -246,35 +246,6 @@ function populateDetailsFromJson ($scope, $http)  {
         getUrlsForPlayers(data, season);
     });
 
-    // Used for dropdown menus
-    $http.get('../json/2015/event-history.json').success(function (data) {
-        for (i = 0; i < data.length; i ++) { // append year so menu dropdown can section values
-            data[i].year = data[i].eventDate.substring(data[i].eventDate.length - 4, data[i].eventDate.length);
-        }
-        statistics.events = data;
-        getUrlForEvents(data);
-    });
-
-    $http.get('../json/2014/event-history.json').success(function (data) {
-            for (i = 0; i < data.length; i ++) { // append year so menu dropdown can section values
-                data[i].year = data[i].eventDate.substring(data[i].eventDate.length - 4, data[i].eventDate.length);
-            }
-            statistics.CCXIV_Events = data;
-            getUrlForEvents(statistics.CCXIV_Events);
-    });
-
-    $http.get('../json/2013/event-history.json').success(function (data) {
-        for (i = 0; i < data.length; i ++) { // append year so menu dropdown can section values
-            data[i].year = data[i].eventDate.substring(data[i].eventDate.length - 4, data[i].eventDate.length);
-        }
-        statistics.CCXIII_Events = data;
-        getUrlForEvents(statistics.CCXIII_Events);
-    });
-
-    $http.get('../json/general/extras.json').success(function (data) {
-       statistics.extras = data;
-    });
-
     $scope.statistics = statistics;
 }
 
@@ -282,13 +253,6 @@ function getUrlsForPlayers(players, year) {
     for (var i=0; i < players.length; i++) {
         var nameParts = players[i].name.split(" ");
         players[i].url = "../players/player.html?name=" + nameParts[0].toLowerCase() + nameParts[1] + '&year=' + year;
-    }
-}
-
-function getUrlForEvents(events) {
-    for (var i=0; i < events.length; i++) {
-        var eventDate = events[i].eventDate
-        events[i].url =  "../events/" + eventDate.substring(6) + eventDate.substring(3,5) + eventDate.substring(0,2) + ".html";
     }
 }
 
