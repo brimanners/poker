@@ -1,37 +1,10 @@
-var extras = angular.module('extras', []);
 
-extras.controller('extrasController', function ($scope, $http) {
+
+var app = angular.module('poker', []);
+
+app.controller('extrasController', function ($scope, $http) {
    var extraDetails = {};
-
-   // Used for dropdown menus
-   $http.get('../json/2015/event-history.json').success(function (data) {
-            for (i = 0; i < data.length; i ++) { // append year so menu dropdown can section values
-                data[i].year = data[i].eventDate.substring(data[i].eventDate.length - 4, data[i].eventDate.length);
-            }
-            extraDetails.events = data;
-            getUrlForEvents(extraDetails.events);
-     });
-
-   $http.get('../json/2014/event-history.json').success(function (data) {
-       for (i = 0; i < data.length; i ++) { // append year so menu dropdown can section values
-           data[i].year = data[i].eventDate.substring(data[i].eventDate.length - 4, data[i].eventDate.length);
-       }
-       extraDetails.CCXIV_Events = data;
-       getUrlForEvents(extraDetails.CCXIV_Events);
-   });
-
-   $http.get('../json/2013/event-history.json').success(function (data) {
-       for (i = 0; i < data.length; i ++) { // append year so menu dropdown can section values
-           data[i].year = data[i].eventDate.substring(data[i].eventDate.length - 4, data[i].eventDate.length);
-       }
-
-       extraDetails.CCXIII_Events = data;
-       getUrlForEvents(extraDetails.CCXIII_Events);
-   });
-
-   $http.get('../json/general/extras.json').success(function (data) {
-         extraDetails.extras = data;
-   });
+   $scope.statistics = {};
 
   $http.get('../json/general/blind-levels.json').success(function (data) {
     $scope.blind_levels = data;
@@ -48,24 +21,6 @@ extras.controller('extrasController', function ($scope, $http) {
        $scope.blind_levels[i].estimatedTime = dateCalc.toLocaleTimeString();
     }
   });
-
-
-   //  Get menu dropdown of players for relevant season
-   $http.get('../json/general/players.json').success(function (data) {
-       var players = [];
-       for (i = 0; i < data.length; i++) {
-           for (j = 0; j < data[i].players.length; j++) {
-               var player = {};
-               player.name = data[i].players[j].name;
-               player.year = data[i].year;
-               var nameParts = player.name.split(" ");
-               player.url = "../players/player.html?name=" + nameParts[0].toLowerCase() + nameParts[1] + '&year=' + data[i].year;
-               players.push(player);
-           }
-      }
-      $scope.playerMenuDropdown = players;
-   });
-
     $scope.extraDetails = extraDetails;
 });
 

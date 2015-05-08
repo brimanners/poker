@@ -22,6 +22,7 @@ app.controller('menusController', ['$scope', '$http', function($scope, $http) {
      }
      $scope.playerNationality = playerNationality;
      $scope.statistics.playerMenuDropdown = players;
+     var blah = "";
   });
 
    $http.get('../json/2015/event-history.json').success(function (data) {

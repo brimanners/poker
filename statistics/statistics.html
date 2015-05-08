@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="event" id="ng-app">
+<html lang="en" ng-app="poker" id="ng-app">
 <!-- the ng-app name 'event1' is referenced the corresponding controller logic -->
 <head> `
     <meta charset="utf-8">
@@ -28,131 +28,74 @@
 
 </head>
 <body ng-controller="statistics-controller" ng-cloak>
-<div class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container" id="navigationBar">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="../index.html">Home</a>
+    <menus data-ng-controller="menusController"></menus> <!-- Custom directive to show all the menu items - see js/directives/menus.js for details -->
+    <div class="container">
 
-        <!-- Menus -->
-        <div class="nav-collapse collapse">
-            <ul class="nav navbar-nav">
-                <li class="dropdown" data-no-collapse="true">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Event History<b class="caret"></b></a>
-                    <ul class="dropdown-menu" >
-                        <li ng-show="event.year == '2015'" ng-repeat="event in results.events | orderBy: ['-no']"><a href="{{event.url}}">{{event.eventDate}} @ {{event.location}}</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Players<b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                        <li ng-show="player.year == '2015'" ng-repeat="player in playerMenuDropdown | orderBy: ['name']"><a href="{{player.url}}">{{player.name}}</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Extras <b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                        <li ng-repeat="extra in results.extras"><a href="{{extra.url}}">{{extra.name}}</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">2014 History<b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="../season/2014Results.html">Season wrap up</a></li>
-                        <li class="menu_year">&nbsp;Events</li>
-                        <li ng-repeat="event in results.CCXIV_Events | orderBy: ['-no']"><a href="{{event.url}}">{{event.eventDate}} @ {{event.location}}</a></li>
-                        <li class="menu_year">&nbsp;Players</li>
-                        <li ng-show="player.year == '2014'" ng-repeat="player in playerMenuDropdown | orderBy: ['name']"><a href="{{player.url}}">{{player.name}}</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">2013 History<b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="../season/2013Results.html">Season wrap up</a></li>
-                        <li class="menu_year">&nbsp;Events</li>
-                        <li ng-repeat="event in results.CCXIII_Events | orderBy: ['-no']"><a href="{{event.url}}">{{event.eventDate}} @ {{event.location}}</a></li>
-                        <li class="menu_year">&nbsp;Players</li>
-                        <li ng-show="player.year == '2013'" ng-repeat="player in playerMenuDropdown | orderBy: ['name']"><a href="{{player.url}}">{{player.name}}</a></li>
-                    </ul>
-                </li>
-            </ul>
-            <a class="navbar-brand" href="../statistics/statistics.html">Statistics</a>
-        </div>
+    <div class="jumbotron table_border">
+        <h2>Statistics overload</h2>
+        <p>&nbsp;</p>
+        <p>Hmmmm....donuts</p>
     </div>
-</div>
-<div class="container">
-
-<div class="jumbotron table_border">
-    <h2>Statistics overload</h2>
-
-    <p>&nbsp;</p>
-
-    <p>Hmmmm....donuts</p>
-</div>
-<div class="body-content">
-    <form>
-        <p>Results for season
-        <div id="selectSeason"></di>
-            <select id="seasons">
-                <option value="2013">2013</option>
-                <option value="2014">2014</option>
-                <option value="2015" selected="selected">2015</option>
-                <option value="All ">All seasons</option>
-            </select>
-        </div>
-        </p>
-        <fieldset>
-        <legend>Hall of fame:</legend>
-        <table>
-            <tr>
-                <td width="50%"><div id="playedDonutChart" class="donut"></div></td>
-                <td width="50%"><div id="wonDonutChart" class="donut"></div></td>
-            </tr>
-        </table>
-        <table>
-             <tr>
-                <td><div id="pointsDonutChart" class="donut"></div></td>
-                <td><div id="topThreeDonutChart" class="donut"></div></td>
-            </tr>
-        </table>
-        <table>
-             <tr>
-                <td><div id="bountiesDonutChart" class="donut"></div></td>
-                <td><div id="hostedDonutChart" class="donut"></div></td>
-            </tr>
-        </table>
-    </fieldset>
-    </form>
-
-    <form>
-        <fieldset>
-            <legend>Hall of shame:</legend>
-            <div id="lastDonutChart" class="donut"></div>
+    <div class="body-content">
+        <form>
+            <p>Results for season
+            <div id="selectSeason"></di>
+                <select id="seasons">
+                    <option value="2013">2013</option>
+                    <option value="2014">2014</option>
+                    <option value="2015" selected="selected">2015</option>
+                    <option value="All ">All seasons</option>
+                </select>
+            </div>
+            </p>
+            <fieldset>
+            <legend>Hall of fame:</legend>
+            <table>
+                <tr>
+                    <td width="50%"><div id="playedDonutChart" class="donut"></div></td>
+                    <td width="50%"><div id="wonDonutChart" class="donut"></div></td>
+                </tr>
+            </table>
+            <table>
+                 <tr>
+                    <td><div id="pointsDonutChart" class="donut"></div></td>
+                    <td><div id="topThreeDonutChart" class="donut"></div></td>
+                </tr>
+            </table>
+            <table>
+                 <tr>
+                    <td><div id="bountiesDonutChart" class="donut"></div></td>
+                    <td><div id="hostedDonutChart" class="donut"></div></td>
+                </tr>
+            </table>
         </fieldset>
-    </form>
-</div>
-<footer>
-    <p>&copy; BJIT website productions <span id="currentYear"></span></p>
-</footer>
+        </form>
+        <form>
+            <fieldset>
+                <legend>Hall of shame:</legend>
+                <div id="lastDonutChart" class="donut"></div>
+            </fieldset>
+        </form>
+    </div>
+    <footer>
+        <p>&copy; BJIT website productions <span id="currentYear"></span></p>
+    </footer>
+    </div>
+        <script type="text/javascript" src="../js/controllers/statistics.js"></script>
+        <script type="text/javascript" src="../js/controllers/menusController.js"></script>
+        <script type="text/javascript" src="../js/directives/menus.js"></script>
+    <script>
+           document.getElementById("currentYear").innerHTML = new Date().getFullYear();
+    </script>
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-</div>
-<!-- /container -->
-<script type="text/javascript" src="../js/controllers/statistics.js"></script>
-<script>
-       document.getElementById("currentYear").innerHTML = new Date().getFullYear();
-</script>
-<script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-40877102-1', 'iinet.net.au');
+        ga('send', 'pageview');
 
-    ga('create', 'UA-40877102-1', 'iinet.net.au');
-    ga('send', 'pageview');
-
-</script>
+    </script>
 </body>
 </html>

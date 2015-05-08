@@ -1,94 +1,18 @@
-var eventModule = angular.module('event', []);        // poker is the name of the ng-app on the template
+var app = angular.module('poker', []);        // poker is the name of the ng-app on the template
 
-eventModule.controller('statistics-controller', function ($scope, $http) {
+app.controller('statistics-controller', function ($scope, $http) {
       var results = {};         // create a model object that can be put on the scope later
       var tournaments = {};
       var eventDate = $('meta[name="eventDate"]').attr("content");
       var season = eventDate.substring(6,10);
       var noOfTournaments = parseInt($('meta[name="noOfTournaments"]').attr("content"));
-
-    // Generic - event history dropdown
-   $http.get('../json/2015/event-history.json').success(function (data) {
-        for (i = 0; i < data.length; i ++) { // append year so menu dropdown can section values
-            data[i].year = data[i].eventDate.substring(data[i].eventDate.length - 4, data[i].eventDate.length);
-        }
-        results.events = data;
-        getUrlForEvents(results.events);
-     });
-
-    $http.get('../json/2014/event-history.json').success(function (data) {
-        for (i = 0; i < data.length; i ++) { // append year so menu dropdown can section values
-            data[i].year = data[i].eventDate.substring(data[i].eventDate.length - 4, data[i].eventDate.length);
-        }
-        results.CCXIV_Events = data;
-        getUrlForEvents(results.CCXIV_Events);
-    });
-
-    // Generic - event history dropdown
-
-    $http.get('../json/2013/event-history.json').success(function (data) {
-        for (i = 0; i < data.length; i ++) { // append year so menu dropdown can section values
-            data[i].year = data[i].eventDate.substring(data[i].eventDate.length - 4, data[i].eventDate.length);
-        }
-        results.CCXIII_Events = data;
-        getUrlForEvents(results.CCXIII_Events);
-    });
-
-
-    //  Get menu dropdown of players for relevant season and accuulate stat for graphs
-   $http.get('../json/general/players.json').success(function (data) {
-       var players = [];
-       for (i = 0; i < data.length; i++) {
-           for (j = 0; j < data[i].players.length; j++) {
-               var player = {};
-               player.name = data[i].players[j].name;
-               player.year = data[i].year;
-               var nameParts = player.name.split(" ");
-               player.url = "../players/player.html?name=" + nameParts[0].toLowerCase() + nameParts[1] + '&year=' + data[i].year;
-               players.push(player);
-           }
-      }
-      $scope.playerMenuDropdown = players;
-      playerList = players;
-
-      for (i = 0; i < players.length; i++) {
-        if (players[i].year == "2014") {
-            var playerName = players[i].name;
-            var playerNoSpace = playerName.substring(0,1).toLowerCase() + playerName.substring(1,playerName.length) + '.json';
-            var jsonFile = playerNoSpace.replace(/ /g,'')
-        }
-      }
-   });
-
-    // Generic - extras
-     $http.get('../json/general/extras.json').success(function (data) {
-        results.extras = data;
-     });
-
-     $scope.results = results;
+      $scope.statistics = {};
 
     $scope.gotPoints = function(result) {
       return result.points > 0
     };
    }
-
 );
-// Used for generic url setting
-function getUrlForEvents(events) {
-    for (var i=0; i < events.length; i++) {
-        var eventDate = events[i].eventDate
-        events[i].url =  "../events/" + eventDate.substring(6) + eventDate.substring(3,5) + eventDate.substring(0,2) + ".html";
-    }
-}
-
-// generic - used for player dropdown url
-function getUrlsForPlayers(players) {
-    for (var i=0; i < players.length; i++) {
-        var nameParts = players[i].name.split(" ");
-        players[i].url = "../players/" + nameParts[0].toLowerCase() + nameParts[1] + ".html";
-    }
-    return players;
-}
 
 function animateIn() {
   $("#wonDonutChart").addClass('animated rotateIn');

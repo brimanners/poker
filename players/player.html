@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="player" id="ng-app">
+<html lang="en" ng-app="poker" id="ng-app">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,239 +22,186 @@
     <script type="text/javascript" src="../js/tableSorter.js"></script>
 </head>
 <body ng-controller="playerController" ng-cloak>
-<div class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container" id="navigationBar">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="../index.html">Home</a>
-        <div class="nav-collapse collapse">
-            <ul class="nav navbar-nav">
-                <li class="dropdown" data-no-collapse="true">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Event History<b class="caret"></b></a>
-                    <ul class="dropdown-menu" >
-                        <li ng-show="event.year == '2015'" ng-repeat="event in playerDetails.events  | orderBy: ['-no']"><a href="{{event.url}}">{{event.eventDate}} @ {{event.location}}</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Players<b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                        <li ng-show="player.year == '2015'" ng-repeat="player in playerMenuDropdown | orderBy: ['name']"><a href="{{player.url}}">{{player.name}}</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Extras <b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                        <li ng-repeat="extra in playerDetails.extras"><a href="{{extra.url}}">{{extra.name}}</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">2014 History<b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="../season/2014Results.html">Season wrap up</a></li>
-                        <li class="menu_year">&nbsp;Events</li>
-                        <li ng-repeat="event in playerDetails.CCXIV_Events | orderBy: ['-no']"><a href="{{event.url}}">{{event.eventDate}} @ {{event.location}}</a></li>
-                        <li class="menu_year">&nbsp;Players</li>
-                        <li ng-show="player.year == '2014'" ng-repeat="player in playerMenuDropdown | orderBy: ['name']"><a href="{{player.url}}">{{player.name}}</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">2013 History<b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="../season/2013Results.html">Season wrap up</a></li>
-                        <li class="menu_year">&nbsp;Events</li>
-                        <li ng-repeat="event in playerDetails.CCXIII_Events | orderBy: ['-no']"><a href="{{event.url}}">{{event.eventDate}} @ {{event.location}}</a></li>
-                        <li class="menu_year">&nbsp;Players</li>
-                        <li ng-show="player.year == '2013'" ng-repeat="player in playerMenuDropdown | orderBy: ['name']"><a href="{{player.url}}">{{player.name}}</a></li>
-                    </ul>
-                </li>
-            </ul>
-            <a class="navbar-brand" href="../statistics/statistics.html">Statistics</a>
-        </div>
-        <!--/.nav-collapse -->
-    </div>
-</div>
-<div class="container">
+    <menus data-ng-controller="menusController"></menus> <!-- Custom directive to show all the menu items - see js/directives/menus.js for details -->
+    <div class="container">
 
-    <div class="jumbotron table_border">
-        <h2 class="shadow" id="header1">{{playerLongName}} statistics and analysis for {{displayYear}} {{selectedOption.year}}</h2>
-        <p>....because you can never have enough tables, charts and graphs.</p>
-        <p>&nbsp;</p>
-    </div>
-    <div class="body-content">
-        <div class="row">
-            <div class="col-lg-8">
-                Select season &nbsp;
-                <select data-ng-change="refreshDetails(selectedOption.value, selectedOption.value)" data-ng-model="selectedOption" data-ng-options="season.year for season in seasons track by season.value" id="selectedSeason" selected="selected">
-                </select>
-            </div>
-            <div><p>&nbsp;</p></div>
-            <div class="col-lg-8">
-                <table class="table_border results table table-striped table-bordered table-condensed table-hover">
-                    <tr>
-                        <th>Season</th>
-                        <th>Position</th>
-                        <th>Played</th>
-                        <th>Won</th>
-                        <th>Second</th>
-                        <th>Third</th>
-                        <th>Fourth</th>
-                        <th>Last</th>
-                        <th>Win ratio</th>
-                        <th>Last ratio</th>
-                        <th>Ave points</th>
-                        <th>Ave position</th>
-                        <th>Won</th>
-                        <th>In the money</th>
-                        <th>In the money%</th>
-                        <th>Points</th>
-                    </tr>
-                    <tr ng-show="result.name == '{{player}}' && result.played > 0 && key == '0'" data-ng-repeat="(key, result) in seasonResults | orderBy: ['-points','-won', 'played', 'name']" class="allSeasonsHeader">
-                        <td>{{result.season}}</td>
-                        <td>WIP</td>
-                        <td>{{result.played}}</td>
-                        <td>{{result.won}}</td>
-                        <td>{{result.second}}</td>
-                        <td>{{result.third}}</td>
-                        <td>{{result.fourth}}</td>
-                        <td>{{result.last}}</td>
-                        <td>{{result.won / result.played * 100 | number:2}} %</td>
-                        <td>{{result.last / result.played * 100 | number:2}} %</td>
-                        <td>{{result.points / result.played | number:2}}</td>
-                        <td>{{result.averagePosition | number:2}}</td>
-                        <td>{{result.cash | currency}}</td>
-                        <td>{{result.cashes | number:0}}</td>
-                        <td>{{result.cashes / result.played * 100 | number:2}}%</td>
-                        <td>{{result.points}}</td>
-                    </tr>
-                    <tr data-ng-show="selectedOption.value == 'ALL'"><td>&nbsp;</td></tr>
-                    <tr data-ng-show="result.name == '{{player}}' && result.played > 0 && key != '0'" data-ng-repeat="(key, result) in seasonResults | orderBy: ['season']">
-                        <td>{{result.season}}</td>
-                        <td>{{result.tablePosition}}<sup>{{positionSuffix(result.tablePosition)}}</sup></td>
-                        <td>{{result.played}}</td>
-                        <td>{{result.won}}</td>
-                        <td>{{result.second}}</td>
-                        <td>{{result.third}}</td>
-                        <td>{{result.fourth}}</td>
-                        <td>{{result.last}}</td>
-                        <td>{{result.won / result.played * 100 | number:2}} %</td>
-                        <td>{{result.last / result.played * 100 | number:2}} %</td>
-                        <td>{{result.points / result.played | number:2}}</td>
-                        <td>{{result.averagePosition | number:2}}</td>
-                        <td>{{result.cash | currency}}</td>
-                        <td>{{result.cashes | number:0}}</td>
-                        <td>{{result.cashes / result.played * 100 | number:2}}%</td>
-                        <td>{{result.points}}</td>
-                    </tr>
-                </table>
-            </div>
-            <div class="col-lg-4">
-               <img ng-show="playerDetails.image != null" class="border" src="{{playerDetails.image}}" style="float:right;">
-            </div>
+        <div class="jumbotron table_border">
+            <h2 class="shadow" id="header1">{{playerLongName}} statistics and analysis for {{displayYear}} {{selectedOption.year}}</h2>
+            <p>....because you can never have enough tables, charts and graphs.</p>
+            <p>&nbsp;</p>
         </div>
-
-        <div class="row">
-            <div class="col-lg-10">
-                <div id='chart_div'></div>
+        <div class="body-content">
+            <div class="row">
+                <div class="col-lg-8">
+                    Select season &nbsp;
+                    <select data-ng-change="refreshDetails(selectedOption.value, selectedOption.value)" data-ng-model="selectedOption" data-ng-options="season.year for season in seasons track by season.value" id="selectedSeason" selected="selected">
+                    </select>
+                </div>
+                <div><p>&nbsp;</p></div>
+                <div class="col-lg-8">
+                    <table class="table_border results table table-striped table-bordered table-condensed table-hover">
+                        <tr>
+                            <th>Season</th>
+                            <th>Position</th>
+                            <th>Played</th>
+                            <th>Won</th>
+                            <th>Second</th>
+                            <th>Third</th>
+                            <th>Fourth</th>
+                            <th>Last</th>
+                            <th>Win ratio</th>
+                            <th>Last ratio</th>
+                            <th>Ave points</th>
+                            <th>Ave position</th>
+                            <th>Won</th>
+                            <th>In the money</th>
+                            <th>In the money%</th>
+                            <th>Points</th>
+                        </tr>
+                        <tr ng-show="result.name == '{{player}}' && result.played > 0 && key == '0'" data-ng-repeat="(key, result) in seasonResults | orderBy: ['-points','-won', 'played', 'name']" class="allSeasonsHeader">
+                            <td>{{result.season}}</td>
+                            <td>WIP</td>
+                            <td>{{result.played}}</td>
+                            <td>{{result.won}}</td>
+                            <td>{{result.second}}</td>
+                            <td>{{result.third}}</td>
+                            <td>{{result.fourth}}</td>
+                            <td>{{result.last}}</td>
+                            <td>{{result.won / result.played * 100 | number:2}} %</td>
+                            <td>{{result.last / result.played * 100 | number:2}} %</td>
+                            <td>{{result.points / result.played | number:2}}</td>
+                            <td>{{result.averagePosition | number:2}}</td>
+                            <td>{{result.cash | currency}}</td>
+                            <td>{{result.cashes | number:0}}</td>
+                            <td>{{result.cashes / result.played * 100 | number:2}}%</td>
+                            <td>{{result.points}}</td>
+                        </tr>
+                        <tr data-ng-show="selectedOption.value == 'ALL'"><td>&nbsp;</td></tr>
+                        <tr data-ng-show="result.name == '{{player}}' && result.played > 0 && key != '0'" data-ng-repeat="(key, result) in seasonResults | orderBy: ['season']">
+                            <td>{{result.season}}</td>
+                            <td>{{result.tablePosition}}<sup>{{positionSuffix(result.tablePosition)}}</sup></td>
+                            <td>{{result.played}}</td>
+                            <td>{{result.won}}</td>
+                            <td>{{result.second}}</td>
+                            <td>{{result.third}}</td>
+                            <td>{{result.fourth}}</td>
+                            <td>{{result.last}}</td>
+                            <td>{{result.won / result.played * 100 | number:2}} %</td>
+                            <td>{{result.last / result.played * 100 | number:2}} %</td>
+                            <td>{{result.points / result.played | number:2}}</td>
+                            <td>{{result.averagePosition | number:2}}</td>
+                            <td>{{result.cash | currency}}</td>
+                            <td>{{result.cashes | number:0}}</td>
+                            <td>{{result.cashes / result.played * 100 | number:2}}%</td>
+                            <td>{{result.points}}</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="col-lg-4">
+                   <img ng-show="playerDetails.image != null" class="border" src="{{playerDetails.image}}" style="float:right;">
+                </div>
             </div>
-        </div>
 
-        <div class="row">
-            <div class="col-lg-10">
-                <table>
-                    <tr>
-                        <td>
-                            <div data-ng-show="selectedOption.value != 'ALL'" id="lineGraph_div" style="height: 200px; width: 500px;"></div>
-                        </td>
+            <div class="row">
+                <div class="col-lg-10">
+                    <div id='chart_div'></div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-lg-10">
+                    <table>
+                        <tr>
+                            <td>
+                                <div data-ng-show="selectedOption.value != 'ALL'" id="lineGraph_div" style="height: 200px; width: 500px;"></div>
+                            </td>
+                            <td>&nbsp;</td>
+                            <td>
+                                <div data-ng-show="selectedOption.value != 'ALL'" id="pointsAccumulation_div" style="height: 200px; width: 500px;"></div>
+                            </td>
+                            <td>&nbsp;</td>
+                        </tr>
+                     </table>
+                </div>
+                <p></p>
+                <div class="col-lg-10">
+                    <table>
+                        <tr>
+                            <td>
+                                <div data-ng-show="selectedOption.value != 'ALL'" id="ladderPosition_div" style="height: 200px; width: 500px;"></div>
+                            </td>
+                            <td>&nbsp;</td>
+                        </tr>
                         <td>&nbsp;</td>
-                        <td>
-                            <div data-ng-show="selectedOption.value != 'ALL'" id="pointsAccumulation_div" style="height: 200px; width: 500px;"></div>
-                        </td>
-                        <td>&nbsp;</td>
-                    </tr>
-                 </table>
+                    </table>
+                </div>
+                <div class="col-lg-10">
+                   <table>
+                       <tr>
+                           <td>
+                               <div id="pieChart_div" style="height: 200px; width: 500px;"></div>
+                           </td>
+                           <td>&nbsp;</td>
+                           <td>
+                               <div id="quartilePieChart_div" style="height: 200px; width: 500px;"></div>
+                           </td>
+                       </tr>
+
+                   </table>
+               </div>
+            </div>
+            <br/>
+        </div>
+
+            <div class="row">
+                <div class="col-lg-8">
+                    <table class="table_border results table table-striped table-bordered table-condensed table-hover small-table">
+                        <tr>
+                            <th>Game No.</th>
+                            <th>Date</th>
+                            <th>Location</th>
+                            <th>Tournament No.</th>
+                            <th>Position</th>
+                            <th>No. of players</th>
+                            <th>Points</th>
+                            <th>Won</th>
+                        </tr>
+                        <tr data-ng-repeat="event in playerDetails.eventDetails | orderBy: displayDate | orderBy: tournament">
+                            <td>{{$index + 1}}</td>
+                            <td>{{event.displayDate | date:'longDate'}}</td>
+                            <td>{{event.location}}</td>
+                            <td>{{event.tournament}}<sup>{{positionSuffix(event.tournament)}}</sup></td>
+                            <td>{{event.position}}<sup>{{positionSuffix(event.position)}}</sup></td>
+                            <td>{{event.noOfPlayers}}</td>
+                            <td>{{event.points}}</td>
+                            <td>{{event.cash | currency}}</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="col-lg-1"></div>
             </div>
             <p></p>
-            <div class="col-lg-10">
-                <table>
-                    <tr>
-                        <td>
-                            <div data-ng-show="selectedOption.value != 'ALL'" id="ladderPosition_div" style="height: 200px; width: 500px;"></div>
-                        </td>
-                        <td>&nbsp;</td>
-                    </tr>
-                    <td>&nbsp;</td>
-                </table>
-            </div>
-            <div class="col-lg-10">
-               <table>
-                   <tr>
-                       <td>
-                           <div id="pieChart_div" style="height: 200px; width: 500px;"></div>
-                       </td>
-                       <td>&nbsp;</td>
-                       <td>
-                           <div id="quartilePieChart_div" style="height: 200px; width: 500px;"></div>
-                       </td>
-                   </tr>
 
-               </table>
-           </div>
-        </div>
-        <br/>
+        <footer>
+            <p>&copy; BJIT website productions <span id="currentYear"></span></p>
+        </footer>
     </div>
+    <!-- /container -->
+    <script type="text/javascript" src="../js/controllers/player.js"></script>
+    <script type="text/javascript" src="../js/controllers/menusController.js"></script>
+    <script type="text/javascript" src="../js/directives/menus.js"></script>
+    <script>
+        document.getElementById("currentYear").innerHTML = new Date().getFullYear();
+    </script>
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-        <div class="row">
-            <div class="col-lg-8">
-                <table class="table_border results table table-striped table-bordered table-condensed table-hover small-table">
-                    <tr>
-                        <th>Game No.</th>
-                        <th>Date</th>
-                        <th>Location</th>
-                        <th>Tournament No.</th>
-                        <th>Position</th>
-                        <th>No. of players</th>
-                        <th>Points</th>
-                        <th>Won</th>
-                    </tr>
-                    <tr data-ng-repeat="event in playerDetails.eventDetails | orderBy: displayDate | orderBy: tournament">
-                        <td>{{$index + 1}}</td>
-                        <td>{{event.displayDate | date:'longDate'}}</td>
-                        <td>{{event.location}}</td>
-                        <td>{{event.tournament}}<sup>{{positionSuffix(event.tournament)}}</sup></td>
-                        <td>{{event.position}}<sup>{{positionSuffix(event.position)}}</sup></td>
-                        <td>{{event.noOfPlayers}}</td>
-                        <td>{{event.points}}</td>
-                        <td>{{event.cash | currency}}</td>
-                    </tr>
-                </table>
-            </div>
-            <div class="col-lg-1"></div>
-        </div>
-        <p></p>
+        ga('create', 'UA-40877102-1', 'iinet.net.au');
+        ga('send', 'pageview');
 
-    <footer>
-        <p>&copy; BJIT website productions <span id="currentYear"></span></p>
-    </footer>
-
-</div>
-<!-- /container -->
-<script type="text/javascript" src="../js/controllers/player.js"></script>
-<script>
-    document.getElementById("currentYear").innerHTML = new Date().getFullYear();
-</script>
-<script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-    ga('create', 'UA-40877102-1', 'iinet.net.au');
-    ga('send', 'pageview');
-
-</script>
-
+    </script>
 </body>
 </html>
