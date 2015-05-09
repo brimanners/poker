@@ -2,11 +2,11 @@
 <html lang="en" ng-app="poker" id="ng-app">
 <!-- the ng-app name 'poker' is referenced the corresponding controller logic -->
 <head>
+    <meta name="season" content="2015">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <meta name="season" content="2015">
     <title>Poker Results</title>
     <!-- Bootstrap core CSS -->
     <link href="../css/bootstrap.css" rel="stylesheet">
@@ -336,11 +336,7 @@
             </table>
         </div>
         <br/>
-        <div class="col-lg-7">
-            <footer>
-                <p>&copy; BJIT website productions <span id="currentYear"></span></p>
-            </foo\ter>
-        </div>
+        <div data-ng-include="'../templates/footer.html'"></div>
     </div>
     <!-- /container -->
     <script type="text/javascript" src="../js/controllers/homePage.js"></script>
