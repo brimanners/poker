@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="event" id="ng-app">
-<!-- the ng-app name 'event1' is referenced the corresponding controller logic -->
+<html lang="en" ng-app="poker" id="ng-app">
 <head> `
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,360 +21,308 @@
     <script type="text/javascript" src="http://twitter.github.com/bootstrap/assets/js/bootstrap-dropdown.js"></script>
 </head>
 <body ng-controller="event-controller" ng-cloak>
-<div class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container" id="navigationBar">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="../index.html">Home</a>
+    <menus data-ng-controller="menusController"></menus> <!-- Custom directive to show all the menu items - see js/directives/menus.js for details -->
+    <div class="container">
 
-        <!-- Menus -->
-        <div class="nav-collapse collapse">
-            <ul class="nav navbar-nav">
-                <li class="dropdown" data-no-collapse="true">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Event History<b class="caret"></b></a>
-                    <ul class="dropdown-menu" >
-                        <li ng-show="event.year == '2015'" ng-repeat="event in results.events | orderBy: ['-no']"><a href="{{event.url}}">{{event.eventDate}} @ {{event.location}}</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Players<b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                        <li ng-show="player.year == '2015'" ng-repeat="player in playerMenuDropdown | orderBy: ['name']"><a href="{{player.url}}">{{player.name}}</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Extras <b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                        <li ng-repeat="extra in results.extras"><a href="{{extra.url}}">{{extra.name}}</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">2014 History<b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="../season/2014Results.html">Season wrap up</a></li>
-                        <li class="menu_year">&nbsp;Events</li>
-                        <li ng-repeat="event in results.CCXIV_Events | orderBy: ['-no']"><a href="{{event.url}}">{{event.eventDate}} @ {{event.location}}</a></li>
-                        <li class="menu_year">&nbsp;Players</li>
-                        <li ng-show="player.year == '2014'" ng-repeat="player in playerMenuDropdown | orderBy: ['name']"><a href="{{player.url}}">{{player.name}}</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">2013 History<b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="../season/2013Results.html">Season wrap up</a></li>
-                        <li class="menu_year">&nbsp;Events</li>
-                        <li ng-repeat="event in results.CCXIII_Events | orderBy: ['-no']"><a href="{{event.url}}">{{event.eventDate}} @ {{event.location}}</a></li>
-                        <li class="menu_year">&nbsp;Players</li>
-                        <li ng-show="player.year == '2013'" ng-repeat="player in playerMenuDropdown | orderBy: ['name']"><a href="{{player.url}}">{{player.name}}</a></li>
-                    </ul>
-                </li>
-            </ul>
-            <a class="navbar-brand" href="../statistics/statistics.html">Statistics</a>
-        </div>
-    </div>
-</div>
-<div class="container">
+    <div class="jumbotron table_border">
+        <h2>The "Battle at Dave's Beach Shack"</h2>
 
-<div class="jumbotron table_border">
-    <h2>The "Battle at Dave's Beach Shack"</h2>
+        <p>&nbsp;</p>
 
-    <p>&nbsp;</p>
-
-    <p>.....The famous five slum it in Rye</p>
-</div>
-<div class="body-content">
-<div class="row">
-    <div class="col-lg-3">
-        <div>
-            <table class="table_border results table table-striped table-bordered table-condensed table-hover">
-                <tr>
-                    <th>Date</th>
-                    <th>Location</th>
-                    <th>Game</th>
-                    <th>Players</th>
-                </tr>
-                <tr>
-                    <td>{{tournaments.tournamentOne[0].eventDate}}</sup></td>
-                    <td>{{tournaments.tournamentOne[0].location}}</td>
-                    <td>{{tournaments.tournamentOne[0].tournament}}</td>
-                    <td>{{tournaments.tournamentOne[0].noOfPlayers}}</td>
-                </tr>
-            </table>
-        </div>
+        <p>.....The famous five slum it in Rye</p>
     </div>
-    <div class="col-lg-3">
-        <div>
-            <table class="table_border results table table-striped table-bordered table-condensed table-hover">
-                <tr>
-                    <th>Date</th>
-                    <th>Location</th>
-                    <th>Game</th>
-                    <th>Players</th>
-                </tr>
-                <tr>
-                    <td>{{tournaments.tournamentTwo[0].eventDate}}</sup></td>
-                    <td>{{tournaments.tournamentTwo[0].location}}</td>
-                    <td>{{tournaments.tournamentTwo[0].tournament}}</td>
-                    <td>{{tournaments.tournamentTwo[0].noOfPlayers}}</td>
-                </tr>
-            </table>
-        </div>
-    </div>
-</div>
-<div class="row">
-    <div class="col-lg-3">
-        <div>
-            <table class="table_border results table table-striped table-bordered table-condensed table-hover">
-                <tr>
-                    <th>Position</th>
-                    <th style="text-align:left; padding-left:10px;">Name</th>
-                    <th>Points</th>
-                    <th>Won</th>
-                </tr>
-                <tr ng-show="result.event == 5 && result.tournament == 1"
-                    ng-repeat="result in results.eventResults | orderBy: ['event','tournament', '-points']">
-                    <td>{{result.position}}<sup>{{positionSuffix(result.position)}}</sup></td>
-                    <td style="text-align:left; padding-left:10px;">{{result.name}}</td>
-                    <td>{{result.points}}</td>
-                    <td>{{result.cash | currency}}</td>
-                </tr>
-            </table>
-            <table class="table_border results table table-striped table-bordered table-condensed table-hover">
-                <tr>
-                    <th>Bounty Winner</th>
-                </tr>
-                <tr>
-                    <td>Steve W</td>
-                </tr>
-            </table>
-        </div>
-    </div>
-    <div class="col-lg-3">
-        <div>
-            <table class="table_border results table table-striped table-bordered table-condensed table-hover">
-                <tr>
-                    <th>Position</th>
-                    <th style="text-align:left; padding-left:10px;">Name</th>
-                    <th>Points</th>
-                    <th>Won</th>
-                </tr>
-                <tr ng-show="result.event == 5 && result.tournament == 2"
-                    ng-repeat="result in results.eventResults | orderBy: ['event','tournament', '-points']">
-                    <td>{{result.position}}<sup>{{positionSuffix(result.position)}}</sup></td>
-                    <td style="text-align:left; padding-left:10px;">{{result.name}}</td>
-                    <td>{{result.points}}</td>
-                    <td>{{result.cash | currency}}</td>
-                </tr>
-            </table>
-            <table class="table_border results table table-striped table-bordered table-condensed table-hover">
-                <tr>
-                    <th>Bounty Winner</th>
-                </tr>
-                <tr>
-                    <td>Dave M</td>
-                </tr>
-            </table>
-        </div>
-    </div>
-    <div class="col-lg-6">
-        <div>
-            <table class="table_border results table table-striped table-bordered table-condensed table-hover">
-                <tr>
-                <tr>
-                    <th>Position</th>
-                    <th style="text-align:left; padding-left:10px;">Name</th>
-                    <th>Played</th>
-                    <th>Won</th>
-                    <th>Win Ratio</th>
-                    <th>Ave Points</th>
-                    <th>Ave Position</th>
-                    <th>Points</th>
-                </tr>
-                </tr>
-                <tr ng-repeat="result in results.eventTables[5] | filter:gotPoints | orderBy: ['-points','-won', 'played', 'name']">
-                    <td>{{$index + 1}}<sup>{{positionSuffix($index + 1)}}</sup></td>
-                    <td style="text-align:left; padding-left:10px;">{{result.name}}</td>
-                    <td>{{result.played}}</td>
-                    <td>{{result.won}}</td>
-                    <td>{{result.won / result.played * 100| number:2}} %</td>
-                    <td>{{result.points / result.played | number:2}}</td>
-                    <td>{{result.averagePosition | number:2}}</td>
-                    <td>{{result.points}}</td>
-                </tr>
-            </table>
-        </div>
-    </div>
-</div>
-<div class="row">
-    <div id="commentary">
-        <h3 style="color:black">Commentary</h3>
-
-            <div class="col-lg-4" style="float:right;">
-                <table>
+    <div class="body-content">
+    <div class="row">
+        <div class="col-lg-3">
+            <div>
+                <table class="table_border results table table-striped table-bordered table-condensed table-hover">
                     <tr>
-                        <td><img src="../images/20131109_daves_c.jpeg" class="border" alt="picture1"></td>
+                        <th>Date</th>
+                        <th>Location</th>
+                        <th>Game</th>
+                        <th>Players</th>
                     </tr>
                     <tr>
-                        <td style="font-size:8pt;">Ben struggles to contain his emotions after finally winning.</td>
+                        <td>{{tournaments.tournamentOne[0].eventDate}}</sup></td>
+                        <td>{{tournaments.tournamentOne[0].location}}</td>
+                        <td>{{tournaments.tournamentOne[0].tournament}}</td>
+                        <td>{{tournaments.tournamentOne[0].noOfPlayers}}</td>
                     </tr>
                 </table>
             </div>
-            <span>
-                <p>
-                    The fifth poker tournament was held off-site from "The Square" as five players ventured towards the
-                    southern shores to take up Dave's kind offer at hosting at his beach house. The overly keen "Ice man" Brian was first to turn up (with ice)
-                    and as the car port filled up quickly, players soon focused their attentions on the long day ahead.
-                </p>
-
-                <p>
-                    Plenty of beers into the ice bucket, red wines stored, doona's and pillows readied for later allocation, but no sign of Donna?
-                    The return of the ol' favourite 8 seater table was eagerly set-up whilst Dave supplied everyone with a cold one, allowing
-                    players to ready for the marathon poker session ahead.
-                </p>
-
-                <p>
-                    The first deal initiated the proceedings and betting in the first few hands was noticeably tentative as people eased their way into the game. Very few raised bets and
-                    lots of checking kept wins at a moderate level. Paul and Brian were wondering when they were going to win a hand, but Dave was already
-                    running hot as he took lots of small pots to create monster $5 and $10 chip towers.
-                </p>
-                <p>
-                    Into the second hour, things were starting to heat up and Ben pushed Steve off on two hands with strong bets to give him a healthy chip level. Maybe the alcohol was starting to loosen players
-                    games up as the pots were starting to increase and Dave's previously won towers were leaving for pastures new.
-                </p>
-                <p>
-                    Returning from the second break with blinds
-                    up to $100/$200, Ben was the clear chip leader. Steve's professional dealing style saw him deal out the flop without giving anyone any cards, but maybe it was
-                    a clever distraction guise as he soon won several hands to close in on Ben's chip amount. Brian was relieved to see pocket K's and pushed in a strong $2000 bet that
-                    saw Ben fold and Steve deliberate for a few minutes. With the famous words "Oh, why the F&$% not", Steve pushed in some of his winnings. With two 3's on the board
-                    causing Brian some anxiety, he was relieved to see his hand hold, and even more relieved when Ben piped up that he had folded pocket 3's!
-                </p>
-
-                <p>
-                    Dave's luck seemed to have run out and he soon found himself the first casualty and was allocated the BBQ duty. Paul was struggling to find any decent cards
-                    to play and was forced to go all in, and with the rollover bounty prize at stake, Brian and Ben didn't think their hole cards were good enough. Steve though,
-                    with dollar signs in his eyes took on the job and summarily dismissed Paul like a Roman Gladiator taking on a helpless slave.
-                    Brian, Steve and (yep, him again) Ben were left to fight out the bonus points but Steve's stack soon took more of a pounding than GWS playing the Hawks, and maybe with
-                    some chagrin, Paul was not dealing Steve any good cards leaving Steve with no option but to go all in, but not hitting the board and finishing in third place.
-                </p>
-                <p>
-                    With chip stacks at comparable levels, no deals were to be struck with Brian and Ben hoping for that final slice of luck to get over the line. With Ben taking a
-                    large amount of Brian's chips after calling a semi-bluff, it led to the final hand with Brian holding AQ and Ben A7. A slight dealer mishap exposed the
-                    first burn card, which was a seven, so Brian was smiling knowing that it was the card that Ben wanted. The smile soon vanished though as the first flop card was another
-                    seven, and with the final river card turning over yet another seven, Ben took in all the chips. Finally his first win after so many close attempts, and with
-                    congratulations and back pats a-plenty, everyone turned their attention to dissect the previous game accompanied with the gastronomic feast served up by Dave (unless
-                    you're a vegetarian).
-                </p>
-
-                <p>
-                    Players ventured back to the table with stomach cavities brimming with vitamin B12. Brian was sporting a poker injury above his left eye after having an argument with the
-                    bathroom sink, but fortunately the anaesthetic level of inebriation meant game two could commence without the need for medical assistance. Another tentative start for the
-                    first few hands before Ben upped the betting levels by betting the flop, turn and river. His bets were matched, and was forced to show down two cards that did not
-                    hit anything.
-                </p>
-                <p>
-                    Steve was now getting some good starting cards, but was looking to the heavens for a change of luck as his raise simply meant the rest of the players folded.
-                    Even when he did manage to win a hand at showdown after the river card, for the fourth time of the night, his best cards were matched by another player and the pot
-                    was split. Meanwhile, Dave was wondering whether he'd done something wrong in a previous life, as his top cards were beaten by other players with better
-                    kicker cards on multiple occasions.
-                </p>
-                <div class="col-lg-4" style="float:right;">
-                    <table>
-                        <tr>
-                            <td><img src="../images/20131109_daves_a.jpeg" class="border" alt="picture1" style="float:left;"></td>
-                        </tr>
-                        <tr>
-                            <td style="font-size:8pt; align: center;">Quad 8's - Paul's new lucky number!</td>
-                        </tr>
-                    </table>
-                </div>
-                <p>
-                    Brian received a nice chip up, after his Jack matched the two Jacks on the flop, but Paul not believing him, called the bets all the way and was forced to
-                    relinquish chips a-plenty as a result. It was all forgotten a few hands later though, as Ben's imperious betting was snap called by Paul.
-                    Ben was confident of more chips as his full house was surely the best hand, until Paul turned over the best hand of the night - Quad Eights. Ben
-                    didn't know whether to laugh or cry, but was good natured to accept the loss gracefully, whilst muttering expletives under his breath.
-                </p>
-                <p>
-                    It wasn't long before Ben decided to re-buy and Steve also down on chips joined in the prize fund enlargement process. A few hands later
-                    Brian's aggressive bet was followed by 3 folds, but Steve decided to come along for the ride. Brian with top pair put the pressure on Steve
-                    who was chasing a flush, and with Steve all in, his despairing look epitomised his luck as he was out in fifth place.
-                </p>
-                <p>
-                    Into the latter stages of the game, players judgements were heavily influenced by the level of intoxication. Brian (on a flush draw), pushed in a massive $5000
-                    bet that gave Dave's neural activity a good work out. Announcing words closely matching Steve's in the first game, the bet was called with Dave having top
-                    pair. This time though, no flush completion (that's not an observation of toilet activity!), knocked Brian out in fourth place. Dave's table vicinity was now
-                    brimming with chips with Dave experiencing his first foray into the top three.
-                </p>
-                <p>
-                    Paul also didn't last much longer as his single story chip stack was being overwhelmed by the neighbouring high-rise efforts of Ben and Dave. And
-                    unsurprisingly, he could not hold out, leaving Dave now into the top two against the all conquering Ben. With Steve taking on the dealing capacity whilst
-                    Brian kept tabs on the chips, the hands were being played fast and furiously. Even a quick stop gap after accident prone Brian provided a broken wine glass for
-                    clearing, did not stop Ben and Dave's concentration.
-                </p>
-                <div class="col-lg-4" style="float:right;">
-                    <table>
-                        <tr>
-                            <td><img src="../images/20131109_daves_b.jpeg" class="border" alt="picture1" style="float:left;"></td>
-                        </tr>
-                        <tr>
-                            <td style="font-size:8pt; align: center;">8 hours of poker later - Exhausted Dave enjoying the moment....</td>
-                        </tr>
-                    </table>
-                </div>
-                <p>
-                    Ben was hoping that his newly found first place experience would see him through, but Dave had other ideas and managed to creep into the chip leader
-                    position meaning an all in from Ben, could put him close to the exit position. Steve's dealing fortuitously gave Dave a chance to get his chips into the
-                    middle and pushed all in with AK. Ben who knew he had to win back the chips called, and as so often been the case, watched as the first place slipped
-                    through his fingers and he returned to the familiar surroundings of runner up spot. Dave's exhausted sigh of relief soon turned to smiles after a massive second game and also
-                    meant his first win after seven attempts.
-                </p>
-
-                <p>
-                    Table update: Yep, the main man Ben keeps up his unstoppable progress at the summit of the ladder, with a 22 point gap to Paul who stays in second.
-                    Brian moves up to third (as Mark V could not play), and bridges the gap slightly to Paul. Both Steve and Dave move up a place at the expense of
-                    Jade and Mark L respectively who also could not join in the shenanigans.
-                </p>
-                <p>
-                   So the marathon 8 hours of double header poker was completed with two players getting wins for the first time (It has to be Steve's turn next time!). Many, many
-                   thanks to Dave for the invite, steak cooking skills and general hospitality, but apologies to the neighbours who will need to wear ear plugs when
-                   the recycle bin is emptied.
-                </p>
-                <p>Room allocation was based upon the results of the night for everyone bar host Dave, so Steve was provided the blow up mattress in the living area whilst the
-                other players gratefully retired for the night into other bedrooms. The morning turned up some sorry looking players, but again the hospitality of Dave providing breakfast and
-                morning papers eased the hangovers. It did give Brian one more opportunity to wreak havoc with Steve's cup of tea utilising gravity to head towards the floor, but
-                at least it meant the floors were mopped.
-                Cars were loaded ready for the return, but not before 4 of the players headed off for another battle, but this time on the golf course...And that as they say,
-                is a another story....</p>
-            </span>
-
-        <p>Event VI.....Can it get any better?</p>
+        </div>
+        <div class="col-lg-3">
+            <div>
+                <table class="table_border results table table-striped table-bordered table-condensed table-hover">
+                    <tr>
+                        <th>Date</th>
+                        <th>Location</th>
+                        <th>Game</th>
+                        <th>Players</th>
+                    </tr>
+                    <tr>
+                        <td>{{tournaments.tournamentTwo[0].eventDate}}</sup></td>
+                        <td>{{tournaments.tournamentTwo[0].location}}</td>
+                        <td>{{tournaments.tournamentTwo[0].tournament}}</td>
+                        <td>{{tournaments.tournamentTwo[0].noOfPlayers}}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
     </div>
-</div>
+    <div class="row">
+        <div class="col-lg-3">
+            <div>
+                <table class="table_border results table table-striped table-bordered table-condensed table-hover">
+                    <tr>
+                        <th>Position</th>
+                        <th style="text-align:left; padding-left:10px;">Name</th>
+                        <th>Points</th>
+                        <th>Won</th>
+                    </tr>
+                    <tr ng-show="result.event == 5 && result.tournament == 1"
+                        ng-repeat="result in results.eventResults | orderBy: ['event','tournament', '-points']">
+                        <td>{{result.position}}<sup>{{positionSuffix(result.position)}}</sup></td>
+                        <td style="text-align:left; padding-left:10px;">{{result.name}}</td>
+                        <td>{{result.points}}</td>
+                        <td>{{result.cash | currency}}</td>
+                    </tr>
+                </table>
+                <table class="table_border results table table-striped table-bordered table-condensed table-hover">
+                    <tr>
+                        <th>Bounty Winner</th>
+                    </tr>
+                    <tr>
+                        <td>Steve W</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div>
+                <table class="table_border results table table-striped table-bordered table-condensed table-hover">
+                    <tr>
+                        <th>Position</th>
+                        <th style="text-align:left; padding-left:10px;">Name</th>
+                        <th>Points</th>
+                        <th>Won</th>
+                    </tr>
+                    <tr ng-show="result.event == 5 && result.tournament == 2"
+                        ng-repeat="result in results.eventResults | orderBy: ['event','tournament', '-points']">
+                        <td>{{result.position}}<sup>{{positionSuffix(result.position)}}</sup></td>
+                        <td style="text-align:left; padding-left:10px;">{{result.name}}</td>
+                        <td>{{result.points}}</td>
+                        <td>{{result.cash | currency}}</td>
+                    </tr>
+                </table>
+                <table class="table_border results table table-striped table-bordered table-condensed table-hover">
+                    <tr>
+                        <th>Bounty Winner</th>
+                    </tr>
+                    <tr>
+                        <td>Dave M</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div>
+                <table class="table_border results table table-striped table-bordered table-condensed table-hover">
+                    <tr>
+                    <tr>
+                        <th>Position</th>
+                        <th style="text-align:left; padding-left:10px;">Name</th>
+                        <th>Played</th>
+                        <th>Won</th>
+                        <th>Win Ratio</th>
+                        <th>Ave Points</th>
+                        <th>Ave Position</th>
+                        <th>Points</th>
+                    </tr>
+                    </tr>
+                    <tr ng-repeat="result in results.eventTables[5] | filter:gotPoints | orderBy: ['-points','-won', 'played', 'name']">
+                        <td>{{$index + 1}}<sup>{{positionSuffix($index + 1)}}</sup></td>
+                        <td style="text-align:left; padding-left:10px;">{{result.name}}</td>
+                        <td>{{result.played}}</td>
+                        <td>{{result.won}}</td>
+                        <td>{{result.won / result.played * 100| number:2}} %</td>
+                        <td>{{result.points / result.played | number:2}}</td>
+                        <td>{{result.averagePosition | number:2}}</td>
+                        <td>{{result.points}}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div id="commentary">
+            <h3 style="color:black">Commentary</h3>
 
-</div>
-</div>
-    <footer>
-        <p>&copy; BJIT website productions <span id="currentYear"></span></p>
-    </footer>
-</div>
+                <div class="col-lg-4" style="float:right;">
+                    <table>
+                        <tr>
+                            <td><img src="../images/20131109_daves_c.jpeg" class="border" alt="picture1"></td>
+                        </tr>
+                        <tr>
+                            <td style="font-size:8pt;">Ben struggles to contain his emotions after finally winning.</td>
+                        </tr>
+                    </table>
+                </div>
+                <span>
+                    <p>
+                        The fifth poker tournament was held off-site from "The Square" as five players ventured towards the
+                        southern shores to take up Dave's kind offer at hosting at his beach house. The overly keen "Ice man" Brian was first to turn up (with ice)
+                        and as the car port filled up quickly, players soon focused their attentions on the long day ahead.
+                    </p>
 
-</div>
-<!-- /container -->
-<script type="text/javascript" src="../js/controllers/events.js"></script>
-<script>
-      document.getElementById("currentYear").innerHTML = new Date().getFullYear();
-</script>
-<script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+                    <p>
+                        Plenty of beers into the ice bucket, red wines stored, doona's and pillows readied for later allocation, but no sign of Donna?
+                        The return of the ol' favourite 8 seater table was eagerly set-up whilst Dave supplied everyone with a cold one, allowing
+                        players to ready for the marathon poker session ahead.
+                    </p>
 
-    ga('create', 'UA-40877102-1', 'iinet.net.au');
-    ga('send', 'pageview');
+                    <p>
+                        The first deal initiated the proceedings and betting in the first few hands was noticeably tentative as people eased their way into the game. Very few raised bets and
+                        lots of checking kept wins at a moderate level. Paul and Brian were wondering when they were going to win a hand, but Dave was already
+                        running hot as he took lots of small pots to create monster $5 and $10 chip towers.
+                    </p>
+                    <p>
+                        Into the second hour, things were starting to heat up and Ben pushed Steve off on two hands with strong bets to give him a healthy chip level. Maybe the alcohol was starting to loosen players
+                        games up as the pots were starting to increase and Dave's previously won towers were leaving for pastures new.
+                    </p>
+                    <p>
+                        Returning from the second break with blinds
+                        up to $100/$200, Ben was the clear chip leader. Steve's professional dealing style saw him deal out the flop without giving anyone any cards, but maybe it was
+                        a clever distraction guise as he soon won several hands to close in on Ben's chip amount. Brian was relieved to see pocket K's and pushed in a strong $2000 bet that
+                        saw Ben fold and Steve deliberate for a few minutes. With the famous words "Oh, why the F&$% not", Steve pushed in some of his winnings. With two 3's on the board
+                        causing Brian some anxiety, he was relieved to see his hand hold, and even more relieved when Ben piped up that he had folded pocket 3's!
+                    </p>
 
-</script>
+                    <p>
+                        Dave's luck seemed to have run out and he soon found himself the first casualty and was allocated the BBQ duty. Paul was struggling to find any decent cards
+                        to play and was forced to go all in, and with the rollover bounty prize at stake, Brian and Ben didn't think their hole cards were good enough. Steve though,
+                        with dollar signs in his eyes took on the job and summarily dismissed Paul like a Roman Gladiator taking on a helpless slave.
+                        Brian, Steve and (yep, him again) Ben were left to fight out the bonus points but Steve's stack soon took more of a pounding than GWS playing the Hawks, and maybe with
+                        some chagrin, Paul was not dealing Steve any good cards leaving Steve with no option but to go all in, but not hitting the board and finishing in third place.
+                    </p>
+                    <p>
+                        With chip stacks at comparable levels, no deals were to be struck with Brian and Ben hoping for that final slice of luck to get over the line. With Ben taking a
+                        large amount of Brian's chips after calling a semi-bluff, it led to the final hand with Brian holding AQ and Ben A7. A slight dealer mishap exposed the
+                        first burn card, which was a seven, so Brian was smiling knowing that it was the card that Ben wanted. The smile soon vanished though as the first flop card was another
+                        seven, and with the final river card turning over yet another seven, Ben took in all the chips. Finally his first win after so many close attempts, and with
+                        congratulations and back pats a-plenty, everyone turned their attention to dissect the previous game accompanied with the gastronomic feast served up by Dave (unless
+                        you're a vegetarian).
+                    </p>
+
+                    <p>
+                        Players ventured back to the table with stomach cavities brimming with vitamin B12. Brian was sporting a poker injury above his left eye after having an argument with the
+                        bathroom sink, but fortunately the anaesthetic level of inebriation meant game two could commence without the need for medical assistance. Another tentative start for the
+                        first few hands before Ben upped the betting levels by betting the flop, turn and river. His bets were matched, and was forced to show down two cards that did not
+                        hit anything.
+                    </p>
+                    <p>
+                        Steve was now getting some good starting cards, but was looking to the heavens for a change of luck as his raise simply meant the rest of the players folded.
+                        Even when he did manage to win a hand at showdown after the river card, for the fourth time of the night, his best cards were matched by another player and the pot
+                        was split. Meanwhile, Dave was wondering whether he'd done something wrong in a previous life, as his top cards were beaten by other players with better
+                        kicker cards on multiple occasions.
+                    </p>
+                    <div class="col-lg-4" style="float:right;">
+                        <table>
+                            <tr>
+                                <td><img src="../images/20131109_daves_a.jpeg" class="border" alt="picture1" style="float:left;"></td>
+                            </tr>
+                            <tr>
+                                <td style="font-size:8pt; align: center;">Quad 8's - Paul's new lucky number!</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <p>
+                        Brian received a nice chip up, after his Jack matched the two Jacks on the flop, but Paul not believing him, called the bets all the way and was forced to
+                        relinquish chips a-plenty as a result. It was all forgotten a few hands later though, as Ben's imperious betting was snap called by Paul.
+                        Ben was confident of more chips as his full house was surely the best hand, until Paul turned over the best hand of the night - Quad Eights. Ben
+                        didn't know whether to laugh or cry, but was good natured to accept the loss gracefully, whilst muttering expletives under his breath.
+                    </p>
+                    <p>
+                        It wasn't long before Ben decided to re-buy and Steve also down on chips joined in the prize fund enlargement process. A few hands later
+                        Brian's aggressive bet was followed by 3 folds, but Steve decided to come along for the ride. Brian with top pair put the pressure on Steve
+                        who was chasing a flush, and with Steve all in, his despairing look epitomised his luck as he was out in fifth place.
+                    </p>
+                    <p>
+                        Into the latter stages of the game, players judgements were heavily influenced by the level of intoxication. Brian (on a flush draw), pushed in a massive $5000
+                        bet that gave Dave's neural activity a good work out. Announcing words closely matching Steve's in the first game, the bet was called with Dave having top
+                        pair. This time though, no flush completion (that's not an observation of toilet activity!), knocked Brian out in fourth place. Dave's table vicinity was now
+                        brimming with chips with Dave experiencing his first foray into the top three.
+                    </p>
+                    <p>
+                        Paul also didn't last much longer as his single story chip stack was being overwhelmed by the neighbouring high-rise efforts of Ben and Dave. And
+                        unsurprisingly, he could not hold out, leaving Dave now into the top two against the all conquering Ben. With Steve taking on the dealing capacity whilst
+                        Brian kept tabs on the chips, the hands were being played fast and furiously. Even a quick stop gap after accident prone Brian provided a broken wine glass for
+                        clearing, did not stop Ben and Dave's concentration.
+                    </p>
+                    <div class="col-lg-4" style="float:right;">
+                        <table>
+                            <tr>
+                                <td><img src="../images/20131109_daves_b.jpeg" class="border" alt="picture1" style="float:left;"></td>
+                            </tr>
+                            <tr>
+                                <td style="font-size:8pt; align: center;">8 hours of poker later - Exhausted Dave enjoying the moment....</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <p>
+                        Ben was hoping that his newly found first place experience would see him through, but Dave had other ideas and managed to creep into the chip leader
+                        position meaning an all in from Ben, could put him close to the exit position. Steve's dealing fortuitously gave Dave a chance to get his chips into the
+                        middle and pushed all in with AK. Ben who knew he had to win back the chips called, and as so often been the case, watched as the first place slipped
+                        through his fingers and he returned to the familiar surroundings of runner up spot. Dave's exhausted sigh of relief soon turned to smiles after a massive second game and also
+                        meant his first win after seven attempts.
+                    </p>
+
+                    <p>
+                        Table update: Yep, the main man Ben keeps up his unstoppable progress at the summit of the ladder, with a 22 point gap to Paul who stays in second.
+                        Brian moves up to third (as Mark V could not play), and bridges the gap slightly to Paul. Both Steve and Dave move up a place at the expense of
+                        Jade and Mark L respectively who also could not join in the shenanigans.
+                    </p>
+                    <p>
+                       So the marathon 8 hours of double header poker was completed with two players getting wins for the first time (It has to be Steve's turn next time!). Many, many
+                       thanks to Dave for the invite, steak cooking skills and general hospitality, but apologies to the neighbours who will need to wear ear plugs when
+                       the recycle bin is emptied.
+                    </p>
+                    <p>Room allocation was based upon the results of the night for everyone bar host Dave, so Steve was provided the blow up mattress in the living area whilst the
+                    other players gratefully retired for the night into other bedrooms. The morning turned up some sorry looking players, but again the hospitality of Dave providing breakfast and
+                    morning papers eased the hangovers. It did give Brian one more opportunity to wreak havoc with Steve's cup of tea utilising gravity to head towards the floor, but
+                    at least it meant the floors were mopped.
+                    Cars were loaded ready for the return, but not before 4 of the players headed off for another battle, but this time on the golf course...And that as they say,
+                    is a another story....</p>
+                </span>
+
+            <p>Event VI.....Can it get any better?</p>
+        </div>
+    </div>
+
+    </div>
+    </div>
+        <footer>
+            <p>&copy; BJIT website productions <span id="currentYear"></span></p>
+        </footer>
+    </div>
+
+    </div>
+    <!-- /container -->
+    <script type="text/javascript" src="../js/controllers/events.js"></script>
+    <script type="text/javascript" src="../js/controllers/menusController.js"></script>
+    <script type="text/javascript" src="../js/directives/menus.js"></script>
+    <script>
+          document.getElementById("currentYear").innerHTML = new Date().getFullYear();
+    </script>
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-40877102-1', 'iinet.net.au');
+        ga('send', 'pageview');
+
+    </script>
 </body>
 </html>

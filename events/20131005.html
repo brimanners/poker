@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="event" id="ng-app">
+<html lang="en" ng-app="poker" id="ng-app">
 <!-- the ng-app name 'event1' is referenced the corresponding controller logic -->
 <head>
     <meta charset="utf-8">
@@ -22,62 +22,7 @@
     <script type="text/javascript" src="http://twitter.github.com/bootstrap/assets/js/bootstrap-dropdown.js"></script>
 </head>
 <body ng-controller="event-controller" ng-cloak>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container" id="navigationBar">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="../index.html">Home</a>
-
-            <!-- Menus -->
-            <div class="nav-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li class="dropdown" data-no-collapse="true">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Event History<b class="caret"></b></a>
-                        <ul class="dropdown-menu" >
-                            <li ng-show="event.year == '2015'" ng-repeat="event in results.events | orderBy: ['-no']"><a href="{{event.url}}">{{event.eventDate}} @ {{event.location}}</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Players<b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li ng-show="player.year == '2015'" ng-repeat="player in playerMenuDropdown | orderBy: ['name']"><a href="{{player.url}}">{{player.name}}</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Extras <b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li ng-repeat="extra in results.extras"><a href="{{extra.url}}">{{extra.name}}</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">2014 History<b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="../season/2014Results.html">Season wrap up</a></li>
-                            <li class="menu_year">&nbsp;Events</li>
-                            <li ng-repeat="event in results.CCXIV_Events | orderBy: ['-no']"><a href="{{event.url}}">{{event.eventDate}} @ {{event.location}}</a></li>
-                            <li class="menu_year">&nbsp;Players</li>
-                            <li ng-show="player.year == '2014'" ng-repeat="player in playerMenuDropdown | orderBy: ['name']"><a href="{{player.url}}">{{player.name}}</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">2013 History<b class="caret"></b></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="../season/2013Results.html">Season wrap up</a></li>
-                            <li class="menu_year">&nbsp;Events</li>
-                            <li ng-repeat="event in results.CCXIII_Events | orderBy: ['-no']"><a href="{{event.url}}">{{event.eventDate}} @ {{event.location}}</a></li>
-                            <li class="menu_year">&nbsp;Players</li>
-                            <li ng-show="player.year == '2013'" ng-repeat="player in playerMenuDropdown | orderBy: ['name']"><a href="{{player.url}}">{{player.name}}</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                <a class="navbar-brand" href="../statistics/statistics.html">Statistics</a>
-            </div>
-            <!--/.nav-collapse -->
-        </div>
-    </div>
+    <menus data-ng-controller="menusController"></menus> <!-- Custom directive to show all the menu items - see js/directives/menus.js for details -->
     <div class="container">
         <div class="jumbotron table_border">
             <h2>The "Battle at Paul's House"</h2>
@@ -276,6 +221,8 @@
         </footer>
     </div>
     <script type="text/javascript" src="../js/controllers/events.js"></script>
+    <script type="text/javascript" src="../js/controllers/menusController.js"></script>
+    <script type="text/javascript" src="../js/directives/menus.js"></script>
     <script>
           document.getElementById("currentYear").innerHTML = new Date().getFullYear();
     </script>

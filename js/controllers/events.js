@@ -6,6 +6,7 @@ app.controller('event-controller', function ($scope, $http) {
       var eventDate = $('meta[name="eventDate"]').attr("content");
       var season = eventDate.substring(6,10);
       var noOfTournaments = parseInt($('meta[name="noOfTournaments"]').attr("content"));
+      $scope.statistics = {};
 
       for (var i=1; i <= noOfTournaments ; i++) {
         var fileName = "../json/" + season + "/" + eventDate + "_" + i + "_results.json";
@@ -59,7 +60,6 @@ app.controller('event-controller', function ($scope, $http) {
 
     $http.get('../json/' + season + '/event_results.json').success(function (data) {
        results.eventResults = data; /* Tournament results - i.e. position, player and points */
-       var blah = "";
     });
 
     //  Get menu dropdown of players for relevant season
@@ -83,19 +83,12 @@ app.controller('event-controller', function ($scope, $http) {
         var noOfTourneys = data.length;
         for (i = 0; i < noOfTourneys; i ++) {
             eventTables[i + 1] = data[noOfTourneys - 1 - i]["event" + data[noOfTourneys - 1 - i]["eventId"]];
-
-//            eventTables[i + 1] = data[noOfTourneys - 1 - i]["event" + (i + 1)];
             results.eventTables = eventTables;
         }
         getUrlsForPlayers(data[0]["event" + data[0]["eventId"]]);
 
         var blah = "";
      });
-
-     $http.get('../json/general/extras.json').success(function (data) {
-        results.extras = data;
-     });
-
      $scope.results = results;
      $scope.statistics = results;
 

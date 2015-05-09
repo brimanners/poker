@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="event" id="ng-app">
-<!-- the ng-app name 'event1' is referenced the corresponding controller logic -->
+<html lang="en" ng-app="poker" id="ng-app">
 <head> `
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,310 +21,238 @@
     <script type="text/javascript" src="http://twitter.github.com/bootstrap/assets/js/bootstrap-dropdown.js"></script>
 </head>
 <body ng-controller="event-controller" ng-cloak>
-<div class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container" id="navigationBar">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-        </button>
-        <a class="navbar-brand" href="../index.html">Home</a>
-
-        <!-- Menus -->
-        <div class="nav-collapse collapse">
-            <ul class="nav navbar-nav">
-                <li class="dropdown" data-no-collapse="true">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Event History<b class="caret"></b></a>
-                    <ul class="dropdown-menu" >
-                        <li ng-show="event.year == '2015'" ng-repeat="event in results.events | orderBy: ['-no']"><a href="{{event.url}}">{{event.eventDate}} @ {{event.location}}</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Players<b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                        <li ng-show="player.year == '2015'" ng-repeat="player in playerMenuDropdown | orderBy: ['name']"><a href="{{player.url}}">{{player.name}}</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Extras <b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                        <li ng-repeat="extra in results.extras"><a href="{{extra.url}}">{{extra.name}}</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">2014 History<b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="../season/2014Results.html">Season wrap up</a></li>
-                        <li class="menu_year">&nbsp;Events</li>
-                        <li ng-repeat="event in results.CCXIV_Events | orderBy: ['-no']"><a href="{{event.url}}">{{event.eventDate}} @ {{event.location}}</a></li>
-                        <li class="menu_year">&nbsp;Players</li>
-                        <li ng-show="player.year == '2014'" ng-repeat="player in playerMenuDropdown | orderBy: ['name']"><a href="{{player.url}}">{{player.name}}</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">2013 History<b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="../season/2013Results.html">Season wrap up</a></li>
-                        <li class="menu_year">&nbsp;Events</li>
-                        <li ng-repeat="event in results.CCXIII_Events | orderBy: ['-no']"><a href="{{event.url}}">{{event.eventDate}} @ {{event.location}}</a></li>
-                        <li class="menu_year">&nbsp;Players</li>
-                        <li ng-show="player.year == '2013'" ng-repeat="player in playerMenuDropdown | orderBy: ['name']"><a href="{{player.url}}">{{player.name}}</a></li>
-                    </ul>
-                </li>
-            </ul>
-            <a class="navbar-brand" href="../statistics/statistics.html">Statistics</a>
-        </div>
-        <!--/.nav-collapse -->
+    <menus data-ng-controller="menusController"></menus> <!-- Custom directive to show all the menu items - see js/directives/menus.js for details -->
+    <div class="container">
+    <div class="jumbotron table_border">
+        <h2>The "Battle at Ben's House"</h2>
+        <p>&nbsp;</p>
+        <p>......because we all have to start somewhere</p>
     </div>
-</div>
-<div class="container">
-
-<div class="jumbotron table_border">
-    <h2>The "Battle at Ben's House"</h2>
-    <p>&nbsp;</p>
-    <p>......because we all have to start somewhere</p>
-</div>
-<div class="body-content">
-<div class="row">
-    <div class="col-lg-3">
-        <div>
-            <table class="results table table-striped table-bordered table-condensed table-hover">
-                <tr>
-                    <th>Date</th>
-                    <th>Location</th>
-                    <th>Game</th>
-                    <th>Players</th>
-                </tr>
-                <tr>
-                    <td>{{tournaments.tournamentOne[0].eventDate}}</td>
-                    <td>{{tournaments.tournamentOne[0].location}}</td>
-                    <td>{{tournaments.tournamentOne[0].tournament}}</td>
-                    <td>{{tournaments.tournamentOne[0].noOfPlayers}}</td>
-                </tr>
-            </table>
+    <div class="body-content">
+    <div class="row">
+        <div class="col-lg-3">
+            <div>
+                <table class="results table table-striped table-bordered table-condensed table-hover">
+                    <tr>
+                        <th>Date</th>
+                        <th>Location</th>
+                        <th>Game</th>
+                        <th>Players</th>
+                    </tr>
+                    <tr>
+                        <td>{{tournaments.tournamentOne[0].eventDate}}</td>
+                        <td>{{tournaments.tournamentOne[0].location}}</td>
+                        <td>{{tournaments.tournamentOne[0].tournament}}</td>
+                        <td>{{tournaments.tournamentOne[0].noOfPlayers}}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div>
+                <table class="results table table-striped table-bordered table-condensed table-hover">
+                    <tr>
+                        <th>Date</th>
+                        <th>Location</th>
+                        <th>Game</th>
+                        <th>Players</th>
+                    </tr>
+                    <tr>
+                        <td>{{tournaments.tournamentTwo[0].eventDate}}</sup></td>
+                        <td>{{tournaments.tournamentTwo[0].location}}</td>
+                        <td>{{tournaments.tournamentTwo[0].tournament}}</td>
+                        <td>{{tournaments.tournamentTwo[0].noOfPlayers}}</td>
+                    </tr>
+                </table>
+            </div>
         </div>
     </div>
-    <div class="col-lg-3">
-        <div>
-            <table class="results table table-striped table-bordered table-condensed table-hover">
-                <tr>
-                    <th>Date</th>
-                    <th>Location</th>
-                    <th>Game</th>
-                    <th>Players</th>
-                </tr>
-                <tr>
-                    <td>{{tournaments.tournamentTwo[0].eventDate}}</sup></td>
-                    <td>{{tournaments.tournamentTwo[0].location}}</td>
-                    <td>{{tournaments.tournamentTwo[0].tournament}}</td>
-                    <td>{{tournaments.tournamentTwo[0].noOfPlayers}}</td>
-                </tr>
-            </table>
+    <div class="row">
+        <div class="col-lg-3">
+            <div>
+                <table class="results table table-striped table-bordered table-condensed table-hover">
+                    <tr>
+                        <th>Position</th>
+                        <th style="text-align:left; padding-left:10px;">Name</th>
+                        <th>Points</th>
+                        <th>Won</th>
+                    </tr>
+                    <tr ng-show="result.event == 1 && result.tournament == 1" ng-repeat="result in results.eventResults | orderBy: ['event','tournament', '-points']">
+                        <td>{{result.position}}<sup>{{positionSuffix(result.position)}}</sup></td>
+                        <td style="text-align:left; padding-left:10px;">{{result.name}}</td>
+                        <td>{{result.points}}</td>
+                        <td>{{result.cash | currency}}</td>
+                    </tr>
+                </table>
+                `
+            </div>
+        </div>
+        <div class="col-lg-3">
+            <div>
+                <table class="results table table-striped table-bordered table-condensed table-hover">
+                    <tr>
+                        <th>Position</th>
+                        <th style="text-align:left; padding-left:10px;">Name</th>
+                        <th>Points</th>
+                        <th>Won</th>
+                    </tr>
+                    <tr ng-show="result.event == 1 && result.tournament == 2" ng-repeat="result in results.eventResults | orderBy: ['event','tournament', '-points']">
+                        <td>{{result.position}}<sup>{{positionSuffix(result.position)}}</sup></td>
+                        <td style="text-align:left; padding-left:10px;">{{result.name}}</td>
+                        <td>{{result.points}}</td>
+                        <td>{{result.cash | currency}}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div>
+                <table class="results table table-striped table-bordered table-condensed table-hover">
+                    <tr>
+                    <tr>
+                        <th>Position</th>
+                        <th style="text-align:left; padding-left:10px;">Name</th>
+                        <th>Played</th>
+                        <th>Won</th>
+                        <th>Win ratio</th>
+                        <th>Ave points</th>
+                        <th>Ave position</th>
+                        <th>Points</th>
+                    </tr>
+                    </tr>
+                    <tr ng-repeat="result in results.eventTables[1] | filter:gotPoints | orderBy: ['-points','-won', 'played', 'name']">
+                        <td>{{$index + 1}}<sup>{{positionSuffix($index + 1)}}</sup></td>
+                        <td style="text-align:left; padding-left:10px;">{{result.name}}</td>
+                        <td>{{result.played}}</td>
+                        <td>{{result.won}}</td>
+                        <td>{{result.won / result.played * 100| number:2}} %</td>
+                        <td>{{result.points / result.played | number:2}}</td>
+                        <td>{{result.averagePosition | number:2}}</td>
+                        <td>{{result.points}}</td>
+                    </tr>
+                </table>
+            </div>
         </div>
     </div>
-</div>
-<div class="row">
-    <div class="col-lg-3">
-        <div>
-            <table class="results table table-striped table-bordered table-condensed table-hover">
-                <tr>
-                    <th>Position</th>
-                    <th style="text-align:left; padding-left:10px;">Name</th>
-                    <th>Points</th>
-                    <th>Won</th>
-                </tr>
-                <tr ng-show="result.event == 1 && result.tournament == 1" ng-repeat="result in results.eventResults | orderBy: ['event','tournament', '-points']">
-                    <td>{{result.position}}<sup>{{positionSuffix(result.position)}}</sup></td>
-                    <td style="text-align:left; padding-left:10px;">{{result.name}}</td>
-                    <td>{{result.points}}</td>
-                    <td>{{result.cash | currency}}</td>
-                </tr>
-            </table>
-            `
+    <div class="row">
+        <div id="commentary">
+            <h3>Commentary</h3>
+
+            <p>
+                <img src="../images/20140604_bens.jpg" alt="aces" style="float:left; padding:10px"> The inaugural
+                square (or
+                oval as Jade pointed out) poker tournament had some first time players quickly get
+                <img src="../images/20140604b_bens.jpg" alt="aces" style="float:right; padding:10px">
+                up to speed with the structure and rules with most players winning a hand at some point during the
+                night.
+            </p>
+
+            <p>
+                The first game had players all jostling for chip leader with some unlucky breaks for some (for
+                example, two
+                players hitting full houses but with the bigger full house taking down the pot). Alleged poker
+                expert Brian
+                forgetting it takes 5 cards of the same suit to make a flush, and some confusion about whether a
+                flush is
+                higher
+                than a straight (it's a flush!) meant a few lost chips but it didn't detract too much from the
+                overall game
+                and betting.
+            </p>
+
+            <p>
+                Despite some good cards, Michael was unluckily the first out with most of his chips heading in
+                Steve's direction (who seemed destined to avoid folding any cards at any cost). With the blinds
+                increasing
+                at a
+                considerable rate, he was followed closely by Jade, Paul and Mark. Dave battled on valiantly but was
+                just
+                out of
+                the top 3 finishing in a respectable 4th place. With only Brian, Ben and Steve left, Brian was the
+                clear
+                chip
+                leader after some aggressive betting, so a deal was struck to end the game there and then. With Ben
+                having
+                slightly higher remaining chips than Steve, Brian was placed first with Ben officially coming in
+                second
+                place. With players keen to initiate a second game,
+                Brian frantically setup up the starting chips whilst Mark entertained the players taste buds with
+                his
+                "master
+                chef" award winning nachos.
+            </p>
+
+            <p>
+                The second game was at a more relaxed pace with golf conversation abound but poker rule "nazi" Brian
+                kept
+                things
+                ticking a long at a fair pace. Again Michael was unlucky losing a sizeable chip amount with 3 sixes
+                to yet
+                another straight by Steve (continuing his reluctance to fold anything). Leaving Michael short
+                stacked and
+                out
+                again in eighth, lady luck was not his friend for the night (and when cross examined she denied any
+                knowledge of
+                him).
+            </p>
+
+            <p>
+                Brian the first game winner was suprisingly next out in seventh (was the alcohol starting to take
+                its toll?), but took on the dealer responsibility anyway and watched as Paul and Jade followed suit, although
+                they got to retire to the "footie zone" in the next room (was this part of their plan)?
+            </p>
+
+            <p>
+                Perennial "just missing out on the top 3" Dave was next out in 4th place again leaving Ben, Steve and Mark
+                to fight it out for the top 3 places. No deals were to be struck, with sizeable pots moving in all directions, before
+                Steve was again out 3rd. Ben tried his hardest to get that elusive win, but some strong betting and good cards
+                for Mark saw him win the final hand and have all the $16,000 worth of chips in front of him.
+            </p>
+
+            <p>
+                Early into Sunday morning, alcohol imbibed players slowly left into the cool air ready for their
+                doona recovery
+                permeated with dreams of chips, pocket aces and nachos, leaving Brian and Ben musing over the poker proceedings
+                with a nightcap. Their poker reverie was suprisingly interrupted by Jade returning with his dog who
+                also decided to stay for one last swifty (that's Jade, not the dog). Although, Jades choice of a longneck (or Darwin
+                stubby), might not constitute a swifty!
+            </p>
+
+            <p>
+                So a special mention has to be made to the consistent players Ben and Steve for making the top 3 on both
+                occasions and leaving Ben at the top of the points ladder after the first event. Also, a heartfelt thanks
+                to Ben for hosting the event (although maybe next time we keep the door closed as our vociferous
+                shenanigans were heard by a few of the spouses and children - oops)
+            </p>
+
+            <p>
+                Until the next exciting installment..............
+            </p>
         </div>
     </div>
-    <div class="col-lg-3">
-        <div>
-            <table class="results table table-striped table-bordered table-condensed table-hover">
-                <tr>
-                    <th>Position</th>
-                    <th style="text-align:left; padding-left:10px;">Name</th>
-                    <th>Points</th>
-                    <th>Won</th>
-                </tr>
-                <tr ng-show="result.event == 1 && result.tournament == 2" ng-repeat="result in results.eventResults | orderBy: ['event','tournament', '-points']">
-                    <td>{{result.position}}<sup>{{positionSuffix(result.position)}}</sup></td>
-                    <td style="text-align:left; padding-left:10px;">{{result.name}}</td>
-                    <td>{{result.points}}</td>
-                    <td>{{result.cash | currency}}</td>
-                </tr>
-            </table>
-        </div>
+
     </div>
-    <div class="col-lg-6">
-        <div>
-            <table class="results table table-striped table-bordered table-condensed table-hover">
-                <tr>
-                <tr>
-                    <th>Position</th>
-                    <th style="text-align:left; padding-left:10px;">Name</th>
-                    <th>Played</th>
-                    <th>Won</th>
-                    <th>Win ratio</th>
-                    <th>Ave points</th>
-                    <th>Ave position</th>
-                    <th>Points</th>
-                </tr>
-                </tr>
-                <tr ng-repeat="result in results.eventTables[1] | filter:gotPoints | orderBy: ['-points','-won', 'played', 'name']">
-                    <td>{{$index + 1}}<sup>{{positionSuffix($index + 1)}}</sup></td>
-                    <td style="text-align:left; padding-left:10px;">{{result.name}}</td>
-                    <td>{{result.played}}</td>
-                    <td>{{result.won}}</td>
-                    <td>{{result.won / result.played * 100| number:2}} %</td>
-                    <td>{{result.points / result.played | number:2}}</td>
-                    <td>{{result.averagePosition | number:2}}</td>
-                    <td>{{result.points}}</td>
-                </tr>
-            </table>
-        </div>
+        <footer>
+            <p>&copy; BJIT website productions <span id="currentYear"></span></p>
+        </footer>
     </div>
-</div>
-<div class="row">
-    <div id="commentary">
-        <h3>Commentary</h3>
+    <!-- /container -->
+    <script type="text/javascript" src="../js/controllers/events.js"></script>
+    <script type="text/javascript" src="../js/controllers/menusController.js"></script>
+    <script type="text/javascript" src="../js/directives/menus.js"></script>
+    <script>
+        document.getElementById("currentYear").innerHTML = new Date().getFullYear();
+    </script>
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-        <p>
-            <img src="../images/20140604_bens.jpg" alt="aces" style="float:left; padding:10px"> The inaugural
-            square (or
-            oval as Jade pointed out) poker tournament had some first time players quickly get
-            <img src="../images/20140604b_bens.jpg" alt="aces" style="float:right; padding:10px">
-            up to speed with the structure and rules with most players winning a hand at some point during the
-            night.
-        </p>
+        ga('create', 'UA-40877102-1', 'iinet.net.au');
+        ga('send', 'pageview');
 
-        <p>
-            The first game had players all jostling for chip leader with some unlucky breaks for some (for
-            example, two
-            players hitting full houses but with the bigger full house taking down the pot). Alleged poker
-            expert Brian
-            forgetting it takes 5 cards of the same suit to make a flush, and some confusion about whether a
-            flush is
-            higher
-            than a straight (it's a flush!) meant a few lost chips but it didn't detract too much from the
-            overall game
-            and betting.
-        </p>
-
-        <p>
-            Despite some good cards, Michael was unluckily the first out with most of his chips heading in
-            Steve's direction (who seemed destined to avoid folding any cards at any cost). With the blinds
-            increasing
-            at a
-            considerable rate, he was followed closely by Jade, Paul and Mark. Dave battled on valiantly but was
-            just
-            out of
-            the top 3 finishing in a respectable 4th place. With only Brian, Ben and Steve left, Brian was the
-            clear
-            chip
-            leader after some aggressive betting, so a deal was struck to end the game there and then. With Ben
-            having
-            slightly higher remaining chips than Steve, Brian was placed first with Ben officially coming in
-            second
-            place. With players keen to initiate a second game,
-            Brian frantically setup up the starting chips whilst Mark entertained the players taste buds with
-            his
-            "master
-            chef" award winning nachos.
-        </p>
-
-        <p>
-            The second game was at a more relaxed pace with golf conversation abound but poker rule "nazi" Brian
-            kept
-            things
-            ticking a long at a fair pace. Again Michael was unlucky losing a sizeable chip amount with 3 sixes
-            to yet
-            another straight by Steve (continuing his reluctance to fold anything). Leaving Michael short
-            stacked and
-            out
-            again in eighth, lady luck was not his friend for the night (and when cross examined she denied any
-            knowledge of
-            him).
-        </p>
-
-        <p>
-            Brian the first game winner was suprisingly next out in seventh (was the alcohol starting to take
-            its
-            toll?),
-            but took on the dealer responsibility anyway and watched as Paul and Jade followed suit, although
-            they got
-            to
-            retire to the "footie zone" in the next room (was this part of their plan)?
-        </p>
-
-        <p>
-            Perennial "just missing out on the top 3" Dave was next out in 4th place again leaving Ben, Steve
-            and Mark
-            to fight it out for the top 3 places. No deals were to be struck, with sizeable pots moving in all
-            directions, before
-            Steve was again out 3rd. Ben tried his hardest to get that elusive win, but some strong betting and
-            good
-            cards
-            for Mark saw him win the final hand and have all the $16,000 worth of chips in front of him.
-        </p>
-
-        <p>
-            Early into Sunday morning, alcohol imbibed players slowly left into the cool air ready for their
-            doona
-            recovery
-            permeated with dreams of chips, pocket aces and nachos, leaving Brian and Ben musing over the poker
-            proceedings
-            with a nightcap. Their poker reverie was suprisingly interrupted by Jade returning with his dog who
-            also
-            decided
-            to stay for one last swifty (that's Jade, not the dog). Although, Jades choice of a longneck (or
-            Darwin
-            stubby),
-            might not constitute a swifty!
-        </p>
-
-        <p>
-            So a special mention has to be made to the consistent players Ben and Steve for making the top 3 on
-            both
-            occasions and leaving Ben at the top of the points ladder after the first event. Also, a heartfelt
-            thanks
-            to Ben for hosting the event (although maybe next time we keep the door closed as our vociferous
-            shenanigans
-            were heard by a few of the spouses and children - oops)
-        </p>
-
-        <p>
-            Until the next exciting installment..............
-        </p>
-    </div>
-</div>
-
-</div>
-<footer>
-    <p>&copy; BJIT website productions <span id="currentYear"></span></p>
-</footer>
-
-</div>
-<!-- /container -->
-<script type="text/javascript" src="../js/controllers/events.js"></script>
-<script>
-          document.getElementById("currentYear").innerHTML = new Date().getFullYear();
-</script>
-<script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-    ga('create', 'UA-40877102-1', 'iinet.net.au');
-    ga('send', 'pageview');
-
-</script>
+    </script>
 
 </body>
 </html>
