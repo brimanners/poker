@@ -86,8 +86,6 @@ app.controller('event-controller', function ($scope, $http) {
             results.eventTables = eventTables;
         }
         getUrlsForPlayers(data[0]["event" + data[0]["eventId"]]);
-
-        var blah = "";
      });
      $scope.results = results;
      $scope.statistics = results;

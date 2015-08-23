@@ -8,7 +8,7 @@ app.controller('extrasController', function ($scope, $http) {
 
   $http.get('../json/general/blind-levels.json').success(function (data) {
     $scope.blind_levels = data;
-    var dateCalc = new Date(2014, 9, 1, 19, 30, 0, 0);
+    var dateCalc = new Date(2014, 9, 1, 19, 00, 0, 0);
     for (i = 0; i < data.length; i ++) {
        var duration = parseInt($scope.blind_levels[i].duration);
        if (duration > 0) {

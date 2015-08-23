@@ -185,62 +185,7 @@ app.controller('playerController', function ($scope, $http) {
         playerDetails.image = imageUrl;
    });
 
-//   $http.get('../json/2015/event-history.json').success(function (data) {
-//        for (i = 0; i < data.length; i ++) { // append year so menu dropdown can section values
-//            data[i].year = data[i].eventDate.substring(data[i].eventDate.length - 4, data[i].eventDate.length);
-//        }
-//        playerDetails.events = data;
-//        getUrlForEvents(playerDetails.events);
-//    });
-
-//   $http.get('../json/2014/event-history.json').success(function (data) {
-//       for (i = 0; i < data.length; i ++) { // append year so menu dropdown can section values
-//           data[i].year = data[i].eventDate.substring(data[i].eventDate.length - 4, data[i].eventDate.length);
-//       }
-//       playerDetails.CCXIV_Events = data;
-//       getUrlForEvents(data);
-//   });
-
-//   $http.get('../json/2013/event-history.json').success(function (data) {
-//       for (i = 0; i < data.length; i ++) { // append year so menu dropdown can section values
-//           data[i].year = data[i].eventDate.substring(data[i].eventDate.length - 4, data[i].eventDate.length);
-//       }
-//       playerDetails.CCXIII_Events = data;
-//       getUrlForEvents(data);
-//   });
-
-  $http.get('../json/2014/event-history.json').success(function (data) {
-      for (i = 0; i < data.length; i ++) { // append year so menu dropdown can section values
-          data[i].year = data[i].eventDate.substring(data[i].eventDate.length - 4, data[i].eventDate.length);
-      }
-      playerDetails.previousEvents = data;
-      getUrlForEvents(data);
-  });
-
-
-
-   $http.get('../json/general/extras.json').success(function (data) {
-         playerDetails.extras = data;
-   });
-
-   //  Get menu dropdown of players for relevant season
-//   $http.get('../json/general/players.json').success(function (data) {
-//       var players = [];
-//       for (i = 0; i < data.length; i++) {
-//           for (j = 0; j < data[i].players.length; j++) {
-//               var player = {};
-//               player.name = data[i].players[j].name;
-//               player.year = data[i].year;
-//               var nameParts = player.name.split(" ");
-//               player.url = "../players/player.html?name=" + nameParts[0].toLowerCase() + nameParts[1] + '&year=' + data[i].year;
-//               players.push(player);
-//           }
-//      }
-//      $scope.playerMenuDropdown = players;
-//   });
-
-
-    $http.get('../json/' + playerYear + '/current-table.json').success(function (data) {
+   $http.get('../json/' + playerYear + '/current-table.json').success(function (data) {
         noOfTourneys = data.length;
         playerEventPosition = calculatePlayerMovement(data, player, playerYear);
         drawLadderPositionLineGraph(playerEventPosition.playerPosition);
