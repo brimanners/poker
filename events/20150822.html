@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="poker" id="ng-app">
+<!-- the ng-app name 'event1' is referenced the corresponding controller logic -->
+<head> `
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="eventDate" content="22_08_2015">
+    <meta name="noOfTournaments" content="1">
+    <title>Poker Results</title>
+    <!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <link href="../css/poker.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <link href="src/css/jumbotron.css" rel="stylesheet">
+    <script type="text/javascript" src="../js/jquery-1.10.2.min.js"></script>
+    <!-- temp local hosting until prod release -->
+    <script type="text/javascript" src="../js/angular.min.js"></script>
+    <!-- temp local hosting until prod release -->
+    <script type="text/javascript" src="../js/bootstrap.js"></script>
+    <script type="text/javascript" src="http://twitter.github.com/bootstrap/assets/js/bootstrap-dropdown.js"></script>
+</head>
+<body ng-controller="event-controller" ng-cloak>
+    <menus data-ng-controller="menusController"></menus> <!-- Custom directive to show all the menu items - see js/directives/menus.js for details -->
+    <div class="container">
+
+    <div class="jumbotron table_border">
+        <h2 class="shadow" id="header1">....Cottage pie..romantic candlelight poker.</h2>
+
+        <p>&nbsp;</p>
+
+        <p>...and an overdue win for a regular!</p>
+    </div>
+    <div class="body-content">
+    <div class="row">
+        <div class="col-lg-8">
+            <table>
+                <tr>
+                    <td>
+                        <table class="table_border results table table-striped table-bordered table-condensed table-hover">
+                            <tr>
+                                <th>Date</th>
+                                <th>Location</th>
+                                <th>Game</th>
+                                <th>Players</th>
+                            </tr>
+                            <tr>
+                                <td>{{tournaments.tournamentOne[0].eventDate}}</td>
+                                <td>{{tournaments.tournamentOne[0].location}}</td>
+                                <td>{{tournaments.tournamentOne[0].tournament}}</td>
+                                <td>{{tournaments.tournamentOne[0].noOfPlayers}}</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-3">
+            <div>
+                <table class="table_border results table table-striped table-bordered table-condensed table-hover">
+                    <tr>
+                        <th>Position</th>
+                        <th style="text-align:left; padding-left:10px;">Name</th>
+                        <th>Points</th>
+                        <th>Won</th>
+                    </tr>
+                    <tr ng-show="result.event == 18 && result.tournament == 1"
+                        ng-repeat="result in results.eventResults | orderBy: ['event','tournament', '-points']">
+                        <td>{{result.position}}<sup>{{positionSuffix(result.position)}}</sup></td>
+                        <td style="text-align:left; padding-left:10px;">{{result.name}}</td>
+                        <td>{{result.points}}</td>
+                        <td>{{result.cash | currency}}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div>
+                <table class="table_border results table table-striped table-bordered table-condensed table-hover">
+                    <tr>
+                    <tr>
+                        <th>Position</th>
+                        <th style="text-align:left; padding-left:10px;">Name</th>
+                        <th>Played</th>
+                        <th>Won</th>
+                        <th>Win Ratio</th>
+                        <th>Ave Points</th>
+                        <th>Ave Position</th>
+                    <th>Points</th>
+                    </tr>
+                    </tr>
+                    <tr ng-repeat="result in results.eventTables[6] | filter:gotPoints | orderBy: ['-points','-won', 'played', 'name']">
+                        <td>{{$index + 1}}<sup>{{positionSuffix($index + 1)}}</sup></td>
+                        <td style="text-align:left; padding-left:10px;">{{result.name}}</td>
+                        <td>{{result.played}}</td>
+                        <td>{{result.won}}</td>
+                        <td>{{result.won / result.played * 100| number:2}} %</td>
+                        <td>{{result.points / result.played | number:2}}</td>
+                        <td>{{result.averagePosition | number:2}}</td>
+                        <td>{{result.points}}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div id="commentary">
+            <h3 style="color:black">Commentary....by Brian </h3>
+            
+			<p>Witty (ish) recollections to come.....</p>
+    </div>
+
+    </div>
+        <div data-ng-include="'../templates/footer.html'"></div>
+    </div>
+    <!-- /container -->
+    <script type="text/javascript" src="../js/controllers/events.js"></script>
+    <script type="text/javascript" src="../js/controllers/menusController.js"></script>
+    <script type="text/javascript" src="../js/directives/menus.js"></script>
+    <script>
+          document.getElementById("currentYear").innerHTML = new Date().getFullYear();
+    </script>
+    <div data-ng-include="'../templates/googleAnalytics.html'"></div>
+</body>
+</html>
