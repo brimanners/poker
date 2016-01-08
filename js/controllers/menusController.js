@@ -30,7 +30,7 @@ app.controller('menusController', ['$scope', '$http', function($scope, $http) {
          $scope.statistics.CCXIII_Events = data;
      });
 
-   $http.get('../json/2015/event-history.json').success(function (data) {
+    $http.get('../json/2016/event-history.json').success(function (data) {
        for (i = 0; i < data.length; i ++) { // append year so menu dropdown can section values
            data[i].year = data[i].eventDate.substring(data[i].eventDate.length - 4, data[i].eventDate.length);
        }
@@ -38,11 +38,20 @@ app.controller('menusController', ['$scope', '$http', function($scope, $http) {
        $scope.statistics.events = data;
    });
 
+
+   $http.get('../json/2015/event-history.json').success(function (data) {
+       for (i = 0; i < data.length; i ++) { // append year so menu dropdown can section values
+           data[i].year = data[i].eventDate.substring(data[i].eventDate.length - 4, data[i].eventDate.length);
+       }
+       getUrlForEvents2(data);
+       $scope.statistics.CCXV_Events = data;
+   });
+
     $http.get('../json/2014/event-history.json').success(function (data) {
        for (i = 0; i < data.length; i ++) { // append year so menu dropdown can section values
            data[i].year = data[i].eventDate.substring(data[i].eventDate.length - 4, data[i].eventDate.length);
        }
-       getUrlForEvents(data);
+       getUrlForEvents2(data);
        $scope.statistics.CCXIV_Events = data;
    });
 

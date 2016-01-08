@@ -29,55 +29,56 @@ $(function () {
             verticalAlign: 'middle',
             borderWidth: 0
         },
+        series:
         series: [{
-            name: 'Ben I',
-            data: [14, 18, 26]
-        }, {
-            name: 'Simon W',
-            data: [11, 16, 16]
-        }, {
-            name: 'Paul B',
-            data: [8, 10, 10]
-        }, {
-            name: 'Steve W',
-            data: [5, 5, 10]
-        }, {
-            name: 'Dave M',
-            data: [4, 16, 17]
-        },
-        {
-            name: 'Mark L',
-            data: [3, 21, 21]
-        },
-        {
-            name: 'Mark V',
-            data: [2, 17, 17]
-        },
-        {
-            name: 'Brian M',
-            data: [0, 6, 9]
-        },
-        {
-            name: 'Andy F',
-            data: [0, 9, 9]
-        },
-        {
-            name: 'Junior A',
-            data: [0, 3, 7]
-        },
-        {
-            name: 'Jade W',
-            data: [0, 1, 15]
-        },
-        {
-            name: 'Craig X',
-            data: [1, 1, 1]
-        },
-        {
-            name: 'Carlos X',
-            data: [0, 0, 2]
-                }
-        ]
+                    name: 'Ben I',
+                    data: [14, 18, 26, 33, 47, 59, 68, 71]
+                }, {
+                    name: 'Simon W',
+                    data: [11, 16, 16, 35, 36, 41, 45]
+                }, {
+                    name: 'Paul B',
+                    data: [8, 10, 10, 20, 25, 40, 44, 44]
+                }, {
+                    name: 'Steve W',
+                    data: [5, 5, 10, 16, 27, 45, 63, 71]
+                }, {
+                    name: 'Dave M',
+                    data: [4, 16, 17, 21, 21, 27, 32, 32]
+                },
+                {
+                    name: 'Mark L',
+                    data: [3, 21, 21, 34, 38, 38, 40, 40]
+                },
+                {
+                    name: 'Mark V',
+                    data: [2, 17, 17, 20, 23, 25, 26, 26]
+                },
+                {
+                    name: 'Brian M',
+                    data: [0, 6, 9, 25, 33, 42, 57, 59]
+                },
+                {
+                    name: 'Andy F',
+                    data: [0, 9, 9, 10, 10, 11, 11, 11]
+                },
+                {
+                    name: 'Junior A',
+                    data: [0, 3, 7, 7, 7, 7, 17]
+                },
+                {
+                    name: 'Jade W',
+                    data: [0, 1, 15, 17, 19, 22, 28, 29]
+                },
+                {
+                    name: 'Craig X',
+                    data: [1, 1, 1, 1, 1, 1, 1]
+                },
+                {
+                    name: 'Carlos X',
+                    data: [0, 0, 2, 2, 19, 23, 26, 32]
+                        }
+                ]
     });
 });
 

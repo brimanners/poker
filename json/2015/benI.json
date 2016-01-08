@@ -1,0 +1,12 @@
+{"positionAndPlayers": [
+ { "player": "benI", 
+ "positions":[1,7,3,5,2,3,4,5],
+"players":[8,10,8,11,9,10,10,7],
+"statistics":{
+"played":8,
+"won":1,
+"top3":4,
+"last":0,
+"bounties":0,
+"hosted":0
+}}]}

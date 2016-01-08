@@ -1,8 +1,5 @@
-[{"eventDate": "06/04/2013", "location": "Ben's", "tournament": 1, "position": 4, "noOfPlayers": 8, "points": 5},
-{"eventDate": "06/04/2013", "location": "Ben's", "tournament": 2, "position": 4, "noOfPlayers": 8, "points": 5},
-{"eventDate": "06/07/2013", "location": "Steve's", "tournament": 1, "position": 5, "noOfPlayers": 8, "points": 4},
-{"eventDate": "06/07/2013", "location": "Steve's", "tournament": 2, "position": 6, "noOfPlayers": 8, "points": 3},
-{"eventDate": "05/10/2013", "location": "Pauls", "tournament": 1, "position": 6, "noOfPlayers": 8, "points": 3},
-{"eventDate": "09/11/2013", "location": "Daves", "tournament": 1, "position": 5, "noOfPlayers": 5, "points": 1},
-{"eventDate": "09/11/2013", "location": "Daves", "tournament": 2, "position": 1, "noOfPlayers": 5, "points": 8}
+[{"eventDate": "01/03/2014", "location": "Brians", "tournament": 1, "position": 6, "noOfPlayers": 7, "cash": 0.0, "points": 2},
+{"eventDate": "03/05/2014", "location": "Mark V's", "tournament": 1, "position": 2, "noOfPlayers": 8, "cash": 26.5, "points": 11},
+{"eventDate": "26/07/2014", "location": "Simon M (Wombats)", "tournament": 1, "position": 3, "noOfPlayers": 9, "cash": 17.5, "points": 11},
+{"eventDate": "13/09/2014", "location": "Bens", "tournament": 1, "position": 5, "noOfPlayers": 10, "cash": 0.0, "points": 6}
 ]

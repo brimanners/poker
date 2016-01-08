@@ -110,13 +110,23 @@ app.controller('playerController', function ($scope, $http) {
                  // overall position - we would need to accumulate each season current table - accumulate points, played, won etc....and then create sort item
                  // and get player details from it - lot of overhead for one item?
 
-                 var sortedResults = playerDetails.results.sort(dynamicSortMultiple("-points", "-played", "-won", "-averagePoints", "name"));
+                 var sortedResults = playerDetails.results.sort(dynamicSortMultiple("-points", "played", "-won", "-averagePoints", "name"));
                  for (i = 0; i < playerDetails.results.length; i++) {
                    var playerName = changeNameToParameterType(playerDetails.results[i].name);
                    if (playerName == player) {
                        for (sorted = 0; sorted < sortedResults.length; sorted ++) {
                          if (sortedResults[sorted].name == playerDetails.results[i].name) {
                             playerDetails.results[i].tablePosition = i + 1;
+                            if (playerDetails.results[i].tablePosition == 1) {
+                                playerDetails.results[i].medalColour = "gold";
+                            }
+                            if (playerDetails.results[i].tablePosition == 2) {
+                                playerDetails.results[i].medalColour = "silver";
+                            }
+                            if (playerDetails.results[i].tablePosition == 3) {
+                                playerDetails.results[i].medalColour = "sandybrown;";
+                            }
+
                          }
                        }
                        playerDetails.results[i].season = data[0]["season"];
@@ -159,7 +169,7 @@ app.controller('playerController', function ($scope, $http) {
                    events ++;
                    accumulatedPoints = accumulatedPoints + data[i].points
                    accumulatedPositions = accumulatedPositions + data[i].position;
-                   playerCumulativePoints[i] = accumulatedPositions;
+                   playerCumulativePoints[i] = accumulatedPoints;
                    playerDetails.cumulativePoints = playerCumulativePoints;
                }
                $scope.playerAccumulatedPositions = accumulatedPositions;

@@ -1,0 +1,802 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/json/06_04_2013_1_results.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/json/06_04_2013_2_results.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/json/06_07_2013_1_results.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/json/06_07_2013_2_results.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/json/11_05_2013_1_results.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/json/11_05_2013_2_results.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/json/benI_event_history.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/json/brianM_event_history.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/json/daveM_event_history.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/json/jadeW_event_history.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/json/markL_event_history.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/json/markV_event_history.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/json/paulB_event_history.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/json/simonM_event_history.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/json/steveW_event_history.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/events/20130406.html" afterPath="$PROJECT_DIR$/events/20130406.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/events/20130511.html" afterPath="$PROJECT_DIR$/events/20130511.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json/benI.json" afterPath="$PROJECT_DIR$/json/benI.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json/brianM.json" afterPath="$PROJECT_DIR$/json/brianM.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json/current-table.json" afterPath="$PROJECT_DIR$/json/current-table.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json/daveM.json" afterPath="$PROJECT_DIR$/json/daveM.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json/event-history.json" afterPath="$PROJECT_DIR$/json/event-history.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/controllers/events.js" afterPath="$PROJECT_DIR$/js/controllers/events.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/controllers/homePage.js" afterPath="$PROJECT_DIR$/js/controllers/homePage.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json/jadeW.json" afterPath="$PROJECT_DIR$/json/jadeW.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json/markL.json" afterPath="$PROJECT_DIR$/json/markL.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json/markV.json" afterPath="$PROJECT_DIR$/json/markV.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json/paulB.json" afterPath="$PROJECT_DIR$/json/paulB.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json/steveW.json" afterPath="$PROJECT_DIR$/json/steveW.json" />
+    </list>
+    <list id="a4b1f768-ae3d-459d-af5d-82622f7ed729" name="Ignore" comment="">
+      <change type="DELETED" beforePath="C:\Users\user\Dropbox\clojure\twitter_bootstrap\json\michaelR.json" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
+    <ignored path="Poker_TwitterBootstrap.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <file path="/index.html" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1379984708077" ignored="false" />
+    <file path="$PROJECT_DIR$/../clojure-poker/src/clojure_poker/domain/players.clj" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1379997664565" ignored="false" />
+    <file path="/bootstrap.css" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1378725538425" ignored="false" />
+    <file path="/ladder.js" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1377730201503" ignored="false" />
+    <file path="/fragment.java" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1376387646350" ignored="false" />
+    <file path="$PROJECT_DIR$/../../Augusta Square Poker/players/brianM.html" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1376387770351" ignored="false" />
+    <file path="/ladderAng.js" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1377649458646" ignored="false" />
+    <file path="/dummy.xml" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1376398476163" ignored="false" />
+    <file path="/poker.css" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1378952427306" ignored="false" />
+    <file path="/20130406.html" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1379999189921" ignored="false" />
+    <file path="/a.dummy" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1379985074880" ignored="false" />
+    <file path="/20130406.js" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1376474754729" ignored="false" />
+    <file path="/event1.js" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1378257129173" ignored="false" />
+    <file path="/animate.css" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1376489267855" ignored="false" />
+    <file path="/20130511.html" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1378265440160" ignored="false" />
+    <file path="/event2.js" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1376567881282" ignored="false" />
+    <file path="/20130706.html" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1378265463106" ignored="false" />
+    <file path="/event3.js" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1376569279972" ignored="false" />
+    <file path="/benI.html" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1378090294884" ignored="false" />
+    <file path="/brianM.html" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1377756096986" ignored="false" />
+    <file path="/daveM.html" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1378091186587" ignored="false" />
+    <file path="/jadeW.html" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1377756129641" ignored="false" />
+    <file path="/markL.html" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1377756216712" ignored="false" />
+    <file path="/markV.html" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1377756236168" ignored="false" />
+    <file path="/michaelR.html" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1377756270954" ignored="false" />
+    <file path="/paulB.html" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1377756289478" ignored="false" />
+    <file path="/simonM.html" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1377756305587" ignored="false" />
+    <file path="/steveW.html" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1377756323962" ignored="false" />
+    <file path="$PROJECT_DIR$/../../Augusta Square Poker/js/playerResults.js" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1376872874301" ignored="false" />
+    <file path="/players.clj" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1379997661807" ignored="false" />
+    <file path="$PROJECT_DIR$/../clojure-poker/src/clojure_poker/domain/eventResults.clj" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1379993447510" ignored="false" />
+    <file path="$PROJECT_DIR$/../clojure-poker/project.clj" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1379041081323" ignored="false" />
+    <file path="/project.clj" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1378877004251" ignored="false" />
+    <file path="/positionAndPlayer.Json" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1376879503521" ignored="false" />
+    <file path="$PROJECT_DIR$/../../Augusta Square Poker/json/players.json" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1376877658951" ignored="false" />
+    <file path="/playerResults.js" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1377000586051" ignored="false" />
+    <file path="/charts.js" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1377000714369" ignored="false" />
+    <file path="$PROJECT_DIR$/../../Augusta Square Poker/js/charts.js" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1376881215732" ignored="false" />
+    <file path="/positionAndPlayer.json" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1376888231360" ignored="false" />
+    <file path="/benI.json" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1376978901035" ignored="false" />
+    <file path="/brianM.json" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1376911180320" ignored="false" />
+    <file path="/guageStatistics.js" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1376963295701" ignored="false" />
+    <file path="/blindLevels.html" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1379417548008" ignored="false" />
+    <file path="$PROJECT_DIR$/../../Augusta Square Poker/miscellaneous/blindLevels.html" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1376970435038" ignored="false" />
+    <file path="/points.html" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1377754546088" ignored="false" />
+    <file path="/winningHands.html" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1376973665217" ignored="false" />
+    <file path="$PROJECT_DIR$/../../Augusta Square Poker/miscellaneous/winningHands.html" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1376973730767" ignored="false" />
+    <file path="/test.html" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1376979370520" ignored="false" />
+    <file path="/test.js" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1376980054501" ignored="false" />
+    <file path="/blindLevels.js" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1376999928941" ignored="false" />
+    <file path="/simonM.json" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1377001227648" ignored="false" />
+    <file path="/eventResults.clj" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1379988699320" ignored="false" />
+    <file path="/Clojure REPL" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1379389783880" ignored="false" />
+    <file path="/currentTable.json" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1377487621006" ignored="false" />
+    <file path="$PROJECT_DIR$/../clojure-poker/src/clojure_poker/domain/events.clj" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1378121029032" ignored="false" />
+    <file path="/events.clj" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1378121001993" ignored="false" />
+    <file path="$PROJECT_DIR$/../clojure-poker/src/clojure_poker/domain/eventPoints.clj" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1377831596886" ignored="false" />
+    <file path="/temp.json" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1377599804773" ignored="false" />
+    <file path="$PROJECT_DIR$/../clojure-poker/src/clojure_poker/domain/createStatistics.clj" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1377601563966" ignored="false" />
+    <file path="/createStatistics.clj" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1379992687056" ignored="false" />
+    <file path="$PROJECT_DIR$/../clojure-poker/src/clojure_poker/createStatistics.clj" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1379992704504" ignored="false" />
+    <file path="$PROJECT_DIR$/../clojure-poker/src/clojure_poker/domain/tournaments.clj" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1379989946026" ignored="false" />
+    <file path="/tournaments.clj" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1379989938455" ignored="false" />
+    <file path="/urls.js" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1377665162849" ignored="false" />
+    <file path="/player.js" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1378089961034" ignored="false" />
+    <file path="/extras.json" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1377681319182" ignored="false" />
+    <file path="/event-history.json" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1377681774683" ignored="false" />
+    <file path="/homePage.js" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1379993000871" ignored="false" />
+    <file path="/Dummy.txt" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1379984822428" ignored="false" />
+    <file path="$PROJECT_DIR$/.idea/workspace.xml" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1377753100125" ignored="false" />
+    <file path="/extras.js" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1377753553871" ignored="false" />
+    <file path="/events.js" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1379999249304" ignored="false" />
+    <file path="$PROJECT_DIR$/../clojure-poker/src/clojure_poker/db/dbtest.clj" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1378273195343" ignored="false" />
+    <file path="/dbtest.clj" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1378273158373" ignored="false" />
+    <file path="$PROJECT_DIR$/../clojure-poker/src/clojure_poker/db/dbConnection.clj" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1378273787575" ignored="false" />
+    <file path="$PROJECT_DIR$/../clojure-poker/src/clojure_poker/db/playerSQL.clj" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1378287659253" ignored="false" />
+    <file path="/dbConnection.clj" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1378273782078" ignored="false" />
+    <file path="/playerSQL.clj" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1378293098424" ignored="false" />
+    <file path="$PROJECT_DIR$/../clojure-poker/src/clojure_poker/db/playerORM.clj" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1378295099866" ignored="false" />
+    <file path="/playerORM.clj" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1378294951451" ignored="false" />
+    <file path="$PROJECT_DIR$/../clojure-poker/src/clojure_poker/db/kormaConnector.clj" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1378295099865" ignored="false" />
+    <file path="$PROJECT_DIR$/../clojure-poker/src/clojure_poker/db/jdbcConnector.clj" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1378292795560" ignored="false" />
+    <file path="/jdbcConnector.clj" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1378292783899" ignored="false" />
+    <file path="$PROJECT_DIR$/../clojure-poker/src/clojure_poker/db/mySQLStatements.clj" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1379993224535" ignored="false" />
+    <file path="$PROJECT_DIR$/../clojure-poker/test/hello_world/test/core.clj" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1378449590198" ignored="false" />
+    <file path="$PROJECT_DIR$/../clojure-poker/src/hello_world/core.clj" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1378449554499" ignored="false" />
+    <file path="/core.clj" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1378449590198" ignored="false" />
+    <file path="$PROJECT_DIR$/../clojure-poker/core.clj" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1378449858816" ignored="false" />
+    <file path="$PROJECT_DIR$/../clojure-poker/src/templates/landingPage.ftl" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1378851510653" ignored="false" />
+    <file path="/landingPage.ftl" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1378765479361" ignored="false" />
+    <file path="$PROJECT_DIR$/../clojure-poker/resources/public/css/bootstrap.css" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1378765220945" ignored="false" />
+    <file path="$PROJECT_DIR$/../clojure-poker/src/clojure_poker/handler.clj" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1379986280965" ignored="false" />
+    <file path="/handler.clj" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1379986172614" ignored="false" />
+    <file path="$PROJECT_DIR$/../clojure-poker/src/templates/players.ftl" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1378851463186" ignored="false" />
+    <file path="/players.ftl" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1378851463186" ignored="false" />
+    <file path="$PROJECT_DIR$/../clojure-poker/src/templates/addPlayer.ftl" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1378798339959" ignored="false" />
+    <file path="/addPlayer.ftl" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1378798339959" ignored="false" />
+    <file path="/mySQLStatements.clj" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1379993224535" ignored="false" />
+    <file path="$PROJECT_DIR$/../clojure-poker/src/clojure_poker/controllers/homePage.clj" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1378812057888" ignored="false" />
+    <file path="/homePage.clj" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1378811999122" ignored="false" />
+    <file path="/addEvent.ftl" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1379644158399" ignored="false" />
+    <file path="$PROJECT_DIR$/../clojure-poker/src/templates/addEvent.ftl" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1379644917052" ignored="false" />
+    <file path="$PROJECT_DIR$/../clojure-poker/.lein-repl-history" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1379994585832" ignored="false" />
+    <file path="$PROJECT_DIR$/../clojure-poker/resources/public/js/web-application/players.js" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1378867773942" ignored="false" />
+    <file path="/players.js" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1378867660271" ignored="false" />
+    <file path="$PROJECT_DIR$/../clojure-poker/resources/public/js/controllers/webAddEvent.js" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1379645568421" ignored="false" />
+    <file path="/webAddEvent.js" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1379645338901" ignored="false" />
+    <file path="$PROJECT_DIR$/../clojure-poker/resources/public/js/controllers/events.js" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1378872108498" ignored="false" />
+    <file path="$PROJECT_DIR$/../clojure-poker/resources/public/css/poker.css" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1378953799918" ignored="false" />
+    <file path="$PROJECT_DIR$/../clojure-poker/resources/public/templates/enterEventResult.ftl" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1379039957833" ignored="false" />
+    <file path="/enterEventResult.ftl" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1379039956395" ignored="false" />
+    <file path="/20131005.html" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1379982475220" ignored="false" />
+    <file path="/*.regexp" changelist="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" time="1379995555103" ignored="false" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
+  <component name="DebuggerManager">
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
+      <breakpoint>
+        <option name="NOTIFY_CAUGHT" value="true" />
+        <option name="NOTIFY_UNCAUGHT" value="true" />
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint>
+        <option name="NOTIFY_CAUGHT" value="true" />
+        <option name="NOTIFY_UNCAUGHT" value="true" />
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </breakpoint_any>
+    <breakpoint_rules />
+    <ui_properties />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="Poker_TwitterBootstrap" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="events.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/controllers/events.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="34" column="0" selection-start="1467" selection-end="1467" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="current-table.json" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/json/current-table.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="playerResults.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/playerResults.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="34" selection-start="205" selection-end="205" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="blindLevels.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/extras/blindLevels.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="47" column="39" selection-start="2623" selection-end="2624" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="20130511.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/events/20130511.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="157" column="61" selection-start="6842" selection-end="6842" vertical-scroll-proportion="-9.153846">
+              <folding>
+                <element signature="n#style#0;n#td#1;n#tr#2;n#table#0;n#div#0;n#div#2;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="20130706.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/events/20130706.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="132" column="30" selection-start="5703" selection-end="5703" vertical-scroll-proportion="0.21834862">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="20131005.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/events/20131005.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="65" selection-start="764" selection-end="764" vertical-scroll-proportion="-10.461538">
+              <folding>
+                <element signature="tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#0;tag#div#1;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#0;tag#div#1;tag#div#1;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="tag#div#2;tag#div#1;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="n#style#0;n#th#1;n#tr#0;n#table#0;n#div#0;n#div#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#1;n#tr#1;n#table#0;n#div#0;n#div#0;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#th#1;n#tr#1;n#table#0;n#div#0;n#div#1;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#1;n#tr#2;n#table#0;n#div#0;n#div#1;n#div#2;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="tag#div#3;tag#div#1;tag#body#0;tag#html#0" expanded="false" />
+                <element signature="n#style#0;n#h3#0;n#div#0;n#div#3;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="91" column="76" selection-start="4711" selection-end="4755" vertical-scroll-proportion="-13.5">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="homePage.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/controllers/homePage.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="20" column="44" selection-start="895" selection-end="910" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="20130406.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/events/20130406.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="153" column="83" selection-start="6825" selection-end="6825" vertical-scroll-proportion="-11.153846">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="false" />
+    </FindUsagesManager>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitLogSettings">
+    <option name="myStructureFilterPaths" />
+    <option name="myDateState">
+      <MyDateState />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="changedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/players/markV.html" />
+        <option value="$PROJECT_DIR$/players/michaelR.html" />
+        <option value="$PROJECT_DIR$/players/paulB.html" />
+        <option value="$PROJECT_DIR$/players/simonM.html" />
+        <option value="$PROJECT_DIR$/players/steveW.html" />
+        <option value="$PROJECT_DIR$/json/06_04_2013_1_results.json" />
+        <option value="$PROJECT_DIR$/js/controllers/event1.js" />
+        <option value="$PROJECT_DIR$/events/20130706.html" />
+        <option value="$PROJECT_DIR$/players/jadeW.html" />
+        <option value="$PROJECT_DIR$/extras/blindLevels.html" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/events/20131005.html" />
+        <option value="$PROJECT_DIR$/js/controllers/homePage.js" />
+        <option value="$PROJECT_DIR$/events/20130406.html" />
+        <option value="$PROJECT_DIR$/js/controllers/events.js" />
+        <option value="$PROJECT_DIR$/events/20130511.html" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="0" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource ProjectPane="true" />
+      <autoscrollFromSource />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="twitter_poker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="twitter_poker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="twitter_bootstrap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="twitter_poker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="twitter_bootstrap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="json" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="twitter_poker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="twitter_bootstrap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="events" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="215" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="232" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="237" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="239" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="910" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="918" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="232" />
+    <property name="GoToClass.includeJavaFiles" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="225" />
+    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
+    <property name="FullScreen" value="false" />
+    <property name="MemberChooser.showClasses" value="true" />
+    <property name="GoToClass.includeLibraries" value="false" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
+    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
+    <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="options.searchVisible" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\user\Dropbox\clojure\twitter_bootstrap\events" />
+      <recent name="C:\Users\user\Dropbox\clojure\twitter_bootstrap\js\controllers" />
+      <recent name="C:\Users\user\Dropbox\clojure\twitter_bootstrap\json" />
+      <recent name="C:\Users\user\Dropbox\clojure\twitter_bootstrap" />
+      <recent name="C:\Users\user\Dropbox\clojure\twitter_bootstrap\images" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\user\Dropbox\clojure\twitter_bootstrap\js" />
+      <recent name="C:\Users\user\Dropbox\clojure\twitter_bootstrap\json" />
+      <recent name="C:\Users\user\Dropbox\clojure\twitter_bootstrap" />
+      <recent name="C:\Users\user\Dropbox\clojure\twitter_bootstrap\players" />
+      <recent name="C:\Users\user\Dropbox\clojure\twitter_bootstrap\src" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <list size="0" />
+    <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
+      <Host>localhost</Host>
+      <Port>5050</Port>
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="all">
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
+    <option name="LAST_MERGED_REVISION" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <option name="FORCE_UPDATE" value="false" />
+    <option name="IGNORE_EXTERNALS" value="false" />
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" name="Default" comment="" />
+      <changelist id="a4b1f768-ae3d-459d-af5d-82622f7ed729" name="Ignore" comment="" />
+      <created>1376361837117</created>
+      <updated>1376361837117</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Remove GIT test comment">
+      <created>1377748548651</created>
+      <updated>1377748548651</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Extra pages to generate dropdowns via angular controller reading relevent json files">
+      <created>1377753694128</created>
+      <updated>1377753694128</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Points and Winning hand pages to generate dropdowns via angular controller reading relevent json files for content">
+      <created>1377754446770</created>
+      <updated>1377754446770</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Change header text">
+      <created>1377754574983</created>
+      <updated>1377754574983</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Updated all players pages to show ladder position summary via the current_table json. Just show the relevant row when the name matches.">
+      <created>1377756428536</created>
+      <updated>1377756428536</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Updated all players pages to show event history from clojure project generated json files">
+      <created>1378091643792</created>
+      <updated>1378091643792</updated>
+    </task>
+    <task id="LOCAL-00007" summary="First event - dropdowns and event summary now derived from Json files - Module WIP">
+      <created>1378175950288</created>
+      <updated>1378175950288</updated>
+    </task>
+    <task id="LOCAL-00008" summary="First event - event results (i.e. position, name and points) for each tournament now derived from json files">
+      <created>1378257687676</created>
+      <updated>1378257687676</updated>
+    </task>
+    <task id="LOCAL-00009" summary="All events now source dropdowns and event results from json - just the table to go :)">
+      <created>1378260911395</created>
+      <updated>1378260911395</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Game summary for event2 and 3 needs to run from json as well">
+      <created>1378261267873</created>
+      <updated>1378261267873</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Event page now uses ladder in angular file...eventually to be replaced with clojure app generating details">
+      <created>1379418140242</created>
+      <updated>1379418140242</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Created event IV page base....updated home page news.....">
+      <created>1379984828789</created>
+      <updated>1379984828789</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.7733756" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.5546751" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296355" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32786885" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296355" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26060605" sideWeight="0.2266244" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296355" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="CHECK_NEW_TODO" value="true" />
+    <option name="myTodoPanelSettings">
+      <value>
+        <are-packages-shown value="false" />
+        <are-modules-shown value="false" />
+        <flatten-packages value="false" />
+        <is-autoscroll-to-source value="false" />
+      </value>
+    </option>
+    <option name="PERFORM_UPDATE_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_COMMIT_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_EDIT_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_CHECKOUT_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_ADD_REMOVE_IN_BACKGROUND" value="true" />
+    <option name="PERFORM_ROLLBACK_IN_BACKGROUND" value="false" />
+    <option name="CHECK_LOCALLY_CHANGED_CONFLICTS_IN_BACKGROUND" value="false" />
+    <option name="CHANGED_ON_SERVER_INTERVAL" value="60" />
+    <option name="SHOW_ONLY_CHANGED_IN_SELECTION_DIFF" value="true" />
+    <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
+    <option name="DEFAULT_PATCH_EXTENSION" value="patch" />
+    <option name="SHORT_DIFF_HORIZONTALLY" value="true" />
+    <option name="SHORT_DIFF_EXTRA_LINES" value="2" />
+    <option name="SOFT_WRAPS_IN_SHORT_DIFF" value="true" />
+    <option name="INCLUDE_TEXT_INTO_PATCH" value="false" />
+    <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
+    <option name="SHOW_FILE_HISTORY_DETAILS" value="true" />
+    <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
+    <option name="SHOW_DIRTY_RECURSIVELY" value="false" />
+    <option name="LIMIT_HISTORY" value="true" />
+    <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
+    <option name="UPDATE_FILTER_SCOPE_NAME" />
+    <option name="USE_COMMIT_MESSAGE_MARGIN" value="false" />
+    <option name="COMMIT_MESSAGE_MARGIN_SIZE" value="72" />
+    <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
+    <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
+    <option name="LAST_COMMIT_MESSAGE" value="Created event IV page base....updated home page news....." />
+    <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="REFORMAT_BEFORE_FILE_COMMIT" value="false" />
+    <option name="FILE_HISTORY_DIALOG_COMMENTS_SPLITTER_PROPORTION" value="0.8" />
+    <option name="FILE_HISTORY_DIALOG_SPLITTER_PROPORTION" value="0.5" />
+    <option name="ACTIVE_VCS_NAME" />
+    <option name="UPDATE_GROUP_BY_PACKAGES" value="false" />
+    <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
+    <option name="UPDATE_FILTER_BY_SCOPE" value="false" />
+    <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
+    <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
+    <MESSAGE value="Remove GIT test comment" />
+    <MESSAGE value="Extra pages to generate dropdowns via angular controller reading relevent json files" />
+    <MESSAGE value="Points and Winning hand pages to generate dropdowns via angular controller reading relevent json files for content" />
+    <MESSAGE value="Change header text" />
+    <MESSAGE value="Updated all players pages to show ladder position summary via the current_table json. Just show the relevant row when the name matches." />
+    <MESSAGE value="Updated all players pages to show event history from clojure project generated json files" />
+    <MESSAGE value="First event - dropdowns and event summary now derived from Json files - Module WIP" />
+    <MESSAGE value="First event - event results (i.e. position, name and points) for each tournament now derived from json files" />
+    <MESSAGE value="All events now source dropdowns and event results from json - just the table to go :)" />
+    <MESSAGE value="Game summary for event2 and 3 needs to run from json as well" />
+    <MESSAGE value="Event page now uses ladder in angular file...eventually to be replaced with clojure app generating details" />
+    <MESSAGE value="Created event IV page base....updated home page news....." />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/css/poker.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/bootstrap.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4508" column="18" selection-start="80654" selection-end="80654" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/animations.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="8" selection-start="456" selection-end="456" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/blindLevels.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/players/brianM.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="99" column="44" selection-start="4491" selection-end="4779" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/players/jadeW.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="103" column="36" selection-start="4900" selection-end="4900" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/extras/blindLevels.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="47" column="39" selection-start="2623" selection-end="2624" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/playerResults.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="34" selection-start="205" selection-end="205" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/json/current-table.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/controllers/homePage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="44" selection-start="895" selection-end="910" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/events/20131005.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="65" selection-start="764" selection-end="764" vertical-scroll-proportion="-10.461538">
+          <folding>
+            <element signature="tag#div#0;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#0;tag#div#1;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#0;tag#div#1;tag#div#1;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="tag#div#2;tag#div#1;tag#body#0;tag#html#0" expanded="false" />
+            <element signature="n#style#0;n#th#1;n#tr#0;n#table#0;n#div#0;n#div#0;n#div#2;n#div#1;n#body#0;n#html#0;n

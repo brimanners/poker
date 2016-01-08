@@ -1,0 +1,17 @@
+#custom {
+    width:512px;
+    height:531px;
+    padding:0px;
+}
+#custom div.close {
+    right:-15px;
+    top:-10px;
+}
+#petrol {
+    color:#fff;
+}
+#apple {
+    background-image:url(/media/img/overlay/apple.png);
+    color:#fff;
+    padding:50px 70px;
+}

@@ -7,7 +7,6 @@ app.controller('events-controller', function ($scope, $http) {
 function loadTitles($scope, $http) {
    $scope.statistics = {};
    $scope.event = location.href.split('event=')[1];
-//   $scope.event = getURLParameter('event');
    var event = [];
    var tournaments = {};
    var results = {};

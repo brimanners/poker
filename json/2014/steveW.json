@@ -1,11 +1,12 @@
 {"positionAndPlayers": [
-{ "positions":[3, 3, 6, 3, 4, 7, 8, 3, 5],
-"players":[8, 8, 6, 6, 8, 8, 8, 5, 5],
+ { "player": "steveW", 
+ "positions":[3,3,4],
+"players":[5,8,10],
 "statistics":{
-"played":9,
+"played":3,
 "won":0,
-"top3":4,
-"last":3,
-"bounties":3,
-"hosted":1
+"top3":2,
+"last":0,
+"bounties":0,
+"hosted":0
 }}]}

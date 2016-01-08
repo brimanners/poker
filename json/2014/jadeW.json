@@ -1,9 +1,10 @@
 {"positionAndPlayers": [
-{ "positions":[7, 5, 4, 2, 1, 8, 7],
-"players":[8, 8, 6, 6, 8, 8, 8],
+ { "player": "jadeW", 
+ "positions":[3,8,4,7,2],
+"players":[7,8,8,9,10],
 "statistics":{
-"played":7,
-"won":1,
+"played":5,
+"won":0,
 "top3":2,
 "last":1,
 "bounties":0,

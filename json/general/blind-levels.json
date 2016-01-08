@@ -1,0 +1,17 @@
+[{"level": "1st", "duration": "20", "small": "50", "big": "100", "ante": "0", "notes": " "}
+ ,{"level": "2nd", "duration": "20", "small": "75", "big": "150", "ante": "0", "notes": " "}
+ ,{"level": "3rd", "duration": "20", "small": "100", "big": "200", "ante": "0", "notes": " "}
+ ,{"level": "break", "duration": "10", "small": "0", "big": "0", "ante": "0", "notes": "Extra $15,000 worth of chips. Removing $25 chips "}
+ ,{"level": "4th", "duration": "20", "small": "200", "big": "400", "ante": "0", "notes": " "}
+ ,{"level": "5th", "duration": "20", "small": "300", "big": "600", "ante": "0", "notes": " "}
+ ,{"level": "6th", "duration": "20", "small": "500", "big": "1000", "ante": "0", "notes": " "}
+ ,{"level": "break", "duration": "10", "small": "0", "big": "0", "ante": "0", "notes": " "}
+ ,{"level": "7th", "duration": "30", "small": "600", "big": "1200", "ante": "100", "notes": " "}
+ ,{"level": "8th", "duration": "30", "small": "1000", "big": "2000", "ante": "200", "notes": " "}
+ ,{"level": "break", "duration": "10", "small": "0", "big": "0", "ante": "0", "notes": "Last chance for a re-buy of $20,000. Removing $100 chips. "}
+ ,{"level": "9th", "duration": "30", "small": "2000", "big": "4000", "ante": "500", "notes": " "}
+ ,{"level": "10th", "duration": "30", "small": "3000", "big": "6000", "ante": "500", "notes": " "}
+ ,{"level": "11th", "duration": "20", "small": "5000", "big": "10000", "ante": "1000", "notes": " "}
+ ,{"level": "12th", "duration": "20", "small": "10000", "big": "20000", "ante": "2000", "notes": " "}
+ ,{"level": "13th", "duration": "60", "small": "20000", "big": "40000", "ante": "4000", "notes": " "}
+ ]

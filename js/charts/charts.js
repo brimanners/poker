@@ -14,7 +14,8 @@ function drawLineGraph(finishingPositions, noOfPlayers) {
             title: "Finishing Position",
             direction: -1,
             minValue: 1,
-            maxValue: 10,
+            maxValue: 12,
+            format: '0',
             viewWindowMode: 'pretty',
             gridlines: {
                 color: "black",
@@ -93,6 +94,7 @@ function drawLadderPositionLineGraph(ladderPositions) {
             direction: -1,
             minValue: 1,
             maxValue: 10,
+            format: '0',
             viewWindowMode: 'pretty',
             gridlines: {
                 color: "black",

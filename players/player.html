@@ -20,6 +20,7 @@
     <script type="text/javascript" src="https://www.google.com/jsapi?autoload={'modules':[{'name':'visualization','version':'1','packages':['gauge']}]}"></script>
     <script type="text/javascript" src="../js/charts/charts.js"></script>
     <script type="text/javascript" src="../js/tableSorter.js"></script>
+    <script type="text/javascript" src="../js/moment.js"></script>
 </head>
 <body ng-controller="playerController" ng-cloak>
     <menus data-ng-controller="menusController"></menus> <!-- Custom directive to show all the menu items - see js/directives/menus.js for details -->
@@ -79,7 +80,7 @@
                         <tr data-ng-show="selectedOption.value == 'ALL'"><td>&nbsp;</td></tr>
                         <tr data-ng-show="result.name == '{{player}}' && result.played > 0 && key != '0'" data-ng-repeat="(key, result) in seasonResults | orderBy: ['season']">
                             <td>{{result.season}}</td>
-                            <td>{{result.tablePosition}}<sup>{{positionSuffix(result.tablePosition)}}</sup></td>
+                            <td style="background-color:{{result.medalColour}}">{{result.tablePosition}}<sup>{{positionSuffix(result.tablePosition)}}</sup></td>
                             <td>{{result.played}}</td>
                             <td>{{result.won}}</td>
                             <td>{{result.second}}</td>
@@ -166,9 +167,9 @@
                             <th>Points</th>
                             <th>Won</th>
                         </tr>
-                        <tr data-ng-repeat="event in playerDetails.eventDetails | orderBy: displayDate | orderBy: tournament">
+                        <tr data-ng-repeat="event in playerDetails.eventDetails | orderBy: displayDate">
                             <td>{{$index + 1}}</td>
-                            <td>{{event.displayDate | date:'longDate'}}</td>
+                            <td>{{event.displayDate | date}}</td>
                             <td>{{event.location}}</td>
                             <td>{{event.tournament}}<sup>{{positionSuffix(event.tournament)}}</sup></td>
                             <td>{{event.position}}<sup>{{positionSuffix(event.position)}}</sup></td>

@@ -1,0 +1,1332 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/season/2014Results.html" afterPath="$PROJECT_DIR$/season/2014Results.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/controllers/homePage.js" afterPath="$PROJECT_DIR$/js/controllers/homePage.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/poker.css" afterPath="$PROJECT_DIR$/css/poker.css" />
+    </list>
+    <list id="a4b1f768-ae3d-459d-af5d-82622f7ed729" name="Ignore" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json/2013/benI.json" afterPath="$PROJECT_DIR$/json/2013/benI.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json/2014/benI.json" afterPath="$PROJECT_DIR$/json/2014/benI.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json/2014/benI_event_history.json" afterPath="$PROJECT_DIR$/json/2014/benI_event_history.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json/2013/brianM.json" afterPath="$PROJECT_DIR$/json/2013/brianM.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json/2014/brianM.json" afterPath="$PROJECT_DIR$/json/2014/brianM.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json/2014/brianM_event_history.json" afterPath="$PROJECT_DIR$/json/2014/brianM_event_history.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json/2013/current-table.json" afterPath="$PROJECT_DIR$/json/2013/current-table.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json/2014/current-table.json" afterPath="$PROJECT_DIR$/json/2014/current-table.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json/2013/daveM.json" afterPath="$PROJECT_DIR$/json/2013/daveM.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json/2014/daveM.json" afterPath="$PROJECT_DIR$/json/2014/daveM.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json/2014/daveM_event_history.json" afterPath="$PROJECT_DIR$/json/2014/daveM_event_history.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json/2014/event-history.json" afterPath="$PROJECT_DIR$/json/2014/event-history.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json/2014/event_results.json" afterPath="$PROJECT_DIR$/json/2014/event_results.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json/2014/form-table.json" afterPath="$PROJECT_DIR$/json/2014/form-table.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json/2013/jadeW.json" afterPath="$PROJECT_DIR$/json/2013/jadeW.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json/2014/jadeW.json" afterPath="$PROJECT_DIR$/json/2014/jadeW.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json/2014/jadeW_event_history.json" afterPath="$PROJECT_DIR$/json/2014/jadeW_event_history.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json/2013/markL.json" afterPath="$PROJECT_DIR$/json/2013/markL.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json/2014/markL.json" afterPath="$PROJECT_DIR$/json/2014/markL.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json/2014/markL_event_history.json" afterPath="$PROJECT_DIR$/json/2014/markL_event_history.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json/2013/markV.json" afterPath="$PROJECT_DIR$/json/2013/markV.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json/2014/markV.json" afterPath="$PROJECT_DIR$/json/2014/markV.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json/2014/markV_event_history.json" afterPath="$PROJECT_DIR$/json/2014/markV_event_history.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json/2013/michaelR.json" afterPath="$PROJECT_DIR$/json/2013/michaelR.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json/2014/michaelR.json" afterPath="$PROJECT_DIR$/json/2014/michaelR.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json/2014/michaelR_event_history.json" afterPath="$PROJECT_DIR$/json/2014/michaelR_event_history.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json/general/news-item.json" afterPath="$PROJECT_DIR$/json/general/news-item.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json/general/next-event.json" afterPath="$PROJECT_DIR$/json/general/next-event.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json/2013/paulB.json" afterPath="$PROJECT_DIR$/json/2013/paulB.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json/2014/paulB.json" afterPath="$PROJECT_DIR$/json/2014/paulB.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json/2014/paulB_event_history.json" afterPath="$PROJECT_DIR$/json/2014/paulB_event_history.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json/general/players.json" afterPath="$PROJECT_DIR$/json/general/players.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json/2013/simonM.json" afterPath="$PROJECT_DIR$/json/2013/simonM.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json/2014/simonM.json" afterPath="$PROJECT_DIR$/json/2014/simonM.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json/2014/simonM_event_history.json" afterPath="$PROJECT_DIR$/json/2014/simonM_event_history.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json/2013/steveW.json" afterPath="$PROJECT_DIR$/json/2013/steveW.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json/2014/steveW.json" afterPath="$PROJECT_DIR$/json/2014/steveW.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json/2014/steveW_event_history.json" afterPath="$PROJECT_DIR$/json/2014/steveW_event_history.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+    </list>
+    <list id="41b7b0e4-51e8-451f-8fe4-79a446baa414" name="Do not checkin" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/jquery.blockUI.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/common/menuDropdowns.js" />
+      <change type="DELETED" beforePath="C:\Users\user\Dropbox\clojure\twitter_bootstrap\json\2014\05_10_2013_1_results.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\user\Dropbox\clojure\twitter_bootstrap\json\2014\06_04_2013_1_results.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\user\Dropbox\clojure\twitter_bootstrap\json\2014\06_04_2013_2_results.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\user\Dropbox\clojure\twitter_bootstrap\json\2014\06_07_2013_1_results.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\user\Dropbox\clojure\twitter_bootstrap\json\2014\06_07_2013_2_results.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\user\Dropbox\clojure\twitter_bootstrap\json\2014\09_11_2013_1_results.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\user\Dropbox\clojure\twitter_bootstrap\json\2014\09_11_2013_2_results.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\user\Dropbox\clojure\twitter_bootstrap\json\2014\11_05_2013_1_results.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\user\Dropbox\clojure\twitter_bootstrap\json\2014\11_05_2013_2_results.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\user\Dropbox\clojure\twitter_bootstrap\json\2014\players.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\user\Dropbox\clojure\twitter_bootstrap\json\extras.json" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\user\Dropbox\clojure\twitter_bootstrap\json\players.json" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
+    <ignored path="Poker_TwitterBootstrap.iws" />
+    <ignored path=".idea/workspace.xml" />
+    <file path="$PROJECT_DIR$/.idea/workspace.xml" ignored="false" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CreatePatchCommitExecutor">
+    <option name="PATCH_PATH" value="" />
+  </component>
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
+  </component>
+  <component name="DebuggerManager">
+    <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
+      <breakpoint>
+        <option name="NOTIFY_CAUGHT" value="true" />
+        <option name="NOTIFY_UNCAUGHT" value="true" />
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+      <breakpoint>
+        <option name="NOTIFY_CAUGHT" value="true" />
+        <option name="NOTIFY_UNCAUGHT" value="true" />
+        <option name="ENABLED" value="false" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="REMOVE_AFTER_HIT" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </breakpoint_any>
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
+    <breakpoint_rules />
+    <ui_properties />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
+  <component name="FavoritesManager">
+    <favorites_list name="Poker_TwitterBootstrap" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file leaf-file-name="2014Results.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/season/2014Results.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="111" column="53" selection-start="6230" selection-end="6230" vertical-scroll-proportion="0.35978836" vertical-offset="1683" max-vertical-offset="5236">
+              <folding>
+                <element signature="n#style#0;n#h4#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#h3#0;n#td#0;n#tr#0;n#table#0;n#div#0;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#1;n#tr#0;n#table#0;n#div#0;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#2;n#tr#0;n#table#0;n#div#0;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#th#1;n#tr#0;n#thead#0;n#table#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#th#1;n#tr#0;n#table#0;n#div#2;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#1;n#tr#1;n#table#0;n#div#2;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#img#0;n#td#1;n#tr#1;n#table#0;n#div#2;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#th#1;n#tr#0;n#table#0;n#div#3;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#1;n#tr#1;n#table#0;n#div#3;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="poker.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/poker.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1" column="12" selection-start="28" selection-end="28" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1547">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bootstrap.css" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/bootstrap.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="176" column="17" selection-start="1926" selection-end="1926" vertical-scroll-proportion="0.0" vertical-offset="2873" max-vertical-offset="82637">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="chart.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/chart_testing/chart.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="4" selection-start="369" selection-end="430" vertical-scroll-proportion="-7.423077" vertical-offset="11" max-vertical-offset="374">
+              <folding>
+                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="homePage.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/controllers/homePage.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="31" column="3" selection-start="1328" selection-end="1328" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="4488">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindManager">
+    <FindUsagesManager>
+      <setting name="OPEN_NEW_TAB" value="false" />
+    </FindUsagesManager>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitLogSettings">
+    <option name="myStructureFilterPaths" />
+    <option name="myDateState">
+      <MyDateState />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="changedFiles">
+      <list>
+        <option value="$PROJECT_DIR$/json/players.json" />
+        <option value="$PROJECT_DIR$/js/controllers/extras.js" />
+        <option value="$PROJECT_DIR$/json/2013/players.json" />
+        <option value="$PROJECT_DIR$/json/2014/current-table.json" />
+        <option value="$PROJECT_DIR$/js/common/menuDropdowns.js" />
+        <option value="$PROJECT_DIR$/js/jquery.blockUI.js" />
+        <option value="$PROJECT_DIR$/js/map.js" />
+        <option value="$PROJECT_DIR$/js/charts/charts.js" />
+        <option value="$PROJECT_DIR$/events/20130511.html" />
+        <option value="$PROJECT_DIR$/events/20130706.html" />
+        <option value="$PROJECT_DIR$/events/20131005.html" />
+        <option value="$PROJECT_DIR$/events/20131109.html" />
+        <option value="$PROJECT_DIR$/extras/winningHands.html" />
+        <option value="$PROJECT_DIR$/mobile/test.html" />
+        <option value="$PROJECT_DIR$/mobile/test2.html" />
+        <option value="$PROJECT_DIR$/css/accordion.css" />
+        <option value="$PROJECT_DIR$/events/20130406.html" />
+        <option value="$PROJECT_DIR$/json/general/players.json" />
+        <option value="$PROJECT_DIR$/statistics/statistics.html" />
+        <option value="$PROJECT_DIR$/js/controllers/statistics.js" />
+        <option value="$PROJECT_DIR$/css/bootstrap.css" />
+        <option value="$PROJECT_DIR$/js/playerResults.js" />
+        <option value="$PROJECT_DIR$/js/controllers/events.js" />
+        <option value="$PROJECT_DIR$/events/20140726.html" />
+        <option value="$PROJECT_DIR$/events/20140614.html" />
+        <option value="$PROJECT_DIR$/events/20140503.html" />
+        <option value="$PROJECT_DIR$/events/20140301.html" />
+        <option value="$PROJECT_DIR$/events/20140104.html" />
+        <option value="$PROJECT_DIR$/season/2013Results.html" />
+        <option value="$PROJECT_DIR$/js/controllers/player.js" />
+        <option value="$PROJECT_DIR$/players/player.html" />
+        <option value="$PROJECT_DIR$/tahlia_pictures/tahlia.css" />
+        <option value="$PROJECT_DIR$/tahlia.html" />
+        <option value="$PROJECT_DIR$/extras/blindLevels.html" />
+        <option value="$PROJECT_DIR$/extras/points.html" />
+        <option value="$PROJECT_DIR$/js/tableSorter.js" />
+        <option value="$PROJECT_DIR$/chart.html" />
+        <option value="$PROJECT_DIR$/chart_testing/chart.html" />
+        <option value="$PROJECT_DIR$/chart_testing/chart.css" />
+        <option value="$PROJECT_DIR$/chart_testing/hs_chart.js" />
+        <option value="$PROJECT_DIR$/chart_testing/overlay.html" />
+        <option value="$PROJECT_DIR$/js/controllers/homePage.js" />
+        <option value="$PROJECT_DIR$/css/poker.css" />
+        <option value="$PROJECT_DIR$/season/2014Results.html" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
+  </component>
+  <component name="ProjectReloadState">
+    <option name="STATE" value="0" />
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" splitterProportion="0.5">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource ProjectPane="true" />
+      <autoscrollFromSource ProjectPane="true" />
+      <sortByType />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="twitter_poker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="twitter_poker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="twitter_bootstrap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="twitter_poker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="twitter_bootstrap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="season" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="twitter_poker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="twitter_bootstrap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="twitter_poker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="twitter_bootstrap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="twitter_poker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="twitter_bootstrap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="twitter_poker" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="twitter_bootstrap" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="chart_testing" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="139" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="150" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="192" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="153" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="716" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="836" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="188" />
+    <property name="GoToClass.includeJavaFiles" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="182" />
+    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
+    <property name="FullScreen" value="false" />
+    <property name="MemberChooser.showClasses" value="true" />
+    <property name="GoToClass.includeLibraries" value="false" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
+    <property name="options.lastSelected" value="editor.preferences.smartKeys" />
+    <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="options.searchVisible" value="true" />
+    <property name="SearchEverywhereHistory" value=":y" />
+    <property name="LayoutCode.rearrangeEntriesPlain text" value="false" />
+    <property name="LayoutCode.rearrangeEntriesHTML" value="false" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\user\Dropbox\clojure\twitter_bootstrap\events" />
+      <recent name="C:\Users\user\Dropbox\clojure\twitter_bootstrap\images\players\2014" />
+      <recent name="C:\Users\user\Dropbox\clojure\twitter_bootstrap\js\controllers" />
+      <recent name="C:\Users\user\Dropbox\clojure\twitter_bootstrap\players" />
+      <recent name="C:\Users\user\Dropbox\clojure\twitter_bootstrap\players\2014" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\user\Dropbox\clojure\twitter_bootstrap\css" />
+      <recent name="C:\Users\user\Dropbox\clojure\twitter_bootstrap\js\charts" />
+      <recent name="C:\Users\user\Dropbox\clojure\twitter_bootstrap\chart_testing" />
+      <recent name="C:\Users\user\Dropbox\clojure\twitter_bootstrap\season" />
+      <recent name="C:\Users\user\Dropbox\clojure\twitter_bootstrap\js" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
+      <module name="" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <method />
+    </configuration>
+    <configuration default="true" type="ClojureREPL" factoryName="Local">
+      <setting name="useLein" value="true" />
+      <setting name="leinProjectName" value="" />
+      <module name="" />
+      <setting name="jvmArgs" value="" />
+      <setting name="parameters" value="" />
+      <setting name="workingDir" value="" />
+      <method>
+        <option name="Synchronize Leiningen" enabled="true" />
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="BatchConfigurationType" factoryName="Batch">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <module name="" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="moduleWithDependencies" />
+      </option>
+      <envs />
+      <patterns />
+      <method />
+    </configuration>
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
+      <module name="" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <method />
+    </configuration>
+    <list size="0" />
+    <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
+      <Host>localhost</Host>
+      <Port>5050</Port>
+    </configuration>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="SvnConfiguration" maxAnnotateRevisions="500" myUseAcceleration="nothing" myAutoUpdateAfterCommit="false" cleanupOnStartRun="false" SSL_PROTOCOLS="all">
+    <option name="USER" value="" />
+    <option name="PASSWORD" value="" />
+    <option name="mySSHConnectionTimeout" value="30000" />
+    <option name="mySSHReadTimeout" value="30000" />
+    <option name="LAST_MERGED_REVISION" />
+    <option name="MERGE_DRY_RUN" value="false" />
+    <option name="MERGE_DIFF_USE_ANCESTRY" value="true" />
+    <option name="UPDATE_LOCK_ON_DEMAND" value="false" />
+    <option name="IGNORE_SPACES_IN_MERGE" value="false" />
+    <option name="CHECK_NESTED_FOR_QUICK_MERGE" value="false" />
+    <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
+    <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
+    <option name="FORCE_UPDATE" value="false" />
+    <option name="IGNORE_EXTERNALS" value="false" />
+    <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" name="Default" comment="" />
+      <changelist id="a4b1f768-ae3d-459d-af5d-82622f7ed729" name="Ignore" comment="" />
+      <changelist id="41b7b0e4-51e8-451f-8fe4-79a446baa414" name="Do not checkin" comment="" />
+      <created>1376361837117</created>
+      <updated>1376361837117</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Remove GIT test comment">
+      <created>1377748548651</created>
+      <updated>1377748548651</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Extra pages to generate dropdowns via angular controller reading relevent json files">
+      <created>1377753694128</created>
+      <updated>1377753694128</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Points and Winning hand pages to generate dropdowns via angular controller reading relevent json files for content">
+      <created>1377754446770</created>
+      <updated>1377754446770</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Change header text">
+      <created>1377754574983</created>
+      <updated>1377754574983</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Updated all players pages to show ladder position summary via the current_table json. Just show the relevant row when the name matches.">
+      <created>1377756428536</created>
+      <updated>1377756428536</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Updated all players pages to show event history from clojure project generated json files">
+      <created>1378091643792</created>
+      <updated>1378091643792</updated>
+    </task>
+    <task id="LOCAL-00007" summary="First event - dropdowns and event summary now derived from Json files - Module WIP">
+      <created>1378175950288</created>
+      <updated>1378175950288</updated>
+    </task>
+    <task id="LOCAL-00008" summary="First event - event results (i.e. position, name and points) for each tournament now derived from json files">
+      <created>1378257687676</created>
+      <updated>1378257687676</updated>
+    </task>
+    <task id="LOCAL-00009" summary="All events now source dropdowns and event results from json - just the table to go :)">
+      <created>1378260911395</created>
+      <updated>1378260911395</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Game summary for event2 and 3 needs to run from json as well">
+      <created>1378261267873</created>
+      <updated>1378261267873</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Event page now uses ladder in angular file...eventually to be replaced with clojure app generating details">
+      <created>1379418140242</created>
+      <updated>1379418140242</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Created event IV page base....updated home page news.....">
+      <created>1379984828789</created>
+      <updated>1379984828789</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Last html hard coding removed? Now derive all event tables from single json ladder file.....">
+      <created>1379999903287</created>
+      <updated>1379999903287</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Forgot event4 hardcoding....and now the home page latest works on the last event">
+      <created>1380002271570</created>
+      <updated>1380002271570</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Had to make table parsing generic so can test for next event handling rather than known amount of events">
+      <created>1380006691089</created>
+      <updated>1380006691089</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Quick text update">
+      <created>1380007148091</created>
+      <updated>1380007148091</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Text update and added bounty winner - currently hardcoded">
+      <created>1380265011438</created>
+      <updated>1380265011438</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Added ability to display ladder for each table on home page">
+      <created>1380545502017</created>
+      <updated>1380545502017</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Add animation to points page - tidy up of hardoded event ids">
+      <created>1380614233399</created>
+      <updated>1380614233399</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Funky home page ladder animations :)">
+      <created>1380626448852</created>
+      <updated>1380626448852</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Updated tables to include new win ratio...news of next event">
+      <created>1382045286381</created>
+      <updated>1382045286381</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Updated individual players to include new win ratio">
+      <created>1382046108213</created>
+      <updated>1382046108213</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Display average finishing position in all ladders">
+      <created>1382425471893</created>
+      <updated>1382425471893</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Display average finishing position for each player">
+      <created>1382425762602</created>
+      <updated>1382425762602</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Add google analytics code">
+      <created>1382561356273</created>
+      <updated>1382561356273</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Display recent form table....and 5 player points allocation">
+      <created>1382925507152</created>
+      <updated>1382925507152</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Add link for player names in form table">
+      <created>1382995471690</created>
+      <updated>1382995471690</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Display ladder movement on home page.">
+      <created>1383270616436</created>
+      <updated>1383270616436</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Up/down movement arrows. Upgrade angular script to latest">
+      <created>1383281744393</created>
+      <updated>1383281744393</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Tidy up new movement ladder code">
+      <created>1383442741482</created>
+      <updated>1383442741482</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Adding player profile pics">
+      <created>1383513164954</created>
+      <updated>1383513164954</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Updated event 5 and updated player profiles">
+      <created>1384117340138</created>
+      <updated>1384117340138</updated>
+    </task>
+    <task id="LOCAL-00033" summary="New charts...updated player pages and last event tweaks">
+      <created>1384388170481</created>
+      <updated>1384388170481</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Segmenting for yearly seasons. Updated menus and paramatise players details">
+      <created>1384983118205</created>
+      <updated>1384983118205</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Display history of events table">
+      <created>1384997041546</created>
+      <updated>1384997041546</updated>
+    </task>
+    <task id="LOCAL-00036" summary="unversioned file commits">
+      <created>1384997574031</created>
+      <updated>1384997574031</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Ignore">
+      <created>1384997594417</created>
+      <updated>1384997594417</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Sgementing into years...fixing menus">
+      <created>1385430514460</created>
+      <updated>1385430514460</updated>
+    </task>
+    <task id="LOCAL-00039" summary="Fixed up all menus from all pages (hopefully)">
+      <created>1385627680168</created>
+      <updated>1385627680168</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Update copyright year">
+      <created>1386712395140</created>
+      <updated>1386712395140</updated>
+    </task>
+    <task id="LOCAL-00041" summary="Created base yearly player json">
+      <created>1388353883337</created>
+      <updated>1388353883337</updated>
+    </task>
+    <task id="LOCAL-00042" summary="Moved generic players/events to general folder as common to each season">
+      <created>1388438172654</created>
+      <updated>1388438172654</updated>
+    </task>
+    <task id="LOCAL-00043" summary="Ongoing fixes - and adding commentary for first 2014 event">
+      <created>1388960123536</created>
+      <updated>1388960123536</updated>
+    </task>
+    <task id="LOCAL-00044" summary="Fixing up seasonal requirements">
+      <created>1389229919197</created>
+      <updated>1389229919197</updated>
+    </task>
+    <task id="LOCAL-00045" summary="Fixing up ladder position graph for season changes">
+      <created>1389316333750</created>
+      <updated>1389316333750</updated>
+    </task>
+    <task id="LOCAL-00046" summary="Fixing up ladder position graph. Should check for points &gt; 0 !!!&#10;">
+      <created>1389317462765</created>
+      <updated>1389317462765</updated>
+    </task>
+    <task id="LOCAL-00047" summary="Remove 2nd event (used for testing) - reopen when event occurs!">
+      <created>1389317603307</created>
+      <updated>1389317603307</updated>
+    </task>
+    <task id="LOCAL-00048" summary="Updated news and created base page for event 2 in 2014">
+      <created>1392341097193</created>
+      <updated>1392341097193</updated>
+    </task>
+    <task id="LOCAL-00049" summary="Display bounty winner from json file created by clojure app">
+      <created>1392686830416</created>
+      <updated>1392686830416</updated>
+    </task>
+    <task id="LOCAL-00050" summary="Event dropdown selection now based on Angular directive - also defaults selected value to the last event">
+      <created>1393310699398</created>
+      <updated>1393310699398</updated>
+    </task>
+    <task id="LOCAL-00051" summary="Display season and overall statistics">
+      <created>1396316218456</created>
+      <updated>1396316218456</updated>
+    </task>
+    <task id="LOCAL-00052" summary="Add extra note regarding receiving chips prior to the break if you lose them all.">
+      <created>1396316765832</created>
+      <updated>1396316765832</updated>
+    </task>
+    <task id="LOCAL-00053" summary="Added next event page, and some rewording on extras pages">
+      <created>1398809948322</created>
+      <updated>1398809948322</updated>
+    </task>
+    <task id="LOCAL-00054" summary="Updated note on homepage">
+      <created>1398810117949</created>
+      <updated>1398810117950</updated>
+    </task>
+    <task id="LOCAL-00055" summary="Updated event details for event 3 and new news on home page">
+      <created>1399534329892</created>
+      <updated>1399534329893</updated>
+    </task>
+    <task id="LOCAL-00056" summary="Added flags for each players nationality">
+      <created>1400737627084</created>
+      <updated>1400737627084</updated>
+    </task>
+    <task id="LOCAL-00057" summary="Added flag images to git">
+      <created>1400737676887</created>
+      <updated>1400737676887</updated>
+    </task>
+    <task id="LOCAL-00058" summary="Add countdown clock to next event on home page.">
+      <created>1401089708420</created>
+      <updated>1401089708420</updated>
+    </task>
+    <task id="LOCAL-00059" summary="Updated counter to set a message when timer expires">
+      <created>1401160459982</created>
+      <updated>1401160459982</updated>
+    </task>
+    <task id="LOCAL-00060" summary="source next event date from Json file - used for countdown clock on home page">
+      <created>1401497364780</created>
+      <updated>1401497364780</updated>
+    </task>
+    <task id="LOCAL-00061" summary="Remove extra quote in json string">
+      <created>1401662163504</created>
+      <updated>1401662163504</updated>
+    </task>
+    <task id="LOCAL-00062" summary="Updated new event details">
+      <created>1402886880721</created>
+      <updated>1402886880721</updated>
+    </task>
+    <task id="LOCAL-00063" summary="add general json details">
+      <created>1402887249457</created>
+      <updated>1402887249457</updated>
+    </task>
+    <task id="LOCAL-00064" summary="Fixed json issue - updated event content and new player image">
+      <created>1402899727185</created>
+      <updated>1402899727185</updated>
+    </task>
+    <task id="LOCAL-00065" summary="Updated blind levels to show all chips at 1st break and longer break times for 1st and 2nd break">
+      <created>1402956181965</created>
+      <updated>1402956181965</updated>
+    </task>
+    <task id="LOCAL-00066" summary="Refactored Statistics page for quicker other season rendering.">
+      <created>1403494532917</created>
+      <updated>1403494532917</updated>
+    </task>
+    <task id="LOCAL-00067" summary="Css styling for menu's &amp; re-instate timer for next event....">
+      <created>1403580266582</created>
+      <updated>1403580266582</updated>
+    </task>
+    <task id="LOCAL-00068" summary="Display player flag for all time and form tables">
+      <created>1404098663282</created>
+      <updated>1404098663282</updated>
+    </task>
+    <task id="LOCAL-00069" summary="Add new event commentary - Changed sort order to make same points sort next by number of games played. I.e. higher placement for players playing less games on same points.">
+      <created>1406601676329</created>
+      <updated>1406601676329</updated>
+    </task>
+    <task id="LOCAL-00070" summary="Display last amount in form table - updated blind amonts to match new chips - pending creation from clojure app.">
+      <created>1407138548607</created>
+      <updated>1407138548607</updated>
+    </task>
+    <task id="LOCAL-00071" summary="Display last 5 position/noOfPlayers">
+      <created>1407292516952</created>
+      <updated>1407292516952</updated>
+    </task>
+    <task id="LOCAL-00072" summary="WIP - Fixing issue with current table displaying all seasons - now to use only current season">
+      <created>1407725982636</created>
+      <updated>1407725982636</updated>
+    </task>
+    <task id="LOCAL-00073" summary="Display position/players - fixed json season results json">
+      <created>1407897869430</created>
+      <updated>1407897869430</updated>
+    </task>
+    <task id="LOCAL-00074" summary="Fix event table display now current table json is standardised">
+      <created>1407983304134</created>
+      <updated>1407983304134</updated>
+    </task>
+    <task id="LOCAL-00075" summary="Expose next date">
+      <created>1408069618952</created>
+      <updated>1408069618952</updated>
+    </task>
+    <task id="LOCAL-00076" summary="Fix player position display">
+      <created>1408070185434</created>
+      <updated>1408070185434</updated>
+    </task>
+    <task id="LOCAL-00077" summary="Updated blind and points pages - still pending driving results from a table.">
+      <created>1408402099175</created>
+      <updated>1408402099175</updated>
+    </task>
+    <task id="LOCAL-00078" summary="Only display news ticker and countdown clock if values exist in json files.">
+      <created>1408435165571</created>
+      <updated>1408435165571</updated>
+    </task>
+    <task id="LOCAL-00079" summary="Display 2nd, 3rd and 4th place finishes for current and all season">
+      <created>1408507239884</created>
+      <updated>1408507239884</updated>
+    </task>
+    <task id="LOCAL-00080" summary="Display 2nd, 3rd and 4th place finishes for form section - updated table css to not allow wrapping.&#10;">
+      <created>1408514927678</created>
+      <updated>1408514927678</updated>
+    </task>
+    <option name="localTasksCounter" value="81" />
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="0" />
+    <editor active="true" />
+    <layout>
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21011059" sideWeight="0.4996215" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.326284" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36966825" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Leiningen" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17522658" sideWeight="0.5003785" order="11" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32326284" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3280507" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23524962" sideWeight="0.32201535" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="REPL" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296355" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.21011059" sideWeight="0.4996215" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Leiningen" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17522658" sideWeight="0.5003785" order="11" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32326284" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23524962" sideWeight="0.32201535" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296355" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.326284" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.36966825" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3280507" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24962178" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="REPL" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+    </layout-to-restore>
+  </component>
+  <component name="Vcs.Log.UiProperties">
+    <option name="RECENTLY_FILTERED_USERS">
+      <collection />
+    </option>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="myTodoPanelSettings">
+      <TodoPanelSettings />
+    </option>
+    <MESSAGE value="Added flags for each players nationality" />
+    <MESSAGE value="Added flag images to git" />
+    <MESSAGE value="Add countdown clock to next event on home page." />
+    <MESSAGE value="Updated counter to set a message when timer expires" />
+    <MESSAGE value="source next event date from Json file - used for countdown clock on home page" />
+    <MESSAGE value="Remove extra quote in json string" />
+    <MESSAGE value="Updated new event details" />
+    <MESSAGE value="add general json details" />
+    <MESSAGE value="Fixed json issue - updated event content and new player image" />
+    <MESSAGE value="Updated blind levels to show all chips at 1st break and longer break times for 1st and 2nd break" />
+    <MESSAGE value="Refactored Statistics page for quicker other season rendering." />
+    <MESSAGE value="Css styling for menu's &amp; re-instate timer for next event...." />
+    <MESSAGE value="Display player flag for all time and form tables" />
+    <MESSAGE value="Add new event commentary - Changed sort order to make same points sort next by number of games played. I.e. higher placement for players playing less games on same points." />
+    <MESSAGE value="Display last amount in form table - updated blind amonts to match new chips - pending creation from clojure app." />
+    <MESSAGE value="Display last 5 position/noOfPlayers" />
+    <MESSAGE value="WIP - Fixing issue with current table displaying all seasons - now to use only current season" />
+    <MESSAGE value="Display position/players - fixed json season results json" />
+    <MESSAGE value="Fix event table display now current table json is standardised" />
+    <MESSAGE value="Expose next date" />
+    <MESSAGE value="Fix player position display" />
+    <MESSAGE value="Updated blind and points pages - still pending driving results from a table." />
+    <MESSAGE value="Only display news ticker and countdown clock if values exist in json files." />
+    <MESSAGE value="Display 2nd, 3rd and 4th place finishes for current and all season" />
+    <MESSAGE value="Display 2nd, 3rd and 4th place finishes for form section - updated table css to not allow wrapping.&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Display 2nd, 3rd and 4th place finishes for form section - updated table css to not allow wrapping.&#10;" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/events/20131005.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="65" column="91" selection-start="4028" selection-end="4028" vertical-scroll-proportion="0.1827957" vertical-offset="1003" max-vertical-offset="4658" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/events/20131109.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="65" column="87" selection-start="3866" selection-end="3866" vertical-scroll-proportion="0.0" vertical-offset="799" max-vertical-offset="6239" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/jquery-ui-1.9.2.custom.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="600" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/bootstrap.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="33898" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/poker_background.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/as_background.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mobile/test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="25" selection-start="423" selection-end="423" vertical-scroll-proportion="0.0" vertical-offset="187" max-vertical-offset="629" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/bootstrap.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="50" selection-start="270" selection-end="270" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="238" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mobile/test2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="0" selection-start="1339" selection-end="1339" vertical-scroll-proportion="0.0" vertical-offset="391" max-vertical-offset="4607" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/extras/winningHands.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="44" column="46" selection-start="2414" selection-end="2414" vertical-scroll-proportion="0.0" vertical-offset="748" max-vertical-offset="1904" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/events/20130511.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="76" column="0" selection-start="4042" selection-end="4042" vertical-scroll-proportion="0.32578397" vertical-offset="1105" max-vertical-offset="5678" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/common/menuDropdowns.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="36" column="15" selection-start="1519" selection-end="1519" vertical-scroll-proportion="0.0" vertical-offset="499" max-vertical-offset="1224" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/flags/AUS.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/accordion.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="0" selection-start="109" selection-end="109" vertical-scroll-proportion="0.0" vertical-offset="62" max-vertical-offset="1683" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/animations.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="697" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/flags/SRI.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/angular_old.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2873" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/json/general/next-event.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="451" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/json/general/extras.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="1" selection-start="184" selection-end="184" vertical-scroll-proportion="0.15077606" vertical-offset="0" max-vertical-offset="451" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/json/general/players.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="9" selection-start="598" selection-end="598" vertical-scroll-proportion="0.0" vertical-offset="17" max-vertical-offset="595" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/images/players/2014/brianM.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/statistics/statistics.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="86" column="29" selection-start="4473" selection-end="4473" vertical-scroll-proportion="0.4924812" vertical-offset="1331" max-vertical-offset="2533" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/controllers/extras.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1139" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/playerResults.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="31" selection-start="462" selection-end="462" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="986" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/countdown.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="42" selection-start="4710" selection-end="4710" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="374" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/events/20130406.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="63" column="21" selection-start="3760" selection-end="3760" vertical-scroll-proportion="-6.4615383" vertical-offset="903" max-vertical-offset="5423" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/controllers/statistics.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="170" column="58" selection-start="6723" selection-end="6725" vertical-scroll-proportion="-4.703704" vertical-offset="2763" max-vertical-offset="4726" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/controllers/events.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="77" column="61" selection-start="3532" selection-end="3532" vertical-scroll-proportion="0.0" vertical-offset="1067" max-vertical-offset="1989" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/events/20140614.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="140" column="62" selection-start="6665" selection-end="6665" vertical-scroll-proportion="-7.8461537" vertical-offset="2176" max-vertical-offset="4913" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/events/20140503.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="140" column="62" selection-start="6673" selection-end="6673" vertical-scroll-proportion="-17.0" vertical-offset="1938" max-vertical-offset="5423" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/events/20140301.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="140" column="62" selection-start="6632" selection-end="6632" vertical-scroll-proportion="0.22911051" vertical-offset="2295" max-vertical-offset="4692" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/events/20140104.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="140" column="62" selection-start="6629" selection-end="6629" vertical-scroll-proportion="0.045822103" vertical-offset="2363" max-vertical-offset="4403" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/events/20140726.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="248" column="87" selection-start="14173" selection-end="14242" vertical-scroll-proportion="0.22818792" vertical-offset="4080" max-vertical-offset="5219" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tahlia.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="21" selection-start="580" selection-end="580" vertical-scroll-proportion="0.3902027" vertical-offset="99" max-vertical-offset="946" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tahlia_pictures/tahlia.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="1" selection-start="79" selection-end="99" vertical-scroll-proportion="0.31132075" vertical-offset="0" max-vertical-offset="636" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/extras/blindLevels.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="35" selection-start="248" selection-end="248" vertical-scroll-proportion="0.28895184" vertical-offset="0" max-vertical-offset="4063" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/extras/points.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="218" column="30" selection-start="9803" selection-end="9803" vertical-scroll-proportion="0.7110482" vertical-offset="3455" max-vertical-offset="4250" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/players/player.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="142" column="28" selection-start="7354" selection-end="7354" vertical-scroll-proportion="-5.730769" vertical-offset="2265" max-vertical-offset="3230" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/charts/charts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="80" column="31" selection-start="2382" selection-end="2409" vertical-scroll-proportion="0.0" vertical-offset="1326" max-vertical-offset="4131" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/controllers/player.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="87" column="35" selection-start="3435" selection-end="3435" vertical-scroll-proportion="-5.703704" vertical-offset="1325" max-vertical-offset="2193" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/tableSorter.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="10" selection-start="542" selection-end="542" vertical-scroll-proportion="0.41129032" vertical-offset="0" max-vertical-offset="1496" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/season/2013Results.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="248" column="7" selection-start="14950" selection-end="14950" vertical-scroll-proportion="0.6936937" vertical-offset="3985" max-vertical-offset="4318" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="498" vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="340">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chart_testing/overlay.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="31" selection-start="1139" selection-end="1139" vertical-scroll-proportion="-6.1153846" vertical-offset="793" max-vertical-offset="1207">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/charts/hs_chart.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2601">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/hs_chart.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="1" selection-start="374" selection-end="374" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="408">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/chart_testing/chart.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="4" selection-start="369" selection-end="430" vertical-scroll-proportion="-7.423077" vertical-offset="11" max-vertical-offset="374">
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/controllers/homePage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="31" column="3" selection-start="1328" selection-end="1328" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="4488">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/bootstrap.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="176" column="17" selection-start="1926" selection-end="1926" vertical-scroll-proportion="0.0" vertical-offset="2873" max-vertical-offset="82637">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/poker.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="12" selection-start="28" selection-end="28" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1547">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/season/2014Results.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="111" column="53" selection-start="6230" selection-end="6230" vertical-scroll-proportion="0.35978836" vertical-offset="1683" max-vertical-offset="5236">
+          <folding>
+            <element signature="n#style#0;n#h4#0;n#div#0;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#h3#0;n#td#0;n#tr#0;n#table#0;n#div#0;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#1;n#tr#0;n#table#0;n#div#0;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#2;n#tr#0;n#table#0;n#div#0;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#1;n#tr#0;n#thead#0;n#table#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#1;n#tr#0;n#tbody#0;n#table#0;n#div#1;n#div#0;n#div#1;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#1;n#tr#0;n#table#0;n#div#2;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#1;n#tr#1;n#table#0;n#div#2;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#td#1;n#tr#1;n#table#0;n#div#2;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#th#1;n#tr#0;n#table#0;n#div#3;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#1;n#tr#1;n#table#0;n#div#3;n#div#1;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
+

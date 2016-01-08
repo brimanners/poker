@@ -1,0 +1,18 @@
+[{"level": "1st", "duration": "20", "small": "50", "big": "100", "ante": "0", "notes": " ", "estimatedTime": "7.50 pm"}
+ ,{"level": "2nd", "duration": "20", "small": "75", "big": "150", "ante": "0", "notes": " ", "estimatedTime": "8.10 pm"} 
+ ,{"level": "3rd", "duration": "20", "small": "100", "big": "200", "ante": "0", "notes": " ", "estimatedTime": "8.30 pm"}
+ ,{"level": "break", "duration": "10", "small": "0", "big": "0", "ante": "0", "notes": "Extra $15,000 worth of chips.", "estimatedTime": "8.40pm"}
+ ,{"level": "4th", "duration": "20", "small": "200", "big": "400", "ante": "0", "notes": " ", "estimatedTime": "9.10 pm"}
+ ,{"level": "5th", "duration": "20", "small": "300", "big": "600", "ante": "0", "notes": " ", "estimatedTime": "9.30 pm"}
+ ,{"level": "6th", "duration": "20", "small": "500", "big": "1000", "ante": "0", "notes": " ", "estimatedTime": "9.50 pm"}
+ ,{"level": "break", "duration": "10", "small": "0", "big": "0", "ante": "0", "notes": "Colouring up and removing $25 chips.", "estimatedTime": "10.00 pm"}
+ ,{"level": "7th", "duration": "30", "small": "600", "big": "1200", "ante": "100", "notes": " ", "estimatedTime": "10.30 pm"}
+ ,{"level": "8th", "duration": "30", "small": "1000", "big": "2000", "ante": "200", "notes": " ", "estimatedTime": "11.00 pm"} 
+ ,{"level": "break", "duration": "10", "small": "0", "big": "0", "ante": "0", "notes": "Colouring up and removing the $100 chips. Last chance for a re-buy of $20,000.", "estimatedTime": "11.10pm"}
+ ,{"level": "9th", "duration": "30", "small": "2000", "big": "4000", "ante": "500", "notes": " ", "estimatedTime": "11.40pm"}
+ ,{"level": "10th", "duration": "30", "small": "3000", "big": "6000", "ante": "500", "notes": " ", "estimatedTime": "12.10 am"}
+ ,{"level": "break", "duration": "5", "small": "0", "big": "0", "ante": "0", "notes": "", "estimatedTime": "12.15 am"}
+ ,{"level": "11th", "duration": "20", "small": "5000", "big": "10000", "ante": "1000", "notes": " ", "estimatedTime": "12.35 am"}
+ ,{"level": "12th", "duration": "20", "small": "10000", "big": "20000", "ante": "2000", "notes": " ", "estimatedTime": "12.55 am"}
+ ,{"level": "13th", "duration": "infinite", "small": "20000", "big": "40000", "ante": "4000", "notes": " ", "estimatedTime": "....."}
+ ]

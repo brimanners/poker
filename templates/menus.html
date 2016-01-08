@@ -11,20 +11,32 @@
                 <li class="dropdown" data-no-collapse="true">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Event History<b class="caret"></b></a>
                     <ul class="dropdown-menu" >
-                        <li ng-show="event.year == '2015'" ng-repeat="event in statistics.events | orderBy: ['-no']"><a href="{{event.url}}">{{event.eventDate}} @ {{event.location}}</a></li>
+                        <li ng-show="event.year == '2016'" ng-repeat="event in statistics.events | orderBy: ['-no']"><a href="{{event.url}}">{{event.eventDate}} @ {{event.location}}</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Players<b class="caret"></b></a>
                     <ul class="dropdown-menu">
-                        <li ng-show="player.year == '2015'" ng-repeat="player in statistics.playerMenuDropdown | orderBy: ['name']"><a href="{{player.url}}">{{player.name}}</a></li>
-                        <li                            data-ng-repeat="event in statistics.CCXIII_Events | orderBy: ['-no']">       <a href="{{event.url}}">{{event.eventDate}} @ {{event.location}}</a></li>
+                        <li ng-show="player.year == '2016'" ng-repeat="player in statistics.playerMenuDropdown | orderBy: ['name']"><a href="{{player.url}}">{{player.name}}</a></li>
+                        <!--<li data-ng-repeat="event in statistics.CCXIII_Events | orderBy: ['-no']">-->
+                            <!--<a href="{{event.url}}">{{event.eventDate}} @ {{event.location}}</a><-->
+                        <!--</li>-->
                     </ul>
                 </li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Extras <b class="caret"></b></a>
                     <ul class="dropdown-menu">
                         <li ng-repeat="extra in statistics.extras"><a href="{{extra.url}}">{{extra.name}}</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">2015 History<b class="caret"></b></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../season/2015Results.html">Season wrap up</a></li>
+                        <li class="menu_year">&nbsp;Events</li>
+                        <li ng-repeat="event in statistics.CCXV_Events | orderBy: ['-no']"><a href="{{event.url}}">{{event.eventDate}} @ {{event.location}}</a></li>
+                        <li class="menu_year">&nbsp;Players</li>
+                        <li ng-show="player.year == '2015'" ng-repeat="player in statistics.playerMenuDropdown | orderBy: ['name']"><a href="{{player.url}}">{{player.name}}</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
@@ -42,16 +54,7 @@
                     <ul class="dropdown-menu">
                         <li><a href="../season/2013Results.html">Season wrap up</a></li>
                         <li class="menu_year">&nbsp;Events</li>
-                        <li data-ng-repeat="event in statistics.CCXIII_Events | orderBy: ['-no']">
-                            <!--<a data-ng-href="{{event.url}}" target="_self" data-ng-id="{{event.eventDate}}" onclick="menuRedirect(this);return false;">{{event.eventDate}} @ {{event.location}}</a>-->
-                            <!--<a data-ng-href="{{event.url}}" data-ng-id="{{event.eventDate}}">{{event.eventDate}} @ {{event.location}}</a>-->
-                            <a href="{{event.url}}" id="{{event.eventDate}}">{{event.eventDate}} @ {{event.location}}</a>
-                            <li><a href="../events/event.html/?event=5" id="event1">hardcode 5</a></li>
-                            <li><a href="../events/event.html/?event=4" id="event1">hardcode 4</a></li>
-                            <li><a href="../events/event.html/?event=3" id="event1">hardcode 3</a></li>
-                            <li><a href="../events/event.html/?event=2" id="event1">hardcode 2</a></li>
-                            <li><a href="../events/event.html/?event=1" id="event1">hardcode 1</a></li>
-                        </li>
+                        <li ng-repeat="event in statistics.CCXIII_Events | orderBy: ['-no']"><a href="{{event.url}}">{{event.eventDate}} @ {{event.location}}</a></li>
                         <li class="menu_year">&nbsp;Players</li>
                         <li data-ng-show="player.year == '2013'" data-ng-repeat="player in statistics.playerMenuDropdown | orderBy: ['name']"><a href="{{player.url}}">{{player.name}}</a></li>
                     </ul>
