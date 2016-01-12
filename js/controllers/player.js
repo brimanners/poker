@@ -107,9 +107,6 @@ app.controller('playerController', function ($scope, $http) {
            $http.get('../json/' + resultYear + '/current-table.json').success(function (data) {
                  playerDetails.results = data[0]["event" + data[0]["eventId"]];
 
-                 // overall position - we would need to accumulate each season current table - accumulate points, played, won etc....and then create sort item
-                 // and get player details from it - lot of overhead for one item?
-
                  var sortedResults = playerDetails.results.sort(dynamicSortMultiple("-points", "played", "-won", "-averagePoints", "name"));
                  for (i = 0; i < playerDetails.results.length; i++) {
                    var playerName = changeNameToParameterType(playerDetails.results[i].name);
@@ -195,11 +192,15 @@ app.controller('playerController', function ($scope, $http) {
         playerDetails.image = imageUrl;
    });
 
-   $http.get('../json/' + playerYear + '/current-table.json').success(function (data) {
-        noOfTourneys = data.length;
-        playerEventPosition = calculatePlayerMovement(data, player, playerYear);
-        drawLadderPositionLineGraph(playerEventPosition.playerPosition);
-    });
+   var displayPositionGraph = function(playerYear) {
+       $http.get('../json/' + playerYear + '/current-table.json').success(function (data) {
+            noOfTourneys = data.length;
+            playerEventPosition = calculatePlayerMovement(data, player, playerYear);
+            drawLadderPositionLineGraph(playerEventPosition.playerPosition);
+        });
+   }
+
+    displayPositionGraph(playerYear);
 
     $scope.player = getURLParameter('name');
     $scope.playerDetails = playerDetails;
@@ -268,6 +269,7 @@ app.controller('playerController', function ($scope, $http) {
                 drawPieChart(sortPieChartEntries(positionOccurrences));
                 drawQuartilePieChart(quartiles);
                 drawPlayerStats(overallStats);
+                displayPositionGraph(playerStartYear);
 
             })
             .fail(function() {
@@ -301,7 +303,7 @@ app.controller('playerController', function ($scope, $http) {
         }
     }
 
-        $scope.displayAllGraphs($scope.year, $scope.year);
+    $scope.displayAllGraphs($scope.year, $scope.year);
 
 });
 

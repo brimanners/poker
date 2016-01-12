@@ -58,7 +58,14 @@ function loadTitles($scope, $http) {
                $scope.table = eventTable;
             });
        }
+
+
    });
+
+    $scope.gotPoints = function(result) {
+        return result.points > 0
+      };
+
    $scope.eventDetails = "eventDetails/event" + $scope.event + ".html";
 }
 
