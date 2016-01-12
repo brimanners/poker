@@ -18,7 +18,7 @@ function animateIn() {
   $("#wonDonutChart").addClass('animated rotateIn');
   $("#playedDonutChart").addClass('animated rotateIn');
   $("#topThreeDonutChart").addClass('animated rotateIn');
-  $("#bountiesDonutChart").addClass('animated rotateIn');
+//  $("#bountiesDonutChart").addClass('animated rotateIn');
   $("#lastDonutChart").addClass('animated rotateIn');
   $("#hostedDonutChart").addClass('animated rotateIn');
   $("#pointsDonutChart").addClass('animated rotateIn');
@@ -26,7 +26,7 @@ function animateIn() {
      $("#wonDonutChart").removeClass('animated rotateIn');
      $("#playedDonutChart").removeClass('animated rotateIn');
      $("#topThreeDonutChart").removeClass('animated rotateIn');
-     $("#bountiesDonutChart").removeClass('animated rotateIn');
+//     $("#bountiesDonutChart").removeClass('animated rotateIn');
      $("#lastDonutChart").removeClass('animated rotateIn');
      $("#hostedDonutChart").removeClass('animated rotateIn');
      $("#pointsDonutChart").removeClass('animated rotateIn');
@@ -37,7 +37,7 @@ function animateOut() {
    $("#wonDonutChart").addClass('animated rotateOut');
    $("#playedDonutChart").addClass('animated rotateOut');
    $("#topThreeDonutChart").addClass('animated rotateOut');
-   $("#bountiesDonutChart").addClass('animated rotateOut');
+//   $("#bountiesDonutChart").addClass('animated rotateOut');
    $("#lastDonutChart").addClass('animated rotateOut');
    $("#hostedDonutChart").addClass('animated rotateOut');
    $("#pointsDonutChart").addClass('animated rotateOut');
@@ -45,7 +45,7 @@ function animateOut() {
      $("#wonDonutChart").removeClass('animated rotateOut');
      $("#playedDonutChart").removeClass('animated rotateOut');
      $("#topThreeDonutChart").removeClass('animated rotateOut');
-     $("#bountiesDonutChart").removeClass('animated rotateOut');
+//     $("#bountiesDonutChart").removeClass('animated rotateOut');
      $("#lastDonutChart").removeClass('animated rotateOut');
      $("#hostedDonutChart").removeClass('animated rotateOut');
      $("#pointsDonutChart").removeClass('animated rotateOut');
@@ -67,7 +67,8 @@ $(document).ready(function(){
     var playerMap = new Object();
     $.ajax({
         url: '../json/general/players.json', dataType: 'json', async: false, success: function(data) {
-            var currentYear = new Date().getFullYear().toString();
+//            var currentYear = new Date().getFullYear().toString();
+            var currentYear = 2015 // Note - Change to above when 1st result of 2016 kicks in
             gatherDonutStats(playerMap, currentYear, data);
             outputDonutData(playerMap, currentYear);
             animateIn();
@@ -105,7 +106,7 @@ $(document).ready(function(){
                             accumulateStatistics(playerMap, 'Played', playerJsonStats.played, playerName, season);
                             accumulateStatistics(playerMap, 'Won', playerJsonStats.won, playerName, season);
                             accumulateStatistics(playerMap, 'Top3', playerJsonStats.top3, playerName, season);
-                            accumulateStatistics(playerMap, 'Bounty', playerJsonStats.bounties, playerName, season);
+//                            accumulateStatistics(playerMap, 'Bounty', playerJsonStats.bounties, playerName, season);
                             accumulateStatistics(playerMap, 'Last', playerJsonStats.last, playerName, season);
                             accumulateStatistics(playerMap, 'Hosted', playerJsonStats.hosted, playerName, season);
                          }
@@ -131,7 +132,7 @@ $(document).ready(function(){
           var playedDonutData = [];
           var wonDonutData = [];
           var topThreeDonutData = [];
-          var bountiesDonutData = [];
+//          var bountiesDonutData = [];
           var lastDonutData = [];
           var hostedDonutData = [];
           var pointsDonutData = [];
@@ -139,7 +140,7 @@ $(document).ready(function(){
           wonDonutData.push(['Player', 'Won']);
           playedDonutData.push(['Player', 'Played']);
           topThreeDonutData.push(['Player', 'Top 3']);
-          bountiesDonutData.push(['Player', 'Bounties']);
+//          bountiesDonutData.push(['Player', 'Bounties']);
           lastDonutData.push(['Player', 'Last']);
           hostedDonutData.push(['Player', 'Hosted']);
           pointsDonutData.push(['Player', 'Points']);
@@ -159,9 +160,9 @@ $(document).ready(function(){
                   if (player.substring(4,8) == "Top3") {
                      topThreeDonutData.push([player.substring(9, player.length), playerMap[player]]);
                   }
-                  if (player.substring(4,10) == "Bounty") {
-                     bountiesDonutData.push([player.substring(11, player.length), playerMap[player]]);
-                  }
+//                  if (player.substring(4,10) == "Bounty") {
+//                     bountiesDonutData.push([player.substring(11, player.length), playerMap[player]]);
+//                  }
                   if (player.substring(4,10) == "Hosted") {
                      hostedDonutData.push([player.substring(11, player.length), playerMap[player]]);
                   }
@@ -175,7 +176,7 @@ $(document).ready(function(){
           drawDonutChart(playedDonutData, "Played", "playedDonutChart");
           drawDonutChart(pointsDonutData, "Total Points", "pointsDonutChart");
           drawDonutChart(topThreeDonutData, "Top 3", "topThreeDonutChart");
-          drawDonutChart(bountiesDonutData, "Bounties", "bountiesDonutChart");
+//          drawDonutChart(bountiesDonutData, "Bounties", "bountiesDonutChart");
           drawDonutChart(hostedDonutData, "Hosted", "hostedDonutChart");
           drawDonutChart(lastDonutData, "Lucky last", "lastDonutChart");
      }

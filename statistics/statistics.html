@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="poker" id="ng-app">
 <!-- the ng-app name 'event1' is referenced the corresponding controller logic -->
-<head> `
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
@@ -17,12 +17,12 @@
     <link href="src/css/jumbotron.css" rel="stylesheet">
     <script type="text/javascript" src="../js/jquery-1.10.2.min.js"></script>
     <!--<script type="text/javascript" src="../js/jquery.blockUI.js"></script>-->
-    <script src="http://malsup.github.io/jquery.blockUI.js"></script>
+    <script src="https://malsup.github.io/jquery.blockUI.js"></script>
     <!-- temp local hosting until prod release -->
     <script type="text/javascript" src="../js/angular.min.js"></script>
     <!-- temp local hosting until prod release -->
     <script type="text/javascript" src="../js/bootstrap.js"></script>
-    <script type="text/javascript" src="http://twitter.github.com/bootstrap/assets/js/bootstrap-dropdown.js"></script>
+    <script type="text/javascript" src="https://twitter.github.com/bootstrap/assets/js/bootstrap-dropdown.js"></script>
     <script type="text/javascript" src="https://www.google.com/jsapi"></script>
     <script type="text/javascript" src="../js/charts/charts.js"></script>
 
@@ -64,18 +64,19 @@
             </table>
             <table>
                  <tr>
-                    <td><div id="bountiesDonutChart" class="donut"></div></td>
+                    <!--<td><div id="bountiesDonutChart" class="donut"></div></td>-->
+                    <td><div id="lastDonutChart" class="donut"></div></td>
                     <td><div id="hostedDonutChart" class="donut"></div></td>
                 </tr>
             </table>
         </fieldset>
         </form>
-        <form>
-            <fieldset>
-                <legend>Hall of shame:</legend>
-                <div id="lastDonutChart" class="donut"></div>
-            </fieldset>
-        </form>
+        <!--<form>-->
+            <!--<fieldset>-->
+                <!--<legend>Hall of shame:</legend>-->
+                <!--<div id="lastDonutChart" class="donut"></div>-->
+            <!--</fieldset>-->
+        <!--</form>-->
     </div>
         <div data-ng-include="'../templates/footer.html'"></div>
     </div>
