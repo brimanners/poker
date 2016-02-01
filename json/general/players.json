@@ -1,6 +1,13 @@
 [
-	{"year": 2016, "players": []},
-    	{"year": 2015, "players": [
+	{"year": 2016, "players": [
+		{"name": "Ben I", "Nationality": "AUS"},
+		{"name": "Steve W", "Nationality": "AUS"},
+		{"name": "Dave M", "Nationality": "AUS"},
+		{"name": "Simon W", "Nationality": "AUS"},
+		{"name": "Brian M", "Nationality": "ENG"},
+		{"name": "Jade W", "Nationality": "ENG"}
+	]},
+	{"year": 2015, "players": [
 			{"name": "Andy F", "Nationality": "NZE"},
 			{"name": "Ben I", "Nationality": "AUS"},
 			{"name": "Carlos P", "Nationality": "VEN"},

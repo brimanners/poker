@@ -1,1 +1,16 @@
-{}
+[{"season": 2016, "eventId": 21, "event21": [{"name":"Steve W","nationality":"AUS","played":1,"won":0,"second":0,"third":1,"fourth":0,"averagePosition":3.0,"last":0,"positions":"(3/6)","cash":"10","cashes":"1","totalPositions":"3","points":5},
+{"name":"Brian M","nationality":"ENG","played":1,"won":1,"second":0,"third":0,"fourth":0,"averagePosition":1.0,"last":0,"positions":"(1/6)","cash":"30","cashes":"1","totalPositions":"1","points":9},
+{"name":"Ben I","nationality":"AUS","played":1,"won":0,"second":1,"third":0,"fourth":0,"averagePosition":2.0,"last":0,"positions":"(2/6)","cash":"15","cashes":"1","totalPositions":"2","points":7},
+{"name":"Dave M","nationality":"AUS","played":1,"won":0,"second":0,"third":0,"fourth":0,"averagePosition":5.0,"last":0,"positions":"(5/6)","cash":"0","cashes":"0","totalPositions":"5","points":2},
+{"name":"Mark V","nationality":"SRI","played":1,"won":0,"second":0,"third":0,"fourth":0,"averagePosition":6.0,"last":1,"positions":"(6/6)","cash":"0","cashes":"0","totalPositions":"6","points":1},
+{"name":"Paul B","nationality":"AUS","played":1,"won":0,"second":0,"third":0,"fourth":1,"averagePosition":4.0,"last":0,"positions":"(4/6)","cash":"0","cashes":"0","totalPositions":"4","points":3},
+{"name":"Jade W","nationality":"ENG","played":0,"won":0,"second":0,"third":0,"fourth":0,"averagePosition":0,"last":0,"positions":"(-/-)","cash":"0","cashes":"0","totalPositions":"0","points":0},
+{"name":"Mark L","nationality":"AUS","played":0,"won":0,"second":0,"third":0,"fourth":0,"averagePosition":0,"last":0,"positions":"(-/-)","cash":"0","cashes":"0","totalPositions":"0","points":0},
+{"name":"Simon M","nationality":"ENG","played":0,"won":0,"second":0,"third":0,"fourth":0,"averagePosition":0,"last":0,"positions":"(-/-)","cash":"0","cashes":"0","totalPositions":"0","points":0},
+{"name":"Michael R","nationality":"NZE","played":0,"won":0,"second":0,"third":0,"fourth":0,"averagePosition":0,"last":0,"positions":"(-/-)","cash":"0","cashes":"0","totalPositions":"0","points":0},
+{"name":"Andy F","nationality":"NZE","played":0,"won":0,"second":0,"third":0,"fourth":0,"averagePosition":0,"last":0,"positions":"(-/-)","cash":"0","cashes":"0","totalPositions":"0","points":0},
+{"name":"Junior A","nationality":"BRA","played":0,"won":0,"second":0,"third":0,"fourth":0,"averagePosition":0,"last":0,"positions":"(-/-)","cash":"0","cashes":"0","totalPositions":"0","points":0},
+{"name":"Simon W","nationality":"AUS","played":0,"won":0,"second":0,"third":0,"fourth":0,"averagePosition":0,"last":0,"positions":"(-/-)","cash":"0","cashes":"0","totalPositions":"0","points":0},
+{"name":"Carlos P","nationality":"VEN","played":0,"won":0,"second":0,"third":0,"fourth":0,"averagePosition":0,"last":0,"positions":"(-/-)","cash":"0","cashes":"0","totalPositions":"0","points":0},
+{"name":"Craig X","nationality":"AUS","played":0,"won":0,"second":0,"third":0,"fourth":0,"averagePosition":0,"last":0,"positions":"(-/-)","cash":"0","cashes":"0","totalPositions":"0","points":0}
+]}]
