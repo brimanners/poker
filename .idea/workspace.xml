@@ -2,139 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="78645fb4-f233-4ca8-a6e8-efa3ae7d0a53" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/events/eventDetails/event18.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/events/eventDetails/event19.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/events/eventDetails/event20.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/js/moment.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/json/2016/form-table.json" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/season/2016Results.html" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/events/201512238.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/json/2014/05_10_2013_1_results.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/json/2014/06_04_2013_1_results.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/json/2014/06_04_2013_2_results.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/json/2014/06_07_2013_1_results.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/json/2014/06_07_2013_2_results.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/json/2014/09_11_2013_1_results.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/json/2014/09_11_2013_2_results.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/json/2014/11_05_2013_1_results.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/json/2014/11_05_2013_2_results.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/json/extras.json" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/events/20150207.html" afterPath="$PROJECT_DIR$/events/eventDetails/event13.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/events/20150321.html" afterPath="$PROJECT_DIR$/events/eventDetails/event14.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/events/20150502.html" afterPath="$PROJECT_DIR$/events/eventDetails/event15.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/events/20150613.html" afterPath="$PROJECT_DIR$/events/eventDetails/event16.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/events/20150718.html" afterPath="$PROJECT_DIR$/events/eventDetails/event17.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" afterPath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/accordion.css" afterPath="$PROJECT_DIR$/css/accordion.css" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/json/2016/current-table.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/json/2016/form-table.json" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/events/eventDetails/event21.html" afterPath="$PROJECT_DIR$/events/eventDetails/event21.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/extras/blindLevels.html" afterPath="$PROJECT_DIR$/extras/blindLevels.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/extras/points.html" afterPath="$PROJECT_DIR$/extras/points.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/extras/winningHands.html" afterPath="$PROJECT_DIR$/extras/winningHands.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/animateRows.js" afterPath="$PROJECT_DIR$/js/animateRows.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/animations.js" afterPath="$PROJECT_DIR$/js/animations.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/charts/charts.js" afterPath="$PROJECT_DIR$/js/charts/charts.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/charts/hs_chart.js" afterPath="$PROJECT_DIR$/js/charts/hs_chart.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/charts/jquery.popupoverlay.js" afterPath="$PROJECT_DIR$/js/charts/jquery.popupoverlay.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/common/menuDropdowns.js" afterPath="$PROJECT_DIR$/js/common/menuDropdowns.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/controllers/events.js" afterPath="$PROJECT_DIR$/js/controllers/events.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/controllers/eventsController.js" afterPath="$PROJECT_DIR$/js/controllers/eventsController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/controllers/extras.js" afterPath="$PROJECT_DIR$/js/controllers/extras.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/controllers/homePage.js" afterPath="$PROJECT_DIR$/js/controllers/homePage.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/controllers/menusController.js" afterPath="$PROJECT_DIR$/js/controllers/menusController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/controllers/player.js" afterPath="$PROJECT_DIR$/js/controllers/player.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/controllers/statistics.js" afterPath="$PROJECT_DIR$/js/controllers/statistics.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/controllers/urls.js" afterPath="$PROJECT_DIR$/js/controllers/urls.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/directives/menus.js" afterPath="$PROJECT_DIR$/js/directives/menus.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/jquery.blockUI.js" afterPath="$PROJECT_DIR$/js/jquery.blockUI.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/overlay.js" afterPath="$PROJECT_DIR$/js/overlay.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/tableSorter.js" afterPath="$PROJECT_DIR$/js/tableSorter.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/mobile/test.html" afterPath="$PROJECT_DIR$/mobile/test.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/players/player.html" afterPath="$PROJECT_DIR$/players/player.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/season/2013Results.html" afterPath="$PROJECT_DIR$/season/2013Results.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/season/2014Results.html" afterPath="$PROJECT_DIR$/season/2014Results.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/season/2015Results.html" afterPath="$PROJECT_DIR$/season/2015Results.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/statistics/statistics.html" afterPath="$PROJECT_DIR$/statistics/statistics.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/footer.html" afterPath="$PROJECT_DIR$/templates/footer.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/googleAnalytics.html" afterPath="$PROJECT_DIR$/templates/googleAnalytics.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/js-imports.html" afterPath="$PROJECT_DIR$/templates/js-imports.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/templates/menus.html" afterPath="$PROJECT_DIR$/templates/menus.html" />
-    </list>
-    <list id="a4b1f768-ae3d-459d-af5d-82622f7ed729" name="Ignore" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/json/2016/current-table.json" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/json/2014/players.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/json/players.json" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/events/20140104.html" afterPath="$PROJECT_DIR$/events/eventDetails/event6.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/events/20140301.html" afterPath="$PROJECT_DIR$/events/eventDetails/event7.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/events/20140503.html" afterPath="$PROJECT_DIR$/events/eventDetails/event8.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/events/20140614.html" afterPath="$PROJECT_DIR$/events/eventDetails/event9.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/events/20140726.html" afterPath="$PROJECT_DIR$/events/eventDetails/event10.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/events/20140913.html" afterPath="$PROJECT_DIR$/events/eventDetails/event11.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/events/20141213.html" afterPath="$PROJECT_DIR$/events/eventDetails/event12.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/events/eventDetails/event1.html" afterPath="$PROJECT_DIR$/events/eventDetails/event1.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/events/eventDetails/event2.html" afterPath="$PROJECT_DIR$/events/eventDetails/event2.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/events/eventDetails/event3.html" afterPath="$PROJECT_DIR$/events/eventDetails/event3.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/events/eventDetails/event4.html" afterPath="$PROJECT_DIR$/events/eventDetails/event4.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/events/eventDetails/event5.html" afterPath="$PROJECT_DIR$/events/eventDetails/event5.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json/2013/current-table.json" afterPath="$PROJECT_DIR$/json/2013/current-table.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json/2014/benI.json" afterPath="$PROJECT_DIR$/json/2014/benI.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json/2014/benI_event_history.json" afterPath="$PROJECT_DIR$/json/2014/benI_event_history.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json/2014/brianM.json" afterPath="$PROJECT_DIR$/json/2014/brianM.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json/2014/brianM_event_history.json" afterPath="$PROJECT_DIR$/json/2014/brianM_event_history.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json/2014/current-table.json" afterPath="$PROJECT_DIR$/json/2014/current-table.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json/2014/daveM.json" afterPath="$PROJECT_DIR$/json/2014/daveM.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json/2014/daveM_event_history.json" afterPath="$PROJECT_DIR$/json/2014/daveM_event_history.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json/2014/event-history.json" afterPath="$PROJECT_DIR$/json/2014/event-history.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json/2014/event_results.json" afterPath="$PROJECT_DIR$/json/2014/event_results.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json/2014/form-table.json" afterPath="$PROJECT_DIR$/json/2014/form-table.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json/2014/jadeW.json" afterPath="$PROJECT_DIR$/json/2014/jadeW.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json/2014/jadeW_event_history.json" afterPath="$PROJECT_DIR$/json/2014/jadeW_event_history.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json/2014/markL.json" afterPath="$PROJECT_DIR$/json/2014/markL.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json/2014/markL_event_history.json" afterPath="$PROJECT_DIR$/json/2014/markL_event_history.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json/2014/markV.json" afterPath="$PROJECT_DIR$/json/2014/markV.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json/2014/markV_event_history.json" afterPath="$PROJECT_DIR$/json/2014/markV_event_history.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json/2014/michaelR.json" afterPath="$PROJECT_DIR$/json/2014/michaelR.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json/2014/michaelR_event_history.json" afterPath="$PROJECT_DIR$/json/2014/michaelR_event_history.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json/2014/paulB.json" afterPath="$PROJECT_DIR$/json/2014/paulB.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json/2014/paulB_event_history.json" afterPath="$PROJECT_DIR$/json/2014/paulB_event_history.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json/2014/simonM.json" afterPath="$PROJECT_DIR$/json/2014/simonM.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json/2014/simonM_event_history.json" afterPath="$PROJECT_DIR$/json/2014/simonM_event_history.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json/2014/steveW.json" afterPath="$PROJECT_DIR$/json/2014/steveW.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json/2014/steveW_event_history.json" afterPath="$PROJECT_DIR$/json/2014/steveW_event_history.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json/general/news-item.json" afterPath="$PROJECT_DIR$/json/general/news-item.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json/general/championship-medals.json" afterPath="$PROJECT_DIR$/json/general/championship-medals.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json/general/events.json" afterPath="$PROJECT_DIR$/json/general/events.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json/general/next-event.json" afterPath="$PROJECT_DIR$/json/general/next-event.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json/general/players.json" afterPath="$PROJECT_DIR$/json/general/players.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/twitter_bootstrap.iml" afterPath="$PROJECT_DIR$/twitter_bootstrap.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/season/2016Results.html" afterPath="$PROJECT_DIR$/season/2016Results.html" />
     </list>
+    <list id="a4b1f768-ae3d-459d-af5d-82622f7ed729" name="Ignore" comment="" />
     <list id="41b7b0e4-51e8-451f-8fe4-79a446baa414" name="Do not checkin" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json/2013/benI_event_history.json" afterPath="$PROJECT_DIR$/json/2013/benI_event_history.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json/2013/brianM_event_history.json" afterPath="$PROJECT_DIR$/json/2013/brianM_event_history.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json/2013/daveM_event_history.json" afterPath="$PROJECT_DIR$/json/2013/daveM_event_history.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json/2013/event_results.json" afterPath="$PROJECT_DIR$/json/2013/event_results.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json/2013/jadeW_event_history.json" afterPath="$PROJECT_DIR$/json/2013/jadeW_event_history.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json/2013/markL_event_history.json" afterPath="$PROJECT_DIR$/json/2013/markL_event_history.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json/2013/markV_event_history.json" afterPath="$PROJECT_DIR$/json/2013/markV_event_history.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json/2013/michaelR_event_history.json" afterPath="$PROJECT_DIR$/json/2013/michaelR_event_history.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json/2013/paulB_event_history.json" afterPath="$PROJECT_DIR$/json/2013/paulB_event_history.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/json/2013/simonM_event_history.json" afterPath="$PROJECT_DIR$/json/2013/simonM_event_history.json" />
     </list>
     <ignored path="Poker_TwitterBootstrap.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <file path="$PROJECT_DIR$/.idea/workspace.xml" ignored="false" />
-    <file path="$PROJECT_DIR$/json/general/players.json" ignored="true" />
-    <file path="$PROJECT_DIR$/json/2014/current-table.json" ignored="false" />
-    <file path="$PROJECT_DIR$/json/2013/current-table.json" ignored="false" />
-    <file path="$PROJECT_DIR$/json/2014/form-table.json" ignored="false" />
-    <file path="$PROJECT_DIR$/json/general/next-event.json" ignored="false" />
-    <file path="$PROJECT_DIR$/json/general/news-item.json" ignored="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -191,59 +77,48 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="2016Results.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="2016Results.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/season/2016Results.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-20.375">
-              <caret line="278" column="66" selection-start-line="278" selection-start-column="55" selection-end-line="278" selection-end-column="66" />
+            <state vertical-scroll-proportion="-0.95414203">
+              <caret line="15" column="54" selection-start-line="15" selection-start-column="54" selection-end-line="15" selection-end-column="54" />
               <folding>
+                <element signature="n#style#0;n#th#1;n#tr#0;n#thead#0;n#table#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#td#1;n#tbody#0;n#table#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#td#15;n#tbody#0;n#table#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#td#16;n#tbody#0;n#table#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#td#17;n#tbody#0;n#table#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#td#12;n#tbody#0;n#table#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="player.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/js/controllers/player.js">
+      <file leaf-file-name="events.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/json/general/events.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7309237">
-              <caret line="125" column="23" selection-start-line="125" selection-start-column="23" selection-end-line="125" selection-end-column="23" />
+            <state vertical-scroll-proportion="-11.875">
+              <caret line="19" column="21" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="player.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/players/player.html">
+      <file leaf-file-name="blindLevels.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/extras/blindLevels.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.9166665">
-              <caret line="120" column="108" selection-start-line="120" selection-start-column="86" selection-end-line="120" selection-end-column="108" />
-              <folding>
-                <element signature="n#style#0;n#td#1;n#tr#3;n#table#0;n#div#2;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#td#2;n#tr#0;n#table#0;n#div#0;n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="charts.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/charts/charts.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="41" column="40" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="40" />
+            <state vertical-scroll-proportion="-11.25">
+              <caret line="47" column="24" selection-start-line="47" selection-start-column="24" selection-end-line="47" selection-end-column="24" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="homePage.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/controllers/homePage.js">
+      <file leaf-file-name="2015Results.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/season/2015Results.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="12" column="41" selection-start-line="12" selection-start-column="41" selection-end-line="12" selection-end-column="41" />
+            <state vertical-scroll-proportion="-0.625">
+              <caret line="62" column="68" selection-start-line="62" selection-start-column="28" selection-end-line="62" selection-end-column="68" />
               <folding />
             </state>
           </provider>
@@ -272,14 +147,12 @@
         <option value="$PROJECT_DIR$/events/20151010.html" />
         <option value="$PROJECT_DIR$/events/20151128.html" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/json/2016/current-table.json" />
         <option value="$PROJECT_DIR$/templates/menus.html" />
         <option value="$PROJECT_DIR$/events/20130406.html" />
         <option value="$PROJECT_DIR$/events/eventDetails/event6.html" />
         <option value="$PROJECT_DIR$/events/eventDetails/event7.html" />
         <option value="$PROJECT_DIR$/events/eventDetails/event8.html" />
         <option value="$PROJECT_DIR$/events/eventDetails/event9.html" />
-        <option value="$PROJECT_DIR$/js/controllers/eventsController.js" />
         <option value="$PROJECT_DIR$/events/eventDetails/event10.html" />
         <option value="$PROJECT_DIR$/events/eventDetails/event11.html" />
         <option value="$PROJECT_DIR$/events/eventDetails/event12.html" />
@@ -291,19 +164,28 @@
         <option value="$PROJECT_DIR$/events/eventDetails/event17.html" />
         <option value="$PROJECT_DIR$/events/eventDetails/event18.html" />
         <option value="$PROJECT_DIR$/events/eventDetails/event19.html" />
-        <option value="$PROJECT_DIR$/json/general/events.json" />
         <option value="$PROJECT_DIR$/events/eventDetails/event20.html" />
-        <option value="$PROJECT_DIR$/js/controllers/menusController.js" />
         <option value="$PROJECT_DIR$/json/general/next-event.json" />
         <option value="$PROJECT_DIR$/json/general/news-item.json" />
-        <option value="$PROJECT_DIR$/json/general/players.json" />
         <option value="$PROJECT_DIR$/js/moment.js" />
         <option value="$PROJECT_DIR$/js/charts/charts.js" />
-        <option value="$PROJECT_DIR$/js/controllers/homePage.js" />
-        <option value="$PROJECT_DIR$/season/2016Results.html" />
         <option value="$PROJECT_DIR$/season/2015Results.html" />
         <option value="$PROJECT_DIR$/players/player.html" />
+        <option value="$PROJECT_DIR$/js/controllers/eventsController.js" />
         <option value="$PROJECT_DIR$/js/controllers/player.js" />
+        <option value="$PROJECT_DIR$/js/controllers/statistics.js" />
+        <option value="$PROJECT_DIR$/statistics/statistics.html" />
+        <option value="$PROJECT_DIR$/../poker-clojure/poker-clojure.iml" />
+        <option value="$PROJECT_DIR$/js/controllers/homePage.js" />
+        <option value="$PROJECT_DIR$/js/controllers/menusController.js" />
+        <option value="$PROJECT_DIR$/json/2016/current-table.json" />
+        <option value="$PROJECT_DIR$/json/general/championship-medals.json" />
+        <option value="$PROJECT_DIR$/json/2016/event-history.json" />
+        <option value="$PROJECT_DIR$/json/general/events.json" />
+        <option value="$PROJECT_DIR$/season/2016Results.html" />
+        <option value="$PROJECT_DIR$/json/general/players.json" />
+        <option value="$PROJECT_DIR$/events/eventDetails/event21.html" />
+        <option value="$PROJECT_DIR$/extras/blindLevels.html" />
       </list>
     </option>
   </component>
@@ -340,8 +222,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -370,20 +250,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="twitter_poker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="twitter_bootstrap" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="season" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -398,7 +264,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="players" />
+              <option name="myItemId" value="json" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="general" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -412,7 +282,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
+              <option name="myItemId" value="json" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -426,70 +296,35 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="twitter_poker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="twitter_bootstrap" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="charts" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="twitter_poker" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="twitter_bootstrap" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="chart_testing" />
+              <option name="myItemId" value="extras" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="110" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="117" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="132" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="139" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="LayoutCode.rearrangeEntriesPlain text" value="false" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="204" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="226" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="119" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="977" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="723" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="202" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="141" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="998" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="744" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="224" />
     <property name="GoToClass.includeJavaFiles" value="false" />
-    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="194" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="216" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
     <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
-    <property name="FullScreen" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
@@ -504,7 +339,10 @@
     <property name="SearchEverywhereHistory" value="&#10;:y" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="options.searchVisible" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../map" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -515,11 +353,11 @@
       <recent name="C:\Users\user\Dropbox\clojure\twitter_bootstrap\js" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/events/eventDetails" />
-      <recent name="$PROJECT_DIR$/events" />
+      <recent name="$PROJECT_DIR$/json/general" />
+      <recent name="$PROJECT_DIR$/json" />
       <recent name="$PROJECT_DIR$/json/2016" />
-      <recent name="$PROJECT_DIR$/season" />
-      <recent name="C:\Users\user\Dropbox\clojure\twitter_bootstrap\events" />
+      <recent name="$PROJECT_DIR$/events/eventDetails" />
+      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunManager">
@@ -556,6 +394,15 @@
       <option name="PARAMETERS" value="" />
       <module name="" />
       <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="ClojureREPL" factoryName="Local">
+      <setting name="replType" value="1" />
+      <module name="" />
+      <setting name="jvmArgs" value="" />
+      <setting name="parameters" value="" />
+      <setting name="workingDir" value="" />
+      <setting name="profiles" value="" />
       <method />
     </configuration>
     <configuration default="true" type="JarApplication" factoryName="JAR Application">
@@ -1060,12 +907,13 @@
     <editor active="true" />
     <layout>
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21916842" sideWeight="0.32201535" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22152779" sideWeight="0.32201535" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329429" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17522658" sideWeight="0.5003785" order="11" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2560113" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31966054" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="REPL" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935917" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31043956" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Leiningen" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2489019" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32481202" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
@@ -1075,8 +923,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="REPL" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935917" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
-      <window_info id="Leiningen" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962743" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1086,6 +932,7 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3296355" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2560113" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1129,8 +976,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Various - js calculation of finish time, latest commentary etc." />
-    <MESSAGE value="New table sorting on each columns - season and overall table updated. Form table WIP" />
     <MESSAGE value="Table sorting on each column for form table&#10;" />
     <MESSAGE value="Remove movement as soon as anything is typed into the filter (as not relevant)" />
     <MESSAGE value="Display latest event details&#10;" />
@@ -1154,7 +999,9 @@
     <MESSAGE value="styling for text" />
     <MESSAGE value="Updated events" />
     <MESSAGE value="Moving to full single page application (although issues with menus) - grrrr" />
-    <option name="LAST_COMMIT_MESSAGE" value="Moving to full single page application (although issues with menus) - grrrr" />
+    <MESSAGE value="Fixed up statistics page - need to change to current year after first result - or put a fix in to check latest year event?&#10;&#10;Also - temp removal of bounties chart until decision on re-introduction or not" />
+    <MESSAGE value="Adding event 21 plus all files as private project" />
+    <option name="LAST_COMMIT_MESSAGE" value="Adding event 21 plus all files as private project" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -1165,55 +1012,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/json/2015/form-table.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/json/2016/form-table.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.34351146">
-          <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/json/2015/current-table.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/json/2016/current-table.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="1" selection-start-line="0" selection-start-column="1" selection-end-line="0" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.32061067">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/json/2013/event_results.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/json/2013/event-history.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/menus.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.125">
@@ -1305,24 +1103,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/json/general/extras.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/events/eventDetails/event13.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-68.75">
           <caret line="110" column="8" selection-start-line="110" selection-start-column="8" selection-end-line="110" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/controllers/events.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="40" column="34" selection-start-line="40" selection-start-column="34" selection-end-line="40" selection-end-column="34" />
         </state>
       </provider>
     </entry>
@@ -1368,13 +1152,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/events/eventDetails/event20.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.07025761">
-          <caret line="2" column="60" selection-start-line="2" selection-start-column="60" selection-end-line="2" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/directives/menus.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1382,48 +1159,141 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/controllers/eventsController.js">
+    <entry file="file://$PROJECT_DIR$/season/2014Results.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.9290466">
-          <caret line="13" column="49" selection-start-line="13" selection-start-column="49" selection-end-line="13" selection-end-column="49" />
+        <state vertical-scroll-proportion="5.4195805">
+          <caret line="155" column="45" selection-start-line="155" selection-start-column="45" selection-end-line="155" selection-end-column="45" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/events/event.html">
+    <entry file="file://$PROJECT_DIR$/chart_testing/chart.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.51288056">
-          <caret line="144" column="37" selection-start-line="144" selection-start-column="25" selection-end-line="144" selection-end-column="37" />
+        <state vertical-scroll-proportion="-17.5">
+          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/moment.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="49.28313">
+          <caret line="3519" column="4" selection-start-line="3519" selection-start-column="4" selection-end-line="3519" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/players/player.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.5833335">
+          <caret line="131" column="104" selection-start-line="131" selection-start-column="86" selection-end-line="131" selection-end-column="104" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/charts/charts.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.3703704">
+          <caret line="80" column="36" selection-start-line="80" selection-start-column="9" selection-end-line="80" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/controllers/events.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.72289157">
+          <caret line="94" column="6" selection-start-line="92" selection-start-column="2" selection-end-line="94" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/controllers/eventsController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.0">
+          <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/controllers/player.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6379691">
+          <caret line="271" column="18" selection-start-line="271" selection-start-column="18" selection-end-line="271" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/controllers/statistics.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.555555">
+          <caret line="70" column="93" selection-start-line="70" selection-start-column="93" selection-end-line="70" selection-end-column="93" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/statistics/statistics.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5620609">
+          <caret line="16" column="56" selection-start-line="16" selection-start-column="56" selection-end-line="16" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/json/2013/benI.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch_6">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/controllers/menusController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7284768">
-          <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="36" column="28" selection-start-line="36" selection-start-column="28" selection-end-line="36" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/json/general/championship-medals.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/json/general/news-item.json">
+    <entry file="file://$PROJECT_DIR$/json/2016/benI.json">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="87" selection-start-line="0" selection-start-column="87" selection-end-line="0" selection-end-column="87" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/json/general/events.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.75">
-          <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/json/general/all-seasons-table.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/json/2016/event_results.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/json/2015/event-history.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/json/2016/event-history.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="77" selection-start-line="0" selection-start-column="77" selection-end-line="0" selection-end-column="77" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/controllers/homePage.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.7442857">
+          <caret line="130" column="20" selection-start-line="130" selection-start-column="20" selection-end-line="130" selection-end-column="20" />
           <folding />
         </state>
       </provider>
@@ -1436,26 +1306,64 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/json/general/blind-levels_old_with_end_times.json">
+    <entry file="file://$PROJECT_DIR$/js/controllers/extras.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.47142857">
+          <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/json/general/championship-medals.json">
+    <entry file="file://$PROJECT_DIR$/events/event.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-18.791666">
+          <caret line="143" column="9" selection-start-line="143" selection-start-column="9" selection-end-line="143" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/json/general/players.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.5294118">
+          <caret line="12" column="53" selection-start-line="12" selection-start-column="53" selection-end-line="12" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/events/eventDetails/event20.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.875">
+          <caret line="3" column="11" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/events/eventDetails/event21.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="2.4630177">
+          <caret line="111" column="14" selection-start-line="111" selection-start-column="14" selection-end-line="111" selection-end-column="14" />
+          <folding>
+            <element signature="n#style#0;n#h3#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#td#0;n#tr#0;n#table#0;n#div#3;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#0;n#tr#1;n#table#0;n#div#3;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#span#0;n#td#0;n#tr#1;n#table#0;n#div#3;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/extras/blindLevels.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-11.25">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+          <caret line="47" column="24" selection-start-line="47" selection-start-column="24" selection-end-line="47" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/season/2014Results.html">
+    <entry file="file://$PROJECT_DIR$/season/2015Results.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="5.4195805">
-          <caret line="155" column="45" selection-start-line="155" selection-start-column="45" selection-end-line="155" selection-end-column="45" />
+        <state vertical-scroll-proportion="-0.625">
+          <caret line="62" column="68" selection-start-line="62" selection-start-column="28" selection-end-line="62" selection-end-column="68" />
           <folding />
         </state>
       </provider>
@@ -1463,92 +1371,108 @@
     <entry file="file://$PROJECT_DIR$/json/general/next-event.json">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="40" selection-start-line="0" selection-start-column="40" selection-end-line="0" selection-end-column="40" />
+          <caret line="0" column="52" selection-start-line="0" selection-start-column="52" selection-end-line="0" selection-end-column="52" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/json/general/players.json">
+    <entry file="file://$PROJECT_DIR$/json/general/events.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.20610687">
-          <caret line="9" column="12" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="12" />
+        <state vertical-scroll-proportion="-11.875">
+          <caret line="19" column="21" selection-start-line="19" selection-start-column="21" selection-end-line="19" selection-end-column="21" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/chart_testing/chart.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.5">
-          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/moment.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="49.28313">
-          <caret line="3519" column="4" selection-start-line="3519" selection-start-column="4" selection-end-line="3519" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/season/2015Results.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.625">
-          <caret line="177" column="69" selection-start-line="177" selection-start-column="69" selection-end-line="177" selection-end-column="69" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/season/2016Results.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-20.375">
-          <caret line="278" column="66" selection-start-line="278" selection-start-column="55" selection-end-line="278" selection-end-column="66" />
+        <state vertical-scroll-proportion="-0.95414203">
+          <caret line="15" column="54" selection-start-line="15" selection-start-column="54" selection-end-line="15" selection-end-column="54" />
           <folding>
+            <element signature="n#style#0;n#th#1;n#tr#0;n#thead#0;n#table#1;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#td#1;n#tbody#0;n#table#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#td#15;n#tbody#0;n#table#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#td#16;n#tbody#0;n#table#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#td#17;n#tbody#0;n#table#0;n#div#3;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#td#12;n#tbody#0;n#table#0;n#div#4;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/controllers/homePage.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="41" selection-start-line="12" selection-start-column="41" selection-end-line="12" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/players/player.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.9166665">
-          <caret line="120" column="108" selection-start-line="120" selection-start-column="86" selection-end-line="120" selection-end-column="108" />
-          <folding>
-            <element signature="n#style#0;n#td#1;n#tr#3;n#table#0;n#div#2;n#div#0;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#td#2;n#tr#0;n#table#0;n#div#0;n#div#2;n#div#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/charts/charts.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="41" column="40" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="40" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/controllers/player.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7309237">
-          <caret line="125" column="23" selection-start-line="125" selection-start-column="23" selection-end-line="125" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>No facets are configured</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.6</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>twitter_poker</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>
