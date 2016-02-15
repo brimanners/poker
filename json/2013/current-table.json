@@ -1,69 +1,69 @@
 [
 	{"season": 2013, "eventId": 5, "event5": 
 		[
-			{"name":"Steve W","nationality":"AUS","played":9,"won":0,"second":0,"third":4,"fourth":1,"last":3,"averagePosition":4.6666665,"points":35,"totalPositions":"42","cash":"66.0","cashes":4},
-			{"name":"Brian M","nationality":"ENG","played":9,"won":1,"second":1,"third":1,"fourth":2,"last":0,"averagePosition":4.0,"points":44,"totalPositions":"36","cash":"67.50","cashes":3},
-			{"name":"Ben I","nationality":"AUS","played":9,"won":1,"second":5,"third":2,"fourth":0,"last":1,"averagePosition":2.5555556,"points":71,"totalPositions":"21","cash":"200.0","cashes":8},
-			{"name":"Dave M","nationality":"AUS","played":7,"won":1,"second":0,"third":0,"fourth":2,"last":1,"averagePosition":4.428571,"points":29,"totalPositions":"31","cash":"45.0","cashes":1},
-			{"name":"Mark V","nationality":"SRI","played":5,"won":2,"second":1,"third":0,"fourth":1,"last":0,"averagePosition":3.0,"points":36,"totalPositions":"15","cash":"120.0","cashes":3},
-			{"name":"Paul B","nationality":"AUS","played":9,"won":1,"second":1,"third":2,"fourth":1,"last":0,"averagePosition":3.8888888,"points":49,"totalPositions":"35","cash":"126.0","cashes":4},
-			{"name":"Jade W","nationality":"ENG","played":7,"won":1,"second":1,"third":0,"fourth":1,"last":1,"averagePosition":4.857143,"points":33,"totalPositions":"33", "cash":"106.0","cashes":2},
-			{"name":"Mark L","nationality":"AUS","played":3,"won":1,"second":0,"third":0,"fourth":0,"last":0,"averagePosition":3.6666667,"points":22,"totalPositions":"11", "cash":"40.0","cashes":1},
-			{"name":"Simon M","nationality":"ENG","played":2,"won":1,"second":0,"third":0,"fourth":0,"last":1,"averagePosition":4.5,"points":15,"totalPositions":"9", "cash":"50.0","cashes":1},
-			{"name":"Michael R","nationality":"NZE","played":2,"won":0,"second":0,"third":0,"fourth":0,"last":2,"averagePosition":8.0,"points":2,"totalPositions":"16", "cash":"0.0","cashes":0}
+			{"name":"Steve W","nationality":"AUS","played":9,"won":0,"second":0,"third":4,"fourth":1,"last":3,"averagePosition":4.6666665,"points":35,"totalPositions":"42","cash":"66.0","cashes":4, "hosted": 1},
+			{"name":"Brian M","nationality":"ENG","played":9,"won":1,"second":1,"third":1,"fourth":2,"last":0,"averagePosition":4.0,"points":44,"totalPositions":"36","cash":"67.50","cashes":3, "hosted": 1},
+			{"name":"Ben I","nationality":"AUS","played":9,"won":1,"second":5,"third":2,"fourth":0,"last":1,"averagePosition":2.5555556,"points":71,"totalPositions":"21","cash":"200.0","cashes":8, "hosted": 1},
+			{"name":"Dave M","nationality":"AUS","played":7,"won":1,"second":0,"third":0,"fourth":2,"last":1,"averagePosition":4.428571,"points":29,"totalPositions":"31","cash":"45.0","cashes":1, "hosted": 1},
+			{"name":"Mark V","nationality":"SRI","played":5,"won":2,"second":1,"third":0,"fourth":1,"last":0,"averagePosition":3.0,"points":36,"totalPositions":"15","cash":"120.0","cashes":3, "hosted": 0},
+			{"name":"Paul B","nationality":"AUS","played":9,"won":1,"second":1,"third":2,"fourth":1,"last":0,"averagePosition":3.8888888,"points":49,"totalPositions":"35","cash":"126.0","cashes":4, "hosted": 0},
+			{"name":"Jade W","nationality":"ENG","played":7,"won":1,"second":1,"third":0,"fourth":1,"last":1,"averagePosition":4.857143,"points":33,"totalPositions":"33", "cash":"106.0","cashes":2, "hosted": 0},
+			{"name":"Mark L","nationality":"AUS","played":3,"won":1,"second":0,"third":0,"fourth":0,"last":0,"averagePosition":3.6666667,"points":22,"totalPositions":"11", "cash":"40.0","cashes":1, "hosted": 0},
+			{"name":"Simon M","nationality":"ENG","played":2,"won":1,"second":0,"third":0,"fourth":0,"last":1,"averagePosition":4.5,"points":15,"totalPositions":"9", "cash":"50.0","cashes":1, "hosted": 0},
+			{"name":"Michael R","nationality":"NZE","played":2,"won":0,"second":0,"third":0,"fourth":0,"last":2,"averagePosition":8.0,"points":2,"totalPositions":"16", "cash":"0.0","cashes":0, "hosted": 0}
 		]
-	},
+	, "hosted": 1},
 	{"season": 2013, "eventId": 4, "event4": 
 		[
-			{"name":"Steve W","nationality":"AUS","played":7,"won":0,"second":0,"third":3,"fourth":1,"last":2,"averagePosition":4.857143,"points":30,"cash":"56.0","cashes":3},
-			{"name":"Brian M","nationality":"ENG","played":7,"won":1,"second":0,"third":1,"fourth":1,"last":0,"averagePosition":4.285714,"points":36,"cash":"52.5","cashes":2},
-			{"name":"Ben I","nationality":"AUS","played":7,"won":0,"second":4,"third":2,"fourth":0,"last":1,"averagePosition":2.857143,"points":57,"cash":"148.0","cashes":6},
-			{"name":"Dave M","nationality":"AUS","played":5,"won":0,"second":0,"third":0,"fourth":2,"last":0,"averagePosition":5.0,"points":20,"cash":"0","cashes":0},
-			{"name":"Mark V","nationality":"SRI","played":5,"won":2,"second":1,"third":0,"fourth":1,"last":0,"averagePosition":3.0,"points":36,"cash":"120.0","cashes":3},
-			{"name":"Paul B","nationality":"AUS","played":7,"won":1,"second":1,"third":1,"fourth":0,"last":0,"averagePosition":4.0,"points":43,"cash":"108.0","cashes":3},
-			{"name":"Jade W","nationality":"ENG","played":7,"won":1,"second":1,"third":0,"fourth":1,"last":1,"averagePosition":4.857143,"points":33,"cash":"106.0","cashes":2},
-			{"name":"Mark L","nationality":"AUS","played":3,"won":1,"second":0,"third":0,"fourth":0,"last":0,"averagePosition":3.6666667,"points":22,"cash":"40","cashes":1},
-			{"name":"Simon M","nationality":"ENG","played":2,"won":1,"second":0,"third":0,"fourth":0,"last":1,"averagePosition":4.5,"points":15, "cash":"50.0","cashes":1},
-			{"name":"Michael R","nationality":"NZE","played":2,"won":0,"second":0,"third":0,"fourth":0,"last":2,"averagePosition":8.0,"points":2, "cash":"0.0","cashes":0}
+			{"name":"Steve W","nationality":"AUS","played":7,"won":0,"second":0,"third":3,"fourth":1,"last":2,"averagePosition":4.857143,"points":30,"cash":"56.0","cashes":3, "hosted": 1},
+			{"name":"Brian M","nationality":"ENG","played":7,"won":1,"second":0,"third":1,"fourth":1,"last":0,"averagePosition":4.285714,"points":36,"cash":"52.5","cashes":2, "hosted": 1},
+			{"name":"Ben I","nationality":"AUS","played":7,"won":0,"second":4,"third":2,"fourth":0,"last":1,"averagePosition":2.857143,"points":57,"cash":"148.0","cashes":6, "hosted": 1},
+			{"name":"Dave M","nationality":"AUS","played":5,"won":0,"second":0,"third":0,"fourth":2,"last":0,"averagePosition":5.0,"points":20,"cash":"0","cashes":0, "hosted": 0},
+			{"name":"Mark V","nationality":"SRI","played":5,"won":2,"second":1,"third":0,"fourth":1,"last":0,"averagePosition":3.0,"points":36,"cash":"120.0","cashes":3, "hosted": 0},
+			{"name":"Paul B","nationality":"AUS","played":7,"won":1,"second":1,"third":1,"fourth":0,"last":0,"averagePosition":4.0,"points":43,"cash":"108.0","cashes":3, "hosted": 1},
+			{"name":"Jade W","nationality":"ENG","played":7,"won":1,"second":1,"third":0,"fourth":1,"last":1,"averagePosition":4.857143,"points":33,"cash":"106.0","cashes":2, "hosted": 0},
+			{"name":"Mark L","nationality":"AUS","played":3,"won":1,"second":0,"third":0,"fourth":0,"last":0,"averagePosition":3.6666667,"points":22,"cash":"40","cashes":1, "hosted": 0},
+			{"name":"Simon M","nationality":"ENG","played":2,"won":1,"second":0,"third":0,"fourth":0,"last":1,"averagePosition":4.5,"points":15, "cash":"50.0","cashes":1, "hosted": 0},
+			{"name":"Michael R","nationality":"NZE","played":2,"won":0,"second":0,"third":0,"fourth":0,"last":2,"averagePosition":8.0,"points":2, "cash":"0.0","cashes":0, "hosted": 0}
 		]
-	},
+	, "hosted": 1},
 	{"season": 2013, "eventId": 3, "event3": 
 		[
-			{"name":"Steve W","nationality":"AUS","played":6,"won":0,"second":0,"third":3,"fourth":1,"last":0,"averagePosition":4.3333335,"points":29,"cash":"56.0","cashes":3},
-			{"name":"Brian M","nationality":"ENG","played":6,"won":1,"second":0,"third":1,"fourth":0,"last":0,"averagePosition":4.3333335,"points":31,"cash":"52.5","cashes":2},
-			{"name":"Ben I","nationality":"AUS","played":6,"won":0,"second":4,"third":1,"fourth":0,"last":1,"averagePosition":2.8333333,"points":49,"cash":"128.0","cashes":5},
-			{"name":"Dave M","nationality":"AUS","played":4,"won":0,"second":0,"third":0,"fourth":2,"last":0,"averagePosition":4.75,"points":17,"cash":"0","cashes":0},
-			{"name":"Mark V","nationality":"SRI","played":4,"won":2,"second":0,"third":0,"fourth":1,"last":0,"averagePosition":3.25,"points":25,"cash":"90.0","cashes":2},
-			{"name":"Paul B","nationality":"AUS","played":6,"won":0,"second":1,"third":1,"fourth":0,"last":0,"averagePosition":4.5,"points":29,"cash":"58.0","cashes":2},
-			{"name":"Jade W","nationality":"ENG","played":6,"won":1,"second":1,"third":0,"fourth":1,"last":1,"averagePosition":4.5,"points":31,"cash":"106.0","cashes":2},
-			{"name":"Mark L","nationality":"AUS","played":2,"won":1,"second":0,"third":0,"fourth":0,"last":0,"averagePosition":3.0,"points":18,"cash":"40.0","cashes":1},
-			{"name":"Simon M","nationality":"ENG","played":2,"won":1,"second":0,"third":0,"fourth":0,"last":1,"averagePosition":4.5,"points":15,"cash":"50.0","cashes":1},
-			{"name":"Michael R","nationality":"NZE","played":2,"won":0,"second":0,"third":0,"fourth":0,"last":2,"averagePosition":8.0,"points":2,"cash":"0","cashes":0}
+			{"name":"Steve W","nationality":"AUS","played":6,"won":0,"second":0,"third":3,"fourth":1,"last":0,"averagePosition":4.3333335,"points":29,"cash":"56.0","cashes":3, "hosted": 1},
+			{"name":"Brian M","nationality":"ENG","played":6,"won":1,"second":0,"third":1,"fourth":0,"last":0,"averagePosition":4.3333335,"points":31,"cash":"52.5","cashes":2, "hosted": 1},
+			{"name":"Ben I","nationality":"AUS","played":6,"won":0,"second":4,"third":1,"fourth":0,"last":1,"averagePosition":2.8333333,"points":49,"cash":"128.0","cashes":5, "hosted": 1},
+			{"name":"Dave M","nationality":"AUS","played":4,"won":0,"second":0,"third":0,"fourth":2,"last":0,"averagePosition":4.75,"points":17,"cash":"0","cashes":0, "hosted": 0},
+			{"name":"Mark V","nationality":"SRI","played":4,"won":2,"second":0,"third":0,"fourth":1,"last":0,"averagePosition":3.25,"points":25,"cash":"90.0","cashes":2, "hosted": 0},
+			{"name":"Paul B","nationality":"AUS","played":6,"won":0,"second":1,"third":1,"fourth":0,"last":0,"averagePosition":4.5,"points":29,"cash":"58.0","cashes":2, "hosted": 0},
+			{"name":"Jade W","nationality":"ENG","played":6,"won":1,"second":1,"third":0,"fourth":1,"last":1,"averagePosition":4.5,"points":31,"cash":"106.0","cashes":2, "hosted": 0},
+			{"name":"Mark L","nationality":"AUS","played":2,"won":1,"second":0,"third":0,"fourth":0,"last":0,"averagePosition":3.0,"points":18,"cash":"40.0","cashes":1, "hosted": 0},
+			{"name":"Simon M","nationality":"ENG","played":2,"won":1,"second":0,"third":0,"fourth":0,"last":1,"averagePosition":4.5,"points":15,"cash":"50.0","cashes":1, "hosted": 0},
+			{"name":"Michael R","nationality":"NZE","played":2,"won":0,"second":0,"third":0,"fourth":0,"last":2,"averagePosition":8.0,"points":2,"cash":"0","cashes":0, "hosted": 0}
 		]
-	},
+	, "hosted": 1},
 	{"season": 2013, "eventId": 2, "event2": 
 		[
-			{"name":"Steve W","nationality":"AUS","played":4,"won":0,"second":0,"third":3,"fourth":0,"last":1,"averagePosition":3.75,"points":22,"cash":"56.0","cashes":3},
-			{"name":"Brian M","nationality":"ENG","played":4,"won":1,"second":0,"third":1,"fourth":0,"last":0,"averagePosition":3.75,"points":24,"cash":"52.5","cashes":2},
-			{"name":"Ben I","nationality":"AUS","played":4,"won":0,"second":3,"third":0,"fourth":0,"last":1,"averagePosition":3.0,"points":30,"cash":"66.0","cashes":3},
-			{"name":"Dave M","nationality":"AUS","played":2,"won":0,"second":0,"third":0,"fourth":2,"last":0,"averagePosition":4.0,"points":10,"cash":"0","cashes":0},
-			{"name":"Mark V","nationality":"SRI","played":2,"won":2,"second":0,"third":0,"fourth":0,"last":0,"averagePosition":1.0,"points":18,"cash":"90.0","cashes":2},
-			{"name":"Paul B","nationality":"AUS","played":4,"won":0,"second":0,"third":0,"fourth":0,"last":0,"averagePosition":5.5,"points":10,"cash":"0","cashes":0},
-			{"name":"Jade W","nationality":"ENG","played":4,"won":0,"second":1,"third":0,"fourth":1,"last":0,"averagePosition":4.5,"points":16,"cash":"36","cashes":1},
-			{"name":"Mark L","nationality":"AUS","played":2,"won":1,"second":0,"third":0,"fourth":0,"last":0,"averagePosition":3.0,"points":18,"cash":"40.0","cashes":1},			
-			{"name":"Michael R","nationality":"NZE","played":2,"won":0,"second":0,"third":0,"fourth":0,"last":2,"averagePosition":8.0,"points":2,"cash":"0","cashes":0}
+			{"name":"Steve W","nationality":"AUS","played":4,"won":0,"second":0,"third":3,"fourth":0,"last":1,"averagePosition":3.75,"points":22,"cash":"56.0","cashes":3, "hosted": 0},
+			{"name":"Brian M","nationality":"ENG","played":4,"won":1,"second":0,"third":1,"fourth":0,"last":0,"averagePosition":3.75,"points":24,"cash":"52.5","cashes":2, "hosted": 1},
+			{"name":"Ben I","nationality":"AUS","played":4,"won":0,"second":3,"third":0,"fourth":0,"last":1,"averagePosition":3.0,"points":30,"cash":"66.0","cashes":3, "hosted": 1},
+			{"name":"Dave M","nationality":"AUS","played":2,"won":0,"second":0,"third":0,"fourth":2,"last":0,"averagePosition":4.0,"points":10,"cash":"0","cashes":0, "hosted": 0},
+			{"name":"Mark V","nationality":"SRI","played":2,"won":2,"second":0,"third":0,"fourth":0,"last":0,"averagePosition":1.0,"points":18,"cash":"90.0","cashes":2, "hosted": 0},
+			{"name":"Paul B","nationality":"AUS","played":4,"won":0,"second":0,"third":0,"fourth":0,"last":0,"averagePosition":5.5,"points":10,"cash":"0","cashes":0, "hosted": 0},
+			{"name":"Jade W","nationality":"ENG","played":4,"won":0,"second":1,"third":0,"fourth":1,"last":0,"averagePosition":4.5,"points":16,"cash":"36","cashes":1, "hosted": 0},
+			{"name":"Mark L","nationality":"AUS","played":2,"won":1,"second":0,"third":0,"fourth":0,"last":0,"averagePosition":3.0,"points":18,"cash":"40.0","cashes":1, "hosted": 0},
+			{"name":"Michael R","nationality":"NZE","played":2,"won":0,"second":0,"third":0,"fourth":0,"last":2,"averagePosition":8.0,"points":2,"cash":"0","cashes":0, "hosted": 0}
 		]
-	},
+	, "hosted": 1},
 	{"season": 2013, "eventId": 1, "event1": 
 		[
-			{"name":"Steve W","nationality":"AUS","played":2,"won":0,"second":0,"third":2,"fourth":0,"last":0,"averagePosition":3.0,"points":16,"cash":"32.0","cashes":2},
-			{"name":"Brian M","nationality":"ENG","played":2,"won":1,"second":0,"third":0,"fourth":0,"last":0,"averagePosition":4.0,"points":16,"cash":"40.5","cashes":1},
-			{"name":"Ben I","nationality":"AUS","played":2,"won":0,"second":2,"third":0,"fourth":0,"last":0,"averagePosition":2.0,"points":22,"cash":"48.0","cashes":2},
-			{"name":"Dave M","nationality":"AUS","played":2,"won":0,"second":0,"third":0,"fourth":2,"last":0,"averagePosition":4.0,"points":10,"cash":"0","cashes":0},			
-			{"name":"Paul B","nationality":"AUS","played":2,"won":0,"second":0,"third":0,"fourth":0,"last":0,"averagePosition":6.0,"points":6,"cash":"0","cashes":0},
-			{"name":"Jade W","nationality":"ENG","played":2,"won":0,"second":0,"third":0,"fourth":0,"last":0,"averagePosition":6.0,"points":6,"cash":"0","cashes":0},
-			{"name":"Mark L","nationality":"AUS","played":2,"won":1,"second":0,"third":0,"fourth":0,"last":0,"averagePosition":3.0,"points":18,"cash":"40.0","cashes":1},		
-			{"name":"Michael R","nationality":"NZE","played":2,"won":0,"second":0,"third":0,"fourth":0,"last":2,"averagePosition":8.0,"points":2,"cash":"0","cashes":0}
+			{"name":"Steve W","nationality":"AUS","played":2,"won":0,"second":0,"third":2,"fourth":0,"last":0,"averagePosition":3.0,"points":16,"cash":"32.0","cashes":2, "hosted": 0},
+			{"name":"Brian M","nationality":"ENG","played":2,"won":1,"second":0,"third":0,"fourth":0,"last":0,"averagePosition":4.0,"points":16,"cash":"40.5","cashes":1, "hosted": 0},
+			{"name":"Ben I","nationality":"AUS","played":2,"won":0,"second":2,"third":0,"fourth":0,"last":0,"averagePosition":2.0,"points":22,"cash":"48.0","cashes":2, "hosted": 1},
+			{"name":"Dave M","nationality":"AUS","played":2,"won":0,"second":0,"third":0,"fourth":2,"last":0,"averagePosition":4.0,"points":10,"cash":"0","cashes":0, "hosted": 0},
+			{"name":"Paul B","nationality":"AUS","played":2,"won":0,"second":0,"third":0,"fourth":0,"last":0,"averagePosition":6.0,"points":6,"cash":"0","cashes":0, "hosted": 0},
+			{"name":"Jade W","nationality":"ENG","played":2,"won":0,"second":0,"third":0,"fourth":0,"last":0,"averagePosition":6.0,"points":6,"cash":"0","cashes":0, "hosted": 0},
+			{"name":"Mark L","nationality":"AUS","played":2,"won":1,"second":0,"third":0,"fourth":0,"last":0,"averagePosition":3.0,"points":18,"cash":"40.0","cashes":1, "hosted": 0},
+			{"name":"Michael R","nationality":"NZE","played":2,"won":0,"second":0,"third":0,"fourth":0,"last":2,"averagePosition":8.0,"points":2,"cash":"0","cashes":0, "hosted": 0}
 		]
 	}
 ]

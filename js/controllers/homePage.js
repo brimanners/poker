@@ -180,11 +180,13 @@ function populateDetailsFromJson ($scope, $http)  {
                      overallLadderPlayer.totalPositions = parseInt(event.totalPositions);
                      overallLadderPlayer.averagePosition = (parseInt(event.totalPositions) / 1);
                      overallLadderPlayer.cashes = parseFloat(event.cashes);
-                     overallLadderPlayer.averageCashes = (overallLadderPlayer.cashes / 1) * 100
+                     overallLadderPlayer.averageCashes = (overallLadderPlayer.cashes / 1) * 100;
+                     overallLadderPlayer.hosted = parseInt(event.hosted);
                      if (event.cash !== undefined) {
                         overallLadderPlayer.cash = parseFloat(event.cash);
                      }
                      overallLadderItems[event.name] = overallLadderPlayer;
+                     var blah = "";
                   } else {
                        var existingPlayer = overallLadderItems[event.name];
                        existingPlayer.played = existingPlayer.played + event.played;
@@ -202,7 +204,8 @@ function populateDetailsFromJson ($scope, $http)  {
                            existingPlayer.averagePosition = (existingPlayer.totalPositions / existingPlayer.played);
                        }
                        existingPlayer.cashes = existingPlayer.cashes + parseFloat(event.cashes);
-                       existingPlayer.averageCashes = (existingPlayer.cashes / existingPlayer.played) * 100
+                       existingPlayer.averageCashes = (existingPlayer.cashes / existingPlayer.played) * 100;
+                       existingPlayer.hosted = existingPlayer.hosted + parseFloat(event.hosted);
                        if (event.cash !== undefined) {
                         existingPlayer.cash = existingPlayer.cash + parseFloat(event.cash);
                        }

@@ -86,12 +86,12 @@
                     <th>Location</th>
                 </tr>
                 <tr class="">
-                    <td>3<sup>nd</sup></td>
+                    <td>3<sup>rd</sup></td>
                     <td>April 30<sup>th</sup></td>
                     <td>Brian's</td>
                 </tr>
                 <tr class="">
-                    <td>4<sup>nd</sup></td>
+                    <td>4<sup>th</sup></td>
                     <td>June 18<sup>th</sup></td>
                     <td>TBD</td>
                 </tr>
@@ -105,12 +105,12 @@
                     <th>Location</th>
                 </tr>
                 <tr class="">
-                    <td>5<sup>nd</sup></td>
+                    <td>5<sup>th</sup></td>
                     <td>July 23<sup>rd</sup></td>
                     <td>TBD</td>
                 </tr>
                 <tr class="">
-                    <td>6<sup>nd</sup></td>
+                    <td>6<sup>th</sup></td>
                     <td>August 27<sup>th</sup></td>
                     <td>TBD</td>
                 </tr>
@@ -124,12 +124,12 @@
                     <th>Location</th>
                 </tr>
                 <tr class="">
-                    <td>7<sup>nd</sup></td>
+                    <td>7<sup>th</sup></td>
                     <td>October 15<sup>th</sup></td>
                     <td>TBD</td>
                 </tr>
                 <tr class="">
-                    <td>8<sup>nd</sup></td>
+                    <td>8<sup>th</sup></td>
                     <td>November 26<sup>th</sup></td>
                     <td>TBD</td>
                 </tr>
@@ -181,6 +181,7 @@
                         <th class="header-center">Season earnings</th>
                         <th class="header-center">In the money</th>
                         <th class="header-center">In the money%</th>
+                        <th class="header-center">Hosted</th>
                         <th class="header-center">Total Points</th>
                         <th data-ng-show="predicate == 'points' && reverse == true && player == ''" class="header-center">Movement</th>
                         <th class="header-center">Hide?</th>
@@ -206,6 +207,7 @@
                        <td class="dosh">{{result.cash | currency}}</td>
                        <td class="dosh">{{result.cashes | number:0}}</td>
                        <td class="dosh">{{result.averageCashes * 100 | number:2}}%</td>
+                       <td class="dosh">{{result.hosted}}</td>
                        <td style="color: blue; background-color: LightSkyBlue;"><b>{{result.points}}</b></td>
                        <div>
                            <td data-ng-show="predicate == 'points' && reverse == true && player == ''">
@@ -252,6 +254,7 @@
                           <th class="header-center"><img src='../images/medals/silver_medal.png' style="width:30px; height:40px;" alt="silver"></th>
                           <th class="header-center"><img src='../images/medals/bronze_medal.png' style="width:30px; height:40px;" alt="bronze"></th>
                           <th class="header-center"><img src='../images/medals/last.png' style="width:30px; height:40px;" alt="spoon"></th>
+                          <th class="header-center">Hosted</th>
                           <th class="header-center">Total Points</a></th>
                       </tr>
                       <tbody class="animate" data-ng-repeat="result in allSeasonsLadder | filter:player | filter:gotPoints | orderBy:['-points','played', '-won']">
@@ -276,6 +279,7 @@
                           <td style="background-color: silver;">{{result.silver || 0}}</td>
                           <td style="background-color: sandybrown;">{{result.bronze || 0}}</td>
                           <td>{{result.spoon || 0}}</td>
+                          <td>{{result.hosted || 0}}</td>
                          <td style="color: blue; background-color: LightSkyBlue;"><b>{{result.points}}</b></td>
                      </tbody>
                   </table>
