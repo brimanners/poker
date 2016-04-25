@@ -7,7 +7,10 @@
 		{"name": "Simon W", "Nationality": "AUS"},
 		{"name": "Brian M", "Nationality": "ENG"},
 		{"name": "Jade W", "Nationality": "ENG"},
-		{"name": "Michael R", "Nationality": "NZE"}
+		{"name": "Michael R", "Nationality": "NZE"},
+		{"name": "Junior A", "Nationality": "BRA"},
+		{"name": "Paul B", "Nationality": "AUS"},
+		{"name": "Mark V", "Nationality": "SRI"}
 	]},
 	{"year": 2015, "players": [
 			{"name": "Andy F", "Nationality": "NZE"},
