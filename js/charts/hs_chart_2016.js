@@ -31,36 +31,40 @@ $(function () {
         },
         series: [{
                     name: 'Ben I',
-                    data: [14, 14]
+                    data: [14, 14, 19]
                 }, {
                     name: 'Simon W',
-                    data: [8, 18]
+                    data: [8, 18, 18]
                 }, {
                     name: 'Steve W',
-                    data: [2, 8]
+                    data: [2, 8, 9]
                 }, {
                     name: 'Dave M',
-                    data: [5, 9]
+                    data: [5, 9, 12]
                 },
                 {
                     name: 'Mark V',
-                    data: [0, 1]
+                    data: [0, 1, 3]
                 },
                 {
                     name: 'Brian M',
-                    data: [11, 19]
+                    data: [11, 19, 28]
                 },
                 {
                     name: 'Andy F',
-                    data: [4, 7]
+                    data: [4, 7, 7]
                 },
                 {
                     name: 'Junior A',
-                    data: [0, 2]
+                    data: [0, 2, 2]
+                },
+                {
+                    name: 'Paul B',
+                    data: [0, 0, 7]
                 },
                 {
                     name: 'Jade W',
-                    data: [1, 1]
+                    data: [1, 1, 1]
                 }
                 ]
     });

@@ -85,7 +85,7 @@
                     <th>Date</th>
                     <th>Location</th>
                 </tr>
-                <tr class="">
+                <tr class="event-completed">
                     <td><a href="../events/event.html?event=23">3<sup>rd</sup></a></td>
                     <td><a href="../events/event.html?event=23">April 30<sup>th</sup></a></td>
                     <td><a href="../events/event.html?event=23">Brian's</a></td>
@@ -93,7 +93,7 @@
                 <tr class="">
                     <td>4<sup>th</sup></td>
                     <td>June 18<sup>th</sup></td>
-                    <td>TBD</td>
+                    <td>Mark L's</td>
                 </tr>
             </table>
         </div>
@@ -187,7 +187,7 @@
                         <th class="header-center">Hide?</th>
                     </tr>
                 </thead>
-                <tbody class="animate" data-ng-repeat="result in displayTable | filter:player | filter:gotPoints | orderBy:'-points'">
+                <tbody class="animate" data-ng-repeat="result in displayTable | filter:player | filter:gotPoints | orderBy:['-points','played','-won']">
                     <tr data-ng-show="result.hidePlayer == false">
                        <td>{{$index + 1}}<sup>{{positionSuffix($index + 1)}}</sup></td>
                        <td style="text-align:left; padding-left:10px; width:100px; white-space:nowrap;">
