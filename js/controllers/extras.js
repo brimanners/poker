@@ -1,5 +1,3 @@
-
-
 var app = angular.module('poker', []);
 
 app.controller('extrasController', function ($scope, $http) {
