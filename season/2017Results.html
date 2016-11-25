@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="poker" id="ng-app">
+<!-- the ng-app name 'poker' is referenced the corresponding controller logic -->
+<head>
+    <meta name="season" content="2017">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Poker Results</title>
+    <!-- Bootstrap core CSS -->
+    <link href="../css/bootstrap.css" rel="stylesheet">
+    <link href="../css/poker.css" rel="stylesheet">
+    <link href="../css/theme.default.css" rel="stylesheet">
+    <link href="../css/animate.min.css" rel="stylesheet">
+    <link href="../css/hs_chart.css" rel="stylesheet">
+    <!-- Custom styles for this template -->
+    <!--<link href="src/css/jumbotron.css" rel="stylesheet">-->
+    <script type="text/javascript" src="../js/jquery-1.10.2.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.tablesorter.min.js"></script>
+    <!-- temp local hosting until prod release -->
+    <script type="text/javascript" src="../js/animations.js"></script>
+    <script type="text/javascript" src="../js/angular.min.js"></script>
+    <script type="text/javascript" src="../js/angular-animate.min.js"></script>
+    <script type="text/javascript" src="../js/tableSorter.js"></script>
+    <!-- temp local hosting until prod release -->
+    <script type="text/javascript" src="../js/bootstrap.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+    <script type="text/javascript" src="../js/animateRows.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript" src="https://code.highcharts.com/highcharts.js"></script>
+    <script type="text/javascript" src="../js/charts/charts.js"></script>
+    <script type="text/javascript" src="../js/countdown.min.js"></script>
+    <script type="text/javascript" src="../js/charts/hs_chart_2016.js"></script>
+    <script type="text/javascript" src="../js/charts/jquery.popupoverlay.js"></script>
+    <script type="text/javascript" src="../js/overlay.js"></script>
+</head>
+<body ng-controller="homePageController" ng-cloak class="yui3-skin-sam">
+
+    <menus data-ng-controller="menusController"></menus> <!-- Custom directive to show all the menu items - see js/directives/menus.js for details -->
+
+    <div class="container">
+
+    <div class="jumbotron table_border">
+            <h2 class="shadow" id="header1"><span>2017 - 'The Square' Poker Results</span></h2>
+            <p id="header2">
+                Here you'll find all the latest scores from each tournament held,
+                latest news, statistics and ammunition for bragging rights
+            </p>
+    </div>
+    <div class="body-content">
+        <div ng-hide="newsItem == ''">
+            <h4 style="color:blue;" class="hidden" id="newsTicker"><b><i><span id="news">Latest News: </span></i></b>{{newsItem}}</h4>
+        </div>
+        <table border="0" ng-show="displayCountdown">
+            <tr>
+                <td id="countdown-text" class="hidden">Time to next event: <b><span id="countdown-holder"></span></b</td>
+            </tr>
+        </table>
+        <br/>
+
+        <div class="col-lg-3">
+            <table class="table_border table table-striped table-bordered table-condensed table-hover" id="eventList">
+                <tr>
+                    <th>Event</th>
+                    <th>Date</th>
+                    <th>Location</th>
+                </tr>
+                <tr class="">
+                    <td><a href="">1<sup>st</sup></a></td>
+                    <td><a href="">February 4<sup>th</sup></s></a></td>
+                    <td><a href="">TBD</a></td>
+                </tr>
+                <tr class="">
+                    <td><a href="">2<sup>nd</sup></a></td>
+                    <td><a href="">March 11<sup>th</sup></a></td>
+                    <td><a href="">TBD</a></td>
+                </tr>
+            </table>
+        </div>
+        <div class="col-lg-3">
+            <table class="table_border table table-striped table-bordered table-condensed table-hover" id="eventList">
+                <tr class="">
+                    <th>Event</th>
+                    <th>Date</th>
+                    <th>Location</th>
+                </tr>
+                <tr class="">
+                    <td><a href="">3<sup>rd</sup></a></td>
+                    <td><a href="">April 29<sup>th</sup></a></td>
+                    <td><a href="">TBD</a></td>
+                </tr>
+                <tr class="">
+                    <td><a href="">4<sup>th</sup></a></td>
+                    <td><a href="">June 10<sup>th</sup></a></td>
+                    <td><a href="">TBD</a></td>
+                </tr>
+            </table>
+        </div>
+        <div class="col-lg-3">
+            <table class="table_border table table-striped table-bordered table-condensed table-hover" id="eventList">
+                <tr>
+                    <th>Event</th>
+                    <th>Date</th>
+                    <th>Location</th>
+                </tr>
+                <tr>
+                    <td><a href="">5<sup>th</sup></a></td>
+                    <td><a href="">July 29<sup>th</sup></a></td>
+                    <td><a href="">TBD</a></td>
+                </tr>
+                <tr>
+                    <td><a href="">6<sup>th</sup></a></td>
+                    <td><a href="">October 14<sup>th</sup></a></td>
+                    <td><a href="">TBD</a></td>
+                </tr>
+            </table>
+        </div>
+        <div class="col-lg-3">
+            <table class="table_border table table-striped table-bordered table-condensed table-hover" id="eventList">
+                <tr>
+                    <th>Event</th>
+                    <th>Date</th>
+                    <th>Location</th>
+                </tr>
+                <tr >
+                    <td><a href="">7<sup>th</sup></a></td>
+                    <td><a href="">November 18<sup>th</sup></a></td>
+                    <td><a href="">TBD</a></td>
+                </tr>
+                <tr >
+                    <td><a href="">9<sup>th</sup></a></td>
+                    <td><a href="">December 16<sup>th</sup></a></td>
+                    <td><a href="">TBD</a></td>
+                </tr>
+            </table>
+        </div>
+        
+    </div>
+        <div class="col-lg-10">
+            <table>
+                <tr>
+                    <td>
+                        <h3 style="white-space:nowrap;">Ladder after event number:</h3>
+                    </td>
+                    <td style="padding-left:10px;">
+                        <select ng-model="eventId" ng-change="tableChanged()" id="eventNumber" class="button_border">
+                            <option ng-repeat="tournament in statistics.events" ng-selected="{{statistics.events.length == $index + 1}}" value="{{$index + 1}}">{{$index + 1}}</option>
+                        </select>
+                    </td>
+                    <td>&nbsp;&nbsp;&nbsp;&nbsp;Filter: <input type="text" ng-model="player"/></span></td>
+                    <td style="padding-left:50px;"><button class="button_border poker_button" ng-model="poker" ng-click="clicked()" ng-hide="displayExtra">Results</button></td>
+                    <td><button class="button_border poker_button" ng-model="poker" ng-click="clicked()" ng-show="displayExtra">Close results</button></td>
+                    <td><button class="button_border poker_button my_popup_open" ng-model="poker" ng-click="displayPoints()">Points</button></td>
+                </tr>
+            </table>
+            <div class="col-lg-9">
+                <div id="my_popup">
+                    <div class="table_border" id="container" style="width:800px; height:=1000px; background-color: #F5FFFA; border: solid" ng-show="displayPointsChart"></div>
+               </div>
+            </div>
+            <div class="col-lg-12">
+                <div ng-show="displayAllPlayerButton == true" style="float:right; padding-left:"><button class="button_border poker_button my_popup_open" ng-model="poker" ng-click="displayAllPlayers()">Display all players</button></div>
+            </div>
+            <!-- Season ladder -->
+            <table data-ng-table="tableParams" id="ladder" class="table_border results table table-striped table-bordered table-condensed table-hover">
+
+                <thead>
+                    <tr class="first">
+                        <th class="first">Position</th>
+                        <th style="text-align:left; padding-left:10px; width:100px; white-space:nowrap;">Name</th>
+                        <th class="header-center">Played</th>
+                        <th class="header-center">1<sup>st</sup></th>
+                        <th class="header-center">2<sup>nd</sup></th>
+                        <th class="header-center">3<sup>rd</sup></th>
+                        <th class="header-center">4<sup>th</sup></th>
+                        <th class="header-center">Last</th>
+                        <th class="header-center">Win Ratio</th>
+                        <th class="header-center">Last Ratio</th>
+                        <th class="header-center">Ave Points</th>
+                        <th class="header-center">Ave Position</th>
+                        <th class="header-center">Season earnings</th>
+                        <th class="header-center">In the money</th>
+                        <th class="header-center">In the money%</th>
+                        <th class="header-center">Hosted</th>
+                        <th class="header-center">Total Points</th>
+                        <th data-ng-show=" class="header-center">Movement</th>
+                        <th class="header-center">Hide?</th>
+                    </tr>
+                </thead>
+                <tbody class="animate" data-ng-repeat="result in displayTable | filter:player | filter:gotPoints | orderBy:['-points','played','-won']">
+                    <tr data-ng-show="result.hidePlayer == false">
+                       <td>{{$index + 1}}<sup>{{positionSuffix($index + 1)}}</sup></td>
+                       <td style="text-align:left; padding-left:10px; width:100px; white-space:nowrap;">
+                           <img src="../images/flags/{{result.nationality}}.png" style="width:30px; height:25px;" alt="flag">
+                           <a href="{{result.url}}">{{result.name}}</a>
+                       </td>
+                       <td data-title="'Played'" sortable="'Played'">{{result.played}}</td>
+                       <td>{{result.won}}</td>
+                       <td>{{result.second}}</td>
+                       <td>{{result.third}}</td>
+                       <td>{{result.fourth}}</td>
+                       <td>{{result.last}}</td>
+                       <td>{{result.winRatio | number:2}}%</td>
+                       <td>{{result.lastRatio | number:2}}%</td>
+                       <td>{{result.averagePoints | number:2}}</td>
+                       <td>{{result.averagePosition | number:2}}</td>
+                       <td class="dosh">{{result.cash | currency}}</td>
+                       <td class="dosh">{{result.cashes | number:0}}</td>
+                       <td class="dosh">{{result.averageCashes * 100 | number:2}}%</td>
+                       <td class="dosh">{{result.hosted}}</td>
+                       <td style="color: blue; background-color: LightSkyBlue;"><b>{{result.points}}</b></td>
+                       <div>
+                           <td>
+                                <div data-ng-if="result.movement > 0">
+                                    <img src="../images/down.png" alt=""> {{result.movement}}
+                                </div>
+                                <div data-ng-if="result.movement < 0">
+                                    <img src="../images/up.png" alt=""> {{result.movement * - 1}}
+                                </div>
+                                <div data-ng-if="result.movement == 0">
+                                    -
+                                </div>
+                            </td>
+                        </div>
+                        <td><input type='checkbox' data-ng-click="clearPlayer()" ng-model="result.hidePlayer" checked="result.hidePlayer"/></td>
+                    </tr>
+                    <tr id="positionResults" data-ng-show="displayExtra">
+                        <td colspan="2" style="text-align:left;"><pre>Position/Players</pre></td>
+                        <td colspan="11" style="text-align:left; font-family:courier-new;"><pre>{{result.positions}}</pre></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="col-lg-10">
+                  <h3>All seasons ladder</h3>
+                  <table class="table_border results table table-striped table-bordered table-condensed table-hover" id="ladder">
+                      <tr>
+                          <th>Position</th>
+                          <th style="text-align:left; padding-left:10px; width:100px; white-space:nowrap;"><a href="" ng-click="angularSort('name')">Name</a></th>
+                          <th class="header-center">Played</th>
+                          <th class="header-center">1<sup>st</sup></th>
+                          <th class="header-center">2<sup>nd</sup></th>
+                          <th class="header-center">3<sup>rd</sup></th>
+                          <th class="header-center">4<sup>th</sup></th>
+                          <th class="header-center">Last</th>
+                          <th class="header-center">Win Ratio</th>
+                          <th class="header-center">Last Ratio</th>
+                          <th class="header-center">Ave Points</th>
+                          <th class="header-center">Ave Position</th>
+                          <th class="header-center">Career earnings</th>
+                          <th class="header-center">In the money</th>
+                          <th class="header-center">In the money%</th>
+                          <th class="header-center"><img src='../images/medals/gold_medal.png' style="width:30px; height:40px;" alt="gold"></th>
+                          <th class="header-center"><img src='../images/medals/silver_medal.png' style="width:30px; height:40px;" alt="silver"></th>
+                          <th class="header-center"><img src='../images/medals/bronze_medal.png' style="width:30px; height:40px;" alt="bronze"></th>
+                          <th class="header-center"><img src='../images/medals/last.png' style="width:30px; height:40px;" alt="spoon"></th>
+                          <th class="header-center">Hosted</th>
+                          <th class="header-center">Total Points</a></th>
+                      </tr>
+                      <tbody class="animate" data-ng-repeat="result in allSeasonsLadder | filter:player | filter:gotPoints | orderBy:['-points','played', '-won']">
+                         <td>{{$index + 1}}<sup>{{positionSuffix($index + 1)}}</sup></td>
+                         <td style="text-align:left; white-space:nowrap;">
+                             <img src='../images/flags/{{result.nationality}}.png' style="width:30px; height:25px;" alt="flag">{{result.name}}
+                         </td>
+                         <td>{{result.played}}</td>
+                         <td>{{result.won}}</td>
+                         <td>{{result.second}}</td>
+                         <td>{{result.third}}</td>
+                         <td>{{result.fourth}}</td>
+                         <td>{{result.last}}</td>
+                         <td>{{result.winRatio | number:2}} %</td>
+                         <td>{{result.lastRatio | number:2}} %</td>
+                         <td>{{result.averagePoints | number:2}}</td>
+                         <td>{{result.averagePosition | number:2}}</td>
+                         <td>{{result.cash | currency}}</td>
+                         <td>{{result.cashes | number:0}}</td>
+                         <td>{{result.averageCashes | number:2}} %</td>
+                         <td style="background-color: gold;">{{result.gold || 0}}</td>
+                          <td style="background-color: silver;">{{result.silver || 0}}</td>
+                          <td style="background-color: sandybrown;">{{result.bronze || 0}}</td>
+                          <td>{{result.spoon || 0}}</td>
+                          <td>{{result.hosted || 0}}</td>
+                         <td style="color: blue; background-color: LightSkyBlue;"><b>{{result.points}}</b></td>
+                     </tbody>
+                  </table>
+              </div>
+        <div class="col-lg-10">
+            <h3>Recent form..... (Each players last 5 results)</h3>
+            <table class="table_border results table table-striped table-bordered table-condensed table-hover" id="ladder">
+                <tr>
+                    <th>Position</th>
+                    <th style="text-align:left; padding-left:10px;">Name</th>
+                    <th class="header-center">Played</th>
+                    <th class="header-center">1<sup>st</sup></th>
+                    <th class="header-center">2<sup>nd</sup></th>
+                    <th class="header-center">3<sup>rd</sup></th>
+                    <th class="header-center">4<sup>th</sup></th>
+                    <th class="header-center">Last</th>
+                    <th class="header-center">Win Ratio</th>
+                    <th class="header-center">Last Ratio</th>
+                    <th class="header-center">Ave Points</th>
+                    <th class="header-center">Ave Position</th>
+                    <th class="header-center">Total Points</th>
+                    <th>Position/Players</th>
+                </tr>
+                <!--<tr ng-repeat="result in formTable | filter:player | filter:gotPoints | orderBy: ['-points', 'played', '-won', 'averagePosition', 'name']" >-->
+                <tbody class="animate" data-ng-repeat="result in formTable | filter:player | filter:gotPoints | orderBy:'-points'">
+                   <td>{{$index + 1}}<sup>{{positionSuffix($index + 1)}}</sup></td>
+                   <td style="text-align:left; padding-left:10px;">
+                       <img src='../images/flags/{{result.nationality}}.png' style="width:30px; height:25px;" alt="flag">{{result.name}}
+                   </td>
+                   <td>{{result.played}}</td>
+                   <td>{{result.won}}</td>
+                   <td>{{result.second}}</td>
+                   <td>{{result.third}}</td>
+                   <td>{{result.fourth}}</td>
+                   <td>{{result.last}}</td>
+                   <td>{{result.won / result.played * 100 | number:2}} %</td>
+                   <td>{{result.last / result.played * 100 | number:2}} %</td>
+                   <td>{{result.averagePoints | number:2}}</td>
+                   <td>{{result.averagePosition | number:2}}</td>
+                   <td style="color: blue; background-color: LightSkyBlue;"><b>{{result.points}}</b></td>
+                   <td>{{result.positionPlayers}}</td>
+               </tr>
+            </table>
+        </div>
+        <br/>
+        <div data-ng-include="'../templates/footer.html'"></div>
+    </div>
+    <!-- /container -->
+    <script type="text/javascript" src="../js/controllers/homePage.js"></script>
+    <script type="text/javascript" src="../js/controllers/menusController.js"></script>
+    <script type="text/javascript" src="../js/directives/menus.js"></script>
+    <div data-ng-include="'../templates/googleAnalytics.html'"></div>
+</body>
+</html>
