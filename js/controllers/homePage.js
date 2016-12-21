@@ -186,7 +186,6 @@ function populateDetailsFromJson ($scope, $http)  {
                         overallLadderPlayer.cash = parseFloat(event.cash);
                      }
                      overallLadderItems[event.name] = overallLadderPlayer;
-                     var blah = "";
                   } else {
                        var existingPlayer = overallLadderItems[event.name];
                        existingPlayer.played = existingPlayer.played + event.played;

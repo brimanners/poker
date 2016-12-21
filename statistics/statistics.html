@@ -31,6 +31,8 @@
     <menus data-ng-controller="menusController"></menus> <!-- Custom directive to show all the menu items - see js/directives/menus.js for details -->
     <div class="container">
 
+    <!--<div id="react_statistics_header" class="jumbotron table_border"></div>  &lt;!&ndash; React container &ndash;&gt;    -->
+
     <div class="jumbotron table_border">
         <h2>Statistics overload</h2>
         <p>&nbsp;</p>
@@ -43,7 +45,8 @@
                 <select id="seasons">
                     <option value="2013">2013</option>
                     <option value="2014">2014</option>
-                    <option value="2015" selected="selected">2015</option>
+                    <option value="2015">2015</option>
+                    <option value="2016" selected="selected">2016</option>
                     <option value="All ">All seasons</option>
                 </select>
             </div>
@@ -83,9 +86,7 @@
         <script type="text/javascript" src="../js/controllers/statistics.js"></script>
         <script type="text/javascript" src="../js/controllers/menusController.js"></script>
         <script type="text/javascript" src="../js/directives/menus.js"></script>
-    <script>
-           document.getElementById("currentYear").innerHTML = new Date().getFullYear();
-    </script>
+        <!--<script type="text/javascript" src="../js/react-src/transformed.js"></script>   &lt;!&ndash; react javascript &ndash;&gt;-->
     <div data-ng-include="'../templates/googleAnalytics.html'"></div>
 </body>
 </html>

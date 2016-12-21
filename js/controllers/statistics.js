@@ -8,8 +8,9 @@ app.controller('statistics-controller', function ($scope, $http) {
       var noOfTournaments = parseInt($('meta[name="noOfTournaments"]').attr("content"));
       $scope.statistics = {};
 
-    $scope.gotPoints = function(result) {
+      $scope.gotPoints = function(result) {
       return result.points > 0
+
     };
    }
 );
@@ -54,7 +55,6 @@ function animateOut() {
 
 }
 
-
 $(document).ready(function(){
 
     function blockUI() {
@@ -65,67 +65,37 @@ $(document).ready(function(){
     blockUI();
 
     var playerMap = new Object();
-    $.ajax({
-        url: '../json/general/players.json', dataType: 'json', async: false, success: function(data) {
-//            var currentYear = new Date().getFullYear().toString();
-            var currentYear = 2015 // Note - Change to above when 1st result of 2016 kicks in
-            gatherDonutStats(playerMap, currentYear, data);
-            outputDonutData(playerMap, currentYear);
-            animateIn();
-        }
-     });
+    var yearList = [2013, 2014, 2015, 2016]
+     for (var year = 0; year < yearList.length; year++) {
+        statisticYear = yearList[year];
+        $.ajax({
+            url: '../json/' + statisticYear + '/' + statisticYear + '_season_statistics.json', dataType: 'json', async: false, success: function(data) {
+                 for (var i = 0; i < data.Statistics.length; i++) {
+                    var playerName = data.Statistics[i].playerName;
+                    accumulateStatistics(playerMap, 'Played', data.Statistics[i].gamesPlayed, playerName, statisticYear);
+                    accumulateStatistics(playerMap, 'Won', data.Statistics[i].gamesWon, playerName, statisticYear);
+                    accumulateStatistics(playerMap, 'Top3', data.Statistics[i].topThree, playerName, statisticYear);
+                    accumulateStatistics(playerMap, 'Last', data.Statistics[i].luckyLast, playerName, statisticYear);
+                    accumulateStatistics(playerMap, 'Hosted', data.Statistics[i].hosted, playerName, statisticYear);
+                    accumulateStatistics(playerMap, 'Points', data.Statistics[i].totalPoints, playerName, statisticYear);
+                 }
+            }
+        });
+    };
 
-     $("#seasons").attr("selectedIndex", -1);
+    outputDonutData(playerMap, 2016);
+    animateIn();
+
+    $("#seasons").attr("selectedIndex", -1);
 
      $("#seasons").change(function() {
         blockUI();
 
         var season = $("#seasons option:selected").val();
-        $.ajax({
-            url: '../json/general/players.json', dataType: 'json', async: false, success: function(data) {
-                outputDonutData(playerMap, season)
-                animateOut();
-            }
-         });
+          outputDonutData(playerMap, season)
+          animateOut();
      });
 
-
-
-     function gatherDonutStats(playerMap, season, data) {
-         for (var i = 0; i < data.length; i++) {
-              var season = data[i].year;
-              for (var j = 0; j < data[i].players.length; j++) {
-                 var playerName = data[i].players[j].name;
-                 var fileName = playerName.substring(0,1).toLowerCase() + playerName.substring(1, playerName.length);
-                 var playerJsonFile = fileName.replace(/ /g,'') + ".json";
-
-                 $.ajax({
-                     url: '../json/' + season + '/' + playerJsonFile, dataType: 'json', async: false, success: function(playerJson) {
-                         for (var k = 0; k < playerJson.positionAndPlayers.length; k++) {
-                            var playerJsonStats = playerJson.positionAndPlayers[k].statistics;
-                            accumulateStatistics(playerMap, 'Played', playerJsonStats.played, playerName, season);
-                            accumulateStatistics(playerMap, 'Won', playerJsonStats.won, playerName, season);
-                            accumulateStatistics(playerMap, 'Top3', playerJsonStats.top3, playerName, season);
-//                            accumulateStatistics(playerMap, 'Bounty', playerJsonStats.bounties, playerName, season);
-                            accumulateStatistics(playerMap, 'Last', playerJsonStats.last, playerName, season);
-                            accumulateStatistics(playerMap, 'Hosted', playerJsonStats.hosted, playerName, season);
-                         }
-                     }
-                 })
-
-                 var playerEventJsonFile = playerJsonFile.replace('.json','_event_history.json');
-                 var totalPoints = 0;
-                 $.ajax(
-                    { url: '../json/' + season + '/' + playerEventJsonFile, dataType: 'json', async: false, success: function(playerEventJson) {
-                        for (var k = 0; k < playerEventJson.length; k++) {
-                              totalPoints = totalPoints + playerEventJson[k].points;
-                        }
-                        accumulateStatistics(playerMap, 'Points', totalPoints, playerName, season);
-                     }
-                 })
-             }
-         }
-     }
 
      function outputDonutData(playerMap, season) {
 
