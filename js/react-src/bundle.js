@@ -44,9 +44,7 @@
 /* 0 */
 /***/ function(module, exports, __webpack_require__) {
 
-	__webpack_require__(1);
-	__webpack_require__(180);
-	module.exports = __webpack_require__(181);
+	module.exports = __webpack_require__(1);
 
 
 /***/ },
@@ -55,19 +53,19 @@
 
 	'use strict';
 
-	var React = __webpack_require__(2);
-	var ReactDOM = __webpack_require__(33);
-	var Header = __webpack_require__(179);
+	var _react = __webpack_require__(2);
 
-	var title = "2017 - 'The Square' Poker Results";
-	var tagline = "Here you'll find all the latest scores from each tournament held, latest news, statistics and ammunition for bragging rights";
-	var className = "shadow";
+	var _react2 = _interopRequireDefault(_react);
 
-	ReactDOM.render(React.createElement(
-	    'div',
-	    null,
-	    React.createElement(Header, { title: title, tagline: tagline, className: className })
-	), document.getElementById('react_home_page_header'));
+	var _reactDom = __webpack_require__(33);
+
+	var _App = __webpack_require__(179);
+
+	var _App2 = _interopRequireDefault(_App);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	(0, _reactDom.render)(_react2.default.createElement(_App2.default, null), document.querySelector('#mainAp'));
 
 /***/ },
 /* 2 */
@@ -21482,35 +21480,44 @@
 
 	'use strict';
 
-	var React = __webpack_require__(2);
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
 
-	var Header = React.createClass({
-	  displayName: 'Header',
+	var _react = __webpack_require__(2);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _header = __webpack_require__(180);
+
+	var _header2 = _interopRequireDefault(_header);
+
+	var _yearSelection = __webpack_require__(181);
+
+	var _yearSelection2 = _interopRequireDefault(_yearSelection);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var title = "2017 - 'The Square' Poker Results";
+	var tagline = "Here you'll find all the latest scores from each tournament held, latest news, statistics and ammunition for bragging rights";
+	var className = "statistics_header";
+	var startYear = 2013;
+	var endYear = 2017;
+
+	var App = _react2.default.createClass({
+	  displayName: 'App',
 
 	  render: function render() {
-	    return React.createElement(
+	    return _react2.default.createElement(
 	      'div',
 	      null,
-	      React.createElement(
-	        'h2',
-	        { className: this.props.className },
-	        this.props.title
-	      ),
-	      React.createElement(
-	        'p',
-	        null,
-	        '\xA0'
-	      ),
-	      React.createElement(
-	        'p',
-	        null,
-	        this.props.tagline
-	      )
+	      _react2.default.createElement(_header2.default, { title: title, tagline: tagline, className: className }),
+	      _react2.default.createElement(_yearSelection2.default, { startYear: startYear, endYear: endYear })
 	    );
 	  }
 	});
 
-	module.exports = Header;
+	exports.default = App;
 
 /***/ },
 /* 180 */
@@ -21519,39 +21526,36 @@
 	'use strict';
 
 	var React = __webpack_require__(2);
-	var ReactDOM = __webpack_require__(33);
-	var Header = __webpack_require__(179);
 
-	var title = "Statistics Overload";
-	var tagline = "Hmmmm - donuts";
+	// Stateless component
 
-	ReactDOM.render(React.createElement(
-	    'div',
-	    null,
-	    React.createElement(Header, { title: title, tagline: tagline })
-	), document.getElementById('react_statistics_header'));
+	var Header = function Header(props) {
+
+	     return React.createElement(
+	          'div',
+	          null,
+	          React.createElement(
+	               'h2',
+	               { className: props.className },
+	               props.title
+	          ),
+	          React.createElement(
+	               'p',
+	               null,
+	               '\xA0'
+	          ),
+	          React.createElement(
+	               'p',
+	               null,
+	               props.tagline
+	          )
+	     );
+	};
+
+	module.exports = Header;
 
 /***/ },
 /* 181 */
-/***/ function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	var React = __webpack_require__(2);
-	var ReactDOM = __webpack_require__(33);
-	var YearSelection = __webpack_require__(182);
-
-	var startYear = 2013;
-	var endYear = 2017;
-
-	ReactDOM.render(React.createElement(
-	    'div',
-	    null,
-	    React.createElement(YearSelection, { startYear: startYear, endYear: endYear })
-	), document.getElementById('react_statistics_year_selection'));
-
-/***/ },
-/* 182 */
 /***/ function(module, exports, __webpack_require__) {
 
 	"use strict";

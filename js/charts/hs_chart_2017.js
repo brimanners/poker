@@ -29,8 +29,53 @@ $(function () {
             verticalAlign: 'middle',
             borderWidth: 0
         },
-        series: [
-                ]
+        series: [{name: 'Ben I',
+                 data: [10, 21, 21, 31]
+                }, {
+                 name: 'Junior A',
+                 data: [8, 8, 8, 8]
+                },
+                {
+                 name: 'Steve W',
+                 data: [6, 11, 21, 21]
+                },
+                {
+                 name: 'Jade W',
+                 data: [4, 5, 7, 7]
+                },
+                {
+                 name: 'Andy F',
+                 data: [3, 17, 17, 19]
+                },
+                {
+                 name: 'Carlos P',
+                 data: [2, 2, 10, 10]
+                },
+                {
+                 name: 'Brian M',
+                 data: [1, 18, 21, 27]
+                },
+                {
+                 name: 'Dave M',
+                 data: [0, 8, 12, 12]
+                },
+                {
+                 name: 'Simon W',
+                 data: [0, 4, 10, 11]
+                },
+                {
+                 name: 'Michael R',
+                 data: [0, 3, 3, 7]
+                },
+                {
+                 name: 'Mark V',
+                 data: [0, 2, 3, 6]
+                },
+                {
+                 name: 'Mark L',
+                 data: [0, 0, 0, 8]
+                }],
+
     });
 });
 
