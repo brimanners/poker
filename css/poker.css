@@ -2,6 +2,11 @@
    background-color: yellow;
 }
 
+
+* {
+    box-sizing: border-box;
+}
+
 #header1 {
   color: yellow;
      font-family: 'Lobster', cursive;

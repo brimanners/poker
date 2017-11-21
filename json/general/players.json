@@ -11,7 +11,10 @@
 		{"name": "Junior A", "Nationality": "BRA"},
 		{"name": "Michael R", "Nationality": "NZE"},
 		{"name": "Mark V", "Nationality": "SRI"},
-		{"name": "Kevin H", "Nationality": "AUS"}
+        {"name": "Mark L", "Nationality": "AUS"},
+        {"name": "Andrew L", "Nationality": "AUS"},
+        {"name": "Kevin H", "Nationality": "AUS"},
+        {"name": "Jacob W", "Nationality": "AUS"}
 	]},
 	{"year": 2016, "players": [
 		{"name": "Andy F", "Nationality": "NZE"},

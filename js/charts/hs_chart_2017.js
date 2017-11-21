@@ -30,52 +30,63 @@ $(function () {
             borderWidth: 0
         },
         series: [{name: 'Ben I',
-                 data: [10, 21, 21, 31]
+                 data: [10, 21, 21, 31, 47]
                 }, {
                  name: 'Junior A',
-                 data: [8, 8, 8, 8]
+                 data: [8, 8, 8, 8, 8]
                 },
                 {
                  name: 'Steve W',
-                 data: [6, 11, 21, 21]
+                 data: [6, 11, 21, 21, 34]
                 },
                 {
                  name: 'Jade W',
-                 data: [4, 5, 7, 7]
+                 data: [4, 5, 7, 7, 26]
                 },
                 {
                  name: 'Andy F',
-                 data: [3, 17, 17, 19]
+                 data: [3, 17, 17, 19, 19]
                 },
                 {
                  name: 'Carlos P',
-                 data: [2, 2, 10, 10]
+                 data: [2, 2, 10, 10, 12]
                 },
                 {
                  name: 'Brian M',
-                 data: [1, 18, 21, 27]
+                 data: [1, 18, 21, 27, 49]
                 },
                 {
                  name: 'Dave M',
-                 data: [0, 8, 12, 12]
+                 data: [0, 8, 12, 12, 17]
                 },
                 {
                  name: 'Simon W',
-                 data: [0, 4, 10, 11]
+                 data: [0, 4, 10, 11, 20]
                 },
                 {
                  name: 'Michael R',
-                 data: [0, 3, 3, 7]
+                 data: [0, 3, 3, 7, 8]
                 },
                 {
                  name: 'Mark V',
-                 data: [0, 2, 3, 6]
+                 data: [0, 2, 3, 6, 9]
                 },
                 {
                  name: 'Mark L',
-                 data: [0, 0, 0, 8]
-                }],
-
+                 data: [0, 0, 0, 8, 16]
+                },
+                {
+                 name: 'Andrew L',
+                 data: [0, 0, 0, 0, 6]
+                },
+                 {
+                 name: 'Kevin H',
+                 data: [0, 0, 0, 0, 4]
+                },
+                 {
+                 name: 'Jacob W',
+                 data: [0, 0, 0, 0, 7]
+                }]
     });
 });
 
