@@ -2,10 +2,26 @@
    background-color: yellow;
 }
 
-
 * {
     box-sizing: border-box;
 }
+
+
+
+@media all and (min-width: 501px)   {
+    #ladderMobile {display: none;}
+    #allSeasonsladderMobile {display: none;}
+    #last5ResultsladderMobile {display: none;}
+}
+
+@media all and (max-width: 500px) {
+    #ladder {display: none;}
+    #last5Resultsladder {display: none;}
+    #allSeasonsladder {display: none;}
+    .hideForMobile {display: none;}
+}
+
+tableOptions
 
 #header1 {
   color: yellow;
@@ -118,6 +134,9 @@ body
 .header-center {
     text-align: center;
 }
+
+.news {
+margin-left: 10px;}
 
 #newsTicker {
     -webkit-animation-duration: 1s;

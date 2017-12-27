@@ -8,7 +8,7 @@ $(function () {
             title: {
                         text: 'Event Number'
                     },
-            categories: ['1', '2', '3', '4', '5']
+            categories: ['1', '2', '3', '4', '5', '6']
         },
         yAxis: {
             title: {
@@ -30,62 +30,62 @@ $(function () {
             borderWidth: 0
         },
         series: [{name: 'Ben I',
-                 data: [10, 21, 21, 31, 47]
+                 data: [10, 21, 21, 31, 47, 55]
                 }, {
                  name: 'Junior A',
-                 data: [8, 8, 8, 8, 8]
+                 data: [8, 8, 8, 8, 8, 11]
                 },
                 {
                  name: 'Steve W',
-                 data: [6, 11, 21, 21, 34]
+                 data: [6, 11, 21, 21, 34, 45]
                 },
                 {
                  name: 'Jade W',
-                 data: [4, 5, 7, 7, 26]
+                 data: [4, 5, 7, 7, 26, 26]
                 },
                 {
                  name: 'Andy F',
-                 data: [3, 17, 17, 19, 19]
+                 data: [3, 17, 17, 19, 19, 19]
                 },
                 {
                  name: 'Carlos P',
-                 data: [2, 2, 10, 10, 12]
+                 data: [2, 2, 10, 10, 12, 14]
                 },
                 {
                  name: 'Brian M',
-                 data: [1, 18, 21, 27, 49]
+                 data: [1, 18, 21, 27, 49, 66]
                 },
                 {
                  name: 'Dave M',
-                 data: [0, 8, 12, 12, 17]
+                 data: [0, 8, 12, 12, 17, 31]
                 },
                 {
                  name: 'Simon W',
-                 data: [0, 4, 10, 11, 20]
+                 data: [0, 4, 10, 11, 20, 20]
                 },
                 {
                  name: 'Michael R',
-                 data: [0, 3, 3, 7, 8]
+                 data: [0, 3, 3, 7, 8, 8]
                 },
                 {
                  name: 'Mark V',
-                 data: [0, 2, 3, 6, 9]
+                 data: [0, 2, 3, 6, 9, 9]
                 },
                 {
                  name: 'Mark L',
-                 data: [0, 0, 0, 8, 16]
+                 data: [0, 0, 0, 8, 16, 20]
                 },
                 {
                  name: 'Andrew L',
-                 data: [0, 0, 0, 0, 6]
+                 data: [0, 0, 0, 0, 6, 7]
                 },
                  {
                  name: 'Kevin H',
-                 data: [0, 0, 0, 0, 4]
+                 data: [0, 0, 0, 0, 4, 4]
                 },
                  {
                  name: 'Jacob W',
-                 data: [0, 0, 0, 0, 7]
+                 data: [0, 0, 0, 0, 7, 7]
                 }]
     });
 });
