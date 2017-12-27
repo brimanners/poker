@@ -3,7 +3,7 @@
 <!-- the ng-app name 'poker' is referenced the corresponding controller logic -->
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="season" content="2017">
+    <meta name="season" content="2018">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
@@ -32,7 +32,7 @@
     <script type="text/javascript" src="https://code.highcharts.com/highcharts.js"></script>
     <script type="text/javascript" src="../js/charts/charts.js"></script>
     <script type="text/javascript" src="../js/countdown.min.js"></script>
-    <script type="text/javascript" src="../js/charts/hs_chart_2017.js"></script>
+    <script type="text/javascript" src="../js/charts/hs_chart_2018.js"></script>
     <script type="text/javascript" src="../js/charts/jquery.popupoverlay.js"></script>
     <script type="text/javascript" src="../js/overlay.js"></script>
 </head>
@@ -43,13 +43,23 @@
     <div class="container">
 
     <div class="jumbotron table_border">
-            <h2 class="shadow" id="header1"><span>2017 - 'The Square' Poker Results</span></h2>
+            <h2 class="shadow" id="header1"><span>2018 - 'The Square' Poker Results</span></h2>
             <p id="header2">
-               Another great season of cards, beers and banter!
+                Here you'll find all the latest scores from each tournament held,
+                latest news, statistics and ammunition for bragging rights
             </p>
     </div>
     <div class="body-content">
-
+        <div class="news">
+            <div ng-hide="newsItem == ''">
+                <h4 style="color:blue;" class="hidden" id="newsTicker"><b><i><span id="news">Latest News: </span></i></b>{{newsItem}}</h4>
+            </div>
+            <table border="0" ng-show="displayCountdown">
+                <tr>
+                    <td id="countdown-text" class="hidden">Time to next event: <b><span id="countdown-holder"></span></b</td>
+                </tr>
+            </table>
+        </div>
         <br/>
 
         <div class="col-lg-3">
@@ -59,15 +69,15 @@
                     <th>Date</th>
                     <th>Location</th>
                 </tr>
-                <tr class="event-completed">
-                    <td><a href="../events/event.html?event=27">1<sup>st</sup></a></td>
-                    <td><a href="../events/event.html?event=27">February 11<sup>th</sup></s></a></td>
-                    <td><a href="../events/event.html?event=27">Brian's</a></td>
+                <tr class="event">
+                    <td><a href="">1<sup>st</sup></a></td>
+                    <td><a href="">TBD</a></td>
+                    <td><a href="">TBD</a></td>
                 </tr>
-                <tr class="event-completed">
-                    <td><a href="../events/event.html?event=28">2<sup>nd</sup></a></td>
-                    <td><a href="../events/event.html?event=28">April 22<sup>nd</sup></a></td>
-                    <td><a href="../events/event.html?event=28">Mark V's</a></td>
+                <tr class="event">
+                    <td><a href="">2<sup>nd</sup></a></td>
+                    <td><a href="">TBD</a></td>
+                    <td><a href="">TBD</a></td>
                 </tr>
             </table>
         </div>
@@ -78,15 +88,15 @@
                     <th>Date</th>
                     <th>Location</th>
                 </tr>
-                <tr class="event-completed">
-                    <td><a href="../events/event.html?event=29">3<sup>rd</sup></a></td>
-                    <td><a href="../events/event.html?event=29">June 17<sup>th</sup></a></td>
-                    <td><a href="../events/event.html?event=29">Simon's</a></td>
+                <tr class="event">
+                    <td><a href="">3<sup>rd</sup></a></td>
+                    <td><a href="">TBD</a></td>
+                    <td><a href="">TBD</a></td>
                 </tr>
-                <tr class="event-completed">
-                    <td><a href="../events/event.html?event=30">4<sup>th</sup></a></td>
-                    <td><a href="../events/event.html?event=30">Aug 12<sup>th</sup></a></td>
-                    <td><a href="../events/event.html?event=30">Ben's</a></td>
+                <tr class="event">
+                    <td><a href="">4<sup>th</sup></a></td>
+                    <td><a href="">TBD</a></td>
+                    <td><a href="">TBD</a></td>
                 </tr>
             </table>
         </div>
@@ -97,15 +107,15 @@
                     <th>Date</th>
                     <th>Location</th>
                 </tr>
-                <tr class="event-completed">
-                    <td><a href="../events/event.html?event=31">5<sup>th</sup></a></td>
-                    <td><a href="../events/event.html?event=31">October 28<sup>th</sup></a></td>
-                    <td><a href="../events/event.html?event=31">Steve's</a></td>
+                <tr class="event">
+                    <td><a href="">5<sup>th</sup></a></td>
+                    <td><a href="">TBD</a></td>
+                    <td><a href="">TBD</a></td>
                 </tr>
-                <tr class="event-completed">
-                    <td><a href="../events/event.html?event=32">6<sup>th</sup></a></td>
-                    <td><a href="../events/event.html?event=32">November 25<sup>th</sup></a></td>
-                    <td><a href="../events/event.html?event=32">Mark L's</a></td>
+                <tr class="event">
+                    <td><a href="">6<sup>th</sup></a></td>
+                    <td><a href="">TBD</a></td>
+                    <td><a href="">TBD</a></td>
                 </tr>
             </table>
         </div>
@@ -241,6 +251,142 @@
                 </tbody>
             </table>
         </div>
+        <!--All seasons ladder-->
+        <div class="col-lg-10">
+          <h3>All seasons ladder</h3>
+          <table class="table_border results table table-striped table-bordered table-condensed table-hover" id="allSeasonsladder">
+              <tr>
+                  <th>Position</th>
+                  <th style="text-align:left; padding-left:10px; width:100px; white-space:nowrap;"><a href="" ng-click="angularSort('name')">Name</a></th>
+                  <th class="header-center">Played</th>
+                  <th class="header-center">1<sup>st</sup></th>
+                  <th class="header-center">2<sup>nd</sup></th>
+                  <th class="header-center">3<sup>rd</sup></th>
+                  <th class="header-center">4<sup>th</sup></th>
+                  <th class="header-center">Last</th>
+                  <th class="header-center">Win Ratio</th>
+                  <th class="header-center">Last Ratio</th>
+                  <th class="header-center">Ave Points</th>
+                  <th class="header-center">Ave Position</th>
+                  <th class="header-center">Career earnings</th>
+                  <th class="header-center">In the money</th>
+                  <th class="header-center">In the money%</th>
+                  <th class="header-center"><img src='../images/medals/gold_medal.png' style="width:30px; height:40px;" alt="gold"></th>
+                  <th class="header-center"><img src='../images/medals/silver_medal.png' style="width:30px; height:40px;" alt="silver"></th>
+                  <th class="header-center"><img src='../images/medals/bronze_medal.png' style="width:30px; height:40px;" alt="bronze"></th>
+                  <th class="header-center"><img src='../images/medals/last.png' style="width:30px; height:40px;" alt="spoon"></th>
+                  <th class="header-center">Hosted</th>
+                  <th class="header-center">Total Points</a></th>
+              </tr>
+              <tbody class="animate" data-ng-repeat="result in allSeasonsLadder | filter:player | filter:gotPoints | orderBy:['-points','played', '-won']">
+                 <td>{{$index + 1}}<sup>{{positionSuffix($index + 1)}}</sup></td>
+                 <td style="text-align:left; white-space:nowrap;">
+                     <img src='../images/flags/{{result.nationality}}.png' style="width:30px; height:25px;" alt="flag">{{result.name}}
+                 </td>
+                 <td>{{result.played}}</td>
+                 <td>{{result.won}}</td>
+                 <td>{{result.second}}</td>
+                 <td>{{result.third}}</td>
+                 <td>{{result.fourth}}</td>
+                 <td>{{result.last}}</td>
+                 <td>{{result.winRatio | number:2}} %</td>
+                 <td>{{result.lastRatio | number:2}} %</td>
+                 <td>{{result.averagePoints | number:2}}</td>
+                 <td>{{result.averagePosition | number:2}}</td>
+                 <td>{{result.cash | currency}}</td>
+                 <td>{{result.cashes | number:0}}</td>
+                 <td>{{result.averageCashes | number:2}} %</td>
+                 <td style="background-color: gold;">{{result.gold || 0}}</td>
+                  <td style="background-color: silver;">{{result.silver || 0}}</td>
+                  <td style="background-color: sandybrown;">{{result.bronze || 0}}</td>
+                  <td>{{result.spoon || 0}}</td>
+                  <td>{{result.hosted || 0}}</td>
+                 <td style="color: blue; background-color: LightSkyBlue;"><b>{{result.points}}</b></td>
+             </tbody>
+          </table>
+          <table class="table_border results table table-striped table-bordered table-condensed table-hover" id="allSeasonsladderMobile">
+            <tr>
+                <th>Position</th>
+                <th style="text-align:left; padding-left:10px; width:100px; white-space:nowrap;"><a href="" ng-click="angularSort('name')">Name</a></th>
+                <th class="header-center">Played</th>
+                <th class="header-center">Ave Points</th>
+                <th class="header-center">Ave Position</th>
+                <th class="header-center">Total Points</a></th>
+            </tr>
+            <tbody class="animate" data-ng-repeat="result in allSeasonsLadder | filter:player | filter:gotPoints | orderBy:['-points','played', '-won']">
+                <td>{{$index + 1}}<sup>{{positionSuffix($index + 1)}}</sup></td>
+                <td style="text-align:left; white-space:nowrap;">
+                    <img src='../images/flags/{{result.nationality}}.png' style="width:30px; height:25px;" alt="flag">{{result.name}}
+                </td>
+                <td>{{result.played}}</td>
+                <td>{{result.averagePoints | number:2}}</td>
+                <td>{{result.averagePosition | number:2}}</td>
+                <td style="color: blue; background-color: LightSkyBlue;"><b>{{result.points}}</b></td>
+            </tbody>
+        </table>
+      </div>
+        <!--Last 5 results-->
+        <div class="col-lg-10">
+            <h3>Recent form..... (Each players last 5 results)</h3>
+            <table class="table_border results table table-striped table-bordered table-condensed table-hover" id="last5Resultsladder">
+                <tr>
+                    <th>Position</th>
+                    <th style="text-align:left; padding-left:10px;">Name</th>
+                    <th class="header-center">Played</th>
+                    <th class="header-center">1<sup>st</sup></th>
+                    <th class="header-center">2<sup>nd</sup></th>
+                    <th class="header-center">3<sup>rd</sup></th>
+                    <th class="header-center">4<sup>th</sup></th>
+                    <th class="header-center">Last</th>
+                    <th class="header-center">Win Ratio</th>
+                    <th class="header-center">Last Ratio</th>
+                    <th class="header-center">Ave Points</th>
+                    <th class="header-center">Ave Position</th>
+                    <th class="header-center">Total Points</th>
+                    <th>Position/Players</th>
+                </tr>
+                <!--<tr ng-repeat="result in formTable | filter:player | filter:gotPoints | orderBy: ['-points', 'played', '-won', 'averagePosition', 'name']" >-->
+                <tbody class="animate" data-ng-repeat="result in formTable | filter:player | filter:gotPoints | orderBy:'-points'">
+                   <td>{{$index + 1}}<sup>{{positionSuffix($index + 1)}}</sup></td>
+                   <td style="text-align:left; padding-left:10px;">
+                       <img src='../images/flags/{{result.nationality}}.png' style="width:30px; height:25px;" alt="flag">{{result.name}}
+                   </td>
+                   <td>{{result.played}}</td>
+                   <td>{{result.won}}</td>
+                   <td>{{result.second}}</td>
+                   <td>{{result.third}}</td>
+                   <td>{{result.fourth}}</td>
+                   <td>{{result.last}}</td>
+                   <td>{{result.won / result.played * 100 | number:2}} %</td>
+                   <td>{{result.last / result.played * 100 | number:2}} %</td>
+                   <td>{{result.averagePoints | number:2}}</td>
+                   <td>{{result.averagePosition | number:2}}</td>
+                   <td style="color: blue; background-color: LightSkyBlue;"><b>{{result.points}}</b></td>
+                   <td>{{result.positionPlayers}}</td>
+               </tr>
+            </table>
+            <table class="table_border results table table-striped table-bordered table-condensed table-hover" id="last5ResultsladderMobile">
+                <tr>
+                    <th>Position</th>
+                    <th style="text-align:left; padding-left:10px;">Name</th>
+                    <th class="header-center">Played</th>
+                    <th class="header-center">Total Points</th>
+                    <th>Position/Players</th>
+                </tr>
+                <!--<tr ng-repeat="result in formTable | filter:player | filter:gotPoints | orderBy: ['-points', 'played', '-won', 'averagePosition', 'name']" >-->
+                <tbody class="animate" data-ng-repeat="result in formTable | filter:player | filter:gotPoints | orderBy:'-points'">
+                <td>{{$index + 1}}<sup>{{positionSuffix($index + 1)}}</sup></td>
+                <td style="text-align:left; padding-left:10px;">
+                    <img src='../images/flags/{{result.nationality}}.png' style="width:30px; height:25px;" alt="flag">{{result.name}}
+                </td>
+                <td>{{result.played}}</td>
+                <td style="color: blue; background-color: LightSkyBlue;"><b>{{result.points}}</b></td>
+                <td>{{result.positionPlayers}}</td>
+                </tr>
+            </table>
+        </div>
+        <br/>
+        <div data-ng-include="'../templates/footer.html'"></div>
     </div>
     <!-- /container -->
     <script type="text/javascript" src="../js/controllers/homePage.js"></script>
