@@ -117,10 +117,16 @@
                 <tr>
                     <td>
                         <h3 style="white-space:nowrap;">Ladder after event number:</h3>
+                        <!--<h3>Hello {{statistics}}</h3>-->
                     </td>
                     <td style="padding-left:10px;">
-                        <select ng-model="eventId" ng-change="tableChanged()" id="eventNumber" class="button_border">
-                            <option ng-repeat="tournament in statistics.events" ng-selected="{{statistics.events.length == $index + 1}}" value="{{$index + 1}}">{{$index + 1}}</option>
+                        <select ng-model="eventId" ng-change="tableChanged()" id="eventNumber">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
                         </select>
                     </td>
                     <td class="hideForMobile">&nbsp;&nbsp;&nbsp;&nbsp;Filter: <input type="text" ng-model="player"/></span></td>
@@ -256,7 +262,8 @@
             <div class="col-lg-4" style="float:right;">
                 <table>
                     <tr>
-                        <td><img src="../images/2017_champion.png" height="300" width="300" class="border" alt="picture1" style="float:left;"></td>
+                        <!--<td><img src="../images/2017_champion.png" height="300" width="300" class="border align-right slide-in" alt="picture1" style="float:left;"></td>-->
+                        <td><img src="../images/2017_champion.png" height="300" width="300" class="border align-right slide-in" alt="picture1" ></td>
                     </tr>
                     <tr>
                         <td style="font-size:8pt; align: center; padding-left:10px;">2016 Champion Brian handing over the trophy to the 2017 champion Brian :)</td>
@@ -316,6 +323,8 @@
     <script type="text/javascript" src="../js/controllers/homePage.js"></script>
     <script type="text/javascript" src="../js/controllers/menusController.js"></script>
     <script type="text/javascript" src="../js/directives/menus.js"></script>
+    <script type="text/javascript" src="../js/floatingImages.js"></script>
+
     <div data-ng-include="'../templates/googleAnalytics.html'"></div>
 </body>
 </html>
