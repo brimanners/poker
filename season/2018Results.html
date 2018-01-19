@@ -43,7 +43,11 @@
     <div class="container">
 
     <div class="jumbotron table_border">
-            <h2 class="shadow" id="header1"><span>2018 - 'The Square' Poker Results</span></h2>
+            <h2 class="shadow" id="header1">
+                <div class="shadowArea">
+                    <span>2018 - 'The Square' Poker Results</span>
+                </div>
+            </h2>
             <p id="header2">
                 Here you'll find all the latest scores from each tournament held,
                 latest news, statistics and ammunition for bragging rights
@@ -215,13 +219,13 @@
                     </tr>
                 </tbody>
             </table>
-            <table data-ng-table="tableParams" id="ladderMobile" class="table_border results table table-striped table-bordered table-condensed table-hover">
+            <table data-ng-table="tableParams" id="ladderMobile" class="table_border results table table-striped table-bordered table-condensed table-hover" style="font-size: 11px">
                 <thead>
                 <tr class="first">
                     <th class="first">Position</th>
                     <th style="text-align:left; padding-left:10px; width:100px; white-space:nowrap;">Name</th>
                     <th class="header-center">Played</th>
-                    <th class="header-center">Total Points</th>
+                    <th class="header-center">Points</th>
                     <th data-ng-show=" class="header-center">Movement</th>
                 </tr>
                 </thead>
@@ -304,14 +308,14 @@
                  <td style="color: blue; background-color: LightSkyBlue;"><b>{{result.points}}</b></td>
              </tbody>
           </table>
-          <table class="table_border results table table-striped table-bordered table-condensed table-hover" id="allSeasonsladderMobile">
+          <table class="table_border results table table-striped table-bordered table-condensed table-hover" id="allSeasonsladderMobile" style="font-size: 11px">
             <tr>
                 <th>Position</th>
                 <th style="text-align:left; padding-left:10px; width:100px; white-space:nowrap;"><a href="" ng-click="angularSort('name')">Name</a></th>
                 <th class="header-center">Played</th>
                 <th class="header-center">Ave Points</th>
                 <th class="header-center">Ave Position</th>
-                <th class="header-center">Total Points</a></th>
+                <th class="header-center">Points</a></th>
             </tr>
             <tbody class="animate" data-ng-repeat="result in allSeasonsLadder | filter:player | filter:gotPoints | orderBy:['-points','played', '-won']">
                 <td>{{$index + 1}}<sup>{{positionSuffix($index + 1)}}</sup></td>
@@ -365,12 +369,12 @@
                    <td>{{result.positionPlayers}}</td>
                </tr>
             </table>
-            <table class="table_border results table table-striped table-bordered table-condensed table-hover" id="last5ResultsladderMobile">
+            <table class="table_border results table table-striped table-bordered table-condensed table-hover" id="last5ResultsladderMobile" style="font-size: 11px">
                 <tr>
                     <th>Position</th>
                     <th style="text-align:left; padding-left:10px;">Name</th>
                     <th class="header-center">Played</th>
-                    <th class="header-center">Total Points</th>
+                    <th class="header-center">Points</th>
                     <th>Position/Players</th>
                 </tr>
                 <!--<tr ng-repeat="result in formTable | filter:player | filter:gotPoints | orderBy: ['-points', 'played', '-won', 'averagePosition', 'name']" >-->
@@ -381,7 +385,7 @@
                 </td>
                 <td>{{result.played}}</td>
                 <td style="color: blue; background-color: LightSkyBlue;"><b>{{result.points}}</b></td>
-                <td>{{result.positionPlayers}}</td>
+                <td style="font-size:10px;">{{result.positionPlayers}}</td>
                 </tr>
             </table>
         </div>

@@ -108,6 +108,12 @@ $scope.clicked = function() {
  $scope.displayPoints = function() {
      $scope.displayPointsChart = true;
   }
+
+    window.addEventListener("load",function() {
+        const mq = window.matchMedia( "(min-width: 500px)" );
+    });
+
+
 });
 
 // WIP - Or do we just create an array in the JSON instead of client side data manipulation?

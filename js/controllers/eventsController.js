@@ -2,6 +2,11 @@ var app = angular.module('poker', []);
 
 app.controller('events-controller', function ($scope, $http) {
     loadTitles($scope, $http)
+
+     window.addEventListener("load",function() {
+        const images = document.querySelectorAll('.border')
+        images.forEach(image => image.classList.add('align-right', 'slide-in'));
+     });
 });
 
 function loadTitles($scope, $http) {
