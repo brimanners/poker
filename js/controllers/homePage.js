@@ -87,6 +87,7 @@ app.controller('homePageController', function ($scope, $http) {
                   clock.innerHTML = countdown(targetDate).toString();
                   var interval = setInterval(function(){
                       clock.innerHTML = countdown(targetDate).toString();
+                      document.title = clock.innerHTML;
                       if (clock.innerHTML == "") {
                          clock.innerHTML = "Game has commenced......."
                          clearInterval(interval);
