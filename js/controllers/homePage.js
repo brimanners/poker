@@ -13,7 +13,7 @@ app.controller('homePageController', function ($scope, $http) {
    $scope.orderProp = "'-points','played'";
 
    $scope.angularSort = function(column) {
-        alert("Sort by " + column);
+
    }
 
     // this function feel like they should be a in general util type area - need to work out scoping so all angular controller can see....

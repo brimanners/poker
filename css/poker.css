@@ -23,11 +23,11 @@
 
 /* Bigger than mobile */
 @media all and (min-width: 501px) {
-    .dropdown-submenu > a.menuMobile {
+    a.menuMobile {
        display:none
     }
     .dropdown-submenu > a.menuNotMobile {
-           display:block
+       display:block
     }
 }
 
