@@ -169,6 +169,11 @@ margin-left: 10px;}
     -o-animation-duration: 1s;
 }
 
+#subtitle {
+    color: black;
+   font-size: 25px;
+    }
+
 .results tbody tr td {
     text-align:center;
     white-space:nowrap;
