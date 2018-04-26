@@ -21,6 +21,7 @@
     <script type="text/javascript" src="../js/charts/charts.js"></script>
     <script type="text/javascript" src="../js/tableSorter.js"></script>
     <script type="text/javascript" src="../js/moment.js"></script>
+    <script type="text/javascript" src="../js/elevator.min.js"></script>
 </head>
 <body ng-controller="playerController" ng-cloak>
     <menus data-ng-controller="menusController"></menus> <!-- Custom directive to show all the menu items - see js/directives/menus.js for details -->
@@ -182,10 +183,7 @@
                 <div class="col-lg-1"></div>
             </div>
             <p></p>
-
-        <footer>
-            <p>&copy; BJIT website productions <span id="currentYear"></span></p>
-        </footer>
+        <div data-ng-include="'../templates/footer.html'"></div>
     </div>
     <!-- /container -->
     <script type="text/javascript" src="../js/controllers/player.js"></script>

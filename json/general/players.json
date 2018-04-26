@@ -7,7 +7,10 @@
       {"name": "Brian M", "Nationality": "ENG"},
       {"name": "Michael R", "Nationality": "NZE"},
       {"name": "Mark V", "Nationality": "SRI"},
-      {"name": "Mark L", "Nationality": "AUS"}
+      {"name": "Mark L", "Nationality": "AUS"},
+      {"name": "Andy F", "Nationality": "NZE"},
+      {"name": "Carlos P", "Nationality": "VEN"},
+      {"name": "Paul B", "Nationality": "AUS"}
     ]},
 	{"year": 2017, "players": [
 		{"name": "Andy F", "Nationality": "NZE"},

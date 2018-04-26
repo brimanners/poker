@@ -35,6 +35,8 @@
     <script type="text/javascript" src="../js/charts/hs_chart_2018.js"></script>
     <script type="text/javascript" src="../js/charts/jquery.popupoverlay.js"></script>
     <script type="text/javascript" src="../js/overlay.js"></script>
+    <script type="text/javascript" src="../js/elevator.min.js"></script>
+
 </head>
 <body ng-controller="homePageController" ng-cloak class="yui3-skin-sam">
 
@@ -75,13 +77,13 @@
                 </tr>
                 <tr class="event-completed">
                     <td style="text-align: center"><a href="../events/event.html?event=33">1<sup>st</sup></a></td>
-                    <td><a href="../events/event.html?event=33">February 17<sup>th</sup></a></td>
-                    <td><a href="../events/event.html?event=33">Mark V's</a></td>
+                    <td><a href="../events/event.html?event=33" class="event-date">February 17<sup>th</sup></a></td>
+                    <td><a href="../events/event.html?event=33" class="event-location">Mark V's</a></td>
                 </tr>
-                <tr class="event">
+                <tr class="event-completed">
                     <td style="text-align: center"><a href="">2<sup>nd</sup></a></td>
-                    <td><a href="">April 21<sup>st</sup></a></td>
-                    <td><a href="">Michael's</a></td>
+                    <td><a href="../events/event.html?event=34" class="event-date">April 21<sup>st</sup></a></td>
+                    <td><a href="../events/event.html?event=34" class="event-location">Michael's</a></td>
                 </tr>
             </table>
         </div>
@@ -94,13 +96,13 @@
                 </tr>
                 <tr class="event">
                     <td style="text-align: center"><a href="">3<sup>rd</sup></a></td>
-                    <td><a href="">June 2<sup>nd</sup></a></td>
-                    <td><a href="">Ben's</a></td>
+                    <td><a href="" class="event-date">June 2<sup>nd</sup></a></td>
+                    <td><a href="" class="event-location">Ben's</a></td>
                 </tr>
                 <tr class="event">
                     <td style="text-align: center"><a href="">4<sup>th</sup></a></td>
-                    <td><a href="">August 18<sup>th</sup></a></td>
-                    <td><a href="">TBD</a></td>
+                    <td><a href="" class="event-date">August 18<sup>th</sup></a></td>
+                    <td><a href="" class="event-location">TBD</a></td>
                 </tr>
             </table>
         </div>
@@ -113,13 +115,13 @@
                 </tr>
                 <tr class="event">
                     <td style="text-align: center"><a href="">5<sup>th</sup></a></td>
-                    <td><a href="">October 13<sup>th</sup></a></td>
-                    <td><a href="">TBD</a></td>
+                    <td><a href="" class="event-date">October 13<sup>th</sup></a></td>
+                    <td><a href="" class="event-location">Dave's shack</a></td>
                 </tr>
                 <tr class="event">
                     <td style="text-align: center"><a href="">6<sup>th</sup></a></td>
-                    <td><a href="">November 24<sup>th</sup></a></td>
-                    <td><a href="">Mark L's</a></td>
+                    <td><a href="" class="event-date">November 24<sup>th</sup></a></td>
+                    <td><a href="" class="event-location">Mark L's</a></td>
                 </tr>
             </table>
         </div>
@@ -174,6 +176,7 @@
                         <th class="header-center">Total Points</th>
                         <th data-ng-show=" class="header-center">Movement</th>
                         <th class="header-center">Hide?</th>
+                        <th class="header-center">&nbsp;</th>
                     </tr>
                 </thead>
                 <tbody class="animate" data-ng-repeat="result in displayTable | filter:player | filter:gotPoints | orderBy:['-points','played','-won']">
@@ -181,7 +184,7 @@
                        <td>{{$index + 1}}<sup>{{positionSuffix($index + 1)}}</sup></td>
                        <td style="text-align:left; padding-left:10px; width:100px; white-space:nowrap;">
                            <img src="../images/flags/{{result.nationality}}.png" style="width:30px; height:25px;" alt="flag">
-                           <a href="{{result.url}}">{{result.name}}</a>
+                           <a href="{{result.url}}" class="player-name">{{result.name}}</a>
                        </td>
                        <td data-title="'Played'" sortable="'Played'">{{result.played}}</td>
                        <td>{{result.won}}</td>
@@ -212,6 +215,9 @@
                             </td>
                         </div>
                         <td><input type='checkbox' data-ng-click="clearPlayer()" ng-model="result.hidePlayer" checked="result.hidePlayer"/></td>
+                        <td>
+                            <button type="button" id="narrate_{{$index + 1}}" data-ng-click="narrate(result, $index + 1)"><img src="../images/sound.png" style="height: 20px; width: 20px;" /></button>
+                        </td>
                     </tr>
                     <tr id="positionResults" data-ng-show="displayExtra">
                         <td colspan="2" style="text-align:left;"><pre>Position/Players</pre></td>
@@ -391,6 +397,8 @@
         </div>
         <br/>
         <div data-ng-include="'../templates/footer.html'"></div>
+
+
     </div>
     <!-- /container -->
     <script type="text/javascript" src="../js/controllers/homePage.js"></script>

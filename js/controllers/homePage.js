@@ -16,6 +16,7 @@ app.controller('homePageController', function ($scope, $http) {
 
    }
 
+
     // this function feel like they should be a in general util type area - need to work out scoping so all angular controller can see....
     $scope.positionSuffix = function(position) {
         switch (position) {
@@ -54,6 +55,40 @@ app.controller('homePageController', function ($scope, $http) {
        }
     }
 
+    $scope.narrate = function(player, position) {
+
+         function singularPoints(points) {
+             if (points == "1") {
+                return "point";
+             }
+             return "points";
+         }
+
+         const synth = window.speechSynthesis;
+         names = player.name.split(' ')
+         decoratedPosition = position + $scope.positionSuffix(position)
+         if (player.positions == "(" + position + "/" + position + ")") {
+
+            decoratedPosition = "last"
+         }
+
+
+         var sentence = names[0] + ',' + names[1] + ', is in ' + decoratedPosition + ' place , with ' + player.points + " " + singularPoints(player.points);
+
+         if (position == "1") {
+            sentence += ", Great work there " + names[0];
+         }
+
+         if (player.positions == "(" + position + "/" + position + ")") {
+            sentence += ", Ha Ha Ha Ha Ha? Hope you're enjoying the wooden spoon, " + names[0];
+         }
+
+         const utterThis = new SpeechSynthesisUtterance(sentence);
+
+         synth.speak(utterThis);
+
+    }
+
      //  Get news ticker item
     $http.get('../json/general/news-item.json').success(function (data) {
       $scope.newsItem = data[0]["news-item"];
@@ -84,10 +119,93 @@ app.controller('homePageController', function ($scope, $http) {
              var clock = document.getElementById("countdown-holder");
              clock.innerHTML = ""
              if (now < targetDate) {
+//                    console.log('start speech recognitions')
+//                 if ('windowsSpeechRecognition' in window) {
+//                     var recognition = new webkitSpeechRecognition();
+//                     recognition.continuous = true;
+//                     recognition.lan = 'en-AU';
+//                     console.log('Listening now..........')
+//
+//                     listening = false;
+//                     recognition.onresult = function(event) {
+////                       console.log('event ', event)
+//                       console.log(new Date().toString(), ' ', event.results[event.results.length - 1][0].transcript)
+//
+//                       let stringToCheck = event.results[event.results.length - 1][0].transcript.toString().trim().toLowerCase();
+//
+//                       console.log('String ', stringToCheck + ' listening ?', listening)
+//
+//                       if (stringToCheck == "hey poker") {
+//                          const synth = window.speechSynthesis;
+//                          const utterThis = new SpeechSynthesisUtterance("Yes. What do you want");
+//                          synth.speak(utterThis);
+//                          listening = true;
+//                          console.log('listening ?', listening);
+//                          setTimeout(function(){ listening = false;
+//                                                 console.log('listening ?', listening);
+//                                               }, 6000);
+//                       }
+//
+//                       stringToCheck = stringToCheck.replace('hey poker', '');
+//                       console.log('Reviewing string ', stringToCheck + ' listening ?', listening)
+//
+//                        if ( (stringToCheck == "where is the next game" || stringToCheck == "where's the next game")  && listening) {
+//                           const synth = window.speechSynthesis;
+//                           let eventDate = document.querySelectorAll('.event .event-date')[0].text
+//                           let eventLocation = document.querySelectorAll('.event .event-location')[0].text
+//
+//                           const utterThis = new SpeechSynthesisUtterance("Grab some beers, and go to " + eventLocation + " on the " + eventDate);
+//                           synth.speak(utterThis);
+//                       }
+//
+//                       if ((stringToCheck == "how long until the next game" || stringToCheck == "how long til the next game") && listening) {
+//
+//                            const synth = window.speechSynthesis;
+//                            const utterThis = new SpeechSynthesisUtterance('Thank you for asking. Shuffling up an dealing in,' + countdown(targetDate).toString());
+//                            synth.speak(utterThis);
+//                       }
+//
+//                       if ((stringToCheck == "who's winning" || stringToCheck == "who's first") && listening) {
+//
+//                            const synth = window.speechSynthesis;
+//                            let topPlayer = document.querySelectorAll('.seasonLadderRow .player-name')[0].text;
+//                            let topPoints = document.querySelectorAll('.seasonLadderRow .player-points')[0].getAttribute("data-points");
+//
+//                            const utterThis = new SpeechSynthesisUtterance('It looks like ' + topPlayer + ' is the top dog at the moment with ' + topPoints + ' points ');
+//                            synth.speak(utterThis);
+//                       }
+//
+//                        if (stringToCheck == "who's last" && listening) {
+//
+//                           const synth = window.speechSynthesis;
+//                           let lastPlayerPos = document.querySelectorAll('.seasonLadderRow .player-name').length - 1;
+//                           let lastPlayer =  document.querySelectorAll('.seasonLadderRow .player-name')[lastPlayerPos].text;
+//                           let lastPlayerPoints =  document.querySelectorAll('.seasonLadderRow .player-points')[lastPlayerPos].getAttribute("data-points");
+//
+//
+//                           const utterThis = new SpeechSynthesisUtterance('It looks like ' + lastPlayer + ",  better pull his socks up. He's only got a pawltry, " + lastPlayerPoints + ', point ');
+//                           synth.speak(utterThis);
+//                      }
+//
+//
+//
+//                       if (stringToCheck == 'i love you') {
+//                          const synth = window.speechSynthesis;
+//                          const utterThis = new SpeechSynthesisUtterance("I love you too. In a platonic way");
+//                          synth.speak(utterThis);
+//                        }
+//
+//                        event = null;
+//                     }
+//                     recognition.start();
+//                 }
+
+        // temp
                   clock.innerHTML = countdown(targetDate).toString();
                   var interval = setInterval(function(){
                       clock.innerHTML = countdown(targetDate).toString();
                       document.title = clock.innerHTML;
+
                       if (clock.innerHTML == "") {
                          clock.innerHTML = "Game has commenced......."
                          clearInterval(interval);
@@ -108,6 +226,10 @@ $scope.clicked = function() {
 
  $scope.displayPoints = function() {
      $scope.displayPointsChart = true;
+
+     const synth = window.speechSynthesis;
+     const utterThis = new SpeechSynthesisUtterance('Oh. So you are checking out the points I see. How are you fairing this season compared to others?');
+     synth.speak(utterThis);
   }
 
     window.addEventListener("load",function() {
@@ -277,6 +399,7 @@ function populateDetailsFromJson ($scope, $http)  {
         $scope.formTable = data;
         getUrlsForPlayers(data, season);
     });
+
 
     $scope.statistics = statistics;
 }
