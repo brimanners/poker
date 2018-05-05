@@ -215,8 +215,8 @@
                             </td>
                         </div>
                         <td><input type='checkbox' data-ng-click="clearPlayer()" ng-model="result.hidePlayer" checked="result.hidePlayer"/></td>
-                        <td>
-                            <button type="button" id="narrate_{{$index + 1}}" data-ng-click="narrate(result, $index + 1)"><img src="../images/sound.png" style="height: 20px; width: 20px;" /></button>
+                        <td data-ng-show="{{currentTableDisplayed == noOfTourneys}}">
+                            <button type="button" id="narrate_{{$index + 1}}" data-ng-click="narrate(result, $index + 1, displayTable.length)"><img src="../images/sound.png" style="height: 20px; width: 20px;" /></button>
                         </td>
                     </tr>
                     <tr id="positionResults" data-ng-show="displayExtra">

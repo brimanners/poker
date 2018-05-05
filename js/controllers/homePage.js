@@ -8,6 +8,7 @@ app.controller('homePageController', function ($scope, $http) {
     $scope.displayTable = [];
     $scope.displayExtra = false;
     $scope.displayAllPlayerButton = false;
+    $scope.currentTableDisplayed = 0;
 
    $scope.direction = false;
    $scope.orderProp = "'-points','played'";
@@ -30,6 +31,7 @@ app.controller('homePageController', function ($scope, $http) {
     $scope.tableChanged = function() {
         $("#ladder").addClass('animated hinge')
         $scope.displayTable = $scope.statistics.eventTables[$scope.eventId];
+        $scope.currentTableDisplayed = $scope.eventId;
         setTimeout (function () {
             $("#ladder").removeClass('animated hinge');
 
@@ -64,6 +66,9 @@ app.controller('homePageController', function ($scope, $http) {
              return "points";
          }
 
+         var totalPlayers =  $scope.statistics.eventTables[2];  // Todo - this will need to change event - so work out how to get the current
+         var actualPlayers = totalPlayers.filter(player => player.played > 0).length;
+
          const synth = window.speechSynthesis;
          names = player.name.split(' ')
          decoratedPosition = position + $scope.positionSuffix(position)
@@ -72,15 +77,50 @@ app.controller('homePageController', function ($scope, $http) {
             decoratedPosition = "last"
          }
 
-
          var sentence = names[0] + ',' + names[1] + ', is in ' + decoratedPosition + ' place , with ' + player.points + " " + singularPoints(player.points);
 
          if (position == "1") {
             sentence += ", Great work there " + names[0];
          }
 
-         if (player.positions == "(" + position + "/" + position + ")") {
-            sentence += ", Ha Ha Ha Ha Ha? Hope you're enjoying the wooden spoon, " + names[0];
+         if (position == "2") {
+           sentence += ", Can you grab that first spot " + names[0] + "?";
+         }
+
+         if (position == "3") {
+           sentence += ", You're currently in the bronze medal position " + names[0] ;
+         }
+
+         if (position == "4") {
+           sentence += ", You're currently residing in Dave's usual spot ";
+         }
+
+        var randomText = [
+            ", How are you enjoying mid table mediocrity, ",
+            ", Time to get some more points, ",
+            ", Come on. Time to move up the ladder, ",
+            ", Hopefully the next game will shoot you up the ladder, ",
+            ", You'd better play more games otherwise it could be wooden spoon time there, "
+        ]
+
+         randomNo = Math.floor((Math.random() * randomText.length));
+
+         if (position > 4 && position <= actualPlayers - 3) {
+            sentence += randomText[randomNo] + names[0];
+          }
+
+
+
+        if (position == actualPlayers - 2) {
+            sentence += ", Oooh - don't look over your shoulder " + names[0] + ", otherwise it could be the wooden spoon for you ";
+          }
+
+         if (position == actualPlayers - 1) {
+            sentence += ", I'd suggest you accumulate some more points there " + names[0] + ", before you come last, ";
+         }
+
+         if (position == actualPlayers) {
+            sentence += ", Ha Ha Ha Ha Ha? Hope you're enjoying the wooden spoon position there " + names[0] + " ?";
          }
 
          const utterThis = new SpeechSynthesisUtterance(sentence);
@@ -253,6 +293,7 @@ function populateDetailsFromJson ($scope, $http)  {
     $http.get('../json/' + season + '/current-table.json').success(function (data) {
 
         noOfTourneys = data.length;
+        $scope.currentTableDisplayed = noOfTourneys;
         if (noOfTourneys != undefined ) {
             playerEventPosition = calculatePlayerMovement(data);
             $scope.eventId = data.length;

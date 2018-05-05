@@ -29,6 +29,10 @@
     .dropdown-submenu > a.menuNotMobile {
        display:block
     }
+    .slide-in {
+        opacity:0;
+        transition:all .5s;
+    }
 }
 
 @media all and (min-width: 501px)   {
@@ -194,10 +198,7 @@ margin-left: 10px;}
     margin-left:20px;
 }
 
-.slide-in {
-    opacity:0;
-    transition:all .5s;
-}
+
 
 .align-left.slide-in {
     transform:translateX(-30%) scale(0.95);
