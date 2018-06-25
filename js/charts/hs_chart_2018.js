@@ -30,48 +30,52 @@ $(function () {
             borderWidth: 0
         },
         series: [{name: 'Ben I',
-                 data: [8, 14]
+                 data: [8, 14, 18]
                 },
                 {
                  name: 'Steve W',
-                 data: [1, 6]
+                 data: [1, 6, 6]
                 },
                 {
                  name: 'Brian M',
-                 data: [11, 29]
+                 data: [11, 29, 46]
                 },
                 {
                  name: 'Dave M',
-                 data: [4, 19]
+                 data: [4, 19, 24]
                 },
                 {
                  name: 'Simon W',
-                 data: [14, 26]
+                 data: [14, 26, 26]
                 },
                 {
                  name: 'Michael R',
-                 data: [2]
+                 data: [2, 7, 10]
                 },
                 {
                  name: 'Mark V',
-                 data: [5, 5]
+                 data: [5, 5, 19]
                 },
                 {
                  name: 'Mark L',
-                 data: [1, 10]
+                 data: [1, 10, 10]
                 },
                {
                 name: 'Carlos',
-                data: [0, 2]
+                data: [0, 2, 2]
                },
                 {
                  name: 'Paul B',
-                 data: [0, 4]
+                 data: [0, 4, 15]
                 },
                {
                 name: 'Andy F',
-                data: [0, 1]
-               }]
+                data: [0, 1, 2]
+               },
+               {
+                   name: 'Kevin H',
+                   data: [0, 0, 2]
+                  }]
     });
 });
 
