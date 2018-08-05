@@ -1,0 +1,16 @@
+[{"name":"Steve W","nationality":"AUS","played":5,"won":0,"second":1,"third":1,"fourth":0,"last":1,"averagePosition":4.6,"positionPlayers":"5/10 6/6 3/7 7/8 2/7","points":23},
+{"name":"Brian M","nationality":"ENG","played":5,"won":1,"second":2,"third":1,"fourth":0,"last":0,"averagePosition":2.8,"positionPlayers":"6/8 3/10 2/7 1/6 2/7","points":40},
+{"name":"Ben I","nationality":"AUS","played":5,"won":1,"second":0,"third":2,"fourth":0,"last":0,"averagePosition":4.0,"positionPlayers":"5/8 8/10 3/7 3/6 1/8","points":32},
+{"name":"Dave M","nationality":"AUS","played":5,"won":1,"second":0,"third":0,"fourth":4,"last":0,"averagePosition":3.4,"positionPlayers":"1/8 4/10 4/7 4/6 4/7","points":34},
+{"name":"Mark V","nationality":"SRI","played":5,"won":0,"second":0,"third":1,"fourth":0,"last":2,"averagePosition":6.8,"positionPlayers":"3/8 9/10 5/6 7/7 10/10","points":14},
+{"name":"Paul B","nationality":"AUS","played":5,"won":0,"second":2,"third":0,"fourth":1,"last":0,"averagePosition":4.2,"positionPlayers":"4/8 6/7 2/6 7/10 2/10","points":33},
+{"name":"Jade W","nationality":"ENG","played":5,"won":1,"second":0,"third":0,"fourth":0,"last":3,"averagePosition":6.0,"positionPlayers":"7/8 1/10 7/7 8/8 7/7","points":23},
+{"name":"Mark L","nationality":"AUS","played":5,"won":1,"second":0,"third":1,"fourth":0,"last":1,"averagePosition":5.8,"positionPlayers":"10/10 1/7 9/10 6/9 3/11","points":30},
+{"name":"Simon M","nationality":"ENG","played":3,"won":1,"second":0,"third":0,"fourth":0,"last":1,"averagePosition":4.6666665,"positionPlayers":"5/7 8/8 1/8","points":18},
+{"name":"Michael R","nationality":"NZE","played":5,"won":0,"second":1,"third":1,"fourth":0,"last":1,"averagePosition":5.2,"positionPlayers":"8/8 2/10 6/8 3/10 7/11","points":36},
+{"name":"Andy F","nationality":"NZE","played":5,"won":0,"second":1,"third":0,"fourth":0,"last":0,"averagePosition":4.6,"positionPlayers":"2/8 6/10 5/7 5/7 5/8","points":26},
+{"name":"Junior A","nationality":"BRA","played":5,"won":1,"second":1,"third":0,"fourth":0,"last":0,"averagePosition":4.4,"positionPlayers":"6/7 1/7 5/8 8/10 2/5","points":25},
+{"name":"Simon W","nationality":"AUS","played":5,"won":1,"second":0,"third":1,"fourth":1,"last":1,"averagePosition":4.6,"positionPlayers":"1/7 3/8 4/7 6/10 9/9","points":28},
+{"name":"Carlos P","nationality":"VEN","played":5,"won":1,"second":0,"third":1,"fourth":0,"last":0,"averagePosition":5.2,"positionPlayers":"7/10 3/7 8/10 7/10 1/9","points":34},
+{"name":"Craig X","nationality":"AUS","played":1,"won":0,"second":0,"third":0,"fourth":0,"last":1,"averagePosition":8.0,"positionPlayers":"8/8","points":1}
+]

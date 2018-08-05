@@ -1,0 +1,7 @@
+[{"eventDate": "06/02/2016", "location": "Bens", "tournament": 1, "position": 2, "noOfPlayers": 8, "cash": 31.2, "points": 11},
+{"eventDate": "19/03/2016", "location": "Mark_Vs", "tournament": 1, "position": 2, "noOfPlayers": 7, "cash": 33.3, "points": 8},
+{"eventDate": "30/04/2016", "location": "Brians", "tournament": 1, "position": 1, "noOfPlayers": 6, "cash": 39, "points": 9},
+{"eventDate": "18/06/2016", "location": "Mark_Ls", "tournament": 1, "position": 2, "noOfPlayers": 7, "cash": 39.3, "points": 8},
+{"eventDate": "27/08/2016", "location": "Steves", "tournament": 1, "position": 3, "noOfPlayers": 10, "cash": 20, "points": 12},
+{"eventDate": "15/10/2016", "location": "Daves", "tournament": 1, "position": 6, "noOfPlayers": 8, "cash": 0, "points": 3}
+]
