@@ -34,8 +34,8 @@ $(function () {
                 },
                 {
                  name: 'Steve W',
-                 data: [1, 6, 6, 6]
-                },, 6
+                 data: [1, 6, 6, 6, 6]
+                },
                 {
                  name: 'Brian M',
                  data: [11, 29, 46, 52, 56]
