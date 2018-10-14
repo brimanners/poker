@@ -66,7 +66,7 @@ app.controller('homePageController', function ($scope, $http) {
              return "points";
          }
 
-         var totalPlayers =  $scope.statistics.eventTables[2];  // Todo - this will need to change event - so work out how to get the current
+         var totalPlayers =  $scope.statistics.players;  // Todo - this will need to change event - so work out how to get the current
          var actualPlayers = totalPlayers.filter(player => player.played > 0).length;
 
          const synth = window.speechSynthesis;
