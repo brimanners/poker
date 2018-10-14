@@ -1,5 +1,6 @@
 [{"eventDate": "17/02/2018", "location": "Mark_Vs", "tournament": 1, "position": 2, "noOfPlayers": 8, "cash": 36, "points": 11},
 {"eventDate": "21/04/2018", "location": "Michaels", "tournament": 1, "position": 1, "noOfPlayers": 10, "cash": 75, "points": 18},
 {"eventDate": "02/06/2018", "location": "Bens", "tournament": 1, "position": 1, "noOfPlayers": 9, "cash": 68, "points": 17},
-{"eventDate": "18/08/2018", "location": "Brians", "tournament": 1, "position": 3, "noOfPlayers": 7, "cash": 23, "points": 6}
+{"eventDate": "18/08/2018", "location": "Brians", "tournament": 1, "position": 3, "noOfPlayers": 7, "cash": 23, "points": 6},
+{"eventDate": "13/10/2018", "location": "Daves", "tournament": 1, "position": 2, "noOfPlayers": 4, "cash": 24, "points": 4}
 ]

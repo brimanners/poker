@@ -1,12 +1,12 @@
 {"positionAndPlayers": [
  { "player": "paulB", 
- "positions":[7,3],
-"players":[10,9],
+ "positions":[7,3,4],
+"players":[10,9,4],
 "statistics":{
-"played":2,
+"played":3,
 "won":0,
 "top3":1,
-"last":0,
+"last":1,
 "bounties":0,
 "hosted":0
 }}]}

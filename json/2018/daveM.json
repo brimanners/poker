@@ -1,12 +1,12 @@
 {"positionAndPlayers": [
  { "player": "daveM", 
- "positions":[5,2,5,5],
-"players":[8,10,9,7],
+ "positions":[5,2,5,5,3],
+"players":[8,10,9,7,4],
 "statistics":{
-"played":4,
+"played":5,
 "won":0,
-"top3":1,
+"top3":2,
 "last":0,
 "bounties":0,
-"hosted":0
+"hosted":1
 }}]}
