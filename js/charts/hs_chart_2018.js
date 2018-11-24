@@ -30,55 +30,55 @@ $(function () {
             borderWidth: 0
         },
         series: [{name: 'Ben I',
-                 data: [8, 14, 18, 19, 25]
+                 data: [8, 14, 18, 19, 25, 25]
                 },
                 {
                  name: 'Steve W',
-                 data: [1, 6, 6, 6, 6]
+                 data: [1, 6, 6, 6, 6, 11]
                 },
                 {
                  name: 'Brian M',
-                 data: [11, 29, 46, 52, 56]
+                 data: [11, 29, 46, 52, 56, 67]
                 },
                 {
                  name: 'Dave M',
-                 data: [4, 19, 24, 27, 29]
+                 data: [4, 19, 24, 27, 29, 29]
                 },
                 {
                  name: 'Simon W',
-                 data: [14, 26, 26, 26, 26]
+                 data: [14, 26, 26, 26, 26, 40]
                 },
                 {
                  name: 'Michael R',
-                 data: [2, 7, 10, 18, 18]
+                 data: [2, 7, 10, 18, 18, 18]
                 },
                 {
                  name: 'Mark V',
-                 data: [5, 5, 19, 23, 23]
+                 data: [5, 5, 19, 23, 23, 26]
                 },
                 {
                  name: 'Mark L',
-                 data: [1, 10, 10, 12, 12]
+                 data: [1, 10, 10, 12, 12, 20]
                 },
                {
                 name: 'Carlos',
-                data: [0, 2, 2, 2, 2]
+                data: [0, 2, 2, 2, 2, 3]
                },
                 {
                  name: 'Paul B',
-                 data: [0, 4, 15, 15, 16]
+                 data: [0, 4, 15, 15, 16, 20]
                 },
                {
                 name: 'Andy F',
-                data: [0, 1, 2, 2, 2]
+                data: [0, 1, 2, 2, 2, 2]
                },
                {
                 name: 'Andrew L',
-                data: [0, 0, 0, 10, 10]
+                data: [0, 0, 0, 10, 10, 10]
                },
                {
                  name: 'Kevin H',
-                 data: [0, 0, 2, 2]
+                 data: [0, 0, 2, 2, 2]
                }]
     });
 });
