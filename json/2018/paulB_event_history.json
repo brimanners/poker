@@ -1,4 +1,5 @@
 [{"eventDate": "21/04/2018", "location": "Michaels", "tournament": 1, "position": 7, "noOfPlayers": 10, "cash": 0, "points": 4},
 {"eventDate": "02/06/2018", "location": "Bens", "tournament": 1, "position": 3, "noOfPlayers": 9, "cash": 21, "points": 11},
-{"eventDate": "13/10/2018", "location": "Daves", "tournament": 1, "position": 4, "noOfPlayers": 4, "cash": 0, "points": 1}
+{"eventDate": "13/10/2018", "location": "Daves", "tournament": 1, "position": 4, "noOfPlayers": 4, "cash": 0, "points": 1},
+{"eventDate": "24/11/2018", "location": "Mark_Ls", "tournament": 1, "position": 5, "noOfPlayers": 8, "cash": 0, "points": 4}
 ]

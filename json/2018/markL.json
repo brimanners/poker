@@ -1,12 +1,12 @@
 {"positionAndPlayers": [
  { "player": "markL", 
- "positions":[8,4,6],
-"players":[8,10,7],
+ "positions":[8,4,6,3],
+"players":[8,10,7,8],
 "statistics":{
-"played":3,
+"played":4,
 "won":0,
-"top3":0,
+"top3":1,
 "last":1,
 "bounties":0,
-"hosted":0
+"hosted":1
 }}]}

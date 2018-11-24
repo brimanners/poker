@@ -1,9 +1,9 @@
 {"positionAndPlayers": [
  { "player": "markV", 
- "positions":[4,2,4],
-"players":[8,9,7],
+ "positions":[4,2,4,6],
+"players":[8,9,7,8],
 "statistics":{
-"played":3,
+"played":4,
 "won":0,
 "top3":1,
 "last":0,

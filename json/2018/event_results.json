@@ -36,5 +36,13 @@
 {"event": 37, "tournament": 1, "position": 1, "name": "Ben I", "cash": 40, "points": 6},
 {"event": 37, "tournament": 1, "position": 2, "name": "Brian M", "cash": 24, "points": 4},
 {"event": 37, "tournament": 1, "position": 3, "name": "Dave M", "cash": 16, "points": 2},
-{"event": 37, "tournament": 1, "position": 4, "name": "Paul B", "cash": 0, "points": 1}
+{"event": 37, "tournament": 1, "position": 4, "name": "Paul B", "cash": 0, "points": 1},
+{"event": 38, "tournament": 1, "position": 1, "name": "Simon W", "cash": 52, "points": 14},
+{"event": 38, "tournament": 1, "position": 2, "name": "Brian M", "cash": 31, "points": 11},
+{"event": 38, "tournament": 1, "position": 3, "name": "Mark L", "cash": 21, "points": 8},
+{"event": 38, "tournament": 1, "position": 4, "name": "Steve W", "cash": 0, "points": 5},
+{"event": 38, "tournament": 1, "position": 5, "name": "Paul B", "cash": 0, "points": 4},
+{"event": 38, "tournament": 1, "position": 6, "name": "Mark V", "cash": 0, "points": 3},
+{"event": 38, "tournament": 1, "position": 7, "name": "Jade W", "cash": 0, "points": 2},
+{"event": 38, "tournament": 1, "position": 8, "name": "Carlos P", "cash": 0, "points": 1}
 ]
