@@ -125,8 +125,13 @@
                         <h3 style="white-space:nowrap;">Ladder after event number:</h3>
                     </td>
                     <td style="padding-left:10px;">
-                        <select ng-model="eventId" ng-change="tableChanged()" id="eventNumber" class="button_border">
-                            <option ng-repeat="tournament in statistics.events" ng-selected="{{statistics.events.length == $index + 1}}" value="{{$index + 1}}">{{$index + 1}}</option>
+                        <select ng-model="eventId" ng-change="tableChanged()" id="eventNumber">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
                         </select>
                     </td>
                     <td class="hideForMobile">&nbsp;&nbsp;&nbsp;&nbsp;Filter: <input type="text" ng-model="player"/></span></td>
