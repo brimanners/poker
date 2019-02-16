@@ -1,4 +1,13 @@
 [
+  {"year": 2019, "players": [
+    {"name": "Ben I", "Nationality": "AUS"},
+    {"name": "Steve W", "Nationality": "AUS"},
+    {"name": "Simon W", "Nationality": "AUS"},
+    {"name": "Brian M", "Nationality": "ENG"},
+    {"name": "Mark V", "Nationality": "SRI"},
+    {"name": "Carlos P", "Nationality": "VEN"},
+    {"name": "Jade W", "Nationality": "ENG"}
+  ]},
     {"year": 2018, "players": [
       {"name": "Ben I", "Nationality": "AUS"},
       {"name": "Dave M", "Nationality": "AUS"},
