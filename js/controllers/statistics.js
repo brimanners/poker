@@ -65,7 +65,7 @@ $(document).ready(function(){
     blockUI();
 
     var playerMap = new Object();
-    var yearList = [2013, 2014, 2015, 2016, 2017, 2018]
+    var yearList = [2013, 2014, 2015, 2016, 2017, 2018, 2019]
      for (var year = 0; year < yearList.length; year++) {
         statisticYear = yearList[year];
         $.ajax({
@@ -83,7 +83,7 @@ $(document).ready(function(){
         });
     };
 
-    outputDonutData(playerMap, 2018);
+    outputDonutData(playerMap, 2019);
     animateIn();
 
     $("#seasons").attr("selectedIndex", -1);
