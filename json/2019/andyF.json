@@ -1,11 +1,11 @@
 {"positionAndPlayers": [
  { "player": "andyF", 
- "positions":[],
-"players":[],
+ "positions":[2],
+"players":[10],
 "statistics":{
-"played":0,
+"played":1,
 "won":0,
-"top3":0,
+"top3":1,
 "last":0,
 "bounties":0,
 "hosted":0
