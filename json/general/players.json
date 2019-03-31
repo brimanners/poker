@@ -1,12 +1,18 @@
 [
   {"year": 2019, "players": [
+    {"name": "Andy F", "Nationality": "NZE"},
     {"name": "Ben I", "Nationality": "AUS"},
     {"name": "Steve W", "Nationality": "AUS"},
     {"name": "Simon W", "Nationality": "AUS"},
     {"name": "Brian M", "Nationality": "ENG"},
     {"name": "Mark V", "Nationality": "SRI"},
     {"name": "Carlos P", "Nationality": "VEN"},
-    {"name": "Jade W", "Nationality": "ENG"}
+    {"name": "Jade W", "Nationality": "ENG"},
+    {"name": "Dave M", "Nationality": "AUS"},
+    {"name": "Michael R", "Nationality": "NZE"},
+    {"name": "Andrew L", "Nationality": "AUS"},
+    {"name": "Mark L", "Nationality": "AUS"},
+    {"name": "Paul B", "Nationality": "AUS"}
   ]},
     {"year": 2018, "players": [
       {"name": "Ben I", "Nationality": "AUS"},
