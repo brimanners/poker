@@ -1,2 +1,3 @@
-[{"eventDate": "30/03/2019", "location": "Carlos", "tournament": 1, "position": 1, "noOfPlayers": 10, "cash": 85, "points": 18}
+[{"eventDate": "30/03/2019", "location": "Carlos", "tournament": 1, "position": 1, "noOfPlayers": 10, "cash": 85, "points": 18},
+{"eventDate": "15/06/2019", "location": "Simons", "tournament": 1, "position": 3, "noOfPlayers": 8, "cash": 24, "points": 8}
 ]
