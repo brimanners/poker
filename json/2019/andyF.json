@@ -1,9 +1,9 @@
 {"positionAndPlayers": [
  { "player": "andyF", 
- "positions":[2],
-"players":[10],
+ "positions":[2,7],
+"players":[10,8],
 "statistics":{
-"played":1,
+"played":2,
 "won":0,
 "top3":1,
 "last":0,

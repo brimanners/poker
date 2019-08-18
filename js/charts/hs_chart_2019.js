@@ -30,58 +30,61 @@ $(function () {
             borderWidth: 0
         },
         series: [{name: 'Ben I',
-                 data: [3, 7, 10]
+                 data: [3, 7, 10, 10]
                 },
                 {
                  name: 'Steve W',
-                 data: [6, 6, 10]
+                 data: [6, 6, 10, 10]
                 },
                 {
                  name: 'Brian M',
-                 data: [10, 19, 33]
+                 data: [10, 19, 33, 47]
                 },
                 {
                  name: 'Simon W',
-                 data: [8, 8, 19]
+                 data: [8, 8, 19, 19]
                 },
                 {
                  name: 'Mark V',
-                 data: [2, 14, 15]
+                 data: [2, 14, 15, 18]
                 },
                {
                 name: 'Carlos',
-                data: [4, 7, 9]
+                data: [4, 7, 9, 14]
                },
                {
                 name: 'Jade',
-                data: [1, 1, 6]
+                data: [1, 1, 6, 7]
                },
                {
                 name: 'Dave',
-                data: [0, 18, 26]
+                data: [0, 18, 26, 37]
                },
                {
                 name: 'Andrew F',
-                data: [0, 15, 15]
+                data: [0, 15, 15, 17]
                },
                {
                 name: 'Paul B',
-                data: [0, 6, 6]
+                data: [0, 6, 6, 6]
                },
                {
                 name: 'Michael',
-                data: [0, 5, 5]
+                data: [0, 5, 5, 9]
                },
                {
                 name: 'Mark L',
-                data: [0, 2, 2]
+                data: [0, 2, 2, 2]
                }
                ,
               {
                name: 'Andrew L',
-               data: [0, 1, 1]
-              }
-
+               data: [0, 1, 1, 1]
+              },
+              {
+                 name: 'Maan A',
+                 data: [0, 0, 0, 8]
+                }
                ]
     });
 });

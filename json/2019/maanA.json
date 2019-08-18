@@ -1,11 +1,11 @@
 {"positionAndPlayers": [
- { "player": "michaelR", 
- "positions":[6,5],
-"players":[10,8],
+ { "player": "maanA", 
+ "positions":[3],
+"players":[8],
 "statistics":{
-"played":2,
+"played":1,
 "won":0,
-"top3":0,
+"top3":1,
 "last":0,
 "bounties":0,
 "hosted":0

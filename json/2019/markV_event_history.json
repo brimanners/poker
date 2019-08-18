@@ -1,4 +1,5 @@
 [{"eventDate": "16/02/2019", "location": "Jades", "tournament": 1, "position": 6, "noOfPlayers": 7, "cash": 0, "points": 2},
 {"eventDate": "30/03/2019", "location": "Carlos", "tournament": 1, "position": 3, "noOfPlayers": 10, "cash": 26, "points": 12},
-{"eventDate": "15/06/2019", "location": "Simons", "tournament": 1, "position": 8, "noOfPlayers": 8, "cash": 0, "points": 1}
+{"eventDate": "15/06/2019", "location": "Simons", "tournament": 1, "position": 8, "noOfPlayers": 8, "cash": 0, "points": 1},
+{"eventDate": "17/08/2019", "location": "Mark_Vs", "tournament": 1, "position": 6, "noOfPlayers": 8, "cash": 0, "points": 3}
 ]
