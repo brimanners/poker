@@ -1,9 +1,9 @@
 {"positionAndPlayers": [
  { "player": "brianM", 
- "positions":[1,4,1,1],
-"players":[7,10,8,8],
+ "positions":[1,4,1,1,4],
+"players":[7,10,8,8,10],
 "statistics":{
-"played":4,
+"played":5,
 "won":3,
 "top3":3,
 "last":0,

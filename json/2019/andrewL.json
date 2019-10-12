@@ -1,12 +1,12 @@
 {"positionAndPlayers": [
  { "player": "andrewL", 
- "positions":[10],
-"players":[10],
+ "positions":[10,2],
+"players":[10,10],
 "statistics":{
-"played":1,
+"played":2,
 "won":0,
-"top3":0,
+"top3":1,
 "last":1,
 "bounties":0,
-"hosted":0
+"hosted":1
 }}]}

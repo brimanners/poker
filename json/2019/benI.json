@@ -1,9 +1,9 @@
 {"positionAndPlayers": [
  { "player": "benI", 
- "positions":[5,7,6],
-"players":[7,10,8],
+ "positions":[5,7,6,8],
+"players":[7,10,8,10],
 "statistics":{
-"played":3,
+"played":4,
 "won":0,
 "top3":0,
 "last":0,
