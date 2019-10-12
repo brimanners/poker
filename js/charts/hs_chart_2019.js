@@ -30,60 +30,60 @@ $(function () {
             borderWidth: 0
         },
         series: [{name: 'Ben I',
-                 data: [3, 7, 10, 10]
+                 data: [3, 7, 10, 10, 13]
                 },
                 {
                  name: 'Steve W',
-                 data: [6, 6, 10, 10]
+                 data: [6, 6, 10, 10, 10]
                 },
                 {
                  name: 'Brian M',
-                 data: [10, 19, 33, 47]
+                 data: [10, 19, 33, 47, 56]
                 },
                 {
                  name: 'Simon W',
-                 data: [8, 8, 19, 19]
+                 data: [8, 8, 19, 19, 23]
                 },
                 {
                  name: 'Mark V',
-                 data: [2, 14, 15, 18]
+                 data: [2, 14, 15, 18, 18]
                 },
                {
                 name: 'Carlos',
-                data: [4, 7, 9, 14]
+                data: [4, 7, 9, 14, 16]
                },
                {
                 name: 'Jade',
-                data: [1, 1, 6, 7]
+                data: [1, 1, 6, 7, 7]
                },
                {
                 name: 'Dave',
-                data: [0, 18, 26, 37]
+                data: [0, 18, 26, 37, 43]
                },
                {
                 name: 'Andrew F',
-                data: [0, 15, 15, 17]
+                data: [0, 15, 15, 17, 17]
                },
                {
                 name: 'Paul B',
-                data: [0, 6, 6, 6]
+                data: [0, 6, 6, 6, 7]
                },
                {
                 name: 'Michael',
-                data: [0, 5, 5, 9]
+                data: [0, 5, 5, 9, 27]
                },
                {
                 name: 'Mark L',
-                data: [0, 2, 2, 2]
+                data: [0, 2, 2, 2, 7]
                }
                ,
               {
                name: 'Andrew L',
-               data: [0, 1, 1, 1]
+               data: [0, 1, 1, 1, 17]
               },
               {
                  name: 'Maan A',
-                 data: [0, 0, 0, 8]
+                 data: [0, 0, 0, 8, 20]
                 }
                ]
     });
