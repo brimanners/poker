@@ -1,9 +1,9 @@
 {"positionAndPlayers": [
  { "player": "michaelR", 
- "positions":[6,5,1],
-"players":[10,8,10],
+ "positions":[6,5,1,6],
+"players":[10,8,10,8],
 "statistics":{
-"played":3,
+"played":4,
 "won":1,
 "top3":1,
 "last":0,

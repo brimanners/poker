@@ -1,11 +1,11 @@
 {"positionAndPlayers": [
  { "player": "maanA", 
- "positions":[3,3],
-"players":[8,10],
+ "positions":[3,3,2],
+"players":[8,10,8],
 "statistics":{
-"played":2,
+"played":3,
 "won":0,
-"top3":2,
+"top3":3,
 "last":0,
 "bounties":0,
 "hosted":0

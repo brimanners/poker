@@ -1,9 +1,9 @@
 {"positionAndPlayers": [
  { "player": "steveW", 
- "positions":[3,5],
-"players":[7,8],
+ "positions":[3,5,4],
+"players":[7,8,8],
 "statistics":{
-"played":2,
+"played":3,
 "won":0,
 "top3":1,
 "last":0,
