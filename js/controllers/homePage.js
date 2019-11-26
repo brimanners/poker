@@ -351,7 +351,7 @@ function populateDetailsFromJson ($scope, $http)  {
                      overallLadderPlayer.totalPositions = parseInt(event.totalPositions);
                      overallLadderPlayer.averagePosition = (parseInt(event.totalPositions) / 1);
                      overallLadderPlayer.cashes = parseFloat(event.cashes);
-                     overallLadderPlayer.averageCashes = (overallLadderPlayer.cashes / 1) * 100;
+                     overallLadderPlayer.averageCashes = (overallLadderPlayer.cashes / event.played) * 100;
                      overallLadderPlayer.hosted = parseInt(event.hosted);
                      if (event.cash !== undefined) {
                         overallLadderPlayer.cash = parseFloat(event.cash);
