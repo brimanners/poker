@@ -168,7 +168,7 @@
                             <th>Points</th>
                             <th>Won</th>
                         </tr>
-                        <tr data-ng-repeat="event in playerDetails.eventDetails | | orderBy: ['event.displayDate']">
+                        <tr data-ng-repeat="event in playerDetails.eventDetails | orderBy: ['event.displayDate']">
                             <td>{{$index + 1}}</td>
                             <td>{{event.displayDate | date}}</td>
                             <td>{{event.location}}</td>
