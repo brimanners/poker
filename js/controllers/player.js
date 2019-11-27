@@ -163,8 +163,10 @@ app.controller('playerController', function ($scope, $http) {
                         playerDetails.eventDetails[events].eventDate.substring(3,5) - 1,
                         playerDetails.eventDetails[events].eventDate.substring(0,2)
                    );
-                   tempDate = playerDetails.eventDetails[events].displayDate
-                   playerDetails.eventDetails[events].sortDate = tempDate.getFullYear() + "-" + tempDate.getMonth() + 1 + "-" + tempDate.getDate()
+
+                   playerDetails.eventDetails[events].sortDate = playerDetails.eventDetails[events].eventDate.substring(6,10)
+                    + "-" + playerDetails.eventDetails[events].eventDate.substring(3,5)
+                    +  "-" + playerDetails.eventDetails[events].eventDate.substring(0,2)
 
                    events ++;
                    accumulatedPoints = accumulatedPoints + data[i].points
