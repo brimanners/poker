@@ -1,21 +1,6 @@
 [
   {"year": 2020, "players": [
-    {"name": "Andrew L", "Nationality": "AUS"},
-    {"name": "Andy F", "Nationality": "NZE"},
-    {"name": "Ben I", "Nationality": "AUS"},
-    {"name": "Brian M", "Nationality": "ENG"},
-    {"name": "Carlos P", "Nationality": "VEN"},
-    {"name": "Dave M", "Nationality": "AUS"},
-    {"name": "Steve W", "Nationality": "AUS"},
-    {"name": "Simon W", "Nationality": "AUS"},
-    {"name": "Mark V", "Nationality": "SRI"},
-    {"name": "Jade W", "Nationality": "ENG"},
-    {"name": "Michael R", "Nationality": "NZE"},
-    {"name": "Mark L", "Nationality": "AUS"},
-    {"name": "Paul B", "Nationality": "AUS"},
-    {"name": "Kevin H", "Nationality": "AUS"},
-    {"name": "Maan A", "Nationality": "KWT"},
-    {"name": "Junior A", "Nationality": "BRA"}
+
   ]},
   {"year": 2019, "players": [
     {"name": "Andy F", "Nationality": "NZE"},
