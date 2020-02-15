@@ -1,6 +1,18 @@
 [
   {"year": 2020, "players": [
-
+    {"name": "Ben I", "Nationality": "AUS"},
+    {"name": "Steve W", "Nationality": "AUS"},
+    {"name": "Simon W", "Nationality": "AUS"},
+    {"name": "Brian M", "Nationality": "ENG"},
+    {"name": "Mark V", "Nationality": "SRI"},
+    {"name": "Carlos P", "Nationality": "VEN"},
+    {"name": "Jade W", "Nationality": "ENG"},
+    {"name": "Dave M", "Nationality": "AUS"},
+    {"name": "Michael R", "Nationality": "NZE"},
+    {"name": "Andrew L", "Nationality": "AUS"},
+    {"name": "Mark L", "Nationality": "AUS"},
+    {"name": "Paul B", "Nationality": "AUS"},
+    {"name": "Maan A", "Nationality": "KWT"}
   ]},
   {"year": 2019, "players": [
     {"name": "Andy F", "Nationality": "NZE"},

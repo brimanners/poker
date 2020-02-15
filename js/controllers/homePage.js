@@ -385,8 +385,8 @@ function populateDetailsFromJson ($scope, $http)  {
            }
         }
 
-//        $http.get('../json/2020/current-table.json').success(function (data) {
-//                            accumulateOverallLadder(data[0]["event" + data[0].eventId]);
+        $http.get('../json/2020/current-table.json').success(function (data) {
+                            accumulateOverallLadder(data[0]["event" + data[0].eventId]);
 
             $http.get('../json/2019/current-table.json').success(function (data) {
                     accumulateOverallLadder(data[0]["event" + data[0].eventId]);
@@ -433,7 +433,7 @@ function populateDetailsFromJson ($scope, $http)  {
                     });
                 });
             });
-//        });
+        });
     });
 
     $http.get('../json/' + season + '/form-table.json').success(function (data) {
