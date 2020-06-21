@@ -1,11 +1,11 @@
 {"positionAndPlayers": [
  { "player": "carlosP", 
- "positions":[7],
-"players":[13],
+ "positions":[7,2],
+"players":[13,11],
 "statistics":{
-"played":1,
+"played":2,
 "won":0,
-"top3":0,
+"top3":1,
 "last":0,
 "bounties":0,
 "hosted":0

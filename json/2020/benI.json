@@ -1,11 +1,11 @@
 {"positionAndPlayers": [
  { "player": "benI", 
- "positions":[2],
-"players":[13],
+ "positions":[2,1],
+"players":[13,11],
 "statistics":{
-"played":1,
-"won":0,
-"top3":1,
+"played":2,
+"won":1,
+"top3":2,
 "last":0,
 "bounties":0,
 "hosted":0
