@@ -84,7 +84,7 @@ app.controller('menusController', ['$scope', '$http', function($scope, $http) {
             data[i].year = data[i].eventDate.substring(data[i].eventDate.length - 4, data[i].eventDate.length);
           }
           getUrlForEvents2(data);
-          $scope.statistics.events = data;
+          $scope.statistics.CCXX_Events = data;
      });
 
      $http.get('../json/2021/event-history.json').success(function (data) {
