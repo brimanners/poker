@@ -1,5 +1,7 @@
 [
   {"year": 2020, "players": [
+  ]},
+  {"year": 2020, "players": [
     {"name": "Ben I", "Nationality": "AUS"},
     {"name": "Steve W", "Nationality": "AUS"},
     {"name": "Simon W", "Nationality": "AUS"},

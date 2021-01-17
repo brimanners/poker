@@ -87,6 +87,14 @@ app.controller('menusController', ['$scope', '$http', function($scope, $http) {
           $scope.statistics.events = data;
      });
 
+     $http.get('../json/2021/event-history.json').success(function (data) {
+          for (i = 0; i < data.length; i ++) { // append year so menu dropdown can section values
+             data[i].year = data[i].eventDate.substring(data[i].eventDate.length - 4, data[i].eventDate.length);
+           }
+           getUrlForEvents2(data);
+           $scope.statistics.events = data;
+         });
+
    $http.get('../json/general/extras.json').success(function (data) {
       $scope.statistics.extras = data;
    });

@@ -135,7 +135,7 @@ app.controller('homePageController', function ($scope, $http) {
     });
 
      // Set countdown time to next event
-     if (season == "2020"){
+     if (season == "2021"){
         $http.get('../json/general/next-event.json').success(function (data) {
             var nextEventDate = data[0]["event-date"];
             var nextEventTime = data[0]["event-time"];

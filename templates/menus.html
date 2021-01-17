@@ -11,7 +11,7 @@
                 <li class="dropdown" data-no-collapse="true">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Event History<b class="caret"></b></a>
                     <ul class="dropdown-menu" >
-                        <li ng-show="event.year == '2020'" ng-repeat="event in statistics.events | orderBy: ['-no']">
+                        <li ng-show="event.year == '2021'" ng-repeat="event in statistics.events | orderBy: ['-no']">
                             <a href="{{event.url}}">{{event.eventDate}} @ {{event.location}}</a>
                         </li>
                     </ul>
@@ -19,7 +19,7 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Players<b class="caret"></b></a>
                     <ul class="dropdown-menu">
-                        <li ng-show="player.year == '2020'" ng-repeat="player in statistics.playerMenuDropdown | orderBy: ['name']"><a href="{{player.url}}">{{player.name}}</a></li>
+                        <li ng-show="player.year == '2021'" ng-repeat="player in statistics.playerMenuDropdown | orderBy: ['name']"><a href="{{player.url}}">{{player.name}}</a></li>
                     </ul>
                 </li>
                 <li class="dropdown">
@@ -31,7 +31,15 @@
                 <li>
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">History<b class="caret"></b></a>
                     <ul class="dropdown-menu">
-                        <a href="../season/2019Results.html" class="menuMobile" >2019</a>
+                        <a href="../season/2020Results.html" class="menuMobile" >2020</a>
+                        <li class="dropdown-submenu menuNotMobile">
+                            <a href="#" class="menuNotMobile dropdown-toggle" data-toggle="dropdown">2020</a>
+                            <ul class="dropdown-menu">
+                                <li><a href="../season/2020Results.html">Season wrap up</a></li>
+                                <li class="menu_year">&nbsp;Events</li>
+                                <li ng-repeat="event in statistics.CCXX_Events | orderBy: ['-no']"><a href="{{event.url}}">{{event.eventDate}} @ {{event.location}}</a></li>
+                            </ul>
+                        </li>
                         <li class="dropdown-submenu menuNotMobile">
                             <a href="#" class="menuNotMobile dropdown-toggle" data-toggle="dropdown">2019</a>
                             <ul class="dropdown-menu">
